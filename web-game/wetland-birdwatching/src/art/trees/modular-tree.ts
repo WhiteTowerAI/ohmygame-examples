@@ -1,11 +1,11 @@
 import * as THREE from 'three';
 import {
-  type DarkCanopyLobeVariant,
-} from './dark-canopy-tree-study';
+  type CanopyLobeVariant,
+} from './canopy-lobe-variant';
 
 type Vec3Tuple = readonly [number, number, number];
 type LegacyFoliageVariant = 'wide' | 'upright' | 'crown' | 'connector';
-export type FoliageVariant = LegacyFoliageVariant | `dark-${DarkCanopyLobeVariant}`;
+export type FoliageVariant = LegacyFoliageVariant | `dark-${CanopyLobeVariant}`;
 
 export type TreePerchCapability =
   | 'rest'

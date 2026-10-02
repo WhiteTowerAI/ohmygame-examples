@@ -1,7 +1,7 @@
 import {
-  compactWetlandStudyGenerationProfile,
-  type WetlandStudyGenerationProfile,
-} from './wetland-study';
+  compactWetlandGenerationProfile,
+  type WetlandGenerationProfile,
+} from './wetland-scene';
 
 export type WetlandMapPresetId = 'compact-v116' | 'park-third' | 'park-third-expanded' | 'large-semantic';
 
@@ -13,10 +13,10 @@ export type WetlandMapPreset = Readonly<{
   semanticInset?: number;
   cameraScale: number;
   shadowExtent: number;
-  generationProfile: WetlandStudyGenerationProfile;
+  generationProfile: WetlandGenerationProfile;
 }>;
 
-const largeWetlandStudyGenerationProfile: WetlandStudyGenerationProfile = {
+const largeWetlandGenerationProfile: WetlandGenerationProfile = {
   terrainVertexSpacing: 0.5,
   surfaceMapTexelSpacing: 0.32,
   grassCandidateBudgetScale: 2.4,
@@ -35,7 +35,7 @@ const largeWetlandStudyGenerationProfile: WetlandStudyGenerationProfile = {
   debugCandidateSpacing: 1.2,
 };
 
-const parkThirdGenerationProfile: WetlandStudyGenerationProfile = {
+const parkThirdGenerationProfile: WetlandGenerationProfile = {
   terrainVertexSpacing: 0.35,
   surfaceMapTexelSpacing: 0.24,
   grassCandidateBudgetScale: 1.3,
@@ -62,7 +62,7 @@ export const wetlandMapPresets: Readonly<Record<WetlandMapPresetId, WetlandMapPr
     worldDepth: 84,
     cameraScale: 1,
     shadowExtent: 72,
-    generationProfile: compactWetlandStudyGenerationProfile,
+    generationProfile: compactWetlandGenerationProfile,
   },
   'park-third': {
     id: 'park-third',
@@ -105,6 +105,6 @@ export const wetlandMapPresets: Readonly<Record<WetlandMapPresetId, WetlandMapPr
     worldDepth: 294,
     cameraScale: 3.5,
     shadowExtent: 245,
-    generationProfile: largeWetlandStudyGenerationProfile,
+    generationProfile: largeWetlandGenerationProfile,
   },
 };

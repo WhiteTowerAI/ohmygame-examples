@@ -47,7 +47,7 @@ mirror live state such as bird state, focus quality and position.
 | Generation defaults | `src/art/environment/wetland-shared-world.ts` | change palette, lighting, density budgets |
 | Map presets (world size) | `src/art/environment/wetland-map-presets.ts` | change world size and generation profile |
 | Semantic map decoding | `src/art/environment/wetland-layout-map.ts` | add a new terrain semantic |
-| Terrain, grass, flowers, shrubs, trees | `src/art/environment/wetland-study.ts`, `wetland-region-fields.ts` | change how regions are filled |
+| Terrain, grass, flowers, shrubs, trees | `src/art/environment/wetland-scene.ts`, `wetland-region-fields.ts` | change how regions are filled |
 | Tree species | `src/art/environment/wetland-tree-presets.ts`, `src/art/trees/` | add or tune procedural trees |
 | Sky, weather, wind | `src/art/environment/wetland-weather.ts`, `wetland-sky.ts`, `wetland-wind.ts` | change sky and clouds |
 | Post-processing | `src/rendering/`, `src/art/rendering/` | change outlines, god rays, depth of field |

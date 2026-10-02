@@ -11,7 +11,7 @@ type AlphaFoliageVisualMode = FoliageRendererVisualMode
   | 'distribution'
   | 'raw-sdf-cards';
 
-type AlphaFoliageLabState = {
+type AlphaFoliageState = {
   usage: AlphaFoliageUsage;
   leafPreset: AlphaLeafPreset;
   leafScale: number;
@@ -54,7 +54,7 @@ const mulberry32 = (seed: number) => {
 
 const drawLeaf = (
   context: CanvasRenderingContext2D,
-  state: AlphaFoliageLabState,
+  state: AlphaFoliageState,
   x: number,
   y: number,
   length: number,
@@ -105,7 +105,7 @@ const drawLeaf = (
 
 const drawWillowLeafSpray = (
   context: CanvasRenderingContext2D,
-  state: AlphaFoliageLabState,
+  state: AlphaFoliageState,
   random: () => number,
   leafCount: number,
 ) => {
@@ -194,12 +194,12 @@ const drawWillowLeafSpray = (
   }
 };
 
-const drawLeafClusterMask = (state: AlphaFoliageLabState) => {
+const drawLeafClusterMask = (state: AlphaFoliageState) => {
   const canvas = document.createElement('canvas');
   canvas.width = MASK_SIZE;
   canvas.height = MASK_SIZE;
   const context = canvas.getContext('2d', { willReadFrequently: true });
-  if (!context) throw new Error('Alpha foliage lab requires Canvas 2D');
+  if (!context) throw new Error('Alpha foliage requires Canvas 2D');
   context.clearRect(0, 0, MASK_SIZE, MASK_SIZE);
   context.fillStyle = '#ffffff';
   const random = mulberry32(0x4f1b);
@@ -302,7 +302,7 @@ const distanceToPixels = (inside: Uint8Array, targetInside: boolean) => {
   return distance;
 };
 
-export const createLeafClusterSdfTexture = (state: AlphaFoliageLabState) => {
+export const createLeafClusterSdfTexture = (state: AlphaFoliageState) => {
   const mask = drawLeafClusterMask(state);
   const inside = new Uint8Array(MASK_SIZE * MASK_SIZE);
   for (let index = 0; index < inside.length; index += 1) {
@@ -337,7 +337,7 @@ const randomSphereDirection = (random: () => number) => {
   return new THREE.Vector3(Math.cos(angle) * radius, y, Math.sin(angle) * radius);
 };
 
-export const createBushEmitterInstances = (state: AlphaFoliageLabState): FoliageInstance[] => {
+export const createBushEmitterInstances = (state: AlphaFoliageState): FoliageInstance[] => {
   const random = mulberry32(state.seed);
   const count = THREE.MathUtils.clamp(Math.round(state.density), 8, MAX_CLUSTER_COUNT);
   const instances: FoliageInstance[] = [];
@@ -368,7 +368,7 @@ export const createBushEmitterInstances = (state: AlphaFoliageLabState): Foliage
   return instances;
 };
 
-export const getDefaultAlphaFoliageLabState = (): AlphaFoliageLabState => ({
+export const getDefaultAlphaFoliageState = (): AlphaFoliageState => ({
     usage: 'bush',
     leafPreset: 'oval',
     leafScale: 1.85,
@@ -394,8 +394,8 @@ export const getDefaultAlphaFoliageLabState = (): AlphaFoliageLabState => ({
     visualMode: 'shared',
 });
 
-export const getCamphorAlphaFoliageState = (): AlphaFoliageLabState => ({
-  ...getDefaultAlphaFoliageLabState(),
+export const getCamphorAlphaFoliageState = (): AlphaFoliageState => ({
+  ...getDefaultAlphaFoliageState(),
   usage: 'branch',
   leafPreset: 'camphor',
   leafScale: 1.87,

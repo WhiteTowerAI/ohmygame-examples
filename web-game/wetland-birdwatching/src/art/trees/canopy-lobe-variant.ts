@@ -1,17 +1,17 @@
 import * as THREE from 'three';
 
 type DarkCanopyVec3Tuple = readonly [number, number, number];
-export type DarkCanopyLobeVariant = 'broad' | 'swept' | 'fan' | 'crown';
+export type CanopyLobeVariant = 'broad' | 'swept' | 'fan' | 'crown';
 type Vec3Tuple = DarkCanopyVec3Tuple;
 
-type DarkCanopyBranchPathSpec = {
+type CanopyBranchPathSpec = {
   id: string;
   points: readonly Vec3Tuple[];
   startRadius: number;
   endRadius: number;
   tone: number;
 };
-type BranchPathSpec = DarkCanopyBranchPathSpec;
+type BranchPathSpec = CanopyBranchPathSpec;
 
 const tupleToVector = ([x, y, z]: Vec3Tuple) => new THREE.Vector3(x, y, z);
 

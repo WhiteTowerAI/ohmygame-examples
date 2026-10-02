@@ -5,7 +5,7 @@ import {
 import type {
   ProceduralTreeFoliageParameters,
   ProceduralTreeFoliageRole,
-} from '../trees/procedural-tree-skeleton-lab';
+} from '../trees/procedural-tree-builder';
 import type { ProceduralTreeParameters } from '../trees/procedural-tree-skeleton';
 
 const sharedSkeleton: ProceduralTreeParameters = {

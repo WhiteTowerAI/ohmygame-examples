@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import type { FoliageTreePaletteStyle } from '../../art-preview/foliage-light-direction-experiment';
+import type { FoliageTreePaletteStyle } from '../rendering/foliage-light-direction';
 import type { WetlandMapPresetId } from './wetland-map-presets';
 import type {
   WetlandBrushStroke,
@@ -9,7 +9,7 @@ import type {
   WetlandShoreStyle,
 } from './wetland-region-fields';
 import type { WetlandSkyVersion, WetlandWeatherId } from './wetland-weather';
-import type { WetlandStudyLayer, WetlandStudyPalette } from './wetland-study';
+import type { WetlandLayer, WetlandPalette } from './wetland-scene';
 
 export const wetlandMinimumSunElevation = 21;
 const wetlandPublishedSceneStorageKey = 'bird.wetland.published-scene.v1';
@@ -86,8 +86,8 @@ type WetlandPublishedScene = Readonly<{
   grassShape: WetlandGrassShape;
   shoreStyle: WetlandShoreStyle;
   brushStrokes: readonly WetlandBrushStroke[];
-  palette: WetlandStudyPalette;
-  layers: Record<Exclude<WetlandStudyLayer, 'candidates'>, boolean>;
+  palette: WetlandPalette;
+  layers: Record<Exclude<WetlandLayer, 'candidates'>, boolean>;
   layout: Readonly<{
     columns: number;
     rows: number;

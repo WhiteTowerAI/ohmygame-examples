@@ -6,7 +6,7 @@ import {
   createLeafClusterSdfTexture,
   getCamphorAlphaFoliageState,
   type AlphaLeafPreset,
-} from '../environment/alpha-foliage-authoring-lab';
+} from '../environment/alpha-foliage';
 import {
   createFoliageCardRenderer,
   type FoliageInstance,
@@ -25,7 +25,7 @@ import {
 
 export type ProceduralTreeFoliageRole = 'spur' | 'inner' | 'mid' | 'outer';
 
-type ProceduralTreeSkeletonLabMode = 'baseline' | 'foliage';
+type ProceduralTreeBuilderMode = 'baseline' | 'foliage';
 
 type GeneratedFoliageRole = ProceduralTreeFoliageRole | 'baseline';
 const foliageRoles: readonly ProceduralTreeFoliageRole[] = ['spur', 'inner', 'mid', 'outer'];
@@ -56,7 +56,7 @@ export type ProceduralTreeFoliageParameters = Readonly<{
 type ProceduralTreeBuildOptions = Readonly<{
   parameters?: ProceduralTreeParameters;
   foliage?: ProceduralTreeFoliageParameters;
-  mode?: ProceduralTreeSkeletonLabMode;
+  mode?: ProceduralTreeBuilderMode;
   authoringAccessories?: boolean;
   generationVersion?: ProceduralTreeGenerationVersion;
   visibleFoliageRoles?: readonly ProceduralTreeFoliageRole[];
@@ -201,7 +201,7 @@ const disposeChildren = (group: THREE.Group) => {
   group.clear();
 };
 
-export const createProceduralTreeSkeletonLab = (
+export const createProceduralTreeBuilder = (
   options: ProceduralTreeBuildOptions = {},
 ) => {
   const root = new THREE.Group();
@@ -289,7 +289,7 @@ export const createProceduralTreeSkeletonLab = (
   let totalFoliageCardCount = 0;
   let trunkCollarRejectedCards = 0;
   let layoutSignature = '';
-  let mode: ProceduralTreeSkeletonLabMode = options.mode ?? 'foliage';
+  let mode: ProceduralTreeBuilderMode = options.mode ?? 'foliage';
   let generationVersion: ProceduralTreeGenerationVersion = initialGenerationVersion;
   let bounceEnabled = options.bounceEnabled ?? true;
   let crownIntegrationEnabled = options.crownIntegrationEnabled ?? true;
@@ -304,7 +304,7 @@ export const createProceduralTreeSkeletonLab = (
     mode === 'baseline' ? baselineCrownLobes : skeleton.crownLobes
   );
 
-  const setMode = (nextMode: ProceduralTreeSkeletonLabMode) => {
+  const setMode = (nextMode: ProceduralTreeBuilderMode) => {
     const layoutChanged = (mode === 'baseline') !== (nextMode === 'baseline');
     mode = nextMode;
     meshStage.visible = true;

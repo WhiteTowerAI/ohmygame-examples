@@ -4,10 +4,10 @@ import { createDefaultWetlandLayoutMap, WetlandLayoutMap } from './wetland-layou
 import { wetlandMapPresets, type WetlandMapPreset } from './wetland-map-presets';
 import { unifiedWetlandRegionParams } from './wetland-region-fields';
 import {
-  elementalSpringWetlandStudyPalette,
-  type WetlandStudyGenerationProfile,
-  type WetlandStudyPalette,
-} from './wetland-study';
+  elementalSpringWetlandPalette,
+  type WetlandGenerationProfile,
+  type WetlandPalette,
+} from './wetland-scene';
 import {
   decodeWetlandLayout,
   loadPublishedWetlandScene,
@@ -22,13 +22,13 @@ export const sharedWetlandGenerationDefaults = Object.freeze({
   grassDistribution: 'color-guided' as const,
   grassShape: 'legacy' as const,
   shoreStyle: 'smooth' as const,
-  palette: elementalSpringWetlandStudyPalette as Readonly<WetlandStudyPalette>,
+  palette: elementalSpringWetlandPalette as Readonly<WetlandPalette>,
 });
 
 // The playable camera stays near the ground, so it can use a lighter sampling
 // budget while preserving the same semantic map, terrain functions, palette,
 // tree placement grammar and materials as the full art study.
-export const sharedWetlandGameplayGenerationProfile: WetlandStudyGenerationProfile = {
+export const sharedWetlandGameplayGenerationProfile: WetlandGenerationProfile = {
   ...sharedWetlandMapPreset.generationProfile,
   terrainVertexSpacing: 0.56,
   surfaceMapTexelSpacing: 0.36,

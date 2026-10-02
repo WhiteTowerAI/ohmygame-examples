@@ -43,13 +43,13 @@ const parkWorld = await createWetlandGameplayWorld({
   renderer: gameRendering.renderer,
   lighting: gameRendering.lighting,
 });
-canvas.dataset.world = parkWorld.study.field.layoutMap.domainShape === 'ellipse'
+canvas.dataset.world = parkWorld.wetland.field.layoutMap.domainShape === 'ellipse'
   ? 'shared-expanded-wetland'
   : 'shared-park-third-wetland';
 canvas.dataset.visualDomain = [
-  parkWorld.study.field.layoutMap.domainShape,
-  parkWorld.study.field.width,
-  parkWorld.study.field.depth,
+  parkWorld.wetland.field.layoutMap.domainShape,
+  parkWorld.wetland.field.width,
+  parkWorld.wetland.field.depth,
 ].join(',');
 canvas.dataset.playableDomain = [
   parkWorld.playableDomain.shape,
@@ -910,13 +910,13 @@ character.position.y = parkWorld.sampleHeight(character.position.x, character.po
             crossTree: selection.crossTree,
           } : null,
           viewMode,
-          world: parkWorld.study.field.layoutMap.domainShape === 'ellipse'
+          world: parkWorld.wetland.field.layoutMap.domainShape === 'ellipse'
             ? 'shared-expanded-wetland'
             : 'shared-park-third-wetland',
           visualDomain: {
-            shape: parkWorld.study.field.layoutMap.domainShape,
-            width: parkWorld.study.field.width,
-            depth: parkWorld.study.field.depth,
+            shape: parkWorld.wetland.field.layoutMap.domainShape,
+            width: parkWorld.wetland.field.width,
+            depth: parkWorld.wetland.field.depth,
           },
           playableDomain: parkWorld.playableDomain,
           playerWalkable: parkWorld.isWalkable(character.position.x, character.position.z),

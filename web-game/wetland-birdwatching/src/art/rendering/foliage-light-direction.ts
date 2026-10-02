@@ -57,7 +57,7 @@ type FoliageEntry = Readonly<{
   experimentMaterial: THREE.Material;
 }>;
 
-export type FoliageLightDirectionExperiment = Readonly<{
+export type FoliageLightDirection = Readonly<{
   setActive: (active: boolean) => void;
   setHeightInfluence: (value: number) => void;
   setDetailStrength: (value: number) => void;
@@ -737,10 +737,10 @@ const getPlantFoliage = (plant: FoliagePlantSource) => {
   return meshes;
 };
 
-export const createFoliageLightDirectionExperiment = (
+export const createFoliageLightDirection = (
   plants: readonly FoliagePlantSource[],
   initialHeightInfluence = 0.20,
-): FoliageLightDirectionExperiment => {
+): FoliageLightDirection => {
   let active = false;
   let heightInfluence = THREE.MathUtils.clamp(initialHeightInfluence, 0, 1);
   let detailStrength = 0.28;

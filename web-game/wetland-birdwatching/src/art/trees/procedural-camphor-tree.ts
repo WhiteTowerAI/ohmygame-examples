@@ -10,12 +10,12 @@ import {
   type TreePerchSupport,
 } from './modular-tree';
 import {
-  createProceduralTreeSkeletonLab,
+  createProceduralTreeBuilder,
   getDefaultProceduralTreeFoliageParameters,
   getDefaultWillowFoliageParameters,
   type ProceduralTreeFoliageParameters,
   type ProceduralTreeFoliageRole,
-} from './procedural-tree-skeleton-lab';
+} from './procedural-tree-builder';
 import {
   getProceduralTreePreset,
   type ProceduralBranchPath,
@@ -527,7 +527,7 @@ const validateTreeContract = (
 export const createProceduralCamphorTree = (
   recipe: ProceduralTreeRecipe = proceduralCamphorTreeRecipe,
 ) => {
-  const model = createProceduralTreeSkeletonLab({
+  const model = createProceduralTreeBuilder({
     parameters: recipe.skeleton,
     foliage: recipe.foliage,
     mode: 'foliage',

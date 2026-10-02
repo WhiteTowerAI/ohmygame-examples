@@ -4,8 +4,8 @@ import { forestEdgePalette } from './forest-edge-palette';
 import {
   createBushEmitterInstances,
   createLeafClusterSdfTexture,
-  getDefaultAlphaFoliageLabState,
-} from './alpha-foliage-authoring-lab';
+  getDefaultAlphaFoliageState,
+} from './alpha-foliage';
 import { createStylizedBush, type StylizedBushVariant } from './stylized-bush';
 import { createFoliageCardRenderer, type FoliagePalette } from '../rendering/foliage-card-renderer';
 
@@ -19,7 +19,7 @@ type AlphaFoliageBushOptions = Readonly<{
 let sharedBushSdfTexture: THREE.Texture | undefined;
 
 export const createAlphaFoliageBush = (options: AlphaFoliageBushOptions) => {
-  const state = getDefaultAlphaFoliageLabState();
+  const state = getDefaultAlphaFoliageState();
   state.seed = options.seed;
   if (options.variant === 'open') {
     state.clusterWidth = 1.95;
@@ -43,7 +43,7 @@ export const createAlphaFoliageBush = (options: AlphaFoliageBushOptions) => {
     if (child.userData.environmentRole === 'bush-foliage') root.remove(child);
   });
 
-  sharedBushSdfTexture ??= createLeafClusterSdfTexture(getDefaultAlphaFoliageLabState());
+  sharedBushSdfTexture ??= createLeafClusterSdfTexture(getDefaultAlphaFoliageState());
   const bushPalette = options.palette ?? {
     shadow: forestEdgePalette.bush[0],
     mid: forestEdgePalette.bush[1],

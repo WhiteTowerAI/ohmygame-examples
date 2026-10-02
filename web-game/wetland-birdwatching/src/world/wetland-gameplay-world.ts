@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { getEnvironmentLookById } from '../art/environment/environment-look';
 import { createStylizedObjectShadowSystem } from '../art/rendering/stylized-object-shadow';
 import { createWetlandGodRays } from '../art/rendering/wetland-god-rays';
-import { createWetlandStudy } from '../art/environment/wetland-study';
-import type { WetlandStudyLayer } from '../art/environment/wetland-study';
+import { createWetlandScene } from '../art/environment/wetland-scene';
+import type { WetlandLayer } from '../art/environment/wetland-scene';
 import { createWetlandWeatherSystem } from '../art/environment/wetland-weather';
 import type { WetlandWindFrame } from '../art/environment/wetland-weather';
 import {
@@ -29,7 +29,7 @@ type WetlandGameplayLocation = 'wetland-path' | 'wetland-shore' | 'wetland-meado
 
 type WetlandGameplayWorld = Readonly<{
   root: THREE.Group;
-  study: Awaited<ReturnType<typeof createWetlandStudy>>;
+  wetland: Awaited<ReturnType<typeof createWetlandScene>>;
   habitatRegistry: HabitatRegistry;
   groundLeaves: readonly THREE.Mesh[];
   blackbirdInitialNodeId: string;
@@ -186,7 +186,7 @@ export const createWetlandGameplayWorld = async (
     shoreStyle: published.shoreStyle,
     palette: { ...published.palette },
   } : sharedWetlandGenerationDefaults;
-  const study = await createWetlandStudy({
+  const wetland = await createWetlandScene({
     look: weather.getLook(),
     hemisphereLight: lighting.hemisphereLight,
     keyLight: lighting.keyLight,
@@ -203,17 +203,17 @@ export const createWetlandGameplayWorld = async (
     brushStrokes: published?.brushStrokes ?? [],
     generationProfile: published ? activeMapPreset.generationProfile : sharedWetlandGameplayGenerationProfile,
   });
-  study.setLightingVersion(savedAppearance.lightingVersion);
-  study.setStylizedLightingFeatures({
+  wetland.setLightingVersion(savedAppearance.lightingVersion);
+  wetland.setStylizedLightingFeatures({
     coreShadow: false,
     dropShadow: savedAppearance.dropShadowEnabled,
     groundBounce: false,
   });
-  study.setTreeFoliageLightResponse(savedAppearance.treeFoliageLightEnabled);
-  study.setTreeFoliagePaletteStyle(savedAppearance.treeFoliagePaletteStyle);
-  study.setTreeFoliageHeightInfluence(savedAppearance.treeFoliageHeight);
-  study.setTreeFoliageDetailStrength(savedAppearance.treeFoliageDetail);
-  study.setTreeFoliageLightingResponse({
+  wetland.setTreeFoliageLightResponse(savedAppearance.treeFoliageLightEnabled);
+  wetland.setTreeFoliagePaletteStyle(savedAppearance.treeFoliagePaletteStyle);
+  wetland.setTreeFoliageHeightInfluence(savedAppearance.treeFoliageHeight);
+  wetland.setTreeFoliageDetailStrength(savedAppearance.treeFoliageDetail);
+  wetland.setTreeFoliageLightingResponse({
     keyEnabled: savedAppearance.treeFoliageKeyEnabled,
     keyStrength: savedAppearance.treeFoliageKey,
     skyEnabled: savedAppearance.treeFoliageSkyEnabled,
@@ -223,14 +223,14 @@ export const createWetlandGameplayWorld = async (
     backlightEnabled: savedAppearance.treeFoliageBacklightEnabled,
     backlightStrength: savedAppearance.treeFoliageBacklight,
   });
-  study.setFoliageShadowOcclusion(
+  wetland.setFoliageShadowOcclusion(
     savedAppearance.foliageShadowOcclusionEnabled,
     savedAppearance.foliageShadowOcclusion,
   );
-  study.setGrassGroundIntegration(savedAppearance.grassGroundIntegrationEnabled);
-  study.setGrassGroundTipLift(savedAppearance.grassGroundTipLift);
-  study.setGrassFinalGroundColor(savedAppearance.grassFinalGroundColorEnabled);
-  study.setTerrainLightingFeatures({
+  wetland.setGrassGroundIntegration(savedAppearance.grassGroundIntegrationEnabled);
+  wetland.setGrassGroundTipLift(savedAppearance.grassGroundTipLift);
+  wetland.setGrassFinalGroundColor(savedAppearance.grassFinalGroundColorEnabled);
+  wetland.setTerrainLightingFeatures({
     slopeLight: savedAppearance.terrainSlopeLightEnabled,
     slopeStrength: savedAppearance.terrainSlopeStrength,
     selfShadow: savedAppearance.terrainSelfShadowEnabled,
@@ -242,7 +242,7 @@ export const createWetlandGameplayWorld = async (
     contactDarkening: savedAppearance.terrainContactDarkeningEnabled,
     contactStrength: savedAppearance.terrainContactStrength,
   });
-  study.setCanopyShaftSettings({
+  wetland.setCanopyShaftSettings({
     enabled: savedAppearance.canopyShaftsEnabled,
     strength: savedAppearance.canopyShaftsStrength * dayLighting.canopyShaftStrength,
     length: savedAppearance.canopyShaftsLength,
@@ -250,24 +250,24 @@ export const createWetlandGameplayWorld = async (
     count: savedAppearance.canopyShaftsCount,
     forwardScatter: savedAppearance.canopyShaftsForwardScatter,
   });
-  study.setGroundDappleSettings({
+  wetland.setGroundDappleSettings({
     enabled: savedAppearance.groundDappleEnabled,
     strength: savedAppearance.groundDappleStrength * dayLighting.groundDappleStrength,
   });
   if (published) {
     for (const [layer, visible] of Object.entries(published.layers)) {
-      study.setLayerVisible(layer as WetlandStudyLayer, visible);
+      wetland.setLayerVisible(layer as WetlandLayer, visible);
     }
   }
-  study.syncLighting(
+  wetland.syncLighting(
     savedAppearance.lightingVersion === 'elemental' ? ambientLight : lighting.hemisphereLight,
   );
-  root.add(study.root);
+  root.add(wetland.root);
   scene.add(root);
 
   const objectShadow = createStylizedObjectShadowSystem(baseLook.material);
-  objectShadow.register(study.root, shouldUseObjectShadowMaterial);
-  objectShadow.setTerrainHeightSource(study.terrainHeightMap, study.terrainWorldSize);
+  objectShadow.register(wetland.root, shouldUseObjectShadowMaterial);
+  objectShadow.setTerrainHeightSource(wetland.terrainHeightMap, wetland.terrainWorldSize);
   objectShadow.setFeatures({
     coreShadow: false,
     dropShadow: savedAppearance.dropShadowEnabled,
@@ -280,11 +280,11 @@ export const createWetlandGameplayWorld = async (
 
   const playerRadius = 0.34;
   const playerObstacles: Array<{ x: number; z: number; radius: number }> = [];
-  study.treeProviders.forEach(({ tree }) => {
+  wetland.treeProviders.forEach(({ tree }) => {
     const position = tree.root.getWorldPosition(new THREE.Vector3());
     playerObstacles.push({ x: position.x, z: position.z, radius: 0.72 });
   });
-  const shrubLayer = study.root.getObjectByName('wetland-field-driven-shrubs');
+  const shrubLayer = wetland.root.getObjectByName('wetland-field-driven-shrubs');
   shrubLayer?.children.forEach((bush) => {
     const position = bush.getWorldPosition(new THREE.Vector3());
     const radius = Math.max(bush.scale.x, bush.scale.z) * 0.34;
@@ -292,7 +292,7 @@ export const createWetlandGameplayWorld = async (
   });
   const isTerrainWalkable = (x: number, z: number) => {
     if (!layoutMap.containsDetailPoint(x, z, playerRadius)) return false;
-    const sample = study.field.sample(x, z);
+    const sample = wetland.field.sample(x, z);
     return sample.pondDistance > 0.18 && sample.slope < 0.62;
   };
   const isWalkable = (x: number, z: number) => {
@@ -302,7 +302,7 @@ export const createWetlandGameplayWorld = async (
     ));
   };
 
-  const centerTree = [...study.treeProviders].sort((left, right) => (
+  const centerTree = [...wetland.treeProviders].sort((left, right) => (
     left.tree.root.position.lengthSq() - right.tree.root.position.lengthSq()
   ))[0];
   const habitatCenter = centerTree?.tree.root.position ?? new THREE.Vector3();
@@ -315,7 +315,7 @@ export const createWetlandGameplayWorld = async (
     const x = habitatCenter.x + Math.sin(angle) * radius;
     const z = habitatCenter.z + Math.cos(angle) * radius;
     if (!isTerrainWalkable(x, z)) continue;
-    const sample = study.field.sample(x, z);
+    const sample = wetland.field.sample(x, z);
     if (sample.pathSurface > 0.7 || sample.groundGrass < 0.08) continue;
     if (groundNodes.some((node) => Math.hypot(node.position.x - x, node.position.z - z) < 1.15)) continue;
     const index = groundNodes.length.toString().padStart(2, '0');
@@ -325,7 +325,7 @@ export const createWetlandGameplayWorld = async (
       kind: 'ground',
       level: 'ground',
       capabilities: ['forage'],
-      position: { x, y: study.field.heightAt(x, z), z },
+      position: { x, y: wetland.field.heightAt(x, z), z },
       forward: { x: Math.sin(angle), y: 0, z: Math.cos(angle) },
       clearance: 0.42,
     });
@@ -336,7 +336,7 @@ export const createWetlandGameplayWorld = async (
 
   const habitatRegistry = new HabitatRegistry(15);
   habitatRegistry.registerNodes('wetland-floor', groundNodes);
-  const nearestTreeProviders = [...study.treeProviders]
+  const nearestTreeProviders = [...wetland.treeProviders]
     .sort((left, right) => (
       left.tree.root.position.distanceToSquared(habitatCenter)
       - right.tree.root.position.distanceToSquared(habitatCenter)
@@ -383,7 +383,7 @@ export const createWetlandGameplayWorld = async (
       else if (isWalkable(zSlide.x, zSlide.z)) current.copy(zSlide);
       break;
     }
-    step.set(current.x, study.field.heightAt(current.x, current.z), current.z);
+    step.set(current.x, wetland.field.heightAt(current.x, current.z), current.z);
     desired.copy(step);
   };
 
@@ -398,7 +398,7 @@ export const createWetlandGameplayWorld = async (
           const x = originX + Math.sin(angle) * radius;
           const z = originZ + Math.cos(angle) * radius;
           if (isWalkable(x, z)) {
-            position.set(x, study.field.heightAt(x, z), z);
+            position.set(x, wetland.field.heightAt(x, z), z);
             found = true;
             break;
           }
@@ -407,7 +407,7 @@ export const createWetlandGameplayWorld = async (
       if (!found) position.copy(spawn);
       return;
     }
-    position.y = study.field.heightAt(position.x, position.z);
+    position.y = wetland.field.heightAt(position.x, position.z);
   };
 
   const playableHalfWidth = layoutMap.detailWorldWidth * 0.5;
@@ -442,7 +442,7 @@ export const createWetlandGameplayWorld = async (
 
   return {
     root,
-    study,
+    wetland,
     habitatRegistry,
     groundLeaves: [],
     blackbirdInitialNodeId: groundNodes[0].id,
@@ -455,13 +455,13 @@ export const createWetlandGameplayWorld = async (
       depth: layoutMap.detailWorldDepth,
     },
     airWallProbe,
-    sampleHeight: study.field.heightAt,
+    sampleHeight: wetland.field.heightAt,
     isTerrainWalkable,
     isWalkable,
     resolvePlayerMovement,
     constrainPlayerPosition,
     locationAt(position) {
-      const sample = study.field.sample(position.x, position.z);
+      const sample = wetland.field.sample(position.x, position.z);
       if (sample.pathSurface > 0.35) return 'wetland-path';
       if (sample.pondDistance < 1.6) return 'wetland-shore';
       return 'wetland-meadow';
@@ -469,15 +469,15 @@ export const createWetlandGameplayWorld = async (
     update(elapsed, camera) {
       const wind = weather.update(elapsed, camera.position, camera);
       if (camera instanceof THREE.PerspectiveCamera) {
-        study.update(elapsed, wind, camera, lighting.fog);
+        wetland.update(elapsed, wind, camera, lighting.fog);
       } else {
-        study.update(elapsed, wind);
+        wetland.update(elapsed, wind);
       }
       objectShadow.updateLighting(lighting.keyLight);
       return wind;
     },
     updateFinalGroundColor(activeRenderer, activeScene) {
-      study.updateGrassFinalGroundColor(activeRenderer, activeScene);
+      wetland.updateGrassFinalGroundColor(activeRenderer, activeScene);
     },
     render(activeCamera) {
       syncGodRaySize();
@@ -487,7 +487,7 @@ export const createWetlandGameplayWorld = async (
       godRays.dispose();
       objectShadow.dispose();
       scene.remove(root);
-      study.dispose();
+      wetland.dispose();
       weather.dispose();
     },
   };

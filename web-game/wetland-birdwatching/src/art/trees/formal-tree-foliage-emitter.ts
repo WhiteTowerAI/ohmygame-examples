@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {
   createLeafClusterSdfTexture,
   getCamphorAlphaFoliageState,
-} from '../environment/alpha-foliage-authoring-lab';
+} from '../environment/alpha-foliage';
 import {
   createFoliageCardRenderer,
   type FoliageInstance,

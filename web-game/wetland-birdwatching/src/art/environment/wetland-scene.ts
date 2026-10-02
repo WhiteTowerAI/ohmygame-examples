@@ -22,11 +22,11 @@ import {
   readWetlandTreeCatalog,
 } from './wetland-tree-catalog';
 import {
-  createFoliageLightDirectionExperiment,
-  type FoliageLightDirectionExperiment,
+  createFoliageLightDirection,
+  type FoliageLightDirection,
   type FoliageLightingResponse,
   type FoliageTreePaletteStyle,
-} from '../../art-preview/foliage-light-direction-experiment';
+} from '../rendering/foliage-light-direction';
 import {
   createWetlandCanopyShafts,
   type WetlandCanopyShaftSettings,
@@ -44,7 +44,7 @@ import {
   type WetlandShoreStyle,
 } from './wetland-region-fields';
 
-export type WetlandStudyLayer =
+export type WetlandLayer =
   | 'terrain'
   | 'water'
   | 'grass'
@@ -54,7 +54,7 @@ export type WetlandStudyLayer =
   | 'trees'
   | 'candidates';
 
-type WetlandStudyMetrics = Readonly<{
+type WetlandMetrics = Readonly<{
   grassBlades: number;
   flowers: number;
   shrubs: number;
@@ -79,18 +79,18 @@ type WetlandTerrainLightingFeatures = Readonly<{
   contactStrength: number;
 }>;
 
-type WetlandStudy = Readonly<{
+type WetlandScene = Readonly<{
   root: THREE.Group;
   field: WetlandRegionField;
   treeProviders: readonly WetlandTreeProvider[];
   terrainHeightMap: THREE.Texture;
   terrainWorldSize: THREE.Vector2;
-  metrics: WetlandStudyMetrics;
-  rebuildGrass: (options: WetlandStudyGrassUpdate) => void;
-  rebuildTrees: (palette: WetlandStudyPalette) => void;
-  updateWaterPalette: (palette: WetlandStudyPalette) => void;
-  updateTerrainPalette: (palette: WetlandStudyPalette) => Promise<void>;
-  setLayerVisible: (layer: WetlandStudyLayer, visible: boolean) => void;
+  metrics: WetlandMetrics;
+  rebuildGrass: (options: WetlandGrassUpdate) => void;
+  rebuildTrees: (palette: WetlandPalette) => void;
+  updateWaterPalette: (palette: WetlandPalette) => void;
+  updateTerrainPalette: (palette: WetlandPalette) => Promise<void>;
+  setLayerVisible: (layer: WetlandLayer, visible: boolean) => void;
   syncLighting: (environmentLight?: THREE.HemisphereLight | THREE.AmbientLight) => void;
   setStylizedLightingFeatures: (features: Partial<StylizedEnvironmentFeatures>) => void;
   setStylizedLightingLook: (look: StylizedEnvironmentMaterialLook) => void;
@@ -105,7 +105,7 @@ type WetlandStudy = Readonly<{
   setGrassGroundTipLift: (amount: number) => void;
   setGrassFinalGroundColor: (enabled: boolean) => void;
   updateGrassFinalGroundColor: (renderer: THREE.WebGLRenderer, scene: THREE.Scene) => void;
-  getTreeFoliageLightSnapshot: FoliageLightDirectionExperiment['getSnapshot'];
+  getTreeFoliageLightSnapshot: FoliageLightDirection['getSnapshot'];
   setTerrainLightingFeatures: (features: Partial<WetlandTerrainLightingFeatures>) => void;
   getTerrainLightingSnapshot: () => WetlandTerrainLightingFeatures;
   setCanopyShaftSettings: (settings: Partial<WetlandCanopyShaftSettings>) => void;
@@ -120,17 +120,17 @@ type WetlandStudy = Readonly<{
   dispose: () => void;
 }>;
 
-type WetlandStudyGrassUpdate = Readonly<{
+type WetlandGrassUpdate = Readonly<{
   params: WetlandRegionParams;
   grassDistribution: WetlandGrassDistribution;
   grassShape: WetlandGrassShape;
   shoreStyle: WetlandShoreStyle;
   brushStrokes: readonly WetlandBrushStroke[];
   layoutMap: WetlandLayoutMap;
-  palette: WetlandStudyPalette;
+  palette: WetlandPalette;
 }>;
 
-export type WetlandStudyGenerationProfile = Readonly<{
+export type WetlandGenerationProfile = Readonly<{
   terrainVertexSpacing: number;
   surfaceMapTexelSpacing: number;
   grassCandidateBudgetScale: number;
@@ -149,7 +149,7 @@ export type WetlandStudyGenerationProfile = Readonly<{
   debugCandidateSpacing: number;
 }>;
 
-export const compactWetlandStudyGenerationProfile: WetlandStudyGenerationProfile = {
+export const compactWetlandGenerationProfile: WetlandGenerationProfile = {
   terrainVertexSpacing: 0.25,
   surfaceMapTexelSpacing: 0.15625,
   grassCandidateBudgetScale: 1,
@@ -174,7 +174,7 @@ type WetlandWindTarget = Readonly<{
   amplitude: number;
 }>;
 
-type WetlandStudyOptions = Readonly<{
+type WetlandSceneOptions = Readonly<{
   look: EnvironmentLook;
   hemisphereLight: THREE.HemisphereLight;
   keyLight: THREE.DirectionalLight;
@@ -188,8 +188,8 @@ type WetlandStudyOptions = Readonly<{
   showCandidates: boolean;
   brushStrokes: readonly WetlandBrushStroke[];
   layoutMap: WetlandLayoutMap;
-  palette: WetlandStudyPalette;
-  generationProfile?: WetlandStudyGenerationProfile;
+  palette: WetlandPalette;
+  generationProfile?: WetlandGenerationProfile;
 }>;
 
 type WetlandTreeProvider = Readonly<{
@@ -199,7 +199,7 @@ type WetlandTreeProvider = Readonly<{
 
 const finalGroundColorLayer = 30;
 
-export type WetlandStudyPalette = {
+export type WetlandPalette = {
   grassShadow: string;
   grassMid: string;
   grassSun: string;
@@ -226,7 +226,7 @@ export type WetlandStudyPalette = {
   waterBedDeep: string;
 };
 
-export const elementalSpringWetlandStudyPalette: WetlandStudyPalette = {
+export const elementalSpringWetlandPalette: WetlandPalette = {
   grassShadow: '#5fa947',
   grassMid: '#92c256',
   grassSun: '#ece765',
@@ -287,7 +287,7 @@ const fieldValue = (view: WetlandFieldView, sample: WetlandRegionSample) => {
 
 const grassSurfaceColor = (
   sample: WetlandRegionSample,
-  palette: WetlandStudyPalette,
+  palette: WetlandPalette,
   target: THREE.Color,
 ) => {
   const shadow = new THREE.Color(palette.grassShadow);
@@ -328,7 +328,7 @@ const appearanceColor = (
   sample: WetlandRegionSample,
   x: number,
   z: number,
-  palette: WetlandStudyPalette,
+  palette: WetlandPalette,
   waterLevel: number,
   target: THREE.Color,
 ) => {
@@ -414,8 +414,8 @@ const createTerrainHeightMap = (field: WetlandRegionField) => {
 const createTerrain = (
   field: WetlandRegionField,
   view: WetlandFieldView,
-  palette: WetlandStudyPalette,
-  generationProfile: WetlandStudyGenerationProfile,
+  palette: WetlandPalette,
+  generationProfile: WetlandGenerationProfile,
 ) => {
   const useSurfaceMap = view === 'appearance';
   const worldWidth = field.width;
@@ -849,8 +849,8 @@ if (uTerrainGroundDappleEnabled > 0.5
 
 const createTerrainSurfaceMap = (
   field: WetlandRegionField,
-  palette: WetlandStudyPalette,
-  generationProfile: WetlandStudyGenerationProfile,
+  palette: WetlandPalette,
+  generationProfile: WetlandGenerationProfile,
 ) => {
   const worldWidth = field.width;
   const worldDepth = field.depth;
@@ -886,8 +886,8 @@ const createTerrainSurfaceMap = (
 
 const createTerrainSurfaceMapAsync = async (
   field: WetlandRegionField,
-  palette: WetlandStudyPalette,
-  generationProfile: WetlandStudyGenerationProfile,
+  palette: WetlandPalette,
+  generationProfile: WetlandGenerationProfile,
   isCurrent: () => boolean,
 ) => {
   const worldWidth = field.width;
@@ -926,7 +926,7 @@ const createTerrainSurfaceMapAsync = async (
   return texture;
 };
 
-const createWater = (field: WetlandRegionField, palette: WetlandStudyPalette) => {
+const createWater = (field: WetlandRegionField, palette: WetlandPalette) => {
   const waterDistance = new Float32Array(field.layoutMap.columns * field.layoutMap.rows);
   for (let row = 0; row < field.layoutMap.rows; row += 1) {
     const z = field.depth * (row / (field.layoutMap.rows - 1) - 0.5);
@@ -959,8 +959,8 @@ const createWater = (field: WetlandRegionField, palette: WetlandStudyPalette) =>
 
 const createShrubs = (
   field: WetlandRegionField,
-  options: WetlandStudyOptions,
-  generationProfile: WetlandStudyGenerationProfile,
+  options: WetlandSceneOptions,
+  generationProfile: WetlandGenerationProfile,
 ) => {
   const random = mulberry32(field.params.vegetationSeed ^ 0x5a3b);
   const candidates: Array<{
@@ -1064,7 +1064,7 @@ const createShrubs = (
 
 const createRocks = (
   field: WetlandRegionField,
-  generationProfile: WetlandStudyGenerationProfile,
+  generationProfile: WetlandGenerationProfile,
 ) => {
   const random = mulberry32(field.params.vegetationSeed ^ 0x702c);
   const placements: Array<{ x: number; z: number; score: number }> = [];
@@ -1143,7 +1143,7 @@ type WetlandTreePlacement = Readonly<{
 
 const applyWetlandTreePalette = (
   root: THREE.Object3D,
-  palette: WetlandStudyPalette,
+  palette: WetlandPalette,
   colorVariation: number,
 ) => {
   const foliageBand = [
@@ -1247,8 +1247,8 @@ const cloneSharedTreePrototype = (prototype: THREE.Object3D) => {
 
 const createTrees = (
   field: WetlandRegionField,
-  options: WetlandStudyOptions,
-  generationProfile: WetlandStudyGenerationProfile,
+  options: WetlandSceneOptions,
+  generationProfile: WetlandGenerationProfile,
 ) => {
   const camphorTreeCatalog = readWetlandTreeCatalog();
   const random = mulberry32(field.params.vegetationSeed ^ 0x31da);
@@ -1526,8 +1526,8 @@ const createGrassLayer = (
   params: WetlandRegionParams,
   grassDistribution: WetlandGrassDistribution,
   grassShape: WetlandGrassShape,
-  palette: WetlandStudyPalette,
-  generationProfile: WetlandStudyGenerationProfile,
+  palette: WetlandPalette,
+  generationProfile: WetlandGenerationProfile,
   look: EnvironmentLook,
 ): WetlandBoonaGrassRenderer => {
   const grassSamplingDensity = THREE.MathUtils.smoothstep(
@@ -1607,9 +1607,9 @@ const createGrassLayer = (
   });
 };
 
-export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<WetlandStudy> => {
+export const createWetlandScene = async (options: WetlandSceneOptions): Promise<WetlandScene> => {
   const generationProfile = options.generationProfile
-    ?? compactWetlandStudyGenerationProfile;
+    ?? compactWetlandGenerationProfile;
   const field = createWetlandRegionField(
     options.params,
     options.brushStrokes,
@@ -1658,7 +1658,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
   finalGroundCamera.layers.set(finalGroundColorLayer);
   let grassFinalGroundColorEnabled = true;
   let finalGroundColorDirty = true;
-  const layers: Record<WetlandStudyLayer, THREE.Object3D> = {
+  const layers: Record<WetlandLayer, THREE.Object3D> = {
     terrain,
     water: new THREE.Group(),
     grass: new THREE.Group(),
@@ -1746,29 +1746,29 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
     terrainSurface.lighting.worldSize.value,
     grassFinalGroundColorEnabled,
   );
-  const createTreeFoliageLightExperiment = () => {
-    const experiment = createFoliageLightDirectionExperiment(
+  const createTreeFoliageLight = () => {
+    const foliageLight = createFoliageLightDirection(
       [
         ...trees.layer.children.map((treeRoot) => ({ kind: 'tree' as const, root: treeRoot })),
         ...shrubs.layer.children.map((bushRoot) => ({ kind: 'bush' as const, root: bushRoot })),
       ],
       treeFoliageHeightInfluence,
     );
-    experiment.setTreeColorMode('gradient-detail');
-    experiment.setDetailStrength(treeFoliageDetailStrength);
-    experiment.setTreePaletteStyle(treeFoliagePaletteStyle);
-    experiment.setForestOcclusion(foliageShadowOcclusionEnabled, foliageShadowOcclusionStrength);
-    experiment.setLightingResponse(treeFoliageLightingResponse);
-    experiment.updateLighting(
+    foliageLight.setTreeColorMode('gradient-detail');
+    foliageLight.setDetailStrength(treeFoliageDetailStrength);
+    foliageLight.setTreePaletteStyle(treeFoliagePaletteStyle);
+    foliageLight.setForestOcclusion(foliageShadowOcclusionEnabled, foliageShadowOcclusionStrength);
+    foliageLight.setLightingResponse(treeFoliageLightingResponse);
+    foliageLight.updateLighting(
       options.keyLight,
       options.fillLight,
       options.rimLight,
       treeEnvironmentLight,
     );
-    experiment.setActive(treeFoliageLightEnabled);
-    return experiment;
+    foliageLight.setActive(treeFoliageLightEnabled);
+    return foliageLight;
   };
-  let treeFoliageLightExperiment = createTreeFoliageLightExperiment();
+  let treeFoliageLight = createTreeFoliageLight();
   let terrainPaletteRevision = 0;
   let stylizedLightingFeatures: StylizedEnvironmentFeatures = {
     coreShadow: false,
@@ -1798,13 +1798,13 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
     );
     shrubs.lightingUpdates.forEach((updateLighting) => updateLighting());
     treeLightingUpdates.forEach((updateLighting) => updateLighting());
-    treeFoliageLightExperiment.updateLighting(
+    treeFoliageLight.updateLighting(
       options.keyLight,
       options.fillLight,
       options.rimLight,
       treeEnvironmentLight,
     );
-    treeFoliageLightExperiment.update();
+    treeFoliageLight.update();
     terrainSurface.lighting.keyDirection.value
       .copy(options.keyLight.position)
       .sub(options.keyLight.target.position)
@@ -1881,7 +1881,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
     },
     rebuildTrees(palette) {
       const visible = layers.trees.visible;
-      treeFoliageLightExperiment.dispose();
+      treeFoliageLight.dispose();
       disposeTree(trees.layer);
       layers.trees.clear();
       const nextTrees = createTrees(field, { ...options, palette }, generationProfile);
@@ -1890,7 +1890,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
       treeWindTargets = trees.windTargets;
       treeFoliageWindUpdates = trees.foliageWindUpdates;
       treeProviders = trees.gameplayTrees;
-      treeFoliageLightExperiment = createTreeFoliageLightExperiment();
+      treeFoliageLight = createTreeFoliageLight();
       layers.trees.add(trees.layer);
       canopyShafts.rebuild(root);
       layers.trees.visible = visible;
@@ -1899,13 +1899,13 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
       metrics.camphorTreePresets = trees.camphorPresetCount;
       metrics.willowTrees = trees.willowCount;
       treeLightingUpdates.forEach((updateLighting) => updateLighting());
-      treeFoliageLightExperiment.updateLighting(
+      treeFoliageLight.updateLighting(
         options.keyLight,
         options.fillLight,
         options.rimLight,
         treeEnvironmentLight,
       );
-      treeFoliageLightExperiment.update();
+      treeFoliageLight.update();
       finalGroundColorDirty = true;
     },
     updateWaterPalette(palette) {
@@ -1952,28 +1952,28 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
     },
     setTreeFoliageLightResponse(enabled) {
       treeFoliageLightEnabled = enabled;
-      treeFoliageLightExperiment.setActive(enabled);
+      treeFoliageLight.setActive(enabled);
     },
     setTreeFoliageHeightInfluence(value) {
       treeFoliageHeightInfluence = THREE.MathUtils.clamp(value, 0, 1);
-      treeFoliageLightExperiment.setHeightInfluence(treeFoliageHeightInfluence);
+      treeFoliageLight.setHeightInfluence(treeFoliageHeightInfluence);
     },
     setTreeFoliageDetailStrength(value) {
       treeFoliageDetailStrength = THREE.MathUtils.clamp(value, 0, 1);
-      treeFoliageLightExperiment.setDetailStrength(treeFoliageDetailStrength);
+      treeFoliageLight.setDetailStrength(treeFoliageDetailStrength);
     },
     setTreeFoliagePaletteStyle(style) {
       treeFoliagePaletteStyle = style;
-      treeFoliageLightExperiment.setTreePaletteStyle(treeFoliagePaletteStyle);
+      treeFoliageLight.setTreePaletteStyle(treeFoliagePaletteStyle);
     },
     setTreeFoliageLightingResponse(response) {
       treeFoliageLightingResponse = { ...treeFoliageLightingResponse, ...response };
-      treeFoliageLightExperiment.setLightingResponse(treeFoliageLightingResponse);
+      treeFoliageLight.setLightingResponse(treeFoliageLightingResponse);
     },
     setFoliageShadowOcclusion(enabled, strength) {
       foliageShadowOcclusionEnabled = enabled;
       foliageShadowOcclusionStrength = THREE.MathUtils.clamp(strength, 0, 1);
-      treeFoliageLightExperiment.setForestOcclusion(
+      treeFoliageLight.setForestOcclusion(
         foliageShadowOcclusionEnabled,
         foliageShadowOcclusionStrength,
       );
@@ -2054,7 +2054,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
       renderer.shadowMap.needsUpdate = previousShadowNeedsUpdate;
       finalGroundColorDirty = false;
     },
-    getTreeFoliageLightSnapshot: () => treeFoliageLightExperiment.getSnapshot(),
+    getTreeFoliageLightSnapshot: () => treeFoliageLight.getSnapshot(),
     setTerrainLightingFeatures(features) {
       terrainLightingFeatures = { ...terrainLightingFeatures, ...features };
       terrainSurface.lighting.slopeEnabled.value = terrainLightingFeatures.slopeLight ? 1 : 0;
@@ -2111,7 +2111,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
       updateWindTargets(treeWindTargets, elapsed, wind);
       shrubs.foliageWindUpdates.forEach((updateWind) => updateWind(elapsed, wind));
       treeFoliageWindUpdates.forEach((updateWind) => updateWind(elapsed, wind));
-      treeFoliageLightExperiment.update();
+      treeFoliageLight.update();
       if (camera) canopyShafts.update(elapsed, camera, options.keyLight, fog);
     },
     dispose() {
@@ -2120,7 +2120,7 @@ export const createWetlandStudy = async (options: WetlandStudyOptions): Promise<
       finalGroundColorTarget.dispose();
       layers.grass.remove(grass.object);
       grass.dispose();
-      treeFoliageLightExperiment.dispose();
+      treeFoliageLight.dispose();
       canopyShafts.dispose();
       disposeTree(root);
     },

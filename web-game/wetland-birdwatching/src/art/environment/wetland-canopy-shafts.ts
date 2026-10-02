@@ -116,7 +116,7 @@ export const createWetlandCanopyShafts = (): WetlandCanopyShafts => {
   let material: THREE.ShaderMaterial | null = null;
   let treeCount = 0;
   let instanceCount = 0;
-  let lastStudyRoot: THREE.Object3D | null = null;
+  let lastSceneRoot: THREE.Object3D | null = null;
   const origins: THREE.Vector3[] = [];
   const bounds = new THREE.Box3();
   const size = new THREE.Vector3();
@@ -198,13 +198,13 @@ export const createWetlandCanopyShafts = (): WetlandCanopyShafts => {
     mesh.visible = settings.enabled;
   };
 
-  const rebuild = (studyRoot: THREE.Object3D) => {
+  const rebuild = (sceneRoot: THREE.Object3D) => {
       disposeMesh();
-      lastStudyRoot = studyRoot;
+      lastSceneRoot = sceneRoot;
       treeCount = 0;
-      studyRoot.updateWorldMatrix(true, true);
+      sceneRoot.updateWorldMatrix(true, true);
       const treeRoots: THREE.Object3D[] = [];
-      studyRoot.traverse((object) => {
+      sceneRoot.traverse((object) => {
         if (object.name.startsWith('wetland-') && object.name.includes('-tree-')) treeRoots.push(object);
       });
       treeRoots.forEach((treeRoot, treeIndex) => {
@@ -278,8 +278,8 @@ export const createWetlandCanopyShafts = (): WetlandCanopyShafts => {
           material.uniforms.uForwardPower.value = settings.forwardScatter;
         }
       }
-      if (nextSettings.count !== undefined && lastStudyRoot) {
-        rebuild(lastStudyRoot);
+      if (nextSettings.count !== undefined && lastSceneRoot) {
+        rebuild(lastSceneRoot);
       } else if (nextSettings.width !== undefined) {
         buildMesh();
       }
@@ -288,7 +288,7 @@ export const createWetlandCanopyShafts = (): WetlandCanopyShafts => {
     dispose() {
       disposeMesh();
       treeCount = 0;
-      lastStudyRoot = null;
+      lastSceneRoot = null;
     },
   };
 };
