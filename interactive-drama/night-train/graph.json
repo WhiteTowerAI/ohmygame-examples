@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "title": "Last Train Home",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "entryNodeId": "platform",
+  "initialState": {
+    "boarded": false
+  },
+  "variables": {
+    "boarded": "Whether the player has boarded the night train"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "platform",
+      "title": "Platform",
+      "source": {
+        "html": "nodes/platform/index.html",
+        "css": "nodes/platform/style.css",
+        "javascript": "nodes/platform/node.js"
+      },
+      "assets": [],
+      "signals": [
+        {
+          "id": "board",
+          "label": "Board the train"
+        }
+      ]
+    },
+    {
+      "id": "carriage",
+      "title": "Carriage",
+      "source": {
+        "html": "nodes/carriage/index.html",
+        "css": "nodes/carriage/style.css",
+        "javascript": "nodes/carriage/node.js"
+      },
+      "assets": [],
+      "signals": [
+        {
+          "id": "continue",
+          "label": "Continue"
+        },
+        {
+          "id": "home",
+          "label": "Home",
+          "role": "navigation"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Last train home",
+      "source": {
+        "html": "nodes/home/index.html",
+        "css": "nodes/home/style.css",
+        "javascript": "nodes/home/node.js"
+      },
+      "assets": [],
+      "signals": [
+        {
+          "id": "home",
+          "label": "Home",
+          "role": "navigation"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "board-train",
+      "source": {
+        "nodeId": "platform",
+        "signal": "board"
+      },
+      "targetNodeId": "carriage",
+      "mode": "replace"
+    },
+    {
+      "id": "reach-home",
+      "source": {
+        "nodeId": "carriage",
+        "signal": "continue"
+      },
+      "targetNodeId": "home",
+      "mode": "replace"
+    },
+    {
+      "id": "carriage-home",
+      "source": {
+        "nodeId": "carriage",
+        "signal": "home"
+      },
+      "targetNodeId": "platform",
+      "mode": "replace"
+    },
+    {
+      "id": "home-home",
+      "source": {
+        "nodeId": "home",
+        "signal": "home"
+      },
+      "targetNodeId": "platform",
+      "mode": "replace"
+    }
+  ]
+}
