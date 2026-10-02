@@ -9,9 +9,9 @@ import type {
 // Local source mirror: Tools/threejs-grass-water-shaders/src/grass/.
 
 export type WetlandBoonaPlacementMode = 'grid' | 'jitter';
-export type WetlandBoonaGrassShape = 'legacy' | 'rounded';
+type WetlandBoonaGrassShape = 'legacy' | 'rounded';
 
-export type WetlandBoonaGrassSample = Readonly<{
+type WetlandBoonaGrassSample = Readonly<{
   height: number;
   meadow: number;
   growth?: number;
@@ -22,7 +22,7 @@ export type WetlandBoonaGrassSample = Readonly<{
   rootColor: THREE.ColorRepresentation;
 }>;
 
-export type WetlandBoonaGrassField = Readonly<{
+type WetlandBoonaGrassField = Readonly<{
   minX: number;
   maxX: number;
   minZ: number;
@@ -74,7 +74,7 @@ export type WetlandBoonaGrassRenderer = Readonly<{
   dispose: () => void;
 }>;
 
-export type WetlandBoonaGrassOptions = Readonly<{
+type WetlandBoonaGrassOptions = Readonly<{
   name: string;
   seed: number;
   bladeCount: number;

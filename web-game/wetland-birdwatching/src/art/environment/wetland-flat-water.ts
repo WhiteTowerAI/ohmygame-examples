@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 import type { WetlandWindFrame } from './wetland-weather';
 
-export type WetlandFlatWater = Readonly<{
+type WetlandFlatWater = Readonly<{
   mesh: THREE.Mesh<THREE.PlaneGeometry, THREE.ShaderMaterial>;
   setColors: (colors: NonNullable<WetlandFlatWaterOptions['colors']>) => void;
   update: (elapsed: number, wind: WetlandWindFrame) => void;
 }>;
 
-export type WetlandFlatWaterOptions = Readonly<{
+type WetlandFlatWaterOptions = Readonly<{
   center: THREE.Vector2;
   radius: THREE.Vector2;
   waterLevel: number;

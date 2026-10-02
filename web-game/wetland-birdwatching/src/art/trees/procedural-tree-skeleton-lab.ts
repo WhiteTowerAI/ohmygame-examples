@@ -25,7 +25,7 @@ import {
 
 export type ProceduralTreeFoliageRole = 'spur' | 'inner' | 'mid' | 'outer';
 
-export type ProceduralTreeSkeletonLabMode = 'baseline' | 'foliage';
+type ProceduralTreeSkeletonLabMode = 'baseline' | 'foliage';
 
 type GeneratedFoliageRole = ProceduralTreeFoliageRole | 'baseline';
 const foliageRoles: readonly ProceduralTreeFoliageRole[] = ['spur', 'inner', 'mid', 'outer'];
@@ -53,7 +53,7 @@ export type ProceduralTreeFoliageParameters = Readonly<{
   branchWrapLength: number;
 }>;
 
-export type ProceduralTreeBuildOptions = Readonly<{
+type ProceduralTreeBuildOptions = Readonly<{
   parameters?: ProceduralTreeParameters;
   foliage?: ProceduralTreeFoliageParameters;
   mode?: ProceduralTreeSkeletonLabMode;
@@ -64,7 +64,7 @@ export type ProceduralTreeBuildOptions = Readonly<{
   crownIntegrationEnabled?: boolean;
 }>;
 
-export type ProceduralTreeAuthoringState = Readonly<{
+type ProceduralTreeAuthoringState = Readonly<{
   generationVersion: ProceduralTreeGenerationVersion;
   parameters: ProceduralTreeParameters;
   foliage: ProceduralTreeFoliageParameters;

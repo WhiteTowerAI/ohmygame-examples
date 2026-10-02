@@ -12,12 +12,12 @@ export type JournalPhoto = Readonly<{
   entryId?: string;
 }>;
 
-export type JournalEntryProgress = Readonly<{
+type JournalEntryProgress = Readonly<{
   definition: JournalEntryDefinition;
   best?: JournalPhoto;
 }>;
 
-export type JournalPhotoResult = Readonly<{
+type JournalPhotoResult = Readonly<{
   photo: JournalPhoto;
   entry?: JournalEntryDefinition;
   // The photo filled an empty entry, or beat the entry's previous best.
@@ -25,7 +25,7 @@ export type JournalPhotoResult = Readonly<{
   improvedEntry: boolean;
 }>;
 
-export type JournalProgress = Readonly<{
+type JournalProgress = Readonly<{
   found: number;
   total: number;
   stars: number;

@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import type { WetlandRegionField } from './wetland-region-fields';
 import type { WetlandWindFrame } from './wetland-weather';
 
-export type WetlandFlowerField = Readonly<{
+type WetlandFlowerField = Readonly<{
   root: THREE.Group;
   count: number;
   update: (elapsed: number, wind: WetlandWindFrame) => void;

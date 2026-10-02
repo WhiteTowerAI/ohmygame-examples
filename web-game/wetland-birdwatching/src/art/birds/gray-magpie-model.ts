@@ -21,7 +21,7 @@ export type GrayMagpiePose = {
   beakOpen: number;
 };
 
-export type GrayMagpieParts = {
+type GrayMagpieParts = {
   body: THREE.Group;
   headGroup: THREE.Group;
   beakUpper: THREE.Mesh;
@@ -436,7 +436,7 @@ const attachGroupDetailOutlines = (
   meshes.forEach((mesh) => attachStylizedBirdDetailOutline(mesh, thickness));
 };
 
-export const grayMagpieNeutralPose = (): GrayMagpiePose => ({
+const grayMagpieNeutralPose = (): GrayMagpiePose => ({
   bodyX: 0,
   bodyY: 0,
   bodyZ: 0,

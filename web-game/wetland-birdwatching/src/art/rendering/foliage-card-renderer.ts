@@ -16,13 +16,13 @@ export type FoliagePalette = Readonly<{
   multiplier?: THREE.ColorRepresentation;
 }>;
 
-export type FoliageMaskMode = 'alpha' | 'sdf';
+type FoliageMaskMode = 'alpha' | 'sdf';
 export type FoliageRendererVisualMode = 'shape' | 'elemental' | 'shared';
 export type FoliageGrowthMode = 'upright' | 'outward' | 'random';
 
-export type FoliageWindDirection = Readonly<{ x: number; y: number }>;
+type FoliageWindDirection = Readonly<{ x: number; y: number }>;
 
-export const getStableFoliageOutwardRoll = (surfaceNormal: THREE.Vector3) => (
+const getStableFoliageOutwardRoll = (surfaceNormal: THREE.Vector3) => (
   Math.hypot(surfaceNormal.x, surfaceNormal.y) > 0.08
     ? Math.atan2(surfaceNormal.x, surfaceNormal.y)
     : 0

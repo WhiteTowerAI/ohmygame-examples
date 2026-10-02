@@ -2,7 +2,7 @@
 // field journal asks for, how photos are judged and when a bird counts as
 // startled. The bird AI itself is configured in src/gameplay/birds/species/.
 
-export type JournalSpecies = Readonly<{
+type JournalSpecies = Readonly<{
   id: string;
   name: string;
 }>;

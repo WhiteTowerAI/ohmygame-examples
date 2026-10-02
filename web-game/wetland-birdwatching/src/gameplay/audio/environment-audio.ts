@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 
-export type EnvironmentAudioLocation = 'wetland-path' | 'wetland-shore' | 'wetland-meadow';
+type EnvironmentAudioLocation = 'wetland-path' | 'wetland-shore' | 'wetland-meadow';
 type FootstepSurface = 'path' | 'grass';
 
-export type EnvironmentAudioUpdate = Readonly<{
+type EnvironmentAudioUpdate = Readonly<{
   time: number;
   delta: number;
   movementSpeed: number;
@@ -11,7 +11,7 @@ export type EnvironmentAudioUpdate = Readonly<{
   location: EnvironmentAudioLocation;
 }>;
 
-export type EnvironmentAudioSnapshot = Readonly<{
+type EnvironmentAudioSnapshot = Readonly<{
   contextState: AudioContextState;
   loaded: boolean;
   unlocked: boolean;

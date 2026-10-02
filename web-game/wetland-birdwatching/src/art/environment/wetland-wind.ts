@@ -8,7 +8,7 @@ export type WetlandWindFrame = Readonly<{
   sway: number;
 }>;
 
-export type WetlandWindSystem = Readonly<{
+type WetlandWindSystem = Readonly<{
   getStrength: () => number;
   getDriftTime: () => number;
   setStrength: (strength: number) => number;

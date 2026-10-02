@@ -5,7 +5,7 @@ type FoliagePlantKind = 'tree' | 'bush';
 export type FoliageTreeColorMode = 'gradient-detail' | 'card-bands' | 'continuous' | 'hard-bands';
 export type FoliageTreePaletteStyle = 'authored-three-color' | 'sakura-green';
 
-export type FoliagePlantSource = Readonly<{
+type FoliagePlantSource = Readonly<{
   kind: FoliagePlantKind;
   root: THREE.Object3D;
 }>;

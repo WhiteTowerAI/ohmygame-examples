@@ -14,7 +14,7 @@ import {
   type RegisteredHabitatNode,
 } from '../habitat/registry';
 
-export type BirdRuntimeSelectionSnapshot = Readonly<{
+type BirdRuntimeSelectionSnapshot = Readonly<{
   nodeId: string;
   score: number;
   observerDistance: number;
@@ -25,7 +25,7 @@ export type BirdRuntimeSelectionSnapshot = Readonly<{
   crossTree: boolean;
 }>;
 
-export type BirdRuntimeStateEvent = Readonly<{
+type BirdRuntimeStateEvent = Readonly<{
   sequence: number;
   previousState: string;
   state: string;
@@ -69,7 +69,7 @@ export type RuntimeBird = Readonly<{
   update: (time: number, delta: number, perception: BirdPerception, observer: THREE.Vector3) => void;
 }>;
 
-export type RuntimeBirdOptions<State extends string> = Readonly<{
+type RuntimeBirdOptions<State extends string> = Readonly<{
   habitatRegistry: HabitatRegistry;
   speciesId: string;
   label: string;

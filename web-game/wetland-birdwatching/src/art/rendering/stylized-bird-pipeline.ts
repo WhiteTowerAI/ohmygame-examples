@@ -6,7 +6,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { isStylizedBirdDetailOutline } from './stylized-bird-detail-outline';
 
-export type StylizedBirdPipeline = {
+type StylizedBirdPipeline = {
   registerBird: (root: THREE.Object3D) => () => void;
   setOutlineEnabled: (enabled: boolean) => void;
   isOutlineEnabled: () => boolean;

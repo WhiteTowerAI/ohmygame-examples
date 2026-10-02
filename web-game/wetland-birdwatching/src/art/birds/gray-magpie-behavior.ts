@@ -12,7 +12,7 @@ export type GrayMagpieState =
   | 'land'
   | 'preen';
 
-export type GrayMagpieHabitat = 'ground' | 'low' | 'high';
+type GrayMagpieHabitat = 'ground' | 'low' | 'high';
 
 export const grayMagpieStateDurationRanges: Record<GrayMagpieState, [number, number]> = {
   perch: [1.2, 2.5],
@@ -142,28 +142,4 @@ export const sampleGrayMagpiePose = (
     pose.beakOpen = 0.06;
   }
   return pose;
-};
-
-export const chooseGrayMagpieState = (
-  current: GrayMagpieState,
-  pressure: number,
-  habitat: GrayMagpieHabitat,
-  random: number,
-): GrayMagpieState => {
-  if (current === 'takeoff') return 'flight';
-  if (current === 'flight') return 'land';
-  if (current === 'land') return habitat === 'ground' ? 'patrol' : 'perch';
-  if (current === 'alarm') return pressure > 0.72 ? 'takeoff' : 'patrol';
-  if (pressure > 0.78) return 'takeoff';
-  if (pressure > 0.48) return 'alarm';
-  if (habitat === 'high') {
-    if (random < 0.28) return 'contact';
-    if (random < 0.52) return 'inspect';
-    if (random < 0.76) return 'patrol';
-    return 'perch';
-  }
-  if (random < 0.30) return 'inspect';
-  if (random < 0.58) return 'patrol';
-  if (random < 0.76) return 'preen';
-  return 'perch';
 };

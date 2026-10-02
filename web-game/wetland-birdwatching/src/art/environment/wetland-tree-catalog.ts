@@ -5,7 +5,7 @@ import {
   wetlandCamphorTreePresets,
 } from './wetland-tree-presets';
 
-export type WetlandTreeCatalogEntry = Readonly<{
+type WetlandTreeCatalogEntry = Readonly<{
   id: string;
   name: string;
   recipe: ProceduralTreeRecipe;
@@ -42,7 +42,7 @@ const cloneEntry = (entry: WetlandTreeCatalogEntry): WetlandTreeCatalogEntry => 
   recipe: cloneRecipe(entry.recipe),
 });
 
-export const createDefaultWetlandTreeCatalog = (): WetlandTreeCatalogEntry[] => (
+const createDefaultWetlandTreeCatalog = (): WetlandTreeCatalogEntry[] => (
   wetlandCamphorTreePresets.map((recipe, index) => ({
     id: recipe.id,
     name: wetlandCamphorTreePresetLabels[recipe.id] ?? recipe.id,
@@ -89,24 +89,3 @@ export const readWetlandTreeCatalog = (): WetlandTreeCatalogEntry[] => {
     return createDefaultWetlandTreeCatalog();
   }
 };
-
-export const writeWetlandTreeCatalog = (entries: readonly WetlandTreeCatalogEntry[]) => {
-  if (entries.length === 0 || !entries.every(isCatalogEntry)) {
-    throw new Error('Wetland tree catalog must contain at least one valid camphor recipe.');
-  }
-  const document: WetlandTreeCatalogDocument = {
-    schemaVersion: 1,
-    entries: entries.map(cloneEntry),
-  };
-  sessionStorage.setItem(storageKey, JSON.stringify(document));
-};
-
-export const resetWetlandTreeCatalog = () => {
-  if (typeof sessionStorage !== 'undefined') sessionStorage.removeItem(storageKey);
-  return createDefaultWetlandTreeCatalog();
-};
-
-export const createWetlandTreeCatalogEntryId = () => (
-  globalThis.crypto?.randomUUID?.()
-  ?? `wetland-tree-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
-);

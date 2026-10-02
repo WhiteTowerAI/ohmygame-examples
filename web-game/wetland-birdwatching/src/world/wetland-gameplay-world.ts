@@ -25,9 +25,9 @@ import type { EnvironmentLightingRig } from '../art/environment/environment-ligh
 import type { HabitatNode } from '../gameplay/birds/contracts';
 import { HabitatRegistry } from '../gameplay/habitat/registry';
 
-export type WetlandGameplayLocation = 'wetland-path' | 'wetland-shore' | 'wetland-meadow';
+type WetlandGameplayLocation = 'wetland-path' | 'wetland-shore' | 'wetland-meadow';
 
-export type WetlandGameplayWorld = Readonly<{
+type WetlandGameplayWorld = Readonly<{
   root: THREE.Group;
   study: Awaited<ReturnType<typeof createWetlandStudy>>;
   habitatRegistry: HabitatRegistry;

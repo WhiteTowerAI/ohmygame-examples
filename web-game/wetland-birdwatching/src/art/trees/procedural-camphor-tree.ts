@@ -24,7 +24,7 @@ import {
   type ProceduralTreeSkeleton,
 } from './procedural-tree-skeleton';
 
-export type ProceduralTreePerchAnchor = Readonly<{
+type ProceduralTreePerchAnchor = Readonly<{
   id: string;
   targetHeightRatio: number;
   preferredExposure: TreePerchExposure;
@@ -436,7 +436,7 @@ const createConnections = (
   return connections;
 };
 
-export const createProceduralTreePerchLayout = (
+const createProceduralTreePerchLayout = (
   skeleton: ProceduralTreeSkeleton,
   recipe: ProceduralTreeRecipe,
 ) => {
@@ -451,7 +451,7 @@ export const createProceduralTreePerchLayout = (
   };
 };
 
-export const getProceduralTreePerchSignature = (tree: TreeInstance) => tree.perches
+const getProceduralTreePerchSignature = (tree: TreeInstance) => tree.perches
   .map((perch) => `${perch.id}:${perch.branchId}@${perch.branchT.toFixed(6)}`)
   .join('|');
 

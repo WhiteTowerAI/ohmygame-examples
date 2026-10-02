@@ -15,7 +15,7 @@ import {
 } from './wetland-published-scene';
 
 export const sharedWetlandMapPreset = wetlandMapPresets['park-third'];
-export const sharedWetlandSemanticMapUrl = new URL('../../assets/maps/park-layout-semantic.png', import.meta.url).href;
+const sharedWetlandSemanticMapUrl = new URL('../../assets/maps/park-layout-semantic.png', import.meta.url).href;
 
 export const sharedWetlandGenerationDefaults = Object.freeze({
   params: unifiedWetlandRegionParams,
@@ -251,7 +251,7 @@ export const sharedWetlandAppearanceDefaults = Object.freeze({
   canopyShaftsForwardScatter: 2.2,
 });
 
-export const loadWetlandLayoutMapImage = async (
+const loadWetlandLayoutMapImage = async (
   layoutMap: WetlandLayoutMap,
   url = sharedWetlandSemanticMapUrl,
 ) => {
@@ -303,25 +303,6 @@ export const createSharedWetlandLayoutMap = async (
   );
   await loadWetlandLayoutMapImage(layoutMap);
   return layoutMap;
-};
-
-export const createSharedWetlandSourceLayoutMap = async () => {
-  const published = loadPublishedWetlandScene();
-  const detailLayout = published?.domain?.detailLayout;
-  if (published?.domain && detailLayout) {
-    const layoutMap = new WetlandLayoutMap(
-      detailLayout.columns,
-      detailLayout.rows,
-      published.domain.detailWorldWidth,
-      published.domain.detailWorldDepth,
-    );
-    const data = decodeWetlandLayout(detailLayout.data);
-    if (data.length === layoutMap.data.length) {
-      layoutMap.restore(data);
-      return layoutMap;
-    }
-  }
-  return createSharedWetlandLayoutMap(sharedWetlandMapPreset);
 };
 
 export const applySharedWetlandLighting = (

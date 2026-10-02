@@ -1,7 +1,7 @@
 // Contextual tutorial: one short instruction at a time, shown when it is
 // relevant and retired as soon as the player has done it.
 
-export type CoachContext = Readonly<{
+type CoachContext = Readonly<{
   touchMode: boolean;
   secondsMoved: number;
   birdNearby: boolean;
@@ -102,5 +102,3 @@ export const createCoach = (element: HTMLElement) => {
     },
   };
 };
-
-export type Coach = ReturnType<typeof createCoach>;

@@ -3,7 +3,7 @@ import { forestEdgePalette } from './forest-edge-palette';
 
 export type StylizedBushVariant = 'rounded' | 'open';
 
-export type StylizedBushOptions = Readonly<{
+type StylizedBushOptions = Readonly<{
   variant: StylizedBushVariant;
   seed: number;
   scale?: number;
@@ -356,26 +356,5 @@ export const createStylizedBush = (options: StylizedBushOptions) => {
   root.add(createEdgeLeaves(lobes, random, open));
 
   root.scale.setScalar(options.scale ?? 1);
-  return root;
-};
-
-export const createStylizedBushStudy = () => {
-  const root = new THREE.Group();
-  root.name = 'stylized-bush-leaf-cluster-study-v003';
-
-  const bush = createStylizedBush({ variant: 'rounded', seed: 7319, scale: 1.35 });
-  bush.rotation.y = -0.24;
-  root.add(bush);
-
-  const ground = new THREE.Mesh(
-    new THREE.CircleGeometry(1.10, 64),
-    new THREE.MeshToonMaterial({ color: forestEdgePalette.surface.grass }),
-  );
-  ground.name = 'stylized-bush-study-ground';
-  ground.rotation.x = -Math.PI / 2;
-  ground.position.y = -0.012;
-  ground.receiveShadow = true;
-  root.add(ground);
-
   return root;
 };

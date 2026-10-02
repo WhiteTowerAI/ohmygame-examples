@@ -17,7 +17,7 @@ type WetlandWeatherPreset = Readonly<{
   sky: WetlandSkyPreset;
 }>;
 
-export type WetlandWeatherSystem = Readonly<{
+type WetlandWeatherSystem = Readonly<{
   root: THREE.Group;
   getWeatherId: () => WetlandWeatherId;
   getLook: () => EnvironmentLook;
@@ -31,23 +31,6 @@ export type WetlandWeatherSystem = Readonly<{
   update: (elapsed: number, cameraPosition: THREE.Vector3, camera?: THREE.Camera) => WetlandWindFrame;
   dispose: () => void;
 }>;
-
-export const createWetlandWeatherLook = (baseLook: EnvironmentLook): EnvironmentLook => ({
-  ...baseLook,
-  background: '#75bded',
-  fog: { color: '#70b9e3', near: 130, far: 230 },
-  hemisphere: { skyColor: '#87ceeb', groundColor: '#788c35', intensity: 1.38 },
-  key: { color: '#fff4e6', intensity: 2.0, position: [-5.5, 10, 4.5] },
-  fill: { color: '#87ceeb', intensity: 0.6, position: [7, 4.5, -7] },
-  rim: { color: '#ffd7a3', intensity: 0.3, position: [7, 9, -10] },
-  material: {
-    ...baseLook.material,
-    litIntensity: 1.35,
-    shadowBaseStrength: 0.58,
-    shadowColorMix: 0.06,
-    bounceStrength: 0.54,
-  },
-});
 
 const makePreset = (
   id: WetlandWeatherId,

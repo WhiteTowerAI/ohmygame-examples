@@ -74,7 +74,7 @@ export type ProceduralTreeSkeleton = Readonly<{
   }>;
 }>;
 
-export type ProceduralBranchGeometryColorOptions = Readonly<{
+type ProceduralBranchGeometryColorOptions = Readonly<{
   baseColor: THREE.ColorRepresentation;
   foliageColor: THREE.ColorRepresentation;
   crownLobes: readonly ProceduralCrownLobe[];
@@ -355,7 +355,8 @@ const createPrimaryBranches = (
   for (let index = 0; index < parameters.primaryBranches; index += 1) {
     const isLeader = index < leaderCount;
     const isCentralLeader = denseV004 && index === 0;
-    const layoutT = (index + 0.35 + random() * 0.32) / parameters.primaryBranches;
+    // Consumes one value so the seeded sequence, and every tree shape, stays stable.
+    random();
     const parentT = isLeader
       ? denseV004
         ? THREE.MathUtils.clamp(

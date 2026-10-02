@@ -93,7 +93,7 @@ export type WetlandRegionField = Readonly<{
   waterDistanceAt: (x: number, z: number) => number;
 }>;
 
-export const defaultWetlandRegionParams: WetlandRegionParams = {
+const defaultWetlandRegionParams: WetlandRegionParams = {
   terrainSeed: 174,
   vegetationSeed: 913,
   macroNoiseAmplitude: 0.38,
@@ -163,16 +163,6 @@ const fbm = (x: number, z: number, seed: number, octaves = 4) => {
     frequency *= 2.03;
   }
   return total / normalization;
-};
-
-const warpedFbm = (x: number, z: number, seed: number, warp = 1) => {
-  const warpX = fbm(x + 11.3, z + 2.7, seed + 79, 3);
-  const warpZ = fbm(x + 5.9, z + 17.1, seed + 151, 3);
-  return fbm(
-    x + (warpX - 0.5) * warp,
-    z + (warpZ - 0.5) * warp,
-    seed,
-  );
 };
 
 export const createWetlandRegionField = (
@@ -706,12 +696,8 @@ export const createWetlandRegionField = (
       coverageMacro,
       coverageEdge,
       coverageDetail,
-      naturalCoverageMacro,
       coherentNaturalStructure,
     } = coverageAt(x, z);
-    const coverageSignal = naturalCoverageMacro * 0.78
-      + coverageEdge * 0.18
-      + coverageDetail * 0.04;
 
     const crossPath = Math.max(0, nearest.distance) / basePathWidth;
     const pathMapBase = 1 - smoothstep(-0.34, basePathWidth * 1.72, nearest.distance);

@@ -22,7 +22,7 @@ export type StylizedEnvironmentFeatures = Readonly<{
   groundBounce: boolean;
 }>;
 
-export type StylizedEnvironmentMaterialSystem = {
+type StylizedEnvironmentMaterialSystem = {
   createMaterial: (
     color: THREE.ColorRepresentation,
     options?: Readonly<{

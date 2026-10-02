@@ -49,7 +49,7 @@ const smooth01 = (value: number) => {
   return clamped * clamped * (3 - 2 * clamped);
 };
 
-export type BlackbirdVariant = 'adult' | 'juvenile';
+type BlackbirdVariant = 'adult' | 'juvenile';
 
 export const createBlackbird = (variant: BlackbirdVariant) => {
   const juvenile = variant === 'juvenile';
@@ -329,7 +329,7 @@ export const createBlackbird = (variant: BlackbirdVariant) => {
 };
 
 
-export type BlackbirdPose = {
+type BlackbirdPose = {
   bodyX: number; bodyY: number; bodyZ: number;
   headX: number; headY: number; headZ: number;
   tailX: number; tailY: number; tailZ: number;
@@ -337,7 +337,7 @@ export type BlackbirdPose = {
   leftLegX: number; rightLegX: number; beakOpen: number;
 };
 
-export type BlackbirdState =
+type BlackbirdState =
   | 'idle'
   | 'listen'
   | 'forage'
@@ -350,7 +350,7 @@ export type BlackbirdState =
   | 'perch'
   | 'sing'
   | 'preen';
-export const createNeutralBlackbirdPose = (): BlackbirdPose => ({
+const createNeutralBlackbirdPose = (): BlackbirdPose => ({
   bodyX: 0, bodyY: 0, bodyZ: 0,
   headX: 0, headY: 0, headZ: 0,
   tailX: 0, tailY: 0, tailZ: 0,

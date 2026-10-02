@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export type StylizedObjectShadowLook = Readonly<{
+type StylizedObjectShadowLook = Readonly<{
   shadowColor: THREE.ColorRepresentation;
   shadowBaseStrength: number;
   shadowColorMix: number;
@@ -11,7 +11,7 @@ export type StylizedObjectShadowLook = Readonly<{
   coreShadowHigh: number;
 }>;
 
-export type StylizedObjectShadowFeatures = Readonly<{
+type StylizedObjectShadowFeatures = Readonly<{
   enabled: boolean;
   coreShadow: boolean;
   dropShadow: boolean;

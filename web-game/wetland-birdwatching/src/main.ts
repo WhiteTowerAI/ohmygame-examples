@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { createReferenceCharacter, updateReferenceCharacterWalk } from './art/characters/birdwatcher';
 import { applyBlackbirdPose, createBlackbird, sampleBlackbirdPose } from './art/birds/blackbird';
 import { applyGrayMagpiePose, createGrayMagpie } from './art/birds/gray-magpie-model';
@@ -39,53 +38,6 @@ const gameRendering = createGameRendering(canvas);
 gameRendering.resize(window.innerWidth, window.innerHeight, gameplayPixelRatio());
 const { scene, camera } = gameRendering;
 
-const toon = (color: THREE.ColorRepresentation) => new THREE.MeshToonMaterial({ color });
-const addMesh = (
-  parent: THREE.Object3D,
-  geometry: THREE.BufferGeometry,
-  material: THREE.Material,
-  position = new THREE.Vector3(),
-  scale = new THREE.Vector3(1, 1, 1),
-) => {
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.copy(position);
-  mesh.scale.copy(scale);
-  mesh.castShadow = true;
-  mesh.receiveShadow = true;
-  parent.add(mesh);
-  return mesh;
-};
-
-const cylinderBetween = (
-  parent: THREE.Object3D,
-  start: THREE.Vector3,
-  end: THREE.Vector3,
-  radius: number,
-  color: THREE.ColorRepresentation,
-) => {
-  const delta = end.clone().sub(start);
-  const mesh = addMesh(parent, new THREE.CylinderGeometry(radius * 0.7, radius, delta.length(), 7), toon(color));
-  mesh.position.copy(start).add(end).multiplyScalar(0.5);
-  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize());
-  return mesh;
-};
-
-const taperedCylinderBetween = (
-  parent: THREE.Object3D,
-  start: THREE.Vector3,
-  end: THREE.Vector3,
-  startRadius: number,
-  endRadius: number,
-  segments: number,
-  material: THREE.Material,
-) => {
-  const delta = end.clone().sub(start);
-  const mesh = addMesh(parent, new THREE.CylinderGeometry(endRadius, startRadius, delta.length(), segments), material);
-  mesh.position.copy(start).add(end).multiplyScalar(0.5);
-  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize());
-  return mesh;
-};
-
 const parkWorld = await createWetlandGameplayWorld({
   scene,
   renderer: gameRendering.renderer,
@@ -115,147 +67,6 @@ canvas.dataset.airWallProbe = [
 gameRendering.setStylizedOutlineEnabled(false);
 const { groundLeaves, habitatRegistry } = parkWorld;
 
-const createDenseCanopyTree = () => {
-  const group = new THREE.Group();
-  const bark = '#654b3f';
-  cylinderBetween(group, new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 2.7, 0), 0.28, bark);
-  const branches = [
-    [new THREE.Vector3(0, 1.8, 0), new THREE.Vector3(-0.8, 3.5, 0.15)],
-    [new THREE.Vector3(0, 2.0, 0), new THREE.Vector3(0.9, 3.8, -0.25)],
-    [new THREE.Vector3(0, 2.4, 0), new THREE.Vector3(0.2, 4.2, 0.2)],
-  ];
-  branches.forEach(([a, b]) => cylinderBetween(group, a, b, 0.16, bark));
-
-  const foliage = [
-    [-1.0, 3.45, 0.1, 1.15], [0.1, 3.65, 0, 1.3], [1.05, 3.65, -0.2, 1.1],
-    [-0.45, 4.25, 0.2, 1.0], [0.7, 4.35, 0.1, 1.05], [0.2, 4.8, -0.15, 0.9],
-  ];
-  foliage.forEach(([x, y, z, s], index) => {
-    const color = index % 2 ? '#365f3f' : '#426d46';
-    addMesh(group, new THREE.IcosahedronGeometry(0.72, 1), toon(color), new THREE.Vector3(x, y, z), new THREE.Vector3(s, s * 0.72, s));
-  });
-  return group;
-};
-
-const createClusteredCharacter = () => {
-  const group = new THREE.Group();
-  const hair = toon('#713044');
-  const skin = toon('#d9a680');
-  const coat = toon('#8fa390');
-  const pants = toon('#22365b');
-  const binocularBody = toon('#17625d');
-  const binocularDark = toon('#123a3a');
-
-  const roundedBox = (width: number, height: number, depth: number, radius = 0.07) =>
-    new RoundedBoxGeometry(width, height, depth, 3, radius);
-
-  // Build a genuinely hollow hair shell: a shallow back volume plus a front
-  // crown/frame. The face sits inside the opening, behind every front hair edge.
-  addMesh(group, roundedBox(0.96, 1.02, 0.26, 0.20), hair, new THREE.Vector3(0, 1.31, -0.23));
-  addMesh(group, roundedBox(0.96, 0.32, 0.58, 0.16), hair, new THREE.Vector3(0, 1.66, 0.03));
-  addMesh(group, roundedBox(0.45, 0.36, 0.12, 0.018), skin, new THREE.Vector3(0, 1.33, 0.235));
-
-  const featureMaterial = toon('#3c3032');
-  [-1, 1].forEach((side) => {
-    addMesh(
-      group,
-      roundedBox(0.105, 0.026, 0.018, 0.007),
-      featureMaterial,
-      new THREE.Vector3(side * 0.12, 1.42, 0.302),
-    );
-    addMesh(
-      group,
-      roundedBox(0.034, 0.13, 0.018, 0.009),
-      featureMaterial,
-      new THREE.Vector3(side * 0.12, 1.305, 0.302),
-    );
-  });
-
-  // The two heavy side locks are part of the head silhouette, rather than a
-  // separate neck-length hairstyle or a rear ponytail.
-  const sideHairShape = new THREE.Shape();
-  sideHairShape.moveTo(0.29, 1.37);
-  sideHairShape.lineTo(0.47, 1.33);
-  sideHairShape.lineTo(0.50, 1.13);
-  sideHairShape.lineTo(0.52, 1.00);
-  sideHairShape.lineTo(0.38, 0.76);
-  sideHairShape.lineTo(0.29, 1.03);
-  sideHairShape.closePath();
-  const sideHairGeometry = new THREE.ExtrudeGeometry(sideHairShape, {
-    depth: 0.44,
-    bevelEnabled: true,
-    bevelSegments: 1,
-    bevelSize: 0.025,
-    bevelThickness: 0.018,
-    curveSegments: 1,
-  });
-  [-1, 1].forEach((side) => {
-    addMesh(
-      group,
-      sideHairGeometry,
-      hair,
-      new THREE.Vector3(0, 0, -0.13),
-      new THREE.Vector3(side, 1, 1),
-    );
-  });
-
-  addMesh(group, roundedBox(0.66, 0.46, 0.42, 0.075), coat, new THREE.Vector3(0, 0.63, 0));
-
-  [-1, 1].forEach((side) => {
-    // Sleeve and hand share one rotated shoulder group, keeping each arm a
-    // continuous rectangular limb with the hand directly on its flat end.
-    const arm = new THREE.Group();
-    arm.position.set(side * 0.33, 0.81, 0);
-    arm.rotation.z = side * 0.30;
-    group.add(arm);
-    addMesh(arm, new THREE.BoxGeometry(0.25, 0.38, 0.26), coat, new THREE.Vector3(0, -0.17, 0));
-    addMesh(arm, new THREE.BoxGeometry(0.25, 0.13, 0.26), skin, new THREE.Vector3(0, -0.415, 0.006));
-
-    // One uninterrupted short leg block: no knee, ankle, or stacked shoe part.
-    addMesh(group, roundedBox(0.28, 0.36, 0.31, 0.045), pants, new THREE.Vector3(side * 0.15, 0.18, 0.025));
-  });
-
-  const binoculars = new THREE.Group();
-  binoculars.position.set(0, 0.60, 0.255);
-  binoculars.scale.setScalar(0.84);
-  group.add(binoculars);
-  [-0.075, 0.075].forEach((x) => {
-    addMesh(
-      binoculars,
-      new THREE.CylinderGeometry(0.064, 0.078, 0.22, 8),
-      binocularBody,
-      new THREE.Vector3(x, 0, 0),
-      new THREE.Vector3(1, 1, 0.82),
-    );
-    addMesh(
-      binoculars,
-      new THREE.CylinderGeometry(0.08, 0.08, 0.035, 8),
-      binocularDark,
-      new THREE.Vector3(x, -0.112, 0),
-      new THREE.Vector3(1, 1, 0.82),
-    );
-  });
-  addMesh(
-    binoculars,
-    new THREE.BoxGeometry(0.09, 0.08, 0.08),
-    binocularBody,
-    new THREE.Vector3(0, 0.025, 0),
-  );
-  [-1, 1].forEach((side) => {
-    taperedCylinderBetween(
-      group,
-      new THREE.Vector3(side * 0.15, 0.83, 0.19),
-      new THREE.Vector3(side * 0.063, 0.71, 0.27),
-      0.012,
-      0.012,
-      6,
-      binocularDark,
-    );
-  });
-
-  return group;
-};
-
 const characterVisualScale = 1.35;
 const blackbirdVisualScale = 0.61;
 const grayMagpieVisualScale = 0.71;
@@ -266,8 +77,6 @@ character.scale.setScalar(characterVisualScale);
 character.position.copy(parkWorld.spawn);
 character.rotation.y = characterSceneYaw;
 scene.add(character);
-
-let activeCharacterAnimation = 'procedural-idle';
 
 const blackbirdCount = 10;
 const wetlandGroundNodes = habitatRegistry.getProviderNodes('wetland-floor')
@@ -830,7 +639,6 @@ const updateGameplay = (delta: number, time: number) => {
   if (!inputActive && gameplayVelocity.lengthSq() < 0.0004) gameplayVelocity.set(0, 0, 0);
   const actualSpeed = gameplayVelocity.length();
   const moving = actualSpeed > 0.025;
-  activeCharacterAnimation = moving ? (actualSpeed > 2.5 ? 'procedural-run' : 'procedural-walk') : 'procedural-idle';
   if (moving) {
     gameplayPreviousPosition.copy(character.position);
     character.position.addScaledVector(gameplayVelocity, delta);

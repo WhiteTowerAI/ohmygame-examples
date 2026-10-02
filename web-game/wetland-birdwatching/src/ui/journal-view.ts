@@ -34,7 +34,7 @@ const photoFigure = (photo: JournalPhoto) => {
   return figure;
 };
 
-export type JournalViewElements = Readonly<{
+type JournalViewElements = Readonly<{
   progressTitle: HTMLElement;
   stats: HTMLElement;
   checklist: HTMLElement;
@@ -88,7 +88,7 @@ export const renderJournal = (elements: JournalViewElements, journal: FieldJourn
   elements.photoGrid.replaceChildren(...[...photos].reverse().map(photoFigure));
 };
 
-export type SummaryElements = Readonly<{
+type SummaryElements = Readonly<{
   root: HTMLElement;
   kicker: HTMLElement;
   title: HTMLElement;

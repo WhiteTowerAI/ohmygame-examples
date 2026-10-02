@@ -15,7 +15,7 @@ import {
   type BinocularDepthOfFieldSnapshot,
 } from './binocular-depth-of-field';
 
-export type EnvironmentAppearanceState = Readonly<{
+type EnvironmentAppearanceState = Readonly<{
   presetId: EnvironmentLookId;
   hemisphereIntensity: number;
   keyIntensity: number;
@@ -29,7 +29,7 @@ export type EnvironmentAppearanceState = Readonly<{
   acesEnabled: boolean;
 }>;
 
-export type EnvironmentAppearanceControls = {
+type EnvironmentAppearanceControls = {
   getState: () => EnvironmentAppearanceState;
   applyPreset: (id: EnvironmentLookId) => EnvironmentAppearanceState;
   setHemisphereIntensity: (value: number) => EnvironmentAppearanceState;
@@ -44,7 +44,7 @@ export type EnvironmentAppearanceControls = {
   reset: () => EnvironmentAppearanceState;
 };
 
-export type GameRendering = {
+type GameRendering = {
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;

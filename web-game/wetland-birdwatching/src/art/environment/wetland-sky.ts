@@ -21,7 +21,7 @@ export type WetlandSkyPreset = Readonly<{
   cloudRimColor: THREE.ColorRepresentation;
 }>;
 
-export type WetlandSky = Readonly<{
+type WetlandSky = Readonly<{
   root: THREE.Group;
   sunDirection: THREE.Vector3;
   applyPreset: (preset: WetlandSkyPreset) => void;

@@ -23,7 +23,7 @@ export type BirdAgentSnapshot<State extends string> = Readonly<{
   drives: Readonly<Record<string, number>>;
 }>;
 
-export type BirdAgentOptions<State extends string> = Readonly<{
+type BirdAgentOptions<State extends string> = Readonly<{
   policy: BirdSpeciesPolicy<State>;
   initialState: State;
   initialHabitatKind: HabitatKind;

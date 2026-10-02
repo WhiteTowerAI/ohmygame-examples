@@ -3,7 +3,7 @@ import type { HabitatLevel } from './contracts';
 
 export type BirdMotionKind = 'still' | 'ground-step' | 'takeoff' | 'flight' | 'land';
 
-export type BirdPresentationOptions<State extends string> = Readonly<{
+type BirdPresentationOptions<State extends string> = Readonly<{
   root: THREE.Group;
   motionByState: Partial<Readonly<Record<State, BirdMotionKind>>>;
   applyPose: (state: State, cycle: number, time: number, delta: number, habitatLevel: HabitatLevel) => void;

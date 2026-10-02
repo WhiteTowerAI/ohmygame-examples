@@ -1,6 +1,5 @@
 import type {
   BirdDecision,
-  BirdDecisionContext,
   BirdSpeciesPolicy,
   ObserverPressureRules,
 } from '../contracts';
@@ -31,7 +30,7 @@ export const blackbirdPressureRules: ObserverPressureRules = {
   ambientAttentionPressure: 0.02,
 };
 
-export const blackbirdEncounterRules = {
+const blackbirdEncounterRules = {
   alertPressure: 0.50,
   flushPressure: 0.82,
   hardFlushDistance: 2.4,
@@ -39,13 +38,13 @@ export const blackbirdEncounterRules = {
   rushApproachSpeed: 2.4,
 } as const;
 
-export const blackbirdStateLabels: Record<BlackbirdState, string> = {
+const blackbirdStateLabels: Record<BlackbirdState, string> = {
   idle: 'Resting on the ground', listen: 'Listening', forage: 'Foraging', peck: 'Pecking', hop: 'Hopping',
   alert: 'Alert', takeoff: 'Taking off', flight: 'In flight', land: 'Landing',
   perch: 'Perched', sing: 'Singing', preen: 'Preening',
 };
 
-export const blackbirdStateDurationRanges: Record<BlackbirdState, readonly [number, number]> = {
+const blackbirdStateDurationRanges: Record<BlackbirdState, readonly [number, number]> = {
   idle: [1.0, 2.1], listen: [0.45, 0.8], forage: [1.2, 2.2], peck: [0.32, 0.55],
   hop: [0.28, 0.42], alert: [0.38, 0.62], takeoff: [0.28, 0.42], flight: [1.05, 1.45],
   land: [0.3, 0.48], perch: [1.2, 2.5], sing: [1.8, 3.0], preen: [1.0, 1.8],

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export type StylizedBirdMaterialParameters = Omit<THREE.MeshToonMaterialParameters, 'color'> & {
+type StylizedBirdMaterialParameters = Omit<THREE.MeshToonMaterialParameters, 'color'> & {
   stylizedShading?: boolean;
   shadeColor?: THREE.ColorRepresentation;
   shadeStrength?: number;
@@ -16,10 +16,6 @@ const defaultShadeTint = new THREE.Color('#9ca6ad');
 
 const keyWorldPosition = new THREE.Vector3();
 const targetWorldPosition = new THREE.Vector3();
-
-export const setStylizedBirdShadingEnabled = (enabled: boolean) => {
-  sharedUniforms.enabled.value = enabled ? 1 : 0;
-};
 
 export const updateStylizedBirdKeyLight = (
   light: THREE.DirectionalLight,

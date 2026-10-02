@@ -12,9 +12,9 @@ import type { WetlandSkyVersion, WetlandWeatherId } from './wetland-weather';
 import type { WetlandStudyLayer, WetlandStudyPalette } from './wetland-study';
 
 export const wetlandMinimumSunElevation = 21;
-export const wetlandPublishedSceneStorageKey = 'bird.wetland.published-scene.v1';
+const wetlandPublishedSceneStorageKey = 'bird.wetland.published-scene.v1';
 
-export type WetlandPublishedLight = Readonly<{
+type WetlandPublishedLight = Readonly<{
   enabled: boolean;
   color: string;
   groundColor?: string;
@@ -22,7 +22,7 @@ export type WetlandPublishedLight = Readonly<{
   position: readonly [number, number, number];
 }>;
 
-export type WetlandPublishedAppearance = Readonly<{
+type WetlandPublishedAppearance = Readonly<{
   shadowStrength: number;
   groundDappleEnabled: boolean;
   groundDappleStrength: number;
@@ -77,7 +77,7 @@ export type WetlandPublishedAppearance = Readonly<{
   canopyShaftsForwardScatter: number;
 }>;
 
-export type WetlandPublishedScene = Readonly<{
+type WetlandPublishedScene = Readonly<{
   schemaVersion: 1 | 2;
   savedAt: string;
   mapPresetId: WetlandMapPresetId;
@@ -113,15 +113,6 @@ export type WetlandPublishedScene = Readonly<{
   appearance: WetlandPublishedAppearance;
 }>;
 
-export const encodeWetlandLayout = (data: Uint8Array) => {
-  let binary = '';
-  const chunkSize = 0x8000;
-  for (let offset = 0; offset < data.length; offset += chunkSize) {
-    binary += String.fromCharCode(...data.subarray(offset, offset + chunkSize));
-  }
-  return btoa(binary);
-};
-
 export const decodeWetlandLayout = (data: string) => {
   const binary = atob(data);
   const result = new Uint8Array(binary.length);
@@ -129,10 +120,6 @@ export const decodeWetlandLayout = (data: string) => {
     result[index] = binary.charCodeAt(index);
   }
   return result;
-};
-
-export const savePublishedWetlandScene = (scene: WetlandPublishedScene) => {
-  localStorage.setItem(wetlandPublishedSceneStorageKey, JSON.stringify(scene));
 };
 
 export const loadPublishedWetlandScene = (): WetlandPublishedScene | null => {

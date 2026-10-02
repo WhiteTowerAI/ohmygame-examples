@@ -1,4 +1,4 @@
-export type PlayerControlFrame = Readonly<{
+type PlayerControlFrame = Readonly<{
   pointerActive: boolean;
   moveForward: number;
   moveRight: number;
@@ -10,7 +10,7 @@ export type PlayerControlFrame = Readonly<{
   touchMode: boolean;
 }>;
 
-export type PlayerInputElements = Readonly<{
+type PlayerInputElements = Readonly<{
   focusRange: HTMLInputElement;
   touchRoot: HTMLElement;
   movePad: HTMLElement;
@@ -19,7 +19,7 @@ export type PlayerInputElements = Readonly<{
   captureButton: HTMLButtonElement;
 }>;
 
-export type PlayerInputOptions = Readonly<{
+type PlayerInputOptions = Readonly<{
   canvas: HTMLCanvasElement;
   elements: PlayerInputElements;
   isBlocked: () => boolean;
@@ -31,7 +31,7 @@ export type PlayerInputOptions = Readonly<{
   onControlStateChange: (active: boolean, gameStarted: boolean) => void;
 }>;
 
-export interface PlayerInputController {
+interface PlayerInputController {
   getFrame(): PlayerControlFrame;
   start(): void;
   setBinocularRaised(raised: boolean): void;

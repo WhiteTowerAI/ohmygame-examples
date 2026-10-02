@@ -1,6 +1,6 @@
 import type { BirdPerception, ObserverPressureRules } from './contracts';
 
-export type BirdPerceptionInput = Readonly<{
+type BirdPerceptionInput = Readonly<{
   observerDistance: number;
   observerApproachSpeed: number;
   observerFacingDot: number;

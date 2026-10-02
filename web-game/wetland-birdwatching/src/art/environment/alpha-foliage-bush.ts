@@ -9,7 +9,7 @@ import {
 import { createStylizedBush, type StylizedBushVariant } from './stylized-bush';
 import { createFoliageCardRenderer, type FoliagePalette } from '../rendering/foliage-card-renderer';
 
-export type AlphaFoliageBushOptions = Readonly<{
+type AlphaFoliageBushOptions = Readonly<{
   variant: StylizedBushVariant;
   seed: number;
   palette?: FoliagePalette;

@@ -4,7 +4,7 @@ import { makeSkyNoiseTextures, SKY_FRAG, SKY_VERT } from '../../vendor/sakura-id
 import type { WetlandSkyPreset } from './wetland-sky';
 import type { WetlandDayLighting } from './wetland-shared-world';
 
-export type WetlandSakuraIdleSky = Readonly<{
+type WetlandSakuraIdleSky = Readonly<{
   root: THREE.Group;
   sunDirection: THREE.Vector3;
   applyPreset: (preset: WetlandSkyPreset) => void;

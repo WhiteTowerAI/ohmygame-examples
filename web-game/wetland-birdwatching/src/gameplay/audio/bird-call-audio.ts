@@ -3,18 +3,18 @@ import type { HabitatKind } from '../birds/contracts';
 
 type BirdCallKind = 'contact' | 'song' | 'alarm';
 
-export type BirdCallSourceUpdate = Readonly<{
+type BirdCallSourceUpdate = Readonly<{
   sourceId: string;
   state: string;
   habitatKind: HabitatKind;
 }>;
 
-export type BirdCallAudioUpdate = Readonly<{
+type BirdCallAudioUpdate = Readonly<{
   time: number;
   sources: readonly BirdCallSourceUpdate[];
 }>;
 
-export type BirdCallAudioSnapshot = Readonly<{
+type BirdCallAudioSnapshot = Readonly<{
   contextState: AudioContextState;
   loaded: boolean;
   playing: boolean;
@@ -101,7 +101,6 @@ export const createBirdCallAudio = (options: BirdCallAudioOptions) => {
   let lastCallDistance: number | undefined;
   let lastClipIndex: number | undefined;
   let activeHabitatKind: HabitatKind | undefined;
-  let activeState = '';
   let eligibleSourceCount = 0;
   let globalCooldownUntil = 0;
   let callCount = 0;
@@ -203,7 +202,6 @@ export const createBirdCallAudio = (options: BirdCallAudioOptions) => {
         if (emitter.isPlaying) emitter.stop();
         activeSourceId = undefined;
         activeHabitatKind = undefined;
-        activeState = '';
         return;
       }
       const due = sources
@@ -225,7 +223,6 @@ export const createBirdCallAudio = (options: BirdCallAudioOptions) => {
       play(due.source.sourceId, due.kind);
       activeSourceId = due.source.sourceId;
       activeHabitatKind = due.source.habitatKind;
-      activeState = due.source.state;
       due.schedule.cooldownUntil = time + cooldownFor(due.kind);
       due.schedule.nextCallAt = undefined;
       globalCooldownUntil = time + (due.kind === 'alarm' ? 1.4 : 6 + random() * 4);

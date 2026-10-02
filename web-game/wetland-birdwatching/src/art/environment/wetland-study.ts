@@ -54,7 +54,7 @@ export type WetlandStudyLayer =
   | 'trees'
   | 'candidates';
 
-export type WetlandStudyMetrics = Readonly<{
+type WetlandStudyMetrics = Readonly<{
   grassBlades: number;
   flowers: number;
   shrubs: number;
@@ -66,7 +66,7 @@ export type WetlandStudyMetrics = Readonly<{
   terrainTriangles: number;
 }>;
 
-export type WetlandTerrainLightingFeatures = Readonly<{
+type WetlandTerrainLightingFeatures = Readonly<{
   slopeLight: boolean;
   slopeStrength: number;
   selfShadow: boolean;
@@ -79,7 +79,7 @@ export type WetlandTerrainLightingFeatures = Readonly<{
   contactStrength: number;
 }>;
 
-export type WetlandStudy = Readonly<{
+type WetlandStudy = Readonly<{
   root: THREE.Group;
   field: WetlandRegionField;
   treeProviders: readonly WetlandTreeProvider[];
@@ -120,7 +120,7 @@ export type WetlandStudy = Readonly<{
   dispose: () => void;
 }>;
 
-export type WetlandStudyGrassUpdate = Readonly<{
+type WetlandStudyGrassUpdate = Readonly<{
   params: WetlandRegionParams;
   grassDistribution: WetlandGrassDistribution;
   grassShape: WetlandGrassShape;
@@ -174,7 +174,7 @@ type WetlandWindTarget = Readonly<{
   amplitude: number;
 }>;
 
-export type WetlandStudyOptions = Readonly<{
+type WetlandStudyOptions = Readonly<{
   look: EnvironmentLook;
   hemisphereLight: THREE.HemisphereLight;
   keyLight: THREE.DirectionalLight;
@@ -192,7 +192,7 @@ export type WetlandStudyOptions = Readonly<{
   generationProfile?: WetlandStudyGenerationProfile;
 }>;
 
-export type WetlandTreeProvider = Readonly<{
+type WetlandTreeProvider = Readonly<{
   providerId: string;
   tree: TreeInstance;
 }>;
@@ -226,33 +226,6 @@ export type WetlandStudyPalette = {
   waterBedDeep: string;
 };
 
-export const legacyWetlandStudyPalette: WetlandStudyPalette = {
-  grassShadow: '#3e6417',
-  grassMid: '#557d24',
-  grassSun: '#75a631',
-  grassTransition: '#7da15f',
-  soil: '#ad9268',
-  soilLight: '#c7ad7b',
-  path: '#9c805a',
-  mud: '#a68d70',
-  bladeBase: '#557d24',
-  bladeTip: '#75a631',
-  bushShadow: '#3e6417',
-  bushMid: '#557d24',
-  bushHighlight: '#75a631',
-  bushStem: '#735b3f',
-  treeShadow: '#3e6417',
-  treeMid: '#557d24',
-  treeHighlight: '#75a631',
-  treeTrunk: '#735b3f',
-  waterDeep: '#72adb8',
-  waterMid: '#72cfc4',
-  waterShallow: '#e8aa5d',
-  waterRipple: '#edf5dd',
-  waterBedShallow: '#d8ae74',
-  waterBedDeep: '#84b8ac',
-};
-
 export const elementalSpringWetlandStudyPalette: WetlandStudyPalette = {
   grassShadow: '#5fa947',
   grassMid: '#92c256',
@@ -279,38 +252,6 @@ export const elementalSpringWetlandStudyPalette: WetlandStudyPalette = {
   waterBedShallow: '#d8ae74',
   waterBedDeep: '#84b8ac',
 };
-
-// Direct wetland mapping of environment-material-study-v001's
-// forestEdgePalette. Water has no counterpart on that stage and retains the
-// existing restrained teal family.
-export const referenceMaterialStudyWetlandPalette: WetlandStudyPalette = {
-  grassShadow: '#76985f',
-  grassMid: '#8db06b',
-  grassSun: '#a2ba78',
-  grassTransition: '#86a36a',
-  soil: '#806b59',
-  soilLight: '#9a8872',
-  path: '#aaa07e',
-  mud: '#6d5b50',
-  bladeBase: '#6f984e',
-  bladeTip: '#86ad58',
-  bushShadow: '#4f7f4b',
-  bushMid: '#5d9053',
-  bushHighlight: '#6ca15e',
-  bushStem: '#805f50',
-  treeShadow: '#47794c',
-  treeMid: '#568a54',
-  treeHighlight: '#76aa67',
-  treeTrunk: '#805f50',
-  waterDeep: '#527f8c',
-  waterMid: '#70aaa2',
-  waterShallow: '#c99d61',
-  waterRipple: '#e1ead7',
-  waterBedShallow: '#a58f70',
-  waterBedDeep: '#789d96',
-};
-
-export const defaultWetlandStudyPalette = legacyWetlandStudyPalette;
 
 const fixedPalette = {
   rock: ['#d6b66f', '#e6c786', '#7d6f39'],

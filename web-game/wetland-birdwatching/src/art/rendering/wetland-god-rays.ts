@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export type WetlandGodRaySettings = Readonly<{
+type WetlandGodRaySettings = Readonly<{
   enabled: boolean;
   strength: number;
   threshold: number;
@@ -12,13 +12,13 @@ export type WetlandGodRaySettings = Readonly<{
   antiScale: number;
 }>;
 
-export type WetlandGodRaySnapshot = WetlandGodRaySettings & Readonly<{
+type WetlandGodRaySnapshot = WetlandGodRaySettings & Readonly<{
   sunUv: readonly [number, number];
   antiAmount: number;
   frameGate: number;
 }>;
 
-export type WetlandGodRays = Readonly<{
+type WetlandGodRays = Readonly<{
   render: (
     renderer: THREE.WebGLRenderer,
     scene: THREE.Scene,

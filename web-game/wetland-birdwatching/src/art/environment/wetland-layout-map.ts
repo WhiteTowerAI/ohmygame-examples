@@ -1,6 +1,6 @@
-export type WetlandLayoutSemantic = 'grass' | 'water' | 'path' | 'highland' | 'forest' | 'shrubland';
+type WetlandLayoutSemantic = 'grass' | 'water' | 'path' | 'highland' | 'forest' | 'shrubland';
 
-export const wetlandLayoutPalette: Readonly<Record<WetlandLayoutSemantic, string>> = {
+const wetlandLayoutPalette: Readonly<Record<WetlandLayoutSemantic, string>> = {
   grass: '#6e9d47',
   water: '#3c92c8',
   path: '#d5ab69',
@@ -9,27 +9,19 @@ export const wetlandLayoutPalette: Readonly<Record<WetlandLayoutSemantic, string
   shrubland: '#7b6a8e',
 };
 
-export const wetlandLayoutWorld = {
+const wetlandLayoutWorld = {
   width: 120,
   depth: 84,
   columns: 480,
   rows: 336,
 } as const;
 
-export type WetlandLayoutWorldSize = Readonly<{
+type WetlandLayoutWorldSize = Readonly<{
   width: number;
   depth: number;
 }>;
 
-export type WetlandEllipticExpansionOptions = Readonly<{
-  worldWidth: number;
-  worldDepth: number;
-  columns?: number;
-  rows?: number;
-  outsideSemantic?: WetlandLayoutSemantic;
-}>;
-
-export type WetlandLayoutDomainShape = 'rectangle' | 'ellipse';
+type WetlandLayoutDomainShape = 'rectangle' | 'ellipse';
 
 const semanticIds: Readonly<Record<WetlandLayoutSemantic, number>> = {
   grass: 0,
@@ -51,10 +43,6 @@ const semantics: readonly WetlandLayoutSemantic[] = [
 const diagonal = Math.SQRT2;
 
 const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value));
-const smoothstep = (edge0: number, edge1: number, value: number) => {
-  const t = clamp((value - edge0) / Math.max(edge1 - edge0, 0.00001), 0, 1);
-  return t * t * (3 - 2 * t);
-};
 
 const hash2 = (x: number, y: number, seed: number) => {
   let value = Math.imul(x | 0, 0x1f123bb5) ^ Math.imul(y | 0, 0x5f356495) ^ seed;
@@ -236,7 +224,7 @@ const smoothDistanceField = (
   return source;
 };
 
-export type WetlandLayoutSample = Readonly<{
+type WetlandLayoutSample = Readonly<{
   waterDistance: number;
   pathDistance: number;
   highlandDistance: number;
@@ -539,61 +527,6 @@ export class WetlandLayoutMap {
     };
   }
 }
-
-export const createEllipticallyExpandedWetlandLayoutMap = (
-  source: WetlandLayoutMap,
-  options: WetlandEllipticExpansionOptions,
-) => {
-  const worldWidth = Math.max(source.worldWidth, options.worldWidth);
-  const worldDepth = Math.max(source.worldDepth, options.worldDepth);
-  const columns = Math.max(
-    source.columns,
-    Math.round(options.columns ?? source.columns * worldWidth / source.worldWidth),
-  );
-  const rows = Math.max(
-    source.rows,
-    Math.round(options.rows ?? source.rows * worldDepth / source.worldDepth),
-  );
-  const expanded = new WetlandLayoutMap(
-    columns,
-    rows,
-    worldWidth,
-    worldDepth,
-    'ellipse',
-    source.worldWidth,
-    source.worldDepth,
-  );
-  const outsideSemanticId = semanticIds[options.outsideSemantic ?? 'grass'];
-  const ellipseRadiusX = worldWidth * 0.5;
-  const ellipseRadiusZ = worldDepth * 0.5;
-  const sourceHalfWidth = source.worldWidth * 0.5;
-  const sourceHalfDepth = source.worldDepth * 0.5;
-
-  for (let row = 0; row < rows; row += 1) {
-    const z = worldDepth * (row / Math.max(rows - 1, 1) - 0.5);
-    for (let column = 0; column < columns; column += 1) {
-      const x = worldWidth * (column / Math.max(columns - 1, 1) - 0.5);
-      const ellipseDistance = (
-        x * x / (ellipseRadiusX * ellipseRadiusX)
-        + z * z / (ellipseRadiusZ * ellipseRadiusZ)
-      );
-      const targetIndex = row * columns + column;
-      if (ellipseDistance > 1) {
-        expanded.data[targetIndex] = outsideSemanticId;
-        continue;
-      }
-
-      const sourceX = clamp(x, -sourceHalfWidth, sourceHalfWidth);
-      const sourceZ = clamp(z, -sourceHalfDepth, sourceHalfDepth);
-      const sourceColumn = (sourceX / source.worldWidth + 0.5) * (source.columns - 1);
-      const sourceRow = (sourceZ / source.worldDepth + 0.5) * (source.rows - 1);
-      expanded.data[targetIndex] = semanticIds[source.semanticAt(sourceColumn, sourceRow)];
-    }
-  }
-
-  expanded.compile();
-  return expanded;
-};
 
 export const createDefaultWetlandLayoutMap = (
   seed: number,

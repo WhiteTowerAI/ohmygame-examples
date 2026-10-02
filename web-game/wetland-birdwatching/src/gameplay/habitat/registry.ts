@@ -16,7 +16,7 @@ import {
   type TreePerchSupport,
 } from '../../art/trees/modular-tree';
 
-export type HabitatMovementMode = TreePerchRouteMode | 'tree-flight';
+type HabitatMovementMode = TreePerchRouteMode | 'tree-flight';
 
 export type RegisteredTreePerch = HabitatNode & Readonly<{
   kind: 'perch';
@@ -31,14 +31,14 @@ export type RegisteredTreePerch = HabitatNode & Readonly<{
 
 export type RegisteredHabitatNode = HabitatNode | RegisteredTreePerch;
 
-export type HabitatConnection = Readonly<{
+type HabitatConnection = Readonly<{
   from: string;
   to: string;
   mode: HabitatMovementMode;
   distance: number;
 }>;
 
-export type HabitatQuery = Readonly<{
+type HabitatQuery = Readonly<{
   kind?: HabitatKind;
   level?: HabitatLevel;
   capability?: HabitatCapability;
@@ -48,7 +48,7 @@ export type HabitatQuery = Readonly<{
   avoidPosition?: SpatialPoint;
 }>;
 
-export type RelocationQuery = HabitatQuery & Readonly<{
+type RelocationQuery = HabitatQuery & Readonly<{
   currentNodeId?: string;
   observerPosition: SpatialPoint;
   preferHigher?: boolean;
@@ -77,17 +77,6 @@ export type HabitatCandidateScore = Readonly<{
   clearance: number;
   crossTree: boolean;
   randomTieBreak: number;
-}>;
-
-export type GroundHabitatRegionSpec = Readonly<{
-  center: SpatialPoint;
-  halfExtents: Readonly<{ x: number; z: number }>;
-  nodeCount: number;
-  seed: number;
-  height?: number;
-  heightAt?: (x: number, z: number) => number;
-  clearance?: number;
-  exclusions?: readonly Readonly<{ center: SpatialPoint; radius: number }>[];
 }>;
 
 type RegisteredTree = {
@@ -123,52 +112,6 @@ const deterministicNoise = (id: string, seed: number) => {
   hash = Math.imul(hash, 2246822507) >>> 0;
   hash ^= hash >>> 13;
   return (hash >>> 0) / 4294967295;
-};
-
-const createSeededRandom = (seed: number) => {
-  let state = seed >>> 0;
-  return () => {
-    state = (state * 1664525 + 1013904223) >>> 0;
-    return state / 4294967296;
-  };
-};
-
-export const createGroundHabitatNodes = (
-  providerId: string,
-  spec: GroundHabitatRegionSpec,
-): readonly HabitatNode[] => {
-  const random = createSeededRandom(spec.seed);
-  const nodes: HabitatNode[] = [];
-  const minimumSpacingSquared = 0.72 * 0.72;
-  const maximumAttempts = Math.max(80, spec.nodeCount * 30);
-  for (let attempt = 0; attempt < maximumAttempts && nodes.length < spec.nodeCount; attempt += 1) {
-    const x = spec.center.x + (random() * 2 - 1) * spec.halfExtents.x;
-    const z = spec.center.z + (random() * 2 - 1) * spec.halfExtents.z;
-    const position = { x, y: spec.heightAt?.(x, z) ?? spec.height ?? spec.center.y, z };
-    const excluded = spec.exclusions?.some((area) => (
-      (position.x - area.center.x) ** 2 + (position.z - area.center.z) ** 2 < area.radius * area.radius
-    ));
-    const crowded = nodes.some((node) => (
-      (position.x - node.position.x) ** 2 + (position.z - node.position.z) ** 2 < minimumSpacingSquared
-    ));
-    if (excluded || crowded) continue;
-    const angle = random() * Math.PI * 2;
-    const index = nodes.length.toString().padStart(2, '0');
-    nodes.push({
-      id: `${providerId}:ground-${index}`,
-      providerId,
-      kind: 'ground',
-      level: 'ground',
-      capabilities: ['forage'],
-      position,
-      forward: { x: Math.sin(angle), y: 0, z: Math.cos(angle) },
-      clearance: spec.clearance ?? 0.36,
-    });
-  }
-  if (nodes.length < spec.nodeCount) {
-    throw new Error(`Ground habitat ${providerId} generated ${nodes.length}/${spec.nodeCount} nodes`);
-  }
-  return nodes;
 };
 
 export class HabitatRegistry {
