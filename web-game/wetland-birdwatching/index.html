@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" href="data:," />
+    <title>Wetland Birdwatching</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="Wetland park birdwatching scene"></canvas>
+      <div class="entry-screen" id="entry-screen">
+        <div class="entry-card">
+          <div class="entry-title">
+            <span>Wetland Park</span>
+            <strong>Morning Birdwatch</strong>
+          </div>
+          <p class="entry-goal">
+            Photograph the park's birds in action to fill your field journal.
+            Birds notice you: move slowly and don't walk straight at them.
+          </p>
+          <ul class="entry-controls entry-controls-desktop">
+            <li><kbd>WASD</kbd> Walk · <kbd>Shift</kbd> Run · <kbd>Mouse</kbd> Look</li>
+            <li><kbd>Right-click</kbd> or <kbd>B</kbd> Binoculars</li>
+            <li><kbd>Wheel</kbd> Focus · <kbd>Click</kbd> Photo</li>
+            <li><kbd>J</kbd> Field journal · <kbd>V</kbd> Switch view · <kbd>Esc</kbd> Free cursor</li>
+          </ul>
+          <ul class="entry-controls entry-controls-touch">
+            <li>Left stick to walk, drag to look</li>
+            <li>Binoculars, then the focus slider, then Photo</li>
+          </ul>
+          <button id="enter-park" type="button">Enter the park</button>
+        </div>
+      </div>
+      <header class="game-hud" aria-label="Watch status">
+        <div class="location-status">
+          <span id="location-name">Wetland path</span>
+          <strong id="game-status">The park is quiet</strong>
+        </div>
+        <label class="species-switch" for="bird-species-select">
+          <span>Watching</span>
+          <select id="bird-species-select">
+            <option value="blackbird">Blackbird · 10</option>
+            <option value="gray-magpie">Gray magpie</option>
+          </select>
+        </label>
+        <button id="finish-session" class="finish-toggle" type="button" title="End the session and see your results">Finish</button>
+        <button id="journal-toggle" class="journal-toggle" type="button" title="Field journal (J)" aria-label="Open field journal">
+          <span aria-hidden="true">▣</span>
+          <output id="journal-count">0/10</output>
+        </button>
+        <button id="view-toggle" class="view-toggle" type="button" title="Switch view (V)" aria-label="Switch between first and third person view" aria-pressed="false">First person</button>
+      </header>
+      <div class="screen-reticle" aria-hidden="true"></div>
+      <div class="binocular-overlay" aria-hidden="true">
+        <div class="binocular-frame"></div>
+        <div class="shot-ring" id="shot-ring"></div>
+        <div class="shot-hint" id="shot-hint"></div>
+        <div class="focus-control" id="focus-control">
+          <span class="focus-endpoint focus-far">Far</span>
+          <input id="focus-distance" type="range" min="0" max="16" step="1" value="5" aria-label="Binocular focus, up is farther, down is nearer" />
+          <span class="focus-endpoint focus-near">Near</span>
+          <div class="focus-quality" aria-hidden="true"><span id="focus-quality"></span></div>
+        </div>
+      </div>
+      <div class="alertness" id="alertness" aria-live="off">
+        <span class="alertness-label" id="alertness-label">Calm</span>
+        <div class="alertness-track"><span id="alertness-fill"></span></div>
+      </div>
+      <div class="call-cue" id="call-cue" aria-hidden="true">♪</div>
+      <div class="coach" id="coach" role="status" aria-live="polite"></div>
+      <div class="control-hints" id="control-hints" aria-hidden="true"></div>
+      <section class="touch-controls" id="touch-controls" aria-label="Touch controls" aria-hidden="true">
+        <div class="touch-move-pad" id="touch-move-pad" aria-label="Movement stick">
+          <span id="touch-move-knob"></span>
+        </div>
+        <div class="touch-actions">
+          <button id="touch-binocular" type="button" aria-label="Toggle binoculars" aria-pressed="false">Binoculars</button>
+          <button id="touch-capture" type="button" aria-label="Take photo" disabled>Photo</button>
+        </div>
+      </section>
+      <div class="capture-flash" aria-hidden="true"></div>
+      <div class="game-toast" id="game-toast" role="status" aria-live="polite"></div>
+      <aside class="journal-drawer" id="journal-drawer" aria-label="Field journal" aria-hidden="true">
+        <header>
+          <div>
+            <span>Field journal</span>
+            <strong id="journal-progress">0 of 10 behaviours recorded</strong>
+          </div>
+          <button id="journal-close" type="button" title="Close journal" aria-label="Close journal">X</button>
+        </header>
+        <div class="journal-stats" id="journal-stats"></div>
+        <div class="journal-checklist" id="journal-checklist"></div>
+        <h3 class="journal-heading">Photos</h3>
+        <div class="album-empty" id="album-empty">No photos yet</div>
+        <div class="album-grid" id="album-grid"></div>
+        <button id="journal-finish" class="journal-finish" type="button">Finish session</button>
+      </aside>
+      <div class="session-summary" id="session-summary" hidden>
+        <div class="summary-card" role="dialog" aria-modal="true" aria-labelledby="summary-title">
+          <span id="summary-kicker">Session complete</span>
+          <strong id="summary-title">Novice birder</strong>
+          <dl id="summary-stats"></dl>
+          <div class="album-grid summary-photos" id="summary-photos"></div>
+          <div class="summary-actions">
+            <button id="summary-continue" type="button">Keep exploring</button>
+            <button id="summary-restart" class="primary" type="button">New session</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
