@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "examples": [
+    {
+      "id": "wetland-birdwatching",
+      "type": "web-game",
+      "name": "Wetland Birdwatching",
+      "description": "Photograph birds in a procedurally generated wetland to fill your field journal. Three.js, Vite and TypeScript.",
+      "path": "web-game/wetland-birdwatching",
+      "cover": "covers/wetland-birdwatching.jpg"
+    }
+  ]
+}
