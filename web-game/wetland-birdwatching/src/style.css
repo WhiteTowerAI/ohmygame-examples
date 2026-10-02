@@ -160,6 +160,11 @@ kbd {
   letter-spacing: 0;
 }
 
+.entry-screen button:disabled {
+  cursor: progress;
+  opacity: 0.72;
+}
+
 .entry-screen button {
   min-width: 132px;
   padding: 0 20px;

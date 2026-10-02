@@ -1,28 +1,19 @@
 import * as THREE from 'three';
 import { createReferenceCharacter, updateReferenceCharacterWalk } from './art/characters/birdwatcher';
-import { applyBlackbirdPose, createBlackbird, sampleBlackbirdPose } from './art/birds/blackbird';
-import { applyGrayMagpiePose, createGrayMagpie } from './art/birds/gray-magpie-model';
-import { sampleGrayMagpiePose } from './art/birds/gray-magpie-behavior';
 import type { BirdPerception } from './gameplay/birds/contracts';
 import { calculateBirdPerception } from './gameplay/birds/perception';
-import { createRuntimeBird, type RuntimeBird } from './gameplay/birds/bird-runtime';
+import type { RuntimeBird } from './gameplay/birds/bird-runtime';
+import { createBirdFlock } from './gameplay/birds/bird-flock';
 import { createBirdCallAudio } from './gameplay/audio/bird-call-audio';
 import { createEnvironmentAudio } from './gameplay/audio/environment-audio';
-import {
-  blackbirdPolicy,
-  blackbirdPressureRules,
-  type BlackbirdState,
-} from './gameplay/birds/species/blackbird-policy';
-import {
-  grayMagpiePolicy,
-  grayMagpiePressureRules,
-  type GrayMagpieState,
-} from './gameplay/birds/species/gray-magpie-policy';
 import { createPlayerInputController } from './gameplay/player/player-input';
+import { closestFocusIndex, focusDepthRange, focusQualityAt, focusStops } from './gameplay/player/binocular-focus';
 import { alertnessRules } from './gameplay/journal/journal-config';
-import { createFieldJournal, entryForState, speciesName } from './gameplay/journal/field-journal';
+import { createFieldJournal, entryForState } from './gameplay/journal/field-journal';
 import { checkShot, ratePhoto, shotProblemText, type ShotMetrics } from './gameplay/journal/photo-rating';
 import { createCoach } from './ui/coach';
+import { createPlayHud } from './ui/play-hud';
+import { gameplayStatusText } from './ui/status-text';
 import { renderJournal, renderSummary } from './ui/journal-view';
 import { createGameRendering } from './rendering/game-rendering';
 import { createWetlandGameplayWorld } from './world/wetland-gameplay-world';
@@ -68,8 +59,6 @@ gameRendering.setStylizedOutlineEnabled(false);
 const { groundLeaves, habitatRegistry } = parkWorld;
 
 const characterVisualScale = 1.35;
-const blackbirdVisualScale = 0.61;
-const grayMagpieVisualScale = 0.71;
 const firstPersonEyeHeight = 2.45;
 const character = createReferenceCharacter();
 const characterSceneYaw = -0.52;
@@ -78,85 +67,18 @@ character.position.copy(parkWorld.spawn);
 character.rotation.y = characterSceneYaw;
 scene.add(character);
 
-const blackbirdCount = 10;
-const wetlandGroundNodes = habitatRegistry.getProviderNodes('wetland-floor')
-  .filter((node) => node.kind === 'ground');
-if (wetlandGroundNodes.length < blackbirdCount) {
-  throw new Error(`Wetland requires ${blackbirdCount} blackbird ground nodes`);
-}
-const blackbirdOccupancy = new Map<string, RuntimeBird>();
-const occupiedByOtherBlackbirds = (sourceId: string) => {
-  const occupiedNodeIds = new Set<string>();
-  blackbirdOccupancy.forEach((runtime, otherSourceId) => {
-    if (otherSourceId === sourceId) return;
-    occupiedNodeIds.add(runtime.getHabitatNode().id);
-    const targetNode = runtime.getTargetHabitatNode();
-    if (targetNode) occupiedNodeIds.add(targetNode.id);
-  });
-  return [...occupiedNodeIds];
-};
-const blackbirdEntries = Array.from({ length: blackbirdCount }, (_, index) => {
-  const sourceId = `blackbird-${(index + 1).toString().padStart(2, '0')}`;
-  const root = createBlackbird('adult');
-  root.name = sourceId;
-  // Keep birds readable at wetland distances without making them oversized
-  // photographic targets; behavior and recognition distances stay unchanged.
-  root.scale.setScalar(blackbirdVisualScale + (index % 4) * 0.014);
-  scene.add(root);
-  gameRendering.registerStylizedBird(root);
-  const parts = root.userData.parts as Parameters<typeof applyBlackbirdPose>[0];
-  const initialNode = wetlandGroundNodes[Math.floor(index * wetlandGroundNodes.length / blackbirdCount)];
-  const runtime = createRuntimeBird<BlackbirdState>({
-    habitatRegistry,
-    speciesId: 'blackbird',
-    label: speciesName('blackbird'),
-    root,
-    policy: blackbirdPolicy,
-    pressureRules: blackbirdPressureRules,
-    initialState: index % 3 === 0 ? 'listen' : 'idle',
-    initialNodeId: initialNode.id,
-    initialDrives: { forage: 0.58 + (index % 5) * 0.07 },
-    seed: 91427 + index * 7919,
-    motionByState: { hop: 'ground-step', takeoff: 'takeoff', flight: 'flight', land: 'land' },
-    faceObserverStates: ['alert'],
-    excludeNodeIds: () => occupiedByOtherBlackbirds(sourceId),
-    groundHeightAt: parkWorld.sampleHeight,
-    applyPose: (state, cycle, time, delta) => {
-      applyBlackbirdPose(parts, sampleBlackbirdPose(state, cycle, time), delta);
-    },
-  });
-  blackbirdOccupancy.set(sourceId, runtime);
-  return { sourceId, root, runtime, initialNodeId: initialNode.id };
-});
-const blackbirdRuntimes = blackbirdEntries.map(({ runtime }) => runtime);
-
-const grayMagpieRoot = createGrayMagpie();
-grayMagpieRoot.scale.setScalar(grayMagpieVisualScale);
-scene.add(grayMagpieRoot);
-gameRendering.registerStylizedBird(grayMagpieRoot);
-const grayMagpieRuntime = createRuntimeBird<GrayMagpieState>({
+const flock = createBirdFlock({
+  scene,
   habitatRegistry,
-  speciesId: 'gray-magpie',
-  label: speciesName('gray-magpie'),
-  root: grayMagpieRoot,
-  policy: grayMagpiePolicy,
-  pressureRules: grayMagpiePressureRules,
-  initialState: 'perch',
-  initialNodeId: parkWorld.grayMagpieInitialNodeId,
-  seed: 31871,
-  motionByState: { patrol: 'ground-step', takeoff: 'takeoff', flight: 'flight', land: 'land' },
-  faceObserverStates: ['inspect', 'alarm'],
-  groundHeightAt: parkWorld.sampleHeight,
-  applyPose: (state, cycle, time, delta, habitatLevel) => {
-    const habitat = habitatLevel === 'ground' ? 'ground' : habitatLevel === 'low' ? 'low' : 'high';
-    applyGrayMagpiePose(grayMagpieRoot, sampleGrayMagpiePose(state, cycle, time, habitat), delta);
-  },
+  grayMagpieInitialNodeId: parkWorld.grayMagpieInitialNodeId,
+  sampleHeight: parkWorld.sampleHeight,
+  registerStylizedBird: gameRendering.registerStylizedBird,
 });
-
-const birdRuntimes: readonly RuntimeBird[] = [...blackbirdRuntimes, grayMagpieRuntime];
+const { blackbirds: blackbirdEntries, blackbirdRuntimes, grayMagpie: grayMagpieRuntime } = flock;
+const grayMagpieRoot = grayMagpieRuntime.root;
+const birdRuntimes = flock.all;
 let activeBird: RuntimeBird = blackbirdRuntimes[0];
 let selectedSpeciesId = 'blackbird';
-grayMagpieRoot.visible = false;
 const birdCallAudio = createBirdCallAudio({
   camera,
   blackbirdRoots: blackbirdEntries.map(({ sourceId, root }) => ({ sourceId, root })),
@@ -190,7 +112,6 @@ const projectedBirdCenter = new THREE.Vector3();
 const gameplayLookTarget = new THREE.Vector3();
 const gameplayLookDirection = new THREE.Vector3();
 const gameplayCameraTarget = new THREE.Vector3();
-const focusStops = [1.5, 2, 2.6, 3.3, 4.1, 5, 6, 7.2, 8.6, 10.2, 12, 14.2, 16.8, 20, 24, 28, 32, 38, 46, 56] as const;
 let binocularRaised = false;
 let binocularRaisedLastFrame = false;
 type ViewMode = 'first-person' | 'third-person';
@@ -287,26 +208,7 @@ window.addEventListener('keydown', (event) => {
 });
 setViewMode(viewMode);
 
-const closestFocusIndex = (distance: number) => focusStops.reduce(
-  (closest, stop, index) => Math.abs(stop - distance) < Math.abs(focusStops[closest] - distance)
-    ? index
-    : closest,
-  0,
-);
-const focusQualityAtDistance = (targetDistance: number) => {
-  // Each stop owns a clear band half as deep as its focal distance. The soft
-  // shoulder keeps wheel/slider changes gradual without making mid and far
-  // targets share one effectively infinite depth of field.
-  const clearHalfWidth = Math.max(0.55, focusDistance * 0.25);
-  const featherWidth = Math.max(0.45, focusDistance * 0.14);
-  const outsideClearBand = Math.max(0, Math.abs(targetDistance - focusDistance) - clearHalfWidth);
-  return 1 - THREE.MathUtils.smoothstep(outsideClearBand, 0, featherWidth);
-};
-
-const focusDepthRange = () => ({
-  clearHalfWidth: Math.max(0.55, focusDistance * 0.25),
-  featherWidth: Math.max(0.45, focusDistance * 0.14),
-});
+const focusQualityAtDistance = (targetDistance: number) => focusQualityAt(focusDistance, targetDistance);
 
 const setFocusIndex = (requestedIndex: number, pulseLimit = false) => {
   const nextIndex = THREE.MathUtils.clamp(Math.round(requestedIndex), 0, focusStops.length - 1);
@@ -356,22 +258,12 @@ const summaryElements = {
   photos: gameElement<HTMLElement>('#summary-photos'),
 };
 const coach = createCoach(gameElement<HTMLElement>('#coach'));
-const shotRing = gameElement<HTMLElement>('#shot-ring');
-const shotHint = gameElement<HTMLElement>('#shot-hint');
-const alertness = gameElement<HTMLElement>('#alertness');
-const alertnessLabel = gameElement<HTMLElement>('#alertness-label');
-const alertnessFill = gameElement<HTMLElement>('#alertness-fill');
-const callCue = gameElement<HTMLElement>('#call-cue');
-const controlHints = gameElement<HTMLElement>('#control-hints');
+const hud = createPlayHud();
 let summaryOpen = false;
 let journalEverOpened = false;
 let summaryShownForCompletion = false;
 let sessionStartedAt: number | undefined;
 let secondsMoved = 0;
-let lastCallCount = 0;
-let callCueSourceId: string | undefined;
-let callCueUntil = 0;
-let renderedControlHints = '';
 const previousBirdStates = new Map<RuntimeBird, string>();
 
 const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(3 - count);
@@ -517,11 +409,6 @@ const detectStartle = (runtime: RuntimeBird, pressure: number) => {
   );
 };
 
-const walkingHints = '<kbd>WASD</kbd> Walk · <kbd>Shift</kbd> Run · <kbd>B</kbd> Binoculars · <kbd>J</kbd> Journal · <kbd>V</kbd> View';
-const binocularHints = '<kbd>Mouse</kbd> Aim · <kbd>Wheel</kbd> Focus · <kbd>Click</kbd> Photo · <kbd>B</kbd> Lower binoculars';
-const lockedHint = ' · <kbd>Esc</kbd> Free cursor';
-const unlockedHint = '<kbd>Click</kbd> the scene to look with the mouse · ';
-
 const updateGuidance = (
   time: number,
   birdDistance: number,
@@ -533,67 +420,21 @@ const updateGuidance = (
   const shot = measureShot();
   const check = checkShot(shot);
 
-  // Viewfinder: the ring and hint use the same rule that judges the photo.
-  shotRing.dataset.state = check.identified ? 'ready' : check.centered ? 'partial' : 'idle';
-  const shotText = check.identified
-    ? `${Math.round(shot.distance)} m · Ready, ${touchMode ? 'tap Photo' : 'click to take a photo'}`
-    : check.problem === 'not-in-frame'
-      ? shotProblemText['not-in-frame']
-      : `${Math.round(shot.distance)} m · ${shotProblemText[check.problem ?? 'out-of-focus']}`
-        + (check.problem === 'out-of-focus' ? (touchMode ? ', drag the slider' : ', scroll to focus') : '');
-  if (shotHint.textContent !== shotText) shotHint.textContent = shotText;
-
-  // Alertness of the watched bird, from the same pressure the bird AI uses.
-  const showAlertness = started && !overlayOpen && activeBird.root.visible
-    && birdDistance < alertnessRules.visibleWithin;
-  alertness.classList.toggle('visible', showAlertness);
-  if (showAlertness) {
-    const level = vigilance >= alertnessRules.fleeing ? 'fleeing' : vigilance >= alertnessRules.wary ? 'wary' : 'calm';
-    alertness.dataset.level = level;
-    const labelText = `${activeBird.label}: ${level === 'fleeing' ? 'About to flee' : level === 'wary' ? 'Wary' : 'Calm'}`;
-    if (alertnessLabel.textContent !== labelText) alertnessLabel.textContent = labelText;
-    alertnessFill.style.transform = `scaleX(${Math.max(0.04, Math.min(1, vigilance)).toFixed(3)})`;
-  }
-
-  // A short marker toward the bird that just called, clamped to the screen edge.
-  if (audioSnapshot.callCount > lastCallCount) {
-    lastCallCount = audioSnapshot.callCount;
-    callCueSourceId = audioSnapshot.lastSourceId;
-    callCueUntil = time + 2.6;
-  }
-  const cueRoot = callCueSourceId
-    ? blackbirdEntries.find(({ sourceId }) => sourceId === callCueSourceId)?.root
-    : undefined;
-  const showCue = started && !overlayOpen && !binocularRaised && cueRoot !== undefined
-    && selectedSpeciesId === 'blackbird' && time < callCueUntil;
-  callCue.classList.toggle('visible', showCue);
-  if (showCue) coach.showTip('call', 'Hear that? The ♪ marker shows where the song came from.', 5);
-  if (showCue && cueRoot) {
-    const projected = cueRoot.position.clone().add(new THREE.Vector3(0, 0.4, 0)).project(camera);
-    let x = projected.x;
-    let y = projected.y;
-    if (projected.z > 1) {
-      x = -x;
-      y = -y;
-    }
-    const overshoot = Math.max(Math.abs(x) / 0.9, Math.abs(y) / 0.8, projected.z > 1 ? 1 : 0);
-    if (overshoot >= 1) {
-      x /= overshoot;
-      y /= overshoot;
-    }
-    callCue.style.left = `${((x + 1) / 2) * window.innerWidth}px`;
-    callCue.style.top = `${((1 - y) / 2) * window.innerHeight}px`;
-    callCue.style.opacity = Math.min(1, (callCueUntil - time) / 0.6).toFixed(2);
-  }
-
-  const mouseLook = playerInput.isMouseLookActive();
-  const hints = started && !touchMode
-    ? (mouseLook ? '' : unlockedHint) + (binocularRaised ? binocularHints : walkingHints) + (mouseLook ? lockedHint : '')
-    : '';
-  if (hints !== renderedControlHints) {
-    renderedControlHints = hints;
-    controlHints.innerHTML = hints;
-  }
+  hud.renderViewfinder(shot, check, touchMode);
+  hud.renderAlertness(
+    started && !overlayOpen && activeBird.root.visible && birdDistance < alertnessRules.visibleWithin,
+    activeBird.label,
+    vigilance,
+  );
+  hud.noteBirdCalls(audioSnapshot.callCount, audioSnapshot.lastSourceId, time);
+  const callCueShown = hud.renderCallCue(
+    started && !overlayOpen && !binocularRaised && selectedSpeciesId === 'blackbird',
+    (sourceId) => blackbirdEntries.find((entry) => entry.sourceId === sourceId)?.root,
+    camera,
+    time,
+  );
+  if (callCueShown) coach.showTip('call', 'Hear that? The ♪ marker shows where the song came from.', 5);
+  hud.renderControlHints(started && !touchMode, playerInput.isMouseLookActive(), binocularRaised);
 
   if (!started) return;
   const progress = journal.getProgress();
@@ -772,7 +613,7 @@ const updateGameplay = (delta: number, time: number) => {
 
   const opticalDistance = camera.position.distanceTo(birdRoot.position);
   const focusQuality = focusQualityAtDistance(opticalDistance);
-  const focusRangeState = focusDepthRange();
+  const focusRangeState = focusDepthRange(focusDistance);
   gameRendering.setBinocularDepthOfField({
     enabled: binocularRaised,
     focusDistance,
@@ -825,157 +666,149 @@ const updateGameplay = (delta: number, time: number) => {
   canvas.dataset.footstepSurface = environmentSnapshot.lastFootstepSurface ?? '';
   canvas.dataset.shoreWaterCount = String(environmentSnapshot.waterEventCount);
   canvas.dataset.shoreWaterClip = environmentSnapshot.lastWaterClip?.toString() ?? '';
-  if (location === 'wetland-shore' && birdDistance > 18) {
-    setGameplayStatus('The water is calm. Keep watching along the shore');
-  } else if (activeState === 'alert' || activeState === 'alarm') {
-    setGameplayStatus(activeState === 'alarm'
-      ? `The ${activeBird.label.toLowerCase()} calls an alarm and eyes an escape route`
-      : `The ${activeBird.label.toLowerCase()} freezes and stares at you`);
-  } else if (activeState === 'flight' || activeState === 'takeoff') {
-    const selection = activeBird.getLastSelection();
-    setGameplayStatus(selection?.crossTree
-      ? `The ${activeBird.label.toLowerCase()} is flying to a safer tree`
-      : `The ${activeBird.label.toLowerCase()} is moving to a new spot`);
-  } else if (binocularRaised) {
-    setGameplayStatus(focusQuality > 0.78 ? 'The view is sharpening' : 'Not in focus yet');
-  } else if (activeState === 'sing' || activeState === 'contact') {
-    setGameplayStatus(`A ${activeBird.label.toLowerCase()} is calling from the trees`);
-  } else if (birdDistance < 13 && (activeState === 'forage' || activeState === 'peck')) {
-    setGameplayStatus('Something is rustling in the leaves');
-  } else {
-    setGameplayStatus(`${activeBird.label} · ${activeBird.getStateLabel()}`);
-  }
+  setGameplayStatus(gameplayStatusText({
+    location,
+    birdDistance,
+    birdLabel: activeBird.label,
+    birdState: activeState,
+    birdStateLabel: activeBird.getStateLabel(),
+    flyingToAnotherTree: activeBird.getLastSelection()?.crossTree ?? false,
+    binocularRaised,
+    focusQuality,
+  }));
   updateGuidance(time, birdDistance, audioSnapshot, controls.touchMode);
 };
 
 character.position.copy(parkWorld.spawn);
 character.position.y = parkWorld.sampleHeight(character.position.x, character.position.z);
-  character.rotation.y = Math.PI;
-  camera.position.set(
-    character.position.x,
-    character.position.y + firstPersonEyeHeight,
-    character.position.z,
-  );
-  setFocusIndex(closestFocusIndex(12));
+character.rotation.y = Math.PI;
+camera.position.set(
+  character.position.x,
+  character.position.y + firstPersonEyeHeight,
+  character.position.z,
+);
+setFocusIndex(closestFocusIndex(12));
 
-  const enterButton = gameElement<HTMLButtonElement>('#enter-park');
-  enterButton.addEventListener('click', () => {
-    void birdCallAudio.unlock();
-    void environmentAudio.unlock();
-    sessionStartedAt ??= clock.elapsedTime;
-    gameElement<HTMLElement>('#entry-screen').classList.add('hidden');
-    playerInput.start();
-  });
-  const speciesSelect = gameElement<HTMLSelectElement>('#bird-species-select');
-  speciesSelect.addEventListener('change', () => {
-    selectedSpeciesId = speciesSelect.value;
-    if (selectedSpeciesId === 'blackbird') {
-      blackbirdRuntimes.forEach((runtime) => { runtime.root.visible = true; });
-      grayMagpieRoot.visible = false;
-      activeBird = selectActiveBlackbird();
-    } else {
-      blackbirdRuntimes.forEach((runtime) => { runtime.root.visible = false; });
-      grayMagpieRoot.visible = true;
-      activeBird = grayMagpieRuntime;
-    }
-    setFocusIndex(closestFocusIndex(camera.position.distanceTo(activeBird.root.position)));
-    setGameplayStatus(selectedSpeciesId === 'blackbird'
-      ? 'Several blackbirds are active in the wetland'
-      : 'Look for the gray magpie high in the canopy');
-  });
-  const requestedSpecies = gameplayParams.get('species');
-  if (requestedSpecies && birdRuntimes.some((candidate) => candidate.speciesId === requestedSpecies)) {
-    speciesSelect.value = requestedSpecies;
-    speciesSelect.dispatchEvent(new Event('change'));
+const enterButton = gameElement<HTMLButtonElement>('#enter-park');
+enterButton.disabled = false;
+enterButton.textContent = 'Enter the park';
+enterButton.addEventListener('click', () => {
+  void birdCallAudio.unlock();
+  void environmentAudio.unlock();
+  sessionStartedAt ??= clock.elapsedTime;
+  gameElement<HTMLElement>('#entry-screen').classList.add('hidden');
+  playerInput.start();
+});
+const speciesSelect = gameElement<HTMLSelectElement>('#bird-species-select');
+speciesSelect.addEventListener('change', () => {
+  selectedSpeciesId = speciesSelect.value;
+  if (selectedSpeciesId === 'blackbird') {
+    blackbirdRuntimes.forEach((runtime) => { runtime.root.visible = true; });
+    grayMagpieRoot.visible = false;
+    activeBird = selectActiveBlackbird();
+  } else {
+    blackbirdRuntimes.forEach((runtime) => { runtime.root.visible = false; });
+    grayMagpieRoot.visible = true;
+    activeBird = grayMagpieRuntime;
   }
-  Object.assign(window, {
-    __BIRD_GAME__: {
-      getSnapshot: () => {
-        const selection = activeBird.getLastSelection();
-        return {
-          speciesId: activeBird.speciesId,
-          speciesLabel: activeBird.label,
-          state: activeBird.getState(),
-          stateLabel: activeBird.getStateLabel(),
-          habitatNodeId: activeBird.getHabitatNode().id,
-          position: activeBird.root.position.toArray(),
-          perception: birdPerception,
-          audio: birdCallAudio.getSnapshot(),
-          selection: selection ? {
-            nodeId: selection.node.id,
-            score: selection.score,
-            observerDistance: selection.observerDistance,
-            heightGain: selection.heightGain,
-            visualTransmission: selection.visualTransmission,
-            crossTree: selection.crossTree,
-          } : null,
-          viewMode,
-          world: parkWorld.wetland.field.layoutMap.domainShape === 'ellipse'
-            ? 'shared-expanded-wetland'
-            : 'shared-park-third-wetland',
-          visualDomain: {
-            shape: parkWorld.wetland.field.layoutMap.domainShape,
-            width: parkWorld.wetland.field.width,
-            depth: parkWorld.wetland.field.depth,
-          },
-          playableDomain: parkWorld.playableDomain,
-          playerWalkable: parkWorld.isWalkable(character.position.x, character.position.z),
-          blackbirds: blackbirdEntries.map(({ sourceId, runtime, initialNodeId }) => ({
-            sourceId,
-            initialNodeId,
-            state: runtime.getState(),
-            habitatNodeId: runtime.getHabitatNode().id,
-            targetHabitatNodeId: runtime.getTargetHabitatNode()?.id,
-            position: runtime.root.position.toArray(),
-            visible: runtime.root.visible,
+  setFocusIndex(closestFocusIndex(camera.position.distanceTo(activeBird.root.position)));
+  setGameplayStatus(selectedSpeciesId === 'blackbird'
+    ? 'Several blackbirds are active in the wetland'
+    : 'Look for the gray magpie high in the canopy');
+});
+const requestedSpecies = gameplayParams.get('species');
+if (requestedSpecies && birdRuntimes.some((candidate) => candidate.speciesId === requestedSpecies)) {
+  speciesSelect.value = requestedSpecies;
+  speciesSelect.dispatchEvent(new Event('change'));
+}
+Object.assign(window, {
+  __BIRD_GAME__: {
+    getSnapshot: () => {
+      const selection = activeBird.getLastSelection();
+      return {
+        speciesId: activeBird.speciesId,
+        speciesLabel: activeBird.label,
+        state: activeBird.getState(),
+        stateLabel: activeBird.getStateLabel(),
+        habitatNodeId: activeBird.getHabitatNode().id,
+        position: activeBird.root.position.toArray(),
+        perception: birdPerception,
+        audio: birdCallAudio.getSnapshot(),
+        selection: selection ? {
+          nodeId: selection.node.id,
+          score: selection.score,
+          observerDistance: selection.observerDistance,
+          heightGain: selection.heightGain,
+          visualTransmission: selection.visualTransmission,
+          crossTree: selection.crossTree,
+        } : null,
+        viewMode,
+        world: parkWorld.wetland.field.layoutMap.domainShape === 'ellipse'
+          ? 'shared-expanded-wetland'
+          : 'shared-park-third-wetland',
+        visualDomain: {
+          shape: parkWorld.wetland.field.layoutMap.domainShape,
+          width: parkWorld.wetland.field.width,
+          depth: parkWorld.wetland.field.depth,
+        },
+        playableDomain: parkWorld.playableDomain,
+        playerWalkable: parkWorld.isWalkable(character.position.x, character.position.z),
+        blackbirds: blackbirdEntries.map(({ sourceId, runtime, initialNodeId }) => ({
+          sourceId,
+          initialNodeId,
+          state: runtime.getState(),
+          habitatNodeId: runtime.getHabitatNode().id,
+          targetHabitatNodeId: runtime.getTargetHabitatNode()?.id,
+          position: runtime.root.position.toArray(),
+          visible: runtime.root.visible,
+        })),
+        trees: parkWorld.habitatProviderIds.filter((providerId) => providerId !== 'wetland-floor').map((providerId) => ({
+          providerId,
+          nodes: habitatRegistry.getProviderNodes(providerId).map((node) => ({
+            id: node.id,
+            level: node.level,
+            position: [node.position.x, node.position.y, node.position.z],
+            exposure: 'structuralExposure' in node ? node.structuralExposure : null,
+            treeHeight: 'treeHeight' in node ? node.treeHeight : null,
           })),
-          trees: parkWorld.habitatProviderIds.filter((providerId) => providerId !== 'wetland-floor').map((providerId) => ({
-            providerId,
-            nodes: habitatRegistry.getProviderNodes(providerId).map((node) => ({
-              id: node.id,
-              level: node.level,
-              position: [node.position.x, node.position.y, node.position.z],
-              exposure: 'structuralExposure' in node ? node.structuralExposure : null,
-              treeHeight: 'treeHeight' in node ? node.treeHeight : null,
-            })),
-          })),
-        };
-      },
-      setSpecies: (speciesId: string) => {
-        speciesSelect.value = speciesId;
-        speciesSelect.dispatchEvent(new Event('change'));
-      },
-      setObserverPosition: (x: number, z: number) => {
-        character.position.x = x;
-        character.position.z = z;
-        parkWorld.constrainPlayerPosition(character.position);
-      },
-      setFocusIndex: (index: number) => setFocusIndex(index),
-      // Points the view at the watched bird and focuses on it (for playtests).
-      aimAtActiveBird: () => {
-        const eye = character.position.clone().add(new THREE.Vector3(0, firstPersonEyeHeight, 0));
-        const toBird = activeBird.root.position.clone().add(new THREE.Vector3(0, 0.22, 0)).sub(eye);
-        playerInput.setLook(
-          Math.atan2(toBird.x, toBird.z),
-          Math.atan2(toBird.y, Math.hypot(toBird.x, toBird.z)),
-        );
-        setFocusIndex(closestFocusIndex(toBird.length()));
-      },
-      getJournal: () => ({ progress: journal.getProgress(), coach: gameElement<HTMLElement>('#coach').textContent }),
+        })),
+      };
     },
-  });
-  gameElement<HTMLButtonElement>('#journal-toggle').addEventListener('click', () => setJournalOpen(true));
-  gameElement<HTMLButtonElement>('#journal-close').addEventListener('click', () => setJournalOpen(false));
-  gameElement<HTMLButtonElement>('#finish-session').addEventListener('click', () => setSummaryOpen(true));
-  gameElement<HTMLButtonElement>('#journal-finish').addEventListener('click', () => setSummaryOpen(true));
-  gameElement<HTMLButtonElement>('#summary-continue').addEventListener('click', () => setSummaryOpen(false));
-  gameElement<HTMLButtonElement>('#summary-restart').addEventListener('click', startNewSession);
-  window.addEventListener('keydown', (event) => {
-    if (event.code !== 'Escape') return;
-    if (summaryOpen) setSummaryOpen(false);
-    else if (journalOpen) setJournalOpen(false);
-  });
-  renderJournalView();
+    setSpecies: (speciesId: string) => {
+      speciesSelect.value = speciesId;
+      speciesSelect.dispatchEvent(new Event('change'));
+    },
+    setObserverPosition: (x: number, z: number) => {
+      character.position.x = x;
+      character.position.z = z;
+      parkWorld.constrainPlayerPosition(character.position);
+    },
+    setFocusIndex: (index: number) => setFocusIndex(index),
+    // Points the view at the watched bird and focuses on it (for playtests).
+    aimAtActiveBird: () => {
+      const eye = character.position.clone().add(new THREE.Vector3(0, firstPersonEyeHeight, 0));
+      const toBird = activeBird.root.position.clone().add(new THREE.Vector3(0, 0.22, 0)).sub(eye);
+      playerInput.setLook(
+        Math.atan2(toBird.x, toBird.z),
+        Math.atan2(toBird.y, Math.hypot(toBird.x, toBird.z)),
+      );
+      setFocusIndex(closestFocusIndex(toBird.length()));
+    },
+    getJournal: () => ({ progress: journal.getProgress(), coach: gameElement<HTMLElement>('#coach').textContent }),
+  },
+});
+gameElement<HTMLButtonElement>('#journal-toggle').addEventListener('click', () => setJournalOpen(true));
+gameElement<HTMLButtonElement>('#journal-close').addEventListener('click', () => setJournalOpen(false));
+gameElement<HTMLButtonElement>('#finish-session').addEventListener('click', () => setSummaryOpen(true));
+gameElement<HTMLButtonElement>('#journal-finish').addEventListener('click', () => setSummaryOpen(true));
+gameElement<HTMLButtonElement>('#summary-continue').addEventListener('click', () => setSummaryOpen(false));
+gameElement<HTMLButtonElement>('#summary-restart').addEventListener('click', startNewSession);
+window.addEventListener('keydown', (event) => {
+  if (event.code !== 'Escape') return;
+  if (summaryOpen) setSummaryOpen(false);
+  else if (journalOpen) setJournalOpen(false);
+});
+renderJournalView();
 
 const animate = () => {
   const rawDelta = clock.getDelta();
