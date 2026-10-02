@@ -29,8 +29,8 @@ results.
 | Field journal | J | Journal button |
 | Switch view | V | View button |
 
-This folder is extracted from `Prototype/visual-feasibility` (the park
-birdwatching page). It contains only the code the game uses and needs nothing
-outside this folder. For the module map and editing rules, see
+Originally extracted from
+[Threejs-Procedural-Nature-Generator](https://github.com/WhiteTowerAI/Threejs-Procedural-Nature-Generator).
+The folder needs nothing outside itself. For the module map and editing rules, see
 [AGENTS.md](AGENTS.md). For asset and code licenses, see
 [src/assets/CREDITS.md](src/assets/CREDITS.md).
