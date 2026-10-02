@@ -17,9 +17,6 @@ import { gameplayStatusText } from './ui/status-text';
 import { renderJournal, renderSummary } from './ui/journal-view';
 import { createGameRendering } from './rendering/game-rendering';
 import { createWetlandGameplayWorld } from './world/wetland-gameplay-world';
-import './style.css';
-
-document.body.classList.add('gameplay-mode');
 
 const canvas = document.querySelector<HTMLCanvasElement>('#scene');
 if (!canvas) throw new Error('Canvas not found');

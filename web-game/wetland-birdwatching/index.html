@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" href="data:," />
     <title>Wetland Birdwatching</title>
+    <!-- Linked here, not imported from main.ts, so the loading screen is styled
+         before the scripts (and three.js) finish loading. -->
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body>
+  <body class="gameplay-mode">
     <main id="app">
       <canvas id="scene" aria-label="Wetland park birdwatching scene"></canvas>
       <div class="entry-screen" id="entry-screen">
