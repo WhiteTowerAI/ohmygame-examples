@@ -1,6 +1,7 @@
-// Validates catalog.json: every example has the required fields, its folder
-// is a runnable web game (package.json with dev and build scripts) and its
-// cover exists. Prints the example paths, one per line, for CI to build.
+// Validates catalog.json: every example has the required fields, a cover, and
+// a folder OhMyGame can use for its type. A web game needs package.json with
+// dev and build scripts; an interactive drama needs graph.json. Prints the
+// web game paths, one per line, for CI to build.
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
@@ -18,9 +19,17 @@ for (const example of catalog.examples ?? []) {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(example.id ?? '')) errors.push(`${label}: id must be kebab-case`);
   if (ids.has(example.id)) errors.push(`${label}: duplicate id`);
   ids.add(example.id);
-  if (example.type !== 'web-game') errors.push(`${label}: unsupported type ${example.type}`);
+  if (!['web-game', 'interactive-drama'].includes(example.type)) errors.push(`${label}: unsupported type ${example.type}`);
   if (!existsSync(path.join(root, example.cover ?? ''))) errors.push(`${label}: cover not found`);
   if (!(example.cover ?? '').endsWith('.webp')) errors.push(`${label}: cover must be a .webp image (OhMyGame stores project covers as WebP)`);
+  if (example.type === 'interactive-drama') {
+    if (!existsSync(path.join(root, example.path ?? '', 'graph.json'))) errors.push(`${label}: ${example.path}/graph.json not found`);
+    // OhMyGame writes these per app version when it copies the example.
+    for (const owned of ['AGENTS.md', 'README.md', 'schemas']) {
+      if (existsSync(path.join(root, example.path ?? '', owned))) errors.push(`${label}: remove ${owned}; OhMyGame provides it`);
+    }
+    continue;
+  }
   const packagePath = path.join(root, example.path ?? '', 'package.json');
   if (!existsSync(packagePath)) {
     errors.push(`${label}: ${example.path}/package.json not found`);
@@ -36,4 +45,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(catalog.examples.map((example) => example.path).join('\n'));
+console.log(catalog.examples.filter((example) => example.type === 'web-game').map((example) => example.path).join('\n'));

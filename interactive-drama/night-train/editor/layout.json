@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "nodes": {
+    "platform": {
+      "x": 80,
+      "y": 180
+    },
+    "carriage": {
+      "x": 600,
+      "y": 180
+    },
+    "home": {
+      "x": 1120,
+      "y": 180
+    }
+  },
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "view": "canvas"
+}

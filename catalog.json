@@ -8,6 +8,14 @@
       "description": "Photograph birds in a procedurally generated wetland to fill your field journal. Three.js, Vite and TypeScript.",
       "path": "web-game/wetland-birdwatching",
       "cover": "covers/wetland-birdwatching.webp"
+    },
+    {
+      "id": "night-train",
+      "type": "interactive-drama",
+      "name": "Last Train Home",
+      "description": "A three-scene interactive drama starter: board the night train and get home. Shows nodes, signals, shared components and state.",
+      "path": "interactive-drama/night-train",
+      "cover": "covers/night-train.webp"
     }
   ]
 }
