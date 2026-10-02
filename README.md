@@ -24,7 +24,7 @@ after OhMyGame updates the pinned commit.
 | `type` | OhMyGame project type; only `web-game` for now |
 | `name`, `description` | Shown when choosing an example |
 | `path` | Folder copied into the new project's workspace |
-| `cover` | Project cover image, kept outside `path` so it is not copied |
+| `cover` | Project cover, a WebP image kept outside `path` so it is not copied |
 
 ## Adding an example
 
@@ -34,7 +34,7 @@ after OhMyGame updates the pinned commit.
 2. Add an `AGENTS.md` that maps the code for an agent, and record every
    third-party asset or code port with its license (see
    [the wetland example's credits](web-game/wetland-birdwatching/src/assets/CREDITS.md)).
-3. Add a cover image to `covers/` and an entry to `catalog.json`.
+3. Add a WebP cover to `covers/` and an entry to `catalog.json`.
 4. Run `node scripts/check-catalog.mjs`, then `npm ci && npm run build` in the
    example folder. CI runs the same checks.
 

@@ -20,6 +20,7 @@ for (const example of catalog.examples ?? []) {
   ids.add(example.id);
   if (example.type !== 'web-game') errors.push(`${label}: unsupported type ${example.type}`);
   if (!existsSync(path.join(root, example.cover ?? ''))) errors.push(`${label}: cover not found`);
+  if (!(example.cover ?? '').endsWith('.webp')) errors.push(`${label}: cover must be a .webp image (OhMyGame stores project covers as WebP)`);
   const packagePath = path.join(root, example.path ?? '', 'package.json');
   if (!existsSync(packagePath)) {
     errors.push(`${label}: ${example.path}/package.json not found`);
