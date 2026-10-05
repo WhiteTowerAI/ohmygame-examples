@@ -11,10 +11,10 @@
     },
     {
       "id": "night-train",
-      "type": "interactive-drama",
+      "type": "interactive-story",
       "name": "Last Train Home",
-      "description": "A three-scene interactive drama starter: board the night train and get home. Shows nodes, signals, shared components and state.",
-      "path": "interactive-drama/night-train",
+      "description": "A three-scene interactive story starter: board the night train and get home. Shows nodes, signals, shared components and state.",
+      "path": "interactive-story/night-train",
       "cover": "covers/night-train.webp"
     }
   ]

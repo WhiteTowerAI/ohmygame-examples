@@ -8,7 +8,7 @@ to build on it.
 | Example | Type | What it shows |
 | --- | --- | --- |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
-| [Last Train Home](interactive-drama/night-train) | Interactive Drama | A three-scene starter: nodes, signals, shared components and state |
+| [Last Train Home](interactive-story/night-train) | Interactive Story | A three-scene starter: nodes, signals, shared components and state |
 
 ## How OhMyGame uses this repository
 
@@ -22,7 +22,7 @@ after OhMyGame updates the pinned commit.
 | Field | Meaning |
 | --- | --- |
 | `id` | Stable kebab-case id, used by OhMyGame to refer to the example |
-| `type` | OhMyGame project type: `web-game` or `interactive-drama` |
+| `type` | OhMyGame project type: `web-game` or `interactive-story` |
 | `name`, `description` | Shown when choosing an example |
 | `path` | Folder copied into the new project's workspace |
 | `cover` | Project cover, a WebP image kept outside `path` so it is not copied |
@@ -33,7 +33,7 @@ after OhMyGame updates the pinned commit.
    folder.
    - A web game needs a `package.json` with `dev` and `build` scripts, and
      `build` must write a static site to `dist/`.
-   - An interactive drama is a Playable Nodes workspace: `graph.json`,
+   - An interactive story is a Playable Nodes workspace: `graph.json`,
      `editor/layout.json`, `nodes/` and `shared/`. Leave out `AGENTS.md`,
      `README.md` and `schemas/`; OhMyGame writes the versions that match the
      app. Media must live in the folder (`source.kind: "workspace"`), not in a
