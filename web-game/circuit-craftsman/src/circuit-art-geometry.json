@@ -1,0 +1,15 @@
+{
+  "revision": 2,
+  "textureSize": 256,
+  "center": 128,
+  "pipeWidth": 32,
+  "silverWidth": 28,
+  "collarWidth": 40,
+  "collarLength": 20,
+  "faceInset": 2,
+  "elbowRadius": 44,
+  "displayScale": 1.07,
+  "glassTop": 40,
+  "glassBottom": 165,
+  "bulbAdapterTop": 216
+}

@@ -7,6 +7,7 @@ to build on it.
 
 | Example | Type | What it shows |
 | --- | --- | --- |
+| [Circuit Craftsman](web-game/circuit-craftsman) | Web Game | 40 circuit puzzles, Phaser boards, worker-based hints, local progress and English/Chinese UI |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
 | [Last Train Home](interactive-drama/night-train) | Interactive Drama | A three-scene starter: nodes, signals, shared components and state |
 

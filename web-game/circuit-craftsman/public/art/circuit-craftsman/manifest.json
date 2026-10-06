@@ -1,0 +1,1255 @@
+{
+  "version": 2,
+  "game": "Circuit Craftsman",
+  "edition": "agent-case",
+  "assetCount": 47,
+  "geometry": {
+    "revision": 2,
+    "textureSize": 256,
+    "center": 128,
+    "pipeWidth": 32,
+    "silverWidth": 28,
+    "collarWidth": 40,
+    "collarLength": 20,
+    "faceInset": 2,
+    "elbowRadius": 44,
+    "displayScale": 1.07,
+    "glassTop": 40,
+    "glassBottom": 165,
+    "bulbAdapterTop": 216
+  },
+  "assets": [
+    {
+      "id": "logo-small",
+      "name": "界面小 Logo",
+      "category": "branding",
+      "file": "branding/logo-small.webp",
+      "width": 384,
+      "height": 144,
+      "bytes": 56620,
+      "sha256": "ed3394b3037c25c3d565ed6e298bfe6de36a1fc7fba02b72763b5a504c9cc4aa",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 38040,
+        "transparentPixels": 17256,
+        "partialAlphaPixels": 2906,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 95984,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "logo-small-en",
+      "name": "英文 Logo 小图",
+      "category": "branding",
+      "file": "branding/logo-small-en.webp",
+      "width": 512,
+      "height": 256,
+      "bytes": 109540,
+      "sha256": "077c6bd9d52da483bf88487ffd8dc06db6506db251237883b09417ccc72740f6",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 78762,
+        "transparentPixels": 52310,
+        "partialAlphaPixels": 3830,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 184501,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "apprentice-idle",
+      "name": "小工匠全身立绘",
+      "category": "characters",
+      "file": "characters/apprentice-idle.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 205900,
+      "sha256": "c5ef719e30f2a6b43e9fc7a542f8949e5d0ca1cf15dc523b4c248c096ad82261",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 153754,
+        "transparentPixels": 239462,
+        "partialAlphaPixels": 8424,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 434999,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "apprentice-happy",
+      "name": "小工匠·开心",
+      "category": "characters",
+      "file": "characters/apprentice-happy.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 153920,
+      "sha256": "dd9d7a67ddda51e35c6d4b0f562bce9f644ac0590cebd3f514d515dfa3a841f7",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 124515,
+        "transparentPixels": 137629,
+        "partialAlphaPixels": 4687,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 320262,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "apprentice-thinking",
+      "name": "小工匠·思考",
+      "category": "characters",
+      "file": "characters/apprentice-thinking.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 150806,
+      "sha256": "d5f38ee570807dbb55976c274b2af2624e899eb242ac49d775a212cb43e9f113",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 123657,
+        "transparentPixels": 138487,
+        "partialAlphaPixels": 4502,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 320585,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "apprentice-surprised",
+      "name": "小工匠·惊讶",
+      "category": "characters",
+      "file": "characters/apprentice-surprised.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 153254,
+      "sha256": "da2784ec98b455b9906600e7d2addd7d3bafafa693ac4023b62b3ae83b67b22e",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 122626,
+        "transparentPixels": 139518,
+        "partialAlphaPixels": 4226,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 315901,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "apprentice-victory",
+      "name": "小工匠·眨眼庆祝",
+      "category": "characters",
+      "file": "characters/apprentice-victory.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 161970,
+      "sha256": "c84d9eae79cdcfcfd81626de750131213c5dff4c31ba96b1460ca6e5170c256e",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 131591,
+        "transparentPixels": 130553,
+        "partialAlphaPixels": 5337,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 333933,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "companion-dog",
+      "name": "伙伴小狗",
+      "category": "characters",
+      "file": "characters/companion-dog.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 140136,
+      "sha256": "3c9d391d060a1069b16e28932909a8e36e66df2bf1cfd1ee6c9136384f240e40",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 111610,
+        "transparentPixels": 150534,
+        "partialAlphaPixels": 5046,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 269420,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "tile-power",
+      "name": "电源方块",
+      "category": "tiles",
+      "file": "tiles/tile-power.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 44298,
+      "sha256": "9f237edc55f0a0e7b6c4ff1ff1bc9ad59c9f0946debdb0bfa162b449fc0d97fb",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 52045,
+        "transparentPixels": 13491,
+        "partialAlphaPixels": 1893,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 71532,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "E"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "E": [
+            0.9921875,
+            0.5
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-straight",
+      "name": "直线导线方块",
+      "category": "tiles",
+      "file": "tiles/tile-straight.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 30380,
+      "sha256": "729e1f4f717236cb4222e880079ff0a42419dd635aad3615c8819b01b5f42391",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 55565,
+        "transparentPixels": 9971,
+        "partialAlphaPixels": 318,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 51327,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "E",
+        "W"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "E": [
+            0.9921875,
+            0.5
+          ],
+          "W": [
+            0.0078125,
+            0.5
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-elbow",
+      "name": "转角导线方块",
+      "category": "tiles",
+      "file": "tiles/tile-elbow.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 32446,
+      "sha256": "cac6278dc1f1e362bd6f0cd8d7b35a09a573fb088744a7231216df8ba96ec06f",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 55525,
+        "transparentPixels": 10011,
+        "partialAlphaPixels": 318,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 56402,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "E",
+        "S"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "E": [
+            0.9921875,
+            0.5
+          ],
+          "S": [
+            0.5,
+            0.9921875
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-tee",
+      "name": "三通导线方块",
+      "category": "tiles",
+      "file": "tiles/tile-tee.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 29300,
+      "sha256": "7245ab64b2168f018cadf1f80d74681b068e9249b2b933720bfb11bba23a2e60",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 55885,
+        "transparentPixels": 9651,
+        "partialAlphaPixels": 318,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 49329,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "E",
+        "S",
+        "W"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "E": [
+            0.9921875,
+            0.5
+          ],
+          "S": [
+            0.5,
+            0.9921875
+          ],
+          "W": [
+            0.0078125,
+            0.5
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-cross",
+      "name": "十字导线方块",
+      "category": "tiles",
+      "file": "tiles/tile-cross.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 27968,
+      "sha256": "18adc1fe6ff4ce343c97e97a7af2ee88dbfb6a713f900cb25d2899c0f86be5cb",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 56205,
+        "transparentPixels": 9331,
+        "partialAlphaPixels": 318,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 46852,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "N": [
+            0.5,
+            0.0078125
+          ],
+          "E": [
+            0.9921875,
+            0.5
+          ],
+          "S": [
+            0.5,
+            0.9921875
+          ],
+          "W": [
+            0.0078125,
+            0.5
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-bulb-off",
+      "name": "灯泡方块·未通电",
+      "category": "tiles",
+      "file": "tiles/tile-bulb-off.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 41526,
+      "sha256": "0c17fd85b3be6decf0b7256c667f99fa9fb54ad5ab57528fb0a6fc779953d337",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 55838,
+        "transparentPixels": 9698,
+        "partialAlphaPixels": 1017,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 78692,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "S"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "S": [
+            0.5,
+            0.9921875
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-bulb-on",
+      "name": "灯泡方块·已通电",
+      "category": "tiles",
+      "file": "tiles/tile-bulb-on.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 42024,
+      "sha256": "e524dcd93a01ab037839fd784b2c210a0a2efb8a0d5206ef94ebd9dc66d34887",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 55838,
+        "transparentPixels": 9698,
+        "partialAlphaPixels": 1017,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 74961,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": [
+        "S"
+      ],
+      "registration": {
+        "targetRotationCenter": [
+          128,
+          128
+        ],
+        "targetPortAnchors": {
+          "S": [
+            0.5,
+            0.9921875
+          ]
+        },
+        "pipeWidth": 32,
+        "contactWidth": 40,
+        "sharedContactTemplate": "circuit-v2-collar"
+      }
+    },
+    {
+      "id": "tile-obstacle",
+      "name": "障碍方块",
+      "category": "tiles",
+      "file": "tiles/tile-obstacle.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 38068,
+      "sha256": "db0cdcb6039e7aed94dbb5c29e66418bff75848d3434413dfc1242e8f5b2147c",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 53071,
+        "transparentPixels": 12465,
+        "partialAlphaPixels": 512,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 82432,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": []
+    },
+    {
+      "id": "tile-empty",
+      "name": "空白棋盘底格",
+      "category": "tiles",
+      "file": "tiles/tile-empty.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 33434,
+      "sha256": "d87ef85a688ffcb60cbabdf92f6707ba8cddf200a13bbc9c15ed525f58480f76",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 54845,
+        "transparentPixels": 10691,
+        "partialAlphaPixels": 318,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 67134,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      },
+      "ports": []
+    },
+    {
+      "id": "button-undo",
+      "name": "撤销按钮",
+      "category": "buttons",
+      "file": "buttons/button-undo.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 40220,
+      "sha256": "62567672ac22265b2709d70d8045c6fd5ec7088ca34a7006ab6f6e5241366ac0",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 53097,
+        "transparentPixels": 12439,
+        "partialAlphaPixels": 1481,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 73551,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "button-restart",
+      "name": "重开按钮",
+      "category": "buttons",
+      "file": "buttons/button-restart.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 40138,
+      "sha256": "387d5c47237e303316f80bf8d6d87d2f62723c7197ae8e29b030bc3a149832fb",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 53277,
+        "transparentPixels": 12259,
+        "partialAlphaPixels": 806,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 75600,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "button-hint",
+      "name": "提示按钮",
+      "category": "buttons",
+      "file": "buttons/button-hint.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 50950,
+      "sha256": "0c8471aaf1de8c85427b1b0cc2b59ee62c1d274d736d95ef76044a2fd62906bd",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 51869,
+        "transparentPixels": 13667,
+        "partialAlphaPixels": 633,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 100089,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "button-levels",
+      "name": "选关按钮",
+      "category": "buttons",
+      "file": "buttons/button-levels.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 35948,
+      "sha256": "ff477372b4d59a49a3ac2a5904a02f9e3ba15b241753548ff54ab4bc58167fd4",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 53568,
+        "transparentPixels": 11968,
+        "partialAlphaPixels": 750,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 68139,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "button-settings",
+      "name": "设置按钮",
+      "category": "buttons",
+      "file": "buttons/button-settings.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 43540,
+      "sha256": "ed599724ffd5fe76d98c4facc887dcf58b1c371d3f8f8d31c3c40c80a43fdeb2",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 43935,
+        "transparentPixels": 21601,
+        "partialAlphaPixels": 1860,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 76871,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "star-earned",
+      "name": "已获得星星",
+      "category": "ui",
+      "file": "ui/star-earned.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 12070,
+      "sha256": "6df6ed3caaae468dac25e785172b38689aaad71924824b44c1133e787659519f",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 8274,
+        "transparentPixels": 8110,
+        "partialAlphaPixels": 1077,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 21447,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "star-empty",
+      "name": "未获得星星",
+      "category": "ui",
+      "file": "ui/star-empty.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 9084,
+      "sha256": "739336dd68b21300bf8532e908dd6f5c108fb13c7443b0066705434f335d9eda",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 8274,
+        "transparentPixels": 8110,
+        "partialAlphaPixels": 1077,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 15561,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "results-panel",
+      "name": "结算面板底图",
+      "category": "ui",
+      "file": "ui/results-panel.webp",
+      "width": 768,
+      "height": 640,
+      "bytes": 210308,
+      "sha256": "5980083c9eab3cf386313dbaacd019e8359d9ee3a6dae33d8114d549e479557c",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 393328,
+        "transparentPixels": 98192,
+        "partialAlphaPixels": 4541,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 348240,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "settings-panel",
+      "name": "设置面板底图",
+      "category": "ui",
+      "file": "ui/settings-panel.webp",
+      "width": 768,
+      "height": 544,
+      "bytes": 230104,
+      "sha256": "5156a2adcefc40492dc18d5af166aa47bc01bf12c35a7d260f6a099ac9ff702a",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 407082,
+        "transparentPixels": 10710,
+        "partialAlphaPixels": 78307,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 358038,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "level-unlocked",
+      "name": "已解锁关卡格子",
+      "category": "ui",
+      "file": "ui/level-unlocked.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 32574,
+      "sha256": "68406c37971e318e28cc7b459e300b8447e411077e5398b1132261b8233d87f8",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 54517,
+        "transparentPixels": 11019,
+        "partialAlphaPixels": 713,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 61408,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "level-locked",
+      "name": "未解锁关卡格子",
+      "category": "ui",
+      "file": "ui/level-locked.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 37430,
+      "sha256": "d173261cfbd44c525e7a213b91748ddb19436bb824f18b82efe3b3fd3a518e0b",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 53585,
+        "transparentPixels": 11951,
+        "partialAlphaPixels": 414,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 79744,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "action-blue",
+      "name": "蓝色操作按钮底图",
+      "category": "ui",
+      "file": "ui/action-blue.webp",
+      "width": 512,
+      "height": 208,
+      "bytes": 51002,
+      "sha256": "4bb06b83452117afc75d13d4ce9b481d7e588f3c4d881ca1525aaa9e602299cf",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 83729,
+        "transparentPixels": 22767,
+        "partialAlphaPixels": 895,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 83330,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "action-gold",
+      "name": "金色操作按钮底图",
+      "category": "ui",
+      "file": "ui/action-gold.webp",
+      "width": 512,
+      "height": 208,
+      "bytes": 51894,
+      "sha256": "8549fc84c7d512a5c70c2ff59596ee63568b0e11274420c3fcda20eb1ecee972",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 79201,
+        "transparentPixels": 27295,
+        "partialAlphaPixels": 895,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 97995,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "background-street",
+      "name": "街角场景背景",
+      "category": "runtime",
+      "file": "runtime/background-street.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 296770,
+      "sha256": "e9d1375498c74195aa0ee55c80493275207fe1f5acd99fdc9b87854256cd9e00",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 1572864,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 5116
+      },
+      "compression": {
+        "mode": "existing-webp"
+      }
+    },
+    {
+      "id": "background-campus",
+      "name": "校园场景背景",
+      "category": "runtime",
+      "file": "runtime/background-campus.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 267548,
+      "sha256": "f9d85f35d1584363254982d556bd219b3ec3f0b98688aabe23bad7190bdfd291",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 1572864,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 5116
+      },
+      "compression": {
+        "mode": "existing-webp"
+      }
+    },
+    {
+      "id": "background-station",
+      "name": "车站场景背景",
+      "category": "runtime",
+      "file": "runtime/background-station.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 265198,
+      "sha256": "cb3c04fcb64b903918cab3f1e2f46f931417a41c35f269b2099657d9c1dffd81",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 1572864,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 5116
+      },
+      "compression": {
+        "mode": "existing-webp"
+      }
+    },
+    {
+      "id": "background-square",
+      "name": "广场场景背景",
+      "category": "runtime",
+      "file": "runtime/background-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 298928,
+      "sha256": "513963b216751f151afb291ccc4ea5f5b531c2e3a1512c3421a3446da5da6e72",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 1572864,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 5116
+      },
+      "compression": {
+        "mode": "existing-webp"
+      }
+    },
+    {
+      "id": "thumbnail-street",
+      "name": "街角区域缩略图",
+      "category": "thumbnails",
+      "file": "thumbnails/thumbnail-street.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 107326,
+      "sha256": "35925a0dcbce69737f7c2d48f4b7b918167bd41670d04f7515f110174d28549f",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 65536,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 1020
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 145025,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "thumbnail-campus",
+      "name": "校园区域缩略图",
+      "category": "thumbnails",
+      "file": "thumbnails/thumbnail-campus.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 99332,
+      "sha256": "5cdb62f453f3dc68190beceb3fafa95bd6552781ce9883be01b6c37f6e5d14b0",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 65536,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 1020
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 140552,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "thumbnail-station",
+      "name": "车站区域缩略图",
+      "category": "thumbnails",
+      "file": "thumbnails/thumbnail-station.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 100108,
+      "sha256": "ec8ccc8d329c480fcc424ca2e97660c7ad43ffc389b5b98e6ab3c078a8a8d888",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 65536,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 1020
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 145695,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "thumbnail-square",
+      "name": "广场区域缩略图",
+      "category": "thumbnails",
+      "file": "thumbnails/thumbnail-square.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 99234,
+      "sha256": "6014e72697a938d0a7c728af028f740ddf9fa37a5569f93ba4d0a50cf93a076a",
+      "transparent": false,
+      "checks": {
+        "visiblePixels": 65536,
+        "transparentPixels": 0,
+        "partialAlphaPixels": 0,
+        "edgeVisiblePixels": 1020
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 139113,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "prop-toolbox",
+      "name": "维修工具箱",
+      "category": "props",
+      "file": "props/prop-toolbox.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 153750,
+      "sha256": "33231da783b30058decb7ce24d987d65e086d49ceb36d345aa2d8f98c53be057",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 149010,
+        "transparentPixels": 113134,
+        "partialAlphaPixels": 147622,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 294018,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "prop-notice-board",
+      "name": "维修告示牌",
+      "category": "props",
+      "file": "props/prop-notice-board.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 202320,
+      "sha256": "d36ae35cc52062130f8d7363b53e1d36bf0a6677de3e28eb3444f52bdd46e980",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 248635,
+        "transparentPixels": 144581,
+        "partialAlphaPixels": 6128,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 462314,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "prop-street-lamp",
+      "name": "小镇路灯",
+      "category": "props",
+      "file": "props/prop-street-lamp.webp",
+      "width": 384,
+      "height": 768,
+      "bytes": 62242,
+      "sha256": "94201758eaf1547f757e453b03ba6afb3d987d213070d16d1da64228ead01536",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 44320,
+        "transparentPixels": 250592,
+        "partialAlphaPixels": 5518,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 158827,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "prop-traffic-cone",
+      "name": "维修路锥",
+      "category": "props",
+      "file": "props/prop-traffic-cone.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 100540,
+      "sha256": "7d06604e3c8a056934ddec70bdcab9afc97c141a7f3e92dae886ad32cc927957",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 107448,
+        "transparentPixels": 154696,
+        "partialAlphaPixels": 3741,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 232664,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "fx-rotation",
+      "name": "旋转反馈光环",
+      "category": "effects",
+      "file": "effects/fx-rotation.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 137540,
+      "sha256": "4ffeeca4e3438b109b8d523d6f01f9e6888768a9913746d9b28530b5658cb613",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 99199,
+        "transparentPixels": 162945,
+        "partialAlphaPixels": 89313,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 311742,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "fx-bulb-ignition",
+      "name": "灯泡亮起特效",
+      "category": "effects",
+      "file": "effects/fx-bulb-ignition.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 179092,
+      "sha256": "7d7ca52b3f96706cbce17b11d75f0ed829ea896918265edc6756345be4b62eab",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 142380,
+        "transparentPixels": 119764,
+        "partialAlphaPixels": 107375,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 403269,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "fx-completion-stars",
+      "name": "三星通关特效",
+      "category": "effects",
+      "file": "effects/fx-completion-stars.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 209842,
+      "sha256": "73ae4eae0ed6a400a171726178d086987c7134e8490b5488c084a3365300148f",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 163120,
+        "transparentPixels": 131792,
+        "partialAlphaPixels": 121069,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 430764,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "fx-hint-ring",
+      "name": "提示高亮光环",
+      "category": "effects",
+      "file": "effects/fx-hint-ring.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 91290,
+      "sha256": "b2ed0707e451799d3d3eb0e7a5bc191403a9cf24574f428fa6825bc3ab257ca0",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 65826,
+        "transparentPixels": 196318,
+        "partialAlphaPixels": 60195,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 206210,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    },
+    {
+      "id": "fx-current-particle",
+      "name": "电流流动光点",
+      "category": "effects",
+      "file": "effects/fx-current-particle.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 12808,
+      "sha256": "32952296db571dfe290697d3b4fbcdafee810e5392da0eaee3ab38f8a7c5d3f4",
+      "transparent": true,
+      "checks": {
+        "visiblePixels": 7469,
+        "transparentPixels": 8915,
+        "partialAlphaPixels": 7090,
+        "edgeVisiblePixels": 0
+      },
+      "compression": {
+        "mode": "lossless",
+        "sourceBytes": 25296,
+        "alphaChangedPixels": 0,
+        "visibleRgbChangedPixels": 0
+      }
+    }
+  ]
+}

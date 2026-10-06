@@ -2,6 +2,14 @@
   "version": 1,
   "examples": [
     {
+      "id": "circuit-craftsman",
+      "type": "web-game",
+      "name": "Circuit Craftsman",
+      "description": "Rotate circuit tiles to light every bulb across 40 handcrafted puzzles. Phaser, TypeScript and Vite, with English and Chinese interfaces.",
+      "path": "web-game/circuit-craftsman",
+      "cover": "covers/circuit-craftsman.webp"
+    },
+    {
       "id": "wetland-birdwatching",
       "type": "web-game",
       "name": "Wetland Birdwatching",

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "boards": [
+    {
+      "id": "47645234-e63f-4538-aa06-a70d07e8263f",
+      "name": "Main"
+    },
+    {
+      "id": "95dfd995-8cda-46b5-965e-d0c30e859a70",
+      "name": "Modify"
+    }
+  ],
+  "documents": [
+    {
+      "id": "970b066d-a80e-49c4-910e-a6f60f7d9526",
+      "title": "电路小工匠"
+    }
+  ],
+  "mainDocumentId": "970b066d-a80e-49c4-910e-a6f60f7d9526"
+}
