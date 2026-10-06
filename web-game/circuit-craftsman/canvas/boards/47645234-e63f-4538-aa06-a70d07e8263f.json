@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "eea82644-827f-4394-b706-e7122a64baf5",
+      "type": "document",
+      "data": {
+        "documentId": "970b066d-a80e-49c4-910e-a6f60f7d9526"
+      },
+      "title": "游戏设计文档"
+    },
+    {
+      "id": "edbd98ef-50c7-4fc1-b241-81d93d089247",
+      "type": "image",
+      "data": {
+        "prompt": "基于游戏文档完成游戏概念图",
+        "promptSource": {
+          "type": "node",
+          "nodeId": "eea82644-827f-4394-b706-e7122a64baf5"
+        },
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": [],
+        "assetId": "a07d8b7a-8f40-4d6e-83e9-98475594f183"
+      },
+      "title": "游戏概念图"
+    }
+  ],
+  "edges": [],
+  "id": "47645234-e63f-4538-aa06-a70d07e8263f"
+}

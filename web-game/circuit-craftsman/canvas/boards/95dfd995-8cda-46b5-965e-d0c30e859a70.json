@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "circuit-v2-final-tile-straight",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-straight",
+        "mediaType": "image"
+      },
+      "title": "直线导线方块"
+    },
+    {
+      "id": "circuit-v2-final-tile-elbow",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-elbow",
+        "mediaType": "image"
+      },
+      "title": "转角导线方块"
+    },
+    {
+      "id": "circuit-v2-final-tile-tee",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-tee",
+        "mediaType": "image"
+      },
+      "title": "三通导线方块"
+    },
+    {
+      "id": "circuit-v2-final-tile-cross",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-cross",
+        "mediaType": "image"
+      },
+      "title": "十字导线方块"
+    },
+    {
+      "id": "circuit-v2-final-tile-bulb-off",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-bulb-off",
+        "mediaType": "image"
+      },
+      "title": "灯泡方块·未通电"
+    },
+    {
+      "id": "circuit-v2-final-tile-bulb-on",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-bulb-on",
+        "mediaType": "image"
+      },
+      "title": "灯泡方块·已通电"
+    },
+    {
+      "id": "circuit-v2-final-tile-power",
+      "type": "asset",
+      "data": {
+        "assetId": "circuit-v2-final-tile-power",
+        "mediaType": "image"
+      },
+      "title": "电源方块"
+    },
+    {
+      "id": "ui-v3-final-settings-panel",
+      "type": "asset",
+      "data": {
+        "assetId": "ui-v3-final-settings-panel",
+        "mediaType": "image"
+      },
+      "title": "设置面板成品"
+    },
+    {
+      "id": "ui-v3-final-background-street",
+      "type": "asset",
+      "data": {
+        "assetId": "ui-v3-final-background-street",
+        "mediaType": "image"
+      },
+      "title": "街角背景调色成品"
+    },
+    {
+      "id": "ui-v3-final-background-campus",
+      "type": "asset",
+      "data": {
+        "assetId": "ui-v3-final-background-campus",
+        "mediaType": "image"
+      },
+      "title": "校园背景调色成品"
+    },
+    {
+      "id": "ui-v3-final-background-station",
+      "type": "asset",
+      "data": {
+        "assetId": "ui-v3-final-background-station",
+        "mediaType": "image"
+      },
+      "title": "车站背景调色成品"
+    },
+    {
+      "id": "ui-v3-final-background-square",
+      "type": "asset",
+      "data": {
+        "assetId": "ui-v3-final-background-square",
+        "mediaType": "image"
+      },
+      "title": "广场背景调色成品"
+    },
+    {
+      "id": "localization-v4-logo-reference",
+      "type": "asset",
+      "data": {
+        "assetId": "localization-v4-logo-reference",
+        "mediaType": "image"
+      },
+      "title": "中文 Logo"
+    },
+    {
+      "id": "localization-v4-final-logo-en",
+      "type": "asset",
+      "data": {
+        "assetId": "localization-v4-final-logo-en",
+        "mediaType": "image"
+      },
+      "title": "英文 Logo"
+    }
+  ],
+  "edges": [],
+  "id": "95dfd995-8cda-46b5-965e-d0c30e859a70"
+}

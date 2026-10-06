@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "nodes": {
+    "circuit-v2-final-tile-straight": {
+      "x": 1216,
+      "y": 96
+    },
+    "circuit-v2-final-tile-elbow": {
+      "x": 1216,
+      "y": 576
+    },
+    "circuit-v2-final-tile-tee": {
+      "x": 1216,
+      "y": 1056
+    },
+    "circuit-v2-final-tile-cross": {
+      "x": 1776,
+      "y": 96
+    },
+    "circuit-v2-final-tile-bulb-off": {
+      "x": 1780,
+      "y": 580
+    },
+    "circuit-v2-final-tile-bulb-on": {
+      "x": 1776,
+      "y": 1056
+    },
+    "circuit-v2-final-tile-power": {
+      "x": 2340,
+      "y": 100
+    },
+    "ui-v3-final-settings-panel": {
+      "x": 3460,
+      "y": 96
+    },
+    "ui-v3-final-background-street": {
+      "x": 3460,
+      "y": 576
+    },
+    "ui-v3-final-background-campus": {
+      "x": 3460,
+      "y": 1056
+    },
+    "ui-v3-final-background-station": {
+      "x": 4020,
+      "y": 96
+    },
+    "ui-v3-final-background-square": {
+      "x": 4020,
+      "y": 576
+    },
+    "localization-v4-logo-reference": {
+      "x": 4580,
+      "y": 96
+    },
+    "localization-v4-final-logo-en": {
+      "x": 5140,
+      "y": 96
+    }
+  },
+  "viewport": {
+    "x": -647.6959771039992,
+    "y": 207.85616881419168,
+    "zoom": 0.3631967610976451
+  },
+  "view": "canvas"
+}

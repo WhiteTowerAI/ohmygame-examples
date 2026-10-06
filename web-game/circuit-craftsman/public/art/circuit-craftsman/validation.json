@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "checkedCount": 47,
+  "runtimeVerified": true,
+  "checks": [
+    "Every runtime image is retained once",
+    "43 transparent or opaque PNG sprites encoded as lossless WebP",
+    "Dimensions, alpha and visible RGB preserved",
+    "Existing four graded runtime backgrounds retained byte-for-byte",
+    "Canvas references share runtime files",
+    "Only original design text and compressed concept illustration retained"
+  ],
+  "compactCase": {
+    "before": {
+      "imageFiles": 146,
+      "imageBytes": 108389430,
+      "sourceBytes": 112112637
+    },
+    "after": {
+      "imageFiles": 48,
+      "imageBytes": 5127430,
+      "runtimeImageFiles": 47,
+      "runtimeImageBytes": 4980720,
+      "canvasAssets": 15,
+      "canvasNodes": 16
+    },
+    "removedRuntimeKeys": [
+      "logo",
+      "logo-en",
+      "button-back",
+      "hud-bar",
+      "level-panel",
+      "info-plaque",
+      "prop-safety-helmet"
+    ],
+    "savedImageBytes": 103262000,
+    "concept": {
+      "file": "assets/concept.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 146710
+    },
+    "originalArtSourcesRetained": false,
+    "generationHistoryRetained": false
+  },
+  "verification": {
+    "automatedTests": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "validatedLevels": 40,
+      "withoutFfmpeg": {
+        "passed": 25,
+        "skippedPixelTests": 5,
+        "failed": 0
+      }
+    },
+    "productionBuild": {
+      "passed": true,
+      "publishedImageFiles": 47,
+      "publishedImagesByteVerified": 47,
+      "relativeAssetURLs": true,
+      "developmentBridgeAbsent": true,
+      "fontLicensesVerified": true,
+      "bytes": 7422620,
+      "outputRetained": false
+    },
+    "canvas": {
+      "passed": true,
+      "boards": 2,
+      "nodes": 16,
+      "assets": 15,
+      "generationRuns": 0,
+      "preservedRemainingIDs": true,
+      "staleReferences": 0
+    },
+    "browser": {
+      "runtime": "development preview",
+      "viewports": [[1280, 800], [390, 844], [360, 640], [844, 390]],
+      "languages": ["en", "zh"],
+      "regions": ["street", "campus", "station", "square"],
+      "nonblankScreenshots": true,
+      "checked": [
+        "Lossless WebP sprites and transparent edges",
+        "Lit and unlit bulbs on one board",
+        "Clockwise rotation, undo, restart and SAT hints",
+        "English and Chinese logos, menus, settings and results",
+        "Sound and reduced-motion switches",
+        "All four region backgrounds and level selection",
+        "4x4, 5x5, 6x6 and 7x7 boards",
+        "Touch rotation and illumination on portrait and landscape"
+      ],
+      "completedLevels": [
+        {"level": 11, "moves": 5, "litBulbs": 2, "stars": 3, "usedHint": false, "input": "pointer"},
+        {"level": 1, "moves": 2, "litBulbs": 1, "stars": 3, "usedHint": false, "input": "touch"}
+      ],
+      "partialIllumination": [
+        {"level": 21, "moves": 1, "litBulbs": 1, "totalBulbs": 2},
+        {"level": 40, "moves": 4, "litBulbs": 1, "totalBulbs": 5}
+      ],
+      "missingRequests": 0,
+      "consoleErrors": 0,
+      "fontErrors": 0,
+      "horizontalOverflow": false,
+      "languagePersistenceScope": "automated tests; browser playthrough used transient saves",
+      "physicalMobileDevice": false,
+      "speakerAudio": false,
+      "deployedHosting": false
+    },
+    "remainingDuplicateImageGroups": 0
+  }
+}
