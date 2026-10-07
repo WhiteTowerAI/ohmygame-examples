@@ -10,8 +10,10 @@ The 47 runtime WebP images in `public/art/circuit-craftsman/` and the design
 illustration in `assets/concept.webp` were created for the original game
 workspace. The supplied artwork includes generated images and normalized
 circuit tiles. See the artwork manifest and README for file details.
-The catalog cover in `../../covers/circuit-craftsman.webp` is a screenshot of
-the game. No external artwork packs or recorded audio are included.
+The catalog cover in `../../covers/circuit-craftsman.webp` is the promotional
+illustration supplied by the project owner as `output.webp`, resized to
+1280 pixels wide and compressed as WebP. No external artwork packs or
+recorded audio are included.
 
 `src/audio.ts` synthesizes game sounds using the Web Audio API.
 
