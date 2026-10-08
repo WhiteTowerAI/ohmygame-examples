@@ -1,0 +1,81 @@
+{
+  "assets": {
+    "paper-frame": {
+      "file": "paper-frame.webp",
+      "width": 512,
+      "height": 499,
+      "sourceRect": {
+        "left": 40,
+        "top": 70,
+        "width": 520,
+        "height": 520
+      },
+      "cutoutBounds": {
+        "left": 25,
+        "top": 26,
+        "right": 497,
+        "bottom": 486
+      },
+      "slice": 64
+    },
+    "resource-plate": {
+      "file": "resource-plate.webp",
+      "width": 768,
+      "height": 332,
+      "sourceRect": {
+        "left": 560,
+        "top": 185,
+        "width": 680,
+        "height": 340
+      },
+      "cutoutBounds": {
+        "left": 21,
+        "top": 25,
+        "right": 650,
+        "bottom": 296
+      },
+      "slice": 64
+    },
+    "mint-button": {
+      "file": "mint-button.webp",
+      "width": 256,
+      "height": 256,
+      "sourceRect": {
+        "left": 55,
+        "top": 620,
+        "width": 520,
+        "height": 525
+      },
+      "cutoutBounds": {
+        "left": 33,
+        "top": 33,
+        "right": 487,
+        "bottom": 484
+      },
+      "slice": null
+    },
+    "coral-button": {
+      "file": "coral-button.webp",
+      "width": 256,
+      "height": 256,
+      "sourceRect": {
+        "left": 675,
+        "top": 620,
+        "width": 515,
+        "height": 525
+      },
+      "cutoutBounds": {
+        "left": 24,
+        "top": 31,
+        "right": 483,
+        "bottom": 485
+      },
+      "slice": null
+    }
+  },
+  "sourceProvenance": {
+    "originalWorkspacePath": "assets/imported/output-9.webp",
+    "includedInExample": false,
+    "originalNodeId": "tidal-hud-skin"
+  }
+}

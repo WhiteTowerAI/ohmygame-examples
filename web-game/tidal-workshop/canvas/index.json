@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "boards": [
+    {
+      "id": "3adb3bb7-d803-4e74-8e70-d759fc016d26",
+      "name": "Tidal Workshop · Design and Art"
+    }
+  ],
+  "documents": [
+    {
+      "id": "tidal-workshop-design",
+      "title": "Tidal Workshop · Game Design Document"
+    },
+    {
+      "id": "tidal-workshop-art",
+      "title": "Tidal Workshop · Visual and Asset Guidelines"
+    }
+  ],
+  "mainDocumentId": "tidal-workshop-design"
+}

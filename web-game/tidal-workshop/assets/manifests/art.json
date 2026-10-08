@@ -1,0 +1,732 @@
+{
+  "dock": {
+    "file": "dock.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 0,
+      "width": 542,
+      "height": 478
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      59,
+      123,
+      41,
+      38
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "crane": {
+    "file": "crane.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 542,
+      "top": 0,
+      "width": 457,
+      "height": 478
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      43,
+      45,
+      76,
+      10
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "press": {
+    "file": "press.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 999,
+      "top": 0,
+      "width": 537,
+      "height": 527
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      76,
+      120,
+      76,
+      45
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "warehouse": {
+    "file": "warehouse.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 478,
+      "width": 556,
+      "height": 546
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      62,
+      38,
+      58,
+      68
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "lighthouse": {
+    "file": "lighthouse.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 556,
+      "top": 478,
+      "width": 449,
+      "height": 546
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      63,
+      10,
+      88,
+      71
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "beacon": {
+    "file": "beacon.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 1005,
+      "top": 527,
+      "width": 531,
+      "height": 497
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      83,
+      45,
+      91,
+      78
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  },
+  "boat-empty": {
+    "file": "boat-empty.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 0,
+      "width": 505,
+      "height": 552
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      37,
+      78,
+      13,
+      48
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "boat-loaded": {
+    "file": "boat-loaded.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 505,
+      "top": 0,
+      "width": 477,
+      "height": 541
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      14,
+      78,
+      9,
+      37
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "barge": {
+    "file": "barge.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 982,
+      "top": 0,
+      "width": 554,
+      "height": 526
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      10,
+      50,
+      15,
+      5
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "scrap-pile": {
+    "file": "scrap-pile.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 552,
+      "width": 516,
+      "height": 472
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      34,
+      49,
+      47,
+      72
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "parts-crate": {
+    "file": "parts-crate.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 516,
+      "top": 541,
+      "width": 538,
+      "height": 483
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      48,
+      38,
+      72,
+      64
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "buoy": {
+    "file": "buoy.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 1054,
+      "top": 526,
+      "width": 482,
+      "height": 498
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      76,
+      5,
+      130,
+      62
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "hoist": {
+    "file": "hoist.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 0,
+      "width": 503,
+      "height": 533
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      63,
+      54,
+      62,
+      18
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "bench": {
+    "file": "bench.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 503,
+      "top": 0,
+      "width": 515,
+      "height": 546
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      62,
+      147,
+      45,
+      33
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "office": {
+    "file": "office.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 1018,
+      "top": 0,
+      "width": 518,
+      "height": 540
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      45,
+      79,
+      48,
+      18
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "jetty": {
+    "file": "jetty.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 0,
+      "top": 533,
+      "width": 558,
+      "height": 491
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      47,
+      20,
+      55,
+      99
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "crates": {
+    "file": "crates.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 558,
+      "top": 546,
+      "width": 490,
+      "height": 478
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      55,
+      34,
+      79,
+      92
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "flag": {
+    "file": "flag.webp",
+    "width": 512,
+    "height": 512,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 1048,
+      "top": 540,
+      "width": 488,
+      "height": 484
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      116,
+      20,
+      92,
+      85
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-11.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-scrap": {
+    "file": "icon-scrap.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 0,
+      "top": 0,
+      "width": 512,
+      "height": 680
+    },
+    "matte": "white",
+    "sourcePadding": [
+      61,
+      248,
+      35,
+      56
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-parts": {
+    "file": "icon-parts.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 512,
+      "top": 0,
+      "width": 512,
+      "height": 680
+    },
+    "matte": "white",
+    "sourcePadding": [
+      92,
+      260,
+      61,
+      56
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-coins": {
+    "file": "icon-coins.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 1024,
+      "top": 0,
+      "width": 512,
+      "height": 680
+    },
+    "matte": "white",
+    "sourcePadding": [
+      85,
+      266,
+      78,
+      59
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-charts": {
+    "file": "icon-charts.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 1536,
+      "top": 0,
+      "width": 512,
+      "height": 680
+    },
+    "matte": "white",
+    "sourcePadding": [
+      26,
+      245,
+      41,
+      28
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-salvage": {
+    "file": "icon-salvage.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 0,
+      "top": 680,
+      "width": 512,
+      "height": 620
+    },
+    "matte": "white",
+    "sourcePadding": [
+      86,
+      65,
+      57,
+      94
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-press": {
+    "file": "icon-press.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 512,
+      "top": 680,
+      "width": 512,
+      "height": 620
+    },
+    "matte": "white",
+    "sourcePadding": [
+      80,
+      99,
+      63,
+      77
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-auto": {
+    "file": "icon-auto.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 1536,
+      "top": 680,
+      "width": 512,
+      "height": 620
+    },
+    "matte": "white",
+    "sourcePadding": [
+      74,
+      145,
+      81,
+      102
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-route": {
+    "file": "icon-route.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.925
+    ],
+    "rect": {
+      "left": 0,
+      "top": 1300,
+      "width": 512,
+      "height": 748
+    },
+    "matte": "white",
+    "sourcePadding": [
+      73,
+      83,
+      39,
+      239
+    ],
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-5.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-boat": {
+    "file": "icon-boat.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 505,
+      "top": 0,
+      "width": 477,
+      "height": 541
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      14,
+      78,
+      9,
+      37
+    ],
+    "derivedFrom": "boat-loaded",
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-12.webp",
+      "includedInExample": false
+    }
+  },
+  "icon-light": {
+    "file": "icon-light.webp",
+    "width": 160,
+    "height": 160,
+    "anchor": [
+      0.5,
+      0.9765625
+    ],
+    "rect": {
+      "left": 556,
+      "top": 478,
+      "width": 449,
+      "height": 546
+    },
+    "matte": "native-alpha",
+    "sourcePadding": [
+      63,
+      10,
+      88,
+      71
+    ],
+    "derivedFrom": "lighthouse",
+    "sourceProvenance": {
+      "originalWorkspacePath": "assets/imported/output-10.webp",
+      "includedInExample": false
+    }
+  }
+}
