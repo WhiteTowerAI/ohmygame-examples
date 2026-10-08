@@ -48,3 +48,9 @@ Environment files were re-encoded from FLAC to MP3 (VBR ~165 kbps) and renamed; 
   above).
 - Shoreline water bands and the warm-light/cool-shadow grade are modelled on
   [brunosimon/folio-2025](https://github.com/brunosimon/folio-2025) (MIT).
+
+## Catalog cover
+
+The catalog cover in `../../../../covers/wetland-birdwatching.webp` is a
+promotional illustration supplied by the project owner as `birdwatching.jpg`,
+resized to 1280×720 and compressed as WebP. It is not part of this folder.
