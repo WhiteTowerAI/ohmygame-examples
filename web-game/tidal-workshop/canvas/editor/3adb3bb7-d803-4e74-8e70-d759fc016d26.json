@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "nodes": {
+    "tidal-design-doc": {
+      "x": 96,
+      "y": 96
+    },
+    "tidal-art-doc": {
+      "x": 96,
+      "y": 576
+    },
+    "tidal-loop-summary": {
+      "x": 96,
+      "y": 1056
+    },
+    "tidal-desktop": {
+      "x": 656,
+      "y": 96
+    },
+    "tidal-harbor": {
+      "x": 656,
+      "y": 1056
+    },
+    "runtime-dock": {
+      "x": 1076,
+      "y": 1936
+    },
+    "runtime-crane": {
+      "x": 1496,
+      "y": 1936
+    },
+    "runtime-press": {
+      "x": 1916,
+      "y": 1936
+    },
+    "runtime-warehouse": {
+      "x": 656,
+      "y": 2336
+    },
+    "runtime-lighthouse": {
+      "x": 1076,
+      "y": 2336
+    },
+    "runtime-boat-empty": {
+      "x": 1496,
+      "y": 2336
+    },
+    "runtime-boat-loaded": {
+      "x": 1916,
+      "y": 2336
+    },
+    "runtime-icon-scrap": {
+      "x": 656,
+      "y": 2736
+    },
+    "runtime-paper-frame": {
+      "x": 1076,
+      "y": 2736
+    },
+    "runtime-coral-button": {
+      "x": 1496,
+      "y": 2736
+    }
+  },
+  "viewport": {
+    "x": -222.50813870464162,
+    "y": 132.3208551467897,
+    "zoom": 0.41179550863378644
+  },
+  "view": "canvas"
+}

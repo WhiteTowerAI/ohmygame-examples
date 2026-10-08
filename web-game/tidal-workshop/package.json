@@ -1,0 +1,22 @@
+{
+  "name": "tidal-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "lucide": "^0.468.0",
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "sharp": "^0.35.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "tidal-design-doc",
+      "type": "document",
+      "data": {
+        "documentId": "tidal-workshop-design"
+      },
+      "title": "01 · Tidal Workshop / Game Design Document",
+      "description": "Main design document: production loop, automation, economic baseline, unlocks, voyages, offline settlement, saves, and initial acceptance requirements. The basis for subsequent game implementation."
+    },
+    {
+      "id": "tidal-art-doc",
+      "type": "document",
+      "data": {
+        "documentId": "tidal-workshop-art"
+      },
+      "title": "02 · Visual and Asset Guidelines",
+      "description": "Shared palette, camera, landscape/portrait UI hierarchy, asset identities, cropping specifications, and integration inspection gates. Generated images are design sources, not automatically production-ready assets."
+    },
+    {
+      "id": "tidal-loop-summary",
+      "type": "text",
+      "data": {
+        "text": "Tidal Workshop\n\nSalvage scrap → Craft parts → Ship cargo → Coins\n↓\nVoyage rewards / Machine upgrades / Specialization → Production leaps\n↓\nIsland expeditions → Permanent research manuscripts → Knowledge and faster openings\n↓\nExpand passages → Light the lighthouse → Voyage charts and hexes\n\nVisuals: turquoise water × coral machinery × bright isometric miniature harbor\n\nCurrent stage: playable game expansion. See the main design document for rules and reference research.",
+        "instruction": ""
+      },
+      "title": "Core Loop · From a Small Dock to an Automated Harbor",
+      "description": "Concept summary for browsing the canvas. The main design document defines complete rules and values."
+    },
+    {
+      "id": "tidal-desktop",
+      "type": "asset",
+      "title": "Landscape Design Concept",
+      "description": "Compressed original layout concept, with historical generated lettering; game rules and current English UI come from source code.",
+      "data": {
+        "assetId": "d879856b-6d83-4d01-b024-6dda2d899034",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "tidal-harbor",
+      "type": "asset",
+      "title": "Runtime Harbor Background",
+      "description": "Retained local artwork for this standalone example.",
+      "data": {
+        "assetId": "31befc9b-edfb-4e7a-b107-2f1d7bd8e3ab",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-dock",
+      "type": "asset",
+      "title": "Dock",
+      "data": {
+        "assetId": "tidal-workshop-runtime-dock",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-crane",
+      "type": "asset",
+      "title": "Crane",
+      "data": {
+        "assetId": "tidal-workshop-runtime-crane",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-press",
+      "type": "asset",
+      "title": "Press",
+      "data": {
+        "assetId": "tidal-workshop-runtime-press",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-warehouse",
+      "type": "asset",
+      "title": "Warehouse",
+      "data": {
+        "assetId": "tidal-workshop-runtime-warehouse",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-lighthouse",
+      "type": "asset",
+      "title": "Lighthouse",
+      "data": {
+        "assetId": "tidal-workshop-runtime-lighthouse",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-boat-empty",
+      "type": "asset",
+      "title": "Boat Empty",
+      "data": {
+        "assetId": "tidal-workshop-runtime-boat-empty",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-boat-loaded",
+      "type": "asset",
+      "title": "Boat Loaded",
+      "data": {
+        "assetId": "tidal-workshop-runtime-boat-loaded",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-icon-scrap",
+      "type": "asset",
+      "title": "Icon Scrap",
+      "data": {
+        "assetId": "tidal-workshop-runtime-icon-scrap",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-paper-frame",
+      "type": "asset",
+      "title": "Paper Frame",
+      "data": {
+        "assetId": "tidal-workshop-runtime-paper-frame",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-coral-button",
+      "type": "asset",
+      "title": "Coral Button",
+      "data": {
+        "assetId": "tidal-workshop-runtime-coral-button",
+        "mediaType": "image"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "tidal-design-to-summary",
+      "source": "tidal-design-doc",
+      "target": "tidal-loop-summary"
+    },
+    {
+      "id": "tidal-design-to-art",
+      "source": "tidal-design-doc",
+      "target": "tidal-art-doc"
+    },
+    {
+      "id": "tidal-art-to-desktop",
+      "source": "tidal-art-doc",
+      "target": "tidal-desktop"
+    }
+  ],
+  "id": "3adb3bb7-d803-4e74-8e70-d759fc016d26"
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "assets": {
+    "d879856b-6d83-4d01-b024-6dda2d899034": {
+      "name": "Tidal Workshop · Landscape Game Prototype",
+      "libraryAssetId": "d879856b-6d83-4d01-b024-6dda2d899034",
+      "path": "assets/concept.webp"
+    },
+    "31befc9b-edfb-4e7a-b107-2f1d7bd8e3ab": {
+      "name": "Tidal Workshop · Harbor Environment Background",
+      "libraryAssetId": "31befc9b-edfb-4e7a-b107-2f1d7bd8e3ab",
+      "path": "public/art/sea.webp"
+    },
+    "tidal-workshop-runtime-dock": {
+      "name": "Dock",
+      "path": "public/art/dock.webp"
+    },
+    "tidal-workshop-runtime-crane": {
+      "name": "Crane",
+      "path": "public/art/crane.webp"
+    },
+    "tidal-workshop-runtime-press": {
+      "name": "Press",
+      "path": "public/art/press.webp"
+    },
+    "tidal-workshop-runtime-warehouse": {
+      "name": "Warehouse",
+      "path": "public/art/warehouse.webp"
+    },
+    "tidal-workshop-runtime-lighthouse": {
+      "name": "Lighthouse",
+      "path": "public/art/lighthouse.webp"
+    },
+    "tidal-workshop-runtime-boat-empty": {
+      "name": "Boat Empty",
+      "path": "public/art/boat-empty.webp"
+    },
+    "tidal-workshop-runtime-boat-loaded": {
+      "name": "Boat Loaded",
+      "path": "public/art/boat-loaded.webp"
+    },
+    "tidal-workshop-runtime-icon-scrap": {
+      "name": "Icon Scrap",
+      "path": "public/art/icon-scrap.webp"
+    },
+    "tidal-workshop-runtime-paper-frame": {
+      "name": "Paper Frame",
+      "path": "src/assets/ui/paper-frame.webp"
+    },
+    "tidal-workshop-runtime-coral-button": {
+      "name": "Coral Button",
+      "path": "src/assets/ui/coral-button.webp"
+    }
+  }
+}

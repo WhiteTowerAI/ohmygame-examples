@@ -10,6 +10,14 @@
       "cover": "covers/circuit-craftsman.webp"
     },
     {
+      "id": "tidal-workshop",
+      "type": "web-game",
+      "name": "Tidal Workshop",
+      "description": "Build a cozy floating harbor: salvage scrap, craft parts, ship cargo and automate production. Explore islands and earn permanent voyage rewards. Phaser, TypeScript and Vite.",
+      "path": "web-game/tidal-workshop",
+      "cover": "covers/tidal-workshop.webp"
+    },
+    {
       "id": "wetland-birdwatching",
       "type": "web-game",
       "name": "Wetland Birdwatching",
