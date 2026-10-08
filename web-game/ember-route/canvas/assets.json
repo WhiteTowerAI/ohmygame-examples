@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "assets": {
+    "69c5c29f-a5d6-4c17-b1f5-69bf4e1e949f": {
+      "name": "Lan, the Lantern Blacksmith · Hero Concept",
+      "libraryAssetId": "69c5c29f-a5d6-4c17-b1f5-69bf4e1e949f",
+      "path": "public/art/hero.webp"
+    },
+    "c3884680-8765-4898-8047-9bc1213442ab": {
+      "name": "Ash Harbor Foundry Bridge · Battle Background",
+      "libraryAssetId": "c3884680-8765-4898-8047-9bc1213442ab",
+      "path": "public/art/bridge.webp"
+    },
+    "99da187e-7599-4d21-a741-dfe93fc121f3": {
+      "name": "Ember Route · Desktop Combat UI Mockup",
+      "libraryAssetId": "99da187e-7599-4d21-a741-dfe93fc121f3",
+      "path": "assets/concept.webp"
+    },
+    "ember-route-runtime-sentinel": {
+      "name": "Sentinel",
+      "path": "public/art/sentinel.webp"
+    },
+    "ember-route-runtime-whelp": {
+      "name": "Whelp",
+      "path": "public/art/whelp.webp"
+    },
+    "ember-route-runtime-lantern": {
+      "name": "Lantern",
+      "path": "public/art/lantern.webp"
+    },
+    "ember-route-runtime-boss": {
+      "name": "Boss",
+      "path": "public/art/boss.webp"
+    },
+    "ember-route-runtime-card-0": {
+      "name": "Card 0",
+      "path": "public/art/card-0.webp"
+    },
+    "ember-route-runtime-card-1": {
+      "name": "Card 1",
+      "path": "public/art/card-1.webp"
+    },
+    "ember-route-runtime-relic-0": {
+      "name": "Relic 0",
+      "path": "public/art/relic-0.webp"
+    },
+    "ember-route-runtime-ui-card-frame": {
+      "name": "Ui Card Frame",
+      "path": "public/art/ui-card-frame.webp"
+    },
+    "ember-route-runtime-ui-heart": {
+      "name": "Ui Heart",
+      "path": "public/art/ui-heart.webp"
+    },
+    "ember-route-runtime-ui-button-mint": {
+      "name": "Ui Button Mint",
+      "path": "public/art/ui-button-mint.webp"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "nodes": {
+    "gdd-ember-route": {
+      "x": 96,
+      "y": 96
+    },
+    "art-direction": {
+      "x": 96,
+      "y": 576
+    },
+    "hero-concept": {
+      "x": 96,
+      "y": 1056
+    },
+    "bridge-background": {
+      "x": 656,
+      "y": 96
+    },
+    "combat-prototype": {
+      "x": 656,
+      "y": 576
+    },
+    "implementation-ember-route": {
+      "x": 4016,
+      "y": 96
+    },
+    "runtime-sentinel": {
+      "x": 1496,
+      "y": 1936
+    },
+    "runtime-whelp": {
+      "x": 1916,
+      "y": 1936
+    },
+    "runtime-lantern": {
+      "x": 656,
+      "y": 2336
+    },
+    "runtime-boss": {
+      "x": 1076,
+      "y": 2336
+    },
+    "runtime-card-0": {
+      "x": 1496,
+      "y": 2336
+    },
+    "runtime-card-1": {
+      "x": 1916,
+      "y": 2336
+    },
+    "runtime-relic-0": {
+      "x": 656,
+      "y": 2736
+    },
+    "runtime-ui-card-frame": {
+      "x": 1076,
+      "y": 2736
+    },
+    "runtime-ui-heart": {
+      "x": 1496,
+      "y": 2736
+    },
+    "runtime-ui-button-mint": {
+      "x": 1916,
+      "y": 2736
+    }
+  },
+  "viewport": {
+    "x": -4805.141126272451,
+    "y": 44.33339289524281,
+    "zoom": 1.1433292845618621
+  },
+  "view": "canvas"
+}
