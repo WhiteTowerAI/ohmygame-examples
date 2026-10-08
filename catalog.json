@@ -18,6 +18,14 @@
       "cover": "covers/tidal-workshop.webp"
     },
     {
+      "id": "ember-route",
+      "type": "web-game",
+      "name": "Ember Route",
+      "description": "Forge a deck and manage Heat and Vent through a twelve-floor roguelike journey with branching routes, events, shops and a boss. Phaser, TypeScript and Vite.",
+      "path": "web-game/ember-route",
+      "cover": "covers/ember-route.webp"
+    },
+    {
       "id": "wetland-birdwatching",
       "type": "web-game",
       "name": "Wetland Birdwatching",

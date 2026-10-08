@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "boards": [
+    {
+      "id": "36531e6d-2aaf-4391-9795-e144120e5863",
+      "name": "Ember Route · Game Design and Art Preproduction"
+    }
+  ],
+  "documents": [
+    {
+      "id": "f4076920-11c4-4376-a7e5-f1caefc1d532",
+      "title": "Ember Route · Game Design Document v0.1"
+    },
+    {
+      "id": "2d2aa858-5691-48d0-aa29-223c7880b935",
+      "title": "Ember Route · Chapter I Implementation and Verification"
+    }
+  ],
+  "mainDocumentId": "f4076920-11c4-4376-a7e5-f1caefc1d532"
+}

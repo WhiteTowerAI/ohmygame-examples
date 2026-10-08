@@ -9,6 +9,7 @@ to build on it.
 | --- | --- | --- |
 | [Circuit Craftsman](web-game/circuit-craftsman) | Web Game | 40 circuit puzzles, Phaser boards, worker-based hints, local progress and English/Chinese UI |
 | [Tidal Workshop](web-game/tidal-workshop) | Web Game | Incremental harbor economy, cargo shipping, automation, island expeditions and permanent voyage rewards |
+| [Ember Route](web-game/ember-route) | Web Game | Roguelike deckbuilding, Heat and Vent combat, a branching twelve-floor route and seeded saves |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
 
 ## How OhMyGame uses this repository
