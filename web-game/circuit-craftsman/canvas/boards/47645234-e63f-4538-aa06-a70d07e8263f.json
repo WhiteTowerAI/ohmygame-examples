@@ -11,13 +11,13 @@
       "data": {
         "documentId": "970b066d-a80e-49c4-910e-a6f60f7d9526"
       },
-      "title": "游戏设计文档"
+      "title": "Game Design Document"
     },
     {
       "id": "edbd98ef-50c7-4fc1-b241-81d93d089247",
       "type": "image",
       "data": {
-        "prompt": "基于游戏文档完成游戏概念图",
+        "prompt": "Create game concept art based on the game design document.",
         "promptSource": {
           "type": "node",
           "nodeId": "eea82644-827f-4394-b706-e7122a64baf5"
@@ -31,7 +31,65 @@
         "images": [],
         "assetId": "a07d8b7a-8f40-4d6e-83e9-98475594f183"
       },
-      "title": "游戏概念图"
+      "title": "Game Concept Art"
+    },
+    {
+      "id": "circuit-craftsman-cover-en",
+      "type": "image",
+      "data": {
+        "prompt": "Create a polished 16:9 game promotional cover for the browser puzzle game Circuit Craftsman. Use the supplied English logo asset exactly as the main title, large and legible near the upper-left or upper-center, preserving its cheerful white-and-yellow lettering with a bold blue outline. Use the supplied street background as the setting: a colorful storybook town at blue hour with glowing street lamps. Feature the supplied happy young apprentice in the foreground on the lower-left, holding a wrench beside the supplied toolbox; place the supplied companion dog near him. On the right foreground, show a clear oversized puzzle circuit board assembled from the supplied metal circuit tiles: a blue power tile connected by bright golden current to several glowing bulbs, with a few distinct tile shapes visible, conveying rotate-and-connect gameplay. Make the composition read instantly as a casual puzzle game cover, with strong depth, crisp 2D game art, clean silhouettes, warm lamp glow, blue and orange palette, and open negative space behind the title. Integrate the supplied assets naturally and keep the original character and item proportions. No UI panels, no screenshots, no Chinese characters, no additional words or captions, no watermarks, and no logos other than the supplied English title.",
+        "promptSource": {
+          "type": "node",
+          "nodeId": "eea82644-827f-4394-b706-e7122a64baf5"
+        },
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": [
+          {
+            "type": "library",
+            "assetId": "localization-v4-final-logo-en"
+          },
+          {
+            "type": "library",
+            "assetId": "ui-v3-final-background-street"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-apprentice-happy"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-companion-dog"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-toolbox"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-tile-power"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-tile-bulb-on"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-tile-straight"
+          },
+          {
+            "type": "library",
+            "assetId": "circuit-v2-final-tile-elbow"
+          }
+        ],
+        "assetId": "fff7d999-48fe-41a5-ac4c-d4847780fb3e"
+      },
+      "title": "English Promotional Cover",
+      "description": "16:9 English promotional cover combining the existing logo, town scene, apprentice, companion, toolbox, and powered circuit gameplay assets."
     }
   ],
   "edges": [],

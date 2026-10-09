@@ -21,55 +21,63 @@
       "x": 656,
       "y": 576
     },
+    "route-prototype": {
+      "x": 656,
+      "y": 1056
+    },
+    "reward-prototype": {
+      "x": 1216,
+      "y": 96
+    },
+    "enemy-concepts": {
+      "x": 1216,
+      "y": 576
+    },
+    "card-illustrations": {
+      "x": 1216,
+      "y": 1056
+    },
+    "relic-icons": {
+      "x": 1776,
+      "y": 96
+    },
+    "mobile-combat-prototype": {
+      "x": 1776,
+      "y": 576
+    },
+    "visual-review": {
+      "x": 2336,
+      "y": 96
+    },
+    "hud-art-direction": {
+      "x": 2896,
+      "y": 96
+    },
+    "hud-icon-atlas": {
+      "x": 2896,
+      "y": 576
+    },
+    "hud-card-frame": {
+      "x": 2896,
+      "y": 1056
+    },
+    "hud-button-plates": {
+      "x": 3456,
+      "y": 96
+    },
     "implementation-ember-route": {
       "x": 4016,
       "y": 96
     },
-    "runtime-sentinel": {
-      "x": 1496,
-      "y": 1936
-    },
-    "runtime-whelp": {
-      "x": 1916,
-      "y": 1936
-    },
-    "runtime-lantern": {
-      "x": 656,
-      "y": 2336
-    },
-    "runtime-boss": {
-      "x": 1076,
-      "y": 2336
-    },
-    "runtime-card-0": {
-      "x": 1496,
-      "y": 2336
-    },
-    "runtime-card-1": {
-      "x": 1916,
-      "y": 2336
-    },
-    "runtime-relic-0": {
-      "x": 656,
-      "y": 2736
-    },
-    "runtime-ui-card-frame": {
-      "x": 1076,
-      "y": 2736
-    },
-    "runtime-ui-heart": {
-      "x": 1496,
-      "y": 2736
-    },
-    "runtime-ui-button-mint": {
-      "x": 1916,
-      "y": 2736
+    "cover-english": {
+      "x": 4576,
+      "y": 96
     }
   },
   "viewport": {
-    "x": -4805.141126272451,
-    "y": 44.33339289524281,
-    "zoom": 1.1433292845618621
+    "x": 82.67442046732833,
+    "y": 139.97703963476636,
+    "zoom": 0.3218162501409603
   },
   "view": "canvas"
 }

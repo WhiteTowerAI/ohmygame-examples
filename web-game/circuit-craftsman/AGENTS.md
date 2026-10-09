@@ -56,6 +56,10 @@ they report skips when it is absent.
   references and layouts.
 - Keep project covers and catalog metadata outside this folder. Do not copy
   editor caches, `node_modules/` or `dist/` into the example source.
+- Preserve every original Canvas node, type, setting, reference, generation
+  record and editor coordinate/viewport when packaging or compressing media.
+  Keep source images and portable generation provenance; they are authoring
+  data. Compress images in place without resizing or changing their alpha.
 
 ## Browser checks
 

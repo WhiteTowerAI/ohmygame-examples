@@ -11,9 +11,11 @@ workspace from generated original industrial-fairytale artwork. They include
 the hero, background, enemies, card illustrations, relics and UI materials.
 Runtime images are copied unchanged; no external artwork packs are included.
 
-`assets/concept.webp` is a 1280-pixel-wide compressed copy of the original
-desktop combat mockup. Its numbers are illustrative; `src/data.ts` and
-`src/engine.ts` define gameplay. The catalog cover is the promotional
+`assets/imported/` and `assets/marketing/` retain original source artwork,
+prototypes and the historical cover. Images are compressed in place without
+changing dimensions or alpha; generation nodes, prompts and history remain
+in `canvas/`. Mockup numbers are illustrative; `src/data.ts` and `src/engine.ts`
+define gameplay. The catalog cover is the promotional
 illustration supplied by the project owner as `output1.webp`, resized to
 1280×720 and compressed as WebP. It is stored outside this example in
 `covers/ember-route.webp`.

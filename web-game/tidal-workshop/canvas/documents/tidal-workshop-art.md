@@ -134,47 +134,64 @@ Every replacement also needs checks for transparent edges, actual row/column gut
 
 These images establish art direction and interface structure. The main document defines the rules. Generated labels, extra decoration, and progress bars do not introduce new mechanics.
 
-## 11. Retained Design and Runtime References
+## 11. Image Previews
 
-This standalone example retains a compressed landscape concept. Its baked
-lettering and numbers are historical layout references, not current UI or rules.
+### Landscape Game Prototype
 
-![Landscape design concept](../../assets/concept.webp)
+![Tidal Workshop landscape game prototype](../../assets/imported/output-2.webp)
 
-The harbor background and representative finished assets are shared with the
-game, rather than copied into separate contact sheets:
+### Portrait Touch Prototype
 
-- [Harbor background](../../public/art/sea.webp)
-- [Salvage crane](../../public/art/crane.webp)
-- [Assembly press](../../public/art/press.webp)
-- [Empty courier](../../public/art/boat-empty.webp)
-- [Loaded courier](../../public/art/boat-loaded.webp)
-- [HUD frame](../../src/assets/ui/paper-frame.webp)
-- [Resource plate](../../src/assets/ui/resource-plate.webp)
+![Tidal Workshop portrait touch prototype](../../assets/imported/output-4.webp)
 
-## 12. Runtime Asset Contract
+### Layered Harbor Background
 
-The game includes 28 transparent WebP sprites and one harbor background.
-Building and boat canvases are 512×512; icons are 160×160. Five HUD materials
-live in `src/assets/ui/` and are bundled by Vite. Runtime files retain their
-original bytes, dimensions and transparency.
+![Tidal Workshop harbor background](../../assets/imported/output-3.webp)
 
-Structural artwork preserves opaque ivory walls, cabin roofs, rails and buoy
-stripes. Do not remove white pixels as if they were background. The historical
-crop and anchor records remain in `assets/manifests/`; source provenance names
-original workspace paths and explicitly marks them as excluded from the example.
-The original workspace retains the source sheets and processing scripts.
+### Six-Cell Building Redraw Sheet
 
-The compact Canvas keeps the two documents, loop summary, concept, background
-and representative runtime assets, preserving retained IDs. Historical generated
-sheets, contact previews, generation jobs and stale layout references are omitted.
-No asset-preparation or ZIP-export command is needed to use this example.
+![Tidal Workshop building redraw sheet](../../assets/imported/output-10.webp)
 
-## 13. Earlier Verification and Current Scope
+### Six-Cell Fleet and Water-Object Redraw Sheet
 
-Earlier implementation checks covered opaque building walls, boat cabins,
-management input blocking, keyboard dialog scrolling, automatic resource
-feedback, English UI, progression and production builds. These are historical
-records rather than a fresh verification of every mechanic. Current commands
-and licensing are documented in the root README and credits. First-voyage
-pacing and independent listening tests still need human review.
+![Tidal Workshop fleet and buoy redraw sheet](../../assets/imported/output-12.webp)
+
+### Six-Cell Starter-Facility Redraw Sheet
+
+![Tidal Workshop starter-facility redraw sheet](../../assets/imported/output-11.webp)
+
+### Generated HUD Material Source Sheet
+
+![Tidal Workshop generated HUD material sheet](../../assets/imported/output-9.webp)
+
+### Current Processed Runtime Assets
+
+![Tidal Workshop runtime asset contact sheet](../../assets/previews/art-contact-sheet.webp)
+
+![Tidal Workshop cropped HUD material contact sheet](../../assets/previews/hud-contact-sheet.webp)
+
+### Twelve-Cell Icon Reference
+
+![Tidal Workshop economy and action icons](../../assets/imported/output-5.webp)
+
+## 12. Current Runtime Assets and Interface Record
+
+- HUD source `output-9.webp` was generated as a 1254×1254 RGB PNG and is now a losslessly compressed WebP at the same dimensions. `scripts/prepare-hud.mjs` processes it into `src/assets/ui/`. Mint metal frames, pale paper texture, and coral enamel buttons come from image generation; numbers, progress, focus, and all controls remain DOM elements.
+- Building, starter, and fleet redraws are `output-10.webp`, `output-11.webp`, and `output-12.webp`, respectively. All were generated as 1536×1024 RGBA PNGs and are now losslessly compressed WebP with the same dimensions and alpha. Processing uses measured encoding and alpha. File extensions and generation-resolution settings do not prove encoding or pixel dimensions.
+- Legacy white removal incorrectly erased the office's right wall, cabin roofs, and the buoy's ivory center stripe. New structural assets preserve opaque surfaces through alpha, cleaning low-opacity outer haze without treating white as background. Structural sources with only a white matte fail explicitly and must be replaced by transparent or chroma-key images.
+- `scripts/prepare-assets.mjs` splits along actual empty row and column bands, handling the barge crossing nominal equal-cell boundaries and the lighthouse tip near the middle line. Empty sprites or crop-boundary collisions fail explicitly. `assets/manifests/art.json` records runtime filenames, source, crop rectangle, transparency mode, and safe padding on all four sides. HUD processing records are in `assets/manifests/hud.json`.
+- Runtime harbor assets total 28 transparent lossless WebP sprites plus one harbor background. The unused generated clock/settings icons were removed; their reference art remains in the twelve-cell source sheet. Building/boat canvases are 512×512; icons are 160×160. `icon-boat` and `icon-light` derive from the new transparent boat/lighthouse and record `derivedFrom`.
+- The redundant upper-left game title and region block were removed. Desktop resources are centered; mobile uses one row. Navigation is Build / Fleet / Voyage. Settings, management, expeditions, research, voyages, and hexes use the English presentation layer; save IDs and economic rules retain their original values.
+- Dialogs have fixed headers/close buttons and independently scrolling bodies. Management and long dialogs support Home / End / PageUp / PageDown. Changing management tabs resets body scroll. Harbor objects respond only to pointers actually landing on the canvas, preventing clicks through management UI.
+- Source and processed images were opened to inspect completeness. The game was checked for the office, warehouse, lighthouse, hoist, press, empty/loaded boats, and buoy. Real salvage/crafting input and a cabin click completed a departure and return, confirming 2 parts exchanged for 16 coins. Economic time stepping only reached inspection states; it does not measure human play duration.
+- UI screenshots, high K/M/B amounts, management, long dialogs, English voyage selection, and reduced motion were checked at 1440×900, 768×1024, 390×844, and 320×568. The earlier 55 logic/English-text coverage tests and production build passed; the current suite includes three additional asset-reference tests, for 58 passing tests.
+
+## 13. Downloadable Example Cleanup
+
+- Generated source sheets and prototypes remain available wherever the board, document, or preparation scripts reference them. Only the unused square draft was deleted; stable IDs of retained nodes and assets are unchanged.
+- Images are losslessly encoded as genuine WebP without resizing or color quantization. The optimizer checks every visible RGB pixel and alpha value before replacement. Fully transparent pixels may have different hidden RGB values. The existing sea background keeps its original WebP encoding.
+- All 28 harbor sprites and five HUD material images were compared against their previous PNG versions after preparation; dimensions, visible RGB, and alpha were identical. Repaired office walls, cabin roofs, rails, and buoy stripes remain opaque.
+- HUD files live under `src/assets/ui/` and are bundled once by Vite. Contact sheets and provenance records live under `assets/previews/` and `assets/manifests/`, outside the published `public/` directory.
+- The source archive is created with `npm run example:pack`. It includes the game, lockfile, tests, canvas documents/board, and referenced art sources. Dependency installations, build output, local editor layout/history, `.data/`, previous exports, and OS files are excluded. The English root README explains installation, commands, controls, layout, and licensing decisions still required before public release.
+- Validation includes ZIP CRC/inclusion checks, extraction to an independent temporary folder, fresh `npm ci`, all 58 tests, a production build, and both optional preparation scripts. Final production-build inspection at a nested URL used real touch salvage, goal claims, crafting, and a completed 2-parts/16-coins shipment, with no missing-image or failed-request errors. Screenshots covered desktop 1440×900 and mobile 390×844/320×568 across development and production modes. A preview-only relative HUD path issue found during migration was fixed before delivery.
+- Total image files were reduced from approximately 43.2 MB to 21.6 MB (50.1% smaller). Runtime images were reduced from 7.93 MB to 4.17 MB (47.4% smaller). The self-contained source ZIP is approximately 21.7 MB; the built static game is approximately 5.83 MB. Values are decimal file sizes, excluding installed dependencies.

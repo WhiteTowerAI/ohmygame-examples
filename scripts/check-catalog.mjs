@@ -4,6 +4,7 @@
 // web game paths, one per line, for CI to build.
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { checkCanvasPreservation } from './canvas-preservation.mjs';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const catalog = JSON.parse(readFileSync(path.join(root, 'catalog.json'), 'utf8'));
@@ -39,6 +40,7 @@ for (const example of catalog.examples ?? []) {
   for (const script of ['dev', 'build']) {
     if (typeof scripts[script] !== 'string') errors.push(`${label}: package.json needs a "${script}" script`);
   }
+  errors.push(...checkCanvasPreservation(path.resolve(root, example.path), example.id));
 }
 
 if (errors.length) {

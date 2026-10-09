@@ -44,8 +44,34 @@ after OhMyGame updates the pinned commit.
    third-party asset or code port with its license (see
    [the wetland example's credits](web-game/wetland-birdwatching/src/assets/CREDITS.md)).
 3. Add a WebP cover to `covers/` and an entry to `catalog.json`.
-4. Run `node scripts/check-catalog.mjs`, then `npm ci && npm run build` in the
-   example folder. CI runs the same checks.
+4. Run `node --test scripts/*.test.mjs` and `node scripts/check-catalog.mjs`, then
+   `npm ci && npm test --if-present && npm run build` in the example folder.
+   CI runs available tests and builds for every example.
+
+## Preserving the original Canvas
+
+An example includes the editable project, including its design and generation
+process. Import the original boards, documents, assets, generation records and
+editor layouts. Preserve node IDs and types, prompts, model settings, media
+dependencies, generation status, coordinates and viewport. Keep generation
+nodes editable; replacing them with finished asset nodes changes the project.
+Source sheets, prototypes and generation history remain useful even when the
+game does not load them at runtime.
+
+Compress source images at their existing paths, retaining dimensions and alpha.
+Check visual quality and compare node state and layouts before and after the
+change. High-quality WebP reduces the source payload without changing the
+Canvas. Preserve `canvas/assets.json`, `canvas/jobs.json` and portable
+`.data/assets.json` provenance. Dependencies, build output, caches, OS files
+and duplicate exports can be excluded. Keep the catalog cover outside the
+project; a historical cover-generation node is still part of its Canvas.
+
+`canvas-baselines.json` stores fingerprints of imported authoring state outside
+the copied projects. The catalog check verifies those fingerprints and local
+asset paths. Add a baseline for each new import after comparing its Canvas with
+the original project. Update a baseline only for an intended Canvas edit, such
+as a requested translation or layout change, with a review of the corresponding
+diff. Media compression alone does not require a baseline update.
 
 ## License
 

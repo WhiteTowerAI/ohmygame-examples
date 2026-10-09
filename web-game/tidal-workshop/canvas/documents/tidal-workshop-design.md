@@ -234,9 +234,4 @@ Completed validation: 58 logic, English-text coverage, and asset-reference tests
 
 Asset repairs: three six-cell source sheets for buildings, starter facilities, and the fleet were redrawn through image generation and integrated using native alpha. Cropping follows actual row and column gutters, preserving white walls, cabin roofs, rails, and the buoy's ivory stripe. Structural assets must not use white-background removal. Empty and loaded boats were inspected, and clicking the cabin completed departure and return. UI improvements include management input blocking, fixed dialog headers and close controls, keyboard scrolling of dialog bodies, and resetting scroll on tab changes. Generated sources, processing records, and runtime asset previews are in the [Visual and Asset Guidelines](tidal-workshop-art.md).
 
-Standalone example: the playable source, lockfile, tests, runtime artwork and
-design documents are self-contained. One compressed landscape concept and a
-compact Canvas replace the historical sheet collection. Runtime images are
-unchanged; source sheets, contact previews, generation jobs, asset-processing
-scripts and ZIP exports remain only in the original workspace. See the root
-README for commands, cleanup scope and credits.
+Downloadable example: obsolete source art and unused generated icons were removed, retained images were losslessly compressed to WebP without changing dimensions or visible pixels, and preview/provenance files were moved outside the published game. The English root README and `npm run example:pack` provide a self-contained source ZIP with the lockfile, tests, canvas, and referenced artwork, excluding installed dependencies, build output, and local editor records. ZIP extraction, a fresh npm install, all tests, the build, and both asset-preparation commands were verified independently. The production build was played from a nested path with touch salvage, goal claiming, crafting, and shipping; desktop/mobile screenshots retained the generated HUD materials and complete sprites.

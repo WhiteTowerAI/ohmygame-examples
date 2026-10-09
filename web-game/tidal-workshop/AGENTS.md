@@ -32,7 +32,7 @@ required. Tests use Sharp to check image dimensions and transparency.
 | Resource feedback and synthesized audio | `src/feedback.ts`, `src/audio.ts` |
 | Runtime sprites and HUD materials | `public/art/`, `src/assets/ui/` |
 | Dimensions, anchors and processing provenance | `assets/manifests/` |
-| Design documents and compact asset board | `canvas/` |
+| Original design documents, board and generation history | `canvas/` |
 | Regression tests | `tests/` |
 
 ## Editing rules
@@ -42,11 +42,13 @@ required. Tests use Sharp to check image dimensions and transparency.
 - Update the sprite list, manifests and Canvas references together when
   changing artwork. Preserve opaque ivory walls and boat roofs.
 - Keep covers and catalog metadata outside this folder. Do not add dependency
-  folders, build output, editor caches, exports or historical generation runs.
-- Source sheets and regeneration scripts are omitted. Provenance records name
-  their original workspace paths and explicitly mark them as unbundled.
+  folders, build output, editor caches or duplicate exports.
+- Preserve every original Canvas node, type, setting, reference, generation
+  record and editor coordinate/viewport when packaging or compressing media.
+  Keep source sheets and portable generation provenance; they are authoring
+  data. Compress images in place without resizing or changing their alpha.
 - Read `canvas/AGENTS.md`, README and schemas before editing Canvas data.
-  Preserve retained IDs and validate documents, assets and layouts.
+  Preserve IDs and validate documents, assets and layouts.
 - Record third-party sources and licenses in `CREDITS.md`. The Vite build
   publishes dependency notices alongside the game.
 

@@ -75,7 +75,7 @@
   },
   "sourceProvenance": {
     "originalWorkspacePath": "assets/imported/output-9.webp",
-    "includedInExample": false,
+    "includedInExample": true,
     "originalNodeId": "tidal-hud-skin"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "examples": {
+    "circuit-craftsman": {
+      "files": {
+        "canvas/index.json": "e34fc32b63cf031dd482576497566070bd3148e71a89bfc4f846afa3c3fff3c5",
+        "canvas/assets.json": "592ec515f2b0a306d27ea9b12cc2fb22949e8086b596ab79475acaef10883d79",
+        "canvas/jobs.json": "7f36df429fb49159b0783dcf08a0ba6cbb774775dbb22788735f36ef2d4db9fd",
+        ".data/assets.json": "4afd0fcaab7e22fc47ce5e69c28bd2188df6c2021695af881ff8f2788c1b6019",
+        "canvas/boards/47645234-e63f-4538-aa06-a70d07e8263f.json": "5f7d948a87a7f087f2f5f06b95a6dee1f4ae7a2c10480d66d71905f49b42f5d7",
+        "canvas/boards/95dfd995-8cda-46b5-965e-d0c30e859a70.json": "5d4e1d81609941c1d1c2b006486608536c7c3e11b3b1f17e7a7c6018d9f44805",
+        "canvas/editor/47645234-e63f-4538-aa06-a70d07e8263f.json": "21ba1b0cc04020b7faa47dfc83a2fb96259c9c23e7ba3792068f499733cc0448",
+        "canvas/editor/95dfd995-8cda-46b5-965e-d0c30e859a70.json": "ff681ec1e1f09261e8aae46b4effd9cf0002b1640516e0e3ab731ce5067e726d"
+      }
+    },
+    "tidal-workshop": {
+      "files": {
+        "canvas/index.json": "462f28599fb5c17e62de309b3a231e9eb5a348ab308c118aaa3de8a10a285bf1",
+        "canvas/assets.json": "1184b1317f48c255522815a66e6b76df92af25dbfa77486b8dd4aae7a9a54559",
+        "canvas/jobs.json": "b73ff2b5e601bd3bf6d43b63376de9fcf51c37ab8d801a8f039b3e93f0f1e92d",
+        ".data/assets.json": "656dc69d957bc3af6128fb2034120662345199956f804aa76f7d9b7f5e1c0a39",
+        "canvas/boards/3adb3bb7-d803-4e74-8e70-d759fc016d26.json": "9c84c096773089eb33cd7bed87c5a9d5a5b13bf55980c1310114e07993e57758",
+        "canvas/editor/3adb3bb7-d803-4e74-8e70-d759fc016d26.json": "e6bd5345078e87e2a6882e76c9c62aab5bb94f111aaf548a545f381d8a484e3b"
+      }
+    },
+    "ember-route": {
+      "files": {
+        "canvas/index.json": "6fe1491f70abb512b1fc96b24191836e46bfde15b6507ee8463dd585ccfab90b",
+        "canvas/assets.json": "c9f213e8526a04922d5f4c9de3851972ff0d7a0d89cbb32769817a49408b6612",
+        "canvas/jobs.json": "648640b6b4d12e84423639cff6af983cf99896b15dcf38eb97e060acb21eb7d5",
+        ".data/assets.json": "c037f551cba2d5d40c1fbd86c1cc982c5f4bcb9b4c606e1021ff87e893baf80d",
+        "canvas/boards/36531e6d-2aaf-4391-9795-e144120e5863.json": "546ba42b6a6721f5c885b2d968afc3b7100df4bb171982c79b5960a47ab4c346",
+        "canvas/editor/36531e6d-2aaf-4391-9795-e144120e5863.json": "c3e753771c16e80e13bce32715d251eb8dfc65885ddce3866479add4256648ae"
+      }
+    }
+  }
+}

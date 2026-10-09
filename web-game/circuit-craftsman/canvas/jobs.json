@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "9f6a847d-1da0-4e0c-8ece-7656e1f91710",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-07T04:05:29.235Z",
+    "status": "succeeded",
+    "title": "Create an English promotional cover for Circuit Craftsman",
+    "context": {
+      "projectId": "d673d2f4-d206-44fe-8982-d068ab2263ac",
+      "boardId": "47645234-e63f-4538-aa06-a70d07e8263f",
+      "nodeId": "circuit-craftsman-cover-en"
+    },
+    "run": {
+      "id": "828a3707-e2c5-456f-a126-2ad715aae73b",
+      "toolId": "generate-image",
+      "createdAt": "2026-10-07T04:06:14.701Z",
+      "files": [
+        {
+          "name": "output.webp",
+          "mediaType": "image/webp",
+          "assetId": "fff7d999-48fe-41a5-ac4c-d4847780fb3e"
+        }
+      ]
+    }
+  }
+]

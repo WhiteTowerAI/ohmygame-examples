@@ -1,6 +1,7 @@
 node_modules/
 dist/
-.data/
+.data/*
+!.data/assets.json
 .DS_Store
 Thumbs.db
 *.log

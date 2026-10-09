@@ -28,120 +28,198 @@
       "type": "text",
       "data": {
         "text": "Tidal Workshop\n\nSalvage scrap → Craft parts → Ship cargo → Coins\n↓\nVoyage rewards / Machine upgrades / Specialization → Production leaps\n↓\nIsland expeditions → Permanent research manuscripts → Knowledge and faster openings\n↓\nExpand passages → Light the lighthouse → Voyage charts and hexes\n\nVisuals: turquoise water × coral machinery × bright isometric miniature harbor\n\nCurrent stage: playable game expansion. See the main design document for rules and reference research.",
-        "instruction": ""
+        "instruction": "",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-6.1-sol"
+        },
+        "reasoningLevel": "high"
       },
       "title": "Core Loop · From a Small Dock to an Automated Harbor",
       "description": "Concept summary for browsing the canvas. The main design document defines complete rules and values."
     },
     {
       "id": "tidal-desktop",
-      "type": "asset",
-      "title": "Landscape Design Concept",
-      "description": "Compressed original layout concept, with historical generated lettering; game rules and current English UI come from source code.",
+      "type": "image",
       "data": {
-        "assetId": "d879856b-6d83-4d01-b024-6dda2d899034",
-        "mediaType": "image"
-      }
+        "prompt": "Create a polished high-fidelity DESKTOP GAME UI PROTOTYPE for a cozy incremental automation game called Tidal Workshop. A finished in-game screenshot composition, 16:9 landscape, edge-to-edge game only, NO monitor or browser frame, NO marketing poster. Bright handcrafted miniature isometric floating workshop harbor, orthographic camera looking down 35 degrees, horizontal axes around 30 degrees. Matte hand-painted 3D-like 2D game art, clean readable silhouettes, soft short shadows lit from upper left, sharp enough to inspect gameplay. Palette: turquoise water #58BBC3, deeper teal channels #278D9B, mint flotation tanks #91D9BF, coral red machine arms and roofs #EE7667, paper-white sails and UI #F5F8F3, dark ink text #263A3B, small brass yellow accents #E7BC5A. Avoid purple, beige-dominant UI, dark moody grading, bokeh, heavy gradients, blur. The playable scene fills the left 73 percent beneath a compact 7-percent-height top HUD. It features connected floating timber docks, several coral-red salvage cranes with hooks, mint-teal gear-driven assembly presses, a red-roof white warehouse, a completed white lighthouse with coral cap and brass lantern, multiple compact mint-hull courier cargo boats with paper-white cabins, red funnels and brass details, floating navigation buoys, gentle water ripples and one small green island. Show clearly visible production from crane to assembly to cargo ships, no people or animals. Buildings can visually represent pooled machine counts. Right 27 percent is a flat continuous paper-white management panel, NOT floating stacked cards, thin separators, restrained 6px corners only on buttons. Game title Tidal Workshop clear in top left. Top HUD resource icons and exact readable figures Scrap 1,284, Parts 368, Coins 8,620, +24.0/s, Charts 0, and gear icon. Sidebar has segmented Build / Fleet / Voyage navigation, quantity selector ×1 ×10 Max, three compact purchase rows with miniature matching machine icons: Salvagers 8 cost 85, Presses 6 cost 162, Ships 6 cost 399, compact coral purchase controls, short progress bars. Small ship status chip and active crane selection highlight in scene. Bottom of playfield has slim milestone bar Prepare to sail 16.4K / 20K and one clear coral Salvage command close to the crane, not a huge overlay. Sophisticated hierarchy, compact readable English UI typography, stable aligned resource figures. No explanatory paragraphs, no tutorial text, no giant hero heading. Complete clean game interface, visibly playable and inviting.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "2K",
+        "aspectRatio": "16:9",
+        "images": [],
+        "assetId": "d879856b-6d83-4d01-b024-6dda2d899034"
+      },
+      "title": "03 · Landscape Game Prototype / Lighthouse Harbor",
+      "description": "16:9 desktop game interface concept. Establishes the harbor scene, resource HUD, management panel, and goal-strip layout; not a runtime screenshot."
+    },
+    {
+      "id": "tidal-mobile",
+      "type": "image",
+      "data": {
+        "prompt": "Using the supplied desktop game prototype as the exact STYLE, COLOR and HARBOR IDENTITY reference, create a polished 9:16 portrait MOBILE GAME UI PROTOTYPE of the same incremental game Tidal Workshop. This is an actual full-screen in-game layout, NOT a phone mockup, no device frame, no webpage hero. Preserve orthographic isometric handcrafted miniature harbor art, coral red cranes and roofs, mint teal gear assembly presses, white lighthouse with coral cap, mint-hull cargo boats with white cabins and coral funnels, turquoise #58BBC3 sea, paper-white interface, brass icons. Re-layout for a narrow touch screen, do not merely crop the desktop or squeeze the desktop sidebar. Top 12 percent is a compact two-row resource HUD with title Tidal Workshop, a settings gear icon, Scrap 1,284 / Parts 368 / Coins 8,620, +24.0/s and Charts 0. Middle upper 42 percent is a full-width unframed harbor with complete identifiable lighthouse, connected docks, cranes, presses and cargo boats; no essential buildings obscured by UI. Beneath it a compact goal strip Prepare to sail 16.4K / 20K. Lower area is a continuous flat paper-white management surface with ×1 ×10 Max segmented selector and three concise well-spaced upgrade rows, matching object icons, machine counts 8 / 6 / 6 and costs 85 / 162 / 399. Large but restrained coral Salvage action near the scene-bottom boundary, at least thumb-sized. Bottom navigation with three familiar icons and small English labels Build / Fleet / Voyage, one active tab. Align every text label, keep readable regular-sized English typography and breathing room, no clipped numbers, no overlays blocking other controls, no card-inside-card design. No instruction paragraphs, no marketing descriptions, no decorative glowing orbs, no animals or people. Show the same game state and mechanics as reference with a credible responsive vertical layout.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "2K",
+        "aspectRatio": "9:16",
+        "images": [
+          {
+            "type": "node",
+            "nodeId": "tidal-desktop"
+          }
+        ],
+        "assetId": "f59e8c63-ff67-469e-9730-4295809be4e3"
+      },
+      "title": "04 · Portrait Game Prototype / Touch Layout",
+      "description": "9:16 mobile interface concept sharing the desktop prototype's harbor identity and resource snapshot. Guides the compact HUD, thumb-reach controls, upgrade list, and bottom navigation."
     },
     {
       "id": "tidal-harbor",
-      "type": "asset",
-      "title": "Runtime Harbor Background",
-      "description": "Retained local artwork for this standalone example.",
+      "type": "image",
       "data": {
-        "assetId": "31befc9b-edfb-4e7a-b107-2f1d7bd8e3ab",
-        "mediaType": "image"
-      }
+        "prompt": "Use the supplied Tidal Workshop desktop image ONLY as reference for the miniature hand-painted game art, isometric camera and turquoise/mint/coral/brass palette. Generate a standalone 16:9 landscape ENVIRONMENT BACKGROUND asset concept for that same cozy floating harbor game. NO UI, NO TEXT, NO letters, NO numbers, NO frame. Orthographic isometric 35-degree elevated camera, painterly matte miniature style with clearly defined forms and soft upper-left sunlight. Bright turquoise shallow sea #58BBC3 with quieter teal channel details, fine restrained water ripple brush marks and a few light reflected wave strokes. Large CENTRAL 65 percent of the image is readable uncluttered open water reserved for separately composited floating docks, buildings and moving boats. Around the far upper-left and upper-right edges place two small low green islands with pale stones, short grass and a few palm-like trees; tiny shallow reef patches and an outer curved sandy shoreline only at margins, not a dominant sandy scene. A subtle navigable channel curves from bottom right toward upper left, but no drawn UI route lines. No lighthouse, no factories, no cranes, no ships, no navigation buoys, no people or animals. Keep all background detail lower contrast than future gameplay objects. Clear daylight, no fog, blur, depth-of-field, vignette, purple, bokeh or photographic noise. Consistent illustrated game background, not concept poster, with abundant buildable negative space.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "2K",
+        "aspectRatio": "16:9",
+        "images": [
+          {
+            "type": "node",
+            "nodeId": "tidal-desktop"
+          }
+        ],
+        "assetId": "31befc9b-edfb-4e7a-b107-2f1d7bd8e3ab"
+      },
+      "title": "05 · Harbor Environment without UI / Layered Background Reference",
+      "description": "Environment base reference with bright water, islands, and shallow reefs. Keeps the center open for building, without baking dynamic buildings or boats into the background."
     },
     {
-      "id": "runtime-dock",
-      "type": "asset",
-      "title": "Dock",
+      "id": "tidal-buildings",
+      "type": "image",
       "data": {
-        "assetId": "tidal-workshop-runtime-dock",
-        "mediaType": "image"
-      }
+        "prompt": "Redraw and refine the SIX BUILDING SPRITES for Tidal Workshop using the supplied old building sheet as the exact identity, palette and orthographic isometric camera reference. Improve structural completeness and clean edges while retaining the charming premium miniature game-art style. EXACTLY THREE COLUMNS by TWO ROWS in a 3:2 sheet. Each object must fit inside the central 76 percent of its equal SQUARE cell with at least 12 percent clear padding on EVERY side. No touching cell boundaries, cropping, overlapping, fragments, missing walls or missing supports. All silhouettes fully closed and coherent. BACKGROUND MUST BE perfectly uniform saturated MAGENTA #FF00FF, including every gutter and every empty opening between ropes, railings and supports. This is a technical chroma-key background. No white background, gradient, vignette, ground plane, cast shadow, pink reflections or magenta color spill on the objects. Objects use ONLY warm ivory, mint, desaturated teal, coral, light timber, steel and brass. Keep all ivory walls fully opaque. Orthographic isometric 35-degree elevated camera, upper-left daylight, finely rendered matte painted metal, timber grain, tile seams, gentle bevels, restrained wear, dimensional ambient occlusion within the objects. Clean, modest dark teal edge definition, crisp continuous thin structural details. TOP LEFT: complete empty square floating timber dock, four intact mint flotation sections, full plank deck, coral corner guards and brass rope posts. TOP MIDDLE: complete powered coral salvage crane, compact square mint floating platform, continuous articulated boom, connected black steel suspension cable, complete hanging brass-and-steel hook, winch drum and intact base. TOP RIGHT: complete teal automatic assembly press, solid rounded frame, brass side gear, coral pressure lever, dark output slot with one finished gear, full square floating platform. BOTTOM LEFT: complete warehouse, FULL ivory side and front walls, coral pitched tile roof with unbroken roof edges, circular upper window, framed open cargo doorway with dark interior, intact loading ramp, mint floating foundation. BOTTOM MIDDLE: complete slender ivory lighthouse from foundation to brass finial, coral cap, warm brass glass lantern, continuous balcony railing, intact tower, doorway and small floating square foundation; no cropped tip. BOTTOM RIGHT: complete short broad navigation beacon station, coral-and-ivory signal tower, brass lamp, full mint base, clearly different from the tall lighthouse. Preserve original asset identity and proportions, each object independently usable. No text, letters, numbers, UI, people, animals, extra objects or watermark. Exactly six polished complete sprites on FLAT MAGENTA, generous safe gutters, every antenna and rope end visible.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "4K",
+        "aspectRatio": "3:2",
+        "images": [
+          {
+            "type": "library",
+            "assetId": "5701fc93-1182-4201-8bab-c57e5df29d0c"
+          }
+        ],
+        "assetId": "c774521d-5421-486a-a5fa-9433a21d227e"
+      },
+      "title": "06 · Buildings / Six-Cell Source Sheet",
+      "description": "Building redraws generated and integrated using native alpha. White walls, hooks, and the lighthouse tip are preserved; cropping follows actual row/column gutters and runtime display has been checked."
     },
     {
-      "id": "runtime-crane",
-      "type": "asset",
-      "title": "Crane",
+      "id": "tidal-fleet",
+      "type": "image",
       "data": {
-        "assetId": "tidal-workshop-runtime-crane",
-        "mediaType": "image"
-      }
+        "prompt": "Redraw and repair the SIX FLEET AND WATER OBJECT SPRITES for Tidal Workshop. Use the supplied old fleet sheet to retain the exact boat and buoy identities, and the new buildings sheet to match refined material quality, palette and orthographic isometric camera. EXACTLY THREE COLUMNS by TWO ROWS, a 3:2 sheet, each object centered in its own equal square cell with at least 12 percent clear padding on every side. Fully visible bow, stern, hull underside, roof, chimney, rails, lamp mast and floating ring. All structures complete, solid, undamaged and coherent. CRITICAL: ivory cabin roofs and walls, white rails and the buoy's ivory central stripe must be fully OPAQUE and unbroken, never transparent holes or cutaway views. Genuine RGBA transparency is preferred for all empty background space. If transparency is unavailable, use ONLY flat saturated MAGENTA #FF00FF as technical chroma key, including gaps between rails and under ropes. No white background, checkerboard, floor plane, exterior cast shadow, pink light, magenta reflections, mist or water plane. Orthographic isometric 35-degree elevated camera, upper-left daylight, premium miniature game art, matte mint and teal painted metal, warm ivory cabins, coral funnels, brass hardware, pale timber crates, gentle bevels, readable material seams and restrained wear. TOP LEFT: complete EMPTY compact courier cargo boat pointing toward bottom right, mint-teal solid closed hull with coral lower waterline, ivory enclosed pilot cabin at rear, solid flat ivory roof, glazed dark teal windows, intact coral funnel, brass rim and continuous safety rails, empty dark teal open cargo deck. TOP MIDDLE: the EXACT SAME courier boat, identical silhouette, camera, hull length and width, cabin, roof, funnel and rail positions, now LOADED with three orderly mint-and-timber crates containing machined parts. Change ONLY the cargo, not the boat geometry, size or position within its cell. TOP RIGHT: complete wider exploration work barge, mint closed floating hull, continuous opaque ivory safety rails, enclosed ivory pilot cabin with full roof and coral funnel, full coral miniature articulated crane, connected cable and complete brass hook, solid teal deck. BOTTOM LEFT: small readable salvage pile, intact bent teal metal plate, two steel tubes and one brass flange; simplify clutter without losing complete silhouettes. BOTTOM MIDDLE: complete open mint-and-timber parts crate with intact ivory corner brackets and three brass-and-teal gears plus bolts. BOTTOM RIGHT: complete barrel-shaped floating navigation buoy, mint circular flotation ring with unbroken outer rim, solid coral tapered body, FULL OPAQUE IVORY CENTRAL STRIPE around the body, complete brass lantern and short brass mast, intact tiny side ladder, all the way from mast tip to closed floating base. It must look like a complete watertight object, no missing middle, torn white band or missing rim segments. No text, numbers, UI, scenery, people, animals, grid or watermark. Exactly six independently cuttable polished sprites. Preserve every white surface and thin metal detail; generous safe gutters.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "4K",
+        "aspectRatio": "3:2",
+        "images": [
+          {
+            "type": "library",
+            "assetId": "f9d74389-39f6-4cb0-ba12-e99161d48f0c"
+          },
+          {
+            "type": "node",
+            "nodeId": "tidal-buildings"
+          }
+        ],
+        "assetId": "3a1ad436-8060-4655-86f5-ad713ad1fcef"
+      },
+      "title": "07 · Fleet and Production Objects / Six-Cell Source Sheet",
+      "description": "Fleet and buoy redraws generated and integrated using native alpha. Empty/loaded cabin roofs, barge rails, and the ivory buoy stripe are intact. Cropping follows actual gutters to avoid the neighboring barge; empty/loaded states and click-to-dispatch have been checked."
     },
     {
-      "id": "runtime-press",
-      "type": "asset",
-      "title": "Press",
+      "id": "tidal-icons",
+      "type": "image",
       "data": {
-        "assetId": "tidal-workshop-runtime-press",
-        "mediaType": "image"
-      }
+        "prompt": "Use the supplied Tidal Workshop prototype as COLOR AND MATERIAL reference, not as a UI layout. Create a clean square GAME ICON SOURCE SHEET with EXACTLY TWELVE unique icons arranged FOUR COLUMNS by THREE ROWS on pure white #FFFFFF. All icons are isolated, centrally aligned, equal apparent visual weight, ample white spacing, no labels, numbers, text, borders or visible grid. Rounded but precise matte hand-painted slight-3D pictograms, simple big readable silhouettes for a cozy floating workshop game, front or slight three-quarter view, upper-left soft light, tiny contact shadows. Palette coral red #EE7667, mint #91D9BF, teal #278D9B, paper white #F5F8F3, brass yellow #E7BC5A, dark ink #263A3B. Ordered left-to-right, top-to-bottom: ROW ONE: salvaged metal plate with short pipe (scrap resource), machined brass gear with teal bolt (parts resource), single clearly embossed brass coin WITHOUT any letter/number/currency glyph (coins resource), folded paper-white nautical chart with a simple coral route and teal island dot (permanent charts resource). ROW TWO: coral crane hook on short teal stem (salvage), teal compact press with brass gear (assembly), mint cargo boat with white cabin and coral funnel (shipping), small teal gear with a coral circular rotation arrow (automation). ROW THREE: three connected teal island dots with coral dashed path (routes), simple white lighthouse with coral cap and brass lantern (milestone), brass-rim simple clock with dark hands and no numerals (offline time), neutral teal settings cog (settings). No repeated filler icons, extra objects, UI panels, fancy backgrounds, water, characters, animals, lettering or glow. Exactly 12 isolated icons with clean distinct silhouettes, suitable as SOURCE ART for later small-size cleanup and cutout, not claiming production-ready sprite atlas.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "2K",
+        "aspectRatio": "1:1",
+        "images": [
+          {
+            "type": "node",
+            "nodeId": "tidal-desktop"
+          }
+        ],
+        "assetId": "c9670954-c351-4e26-8c2a-3bc84af3c80f"
+      },
+      "title": "08 · Economy and Action Icons / Twelve-Cell Reference",
+      "description": "4×3 icon source sheet: scrap, parts, coins, charts, salvage, crafting, ship, automation, routes, lighthouse, time, and settings. Small-size cleanup is required before use."
     },
     {
-      "id": "runtime-warehouse",
-      "type": "asset",
-      "title": "Warehouse",
+      "id": "tidal-starter",
+      "type": "image",
       "data": {
-        "assetId": "tidal-workshop-runtime-warehouse",
-        "mediaType": "image"
-      }
+        "prompt": "Redraw and optimize the SIX STARTER FACILITIES for Tidal Workshop. Use the old starter sheet to preserve the exact identities, and the updated building sheet to match miniature style, camera and materials. A 3:2 source sheet, EXACTLY THREE COLUMNS by TWO ROWS. Each sprite entirely within the central 76 percent of its equal square cell, at least 12 percent clean gutter on all four sides. FULL structural completeness: closed wall silhouettes, continuous roofs, connected supports, visible rope ends, intact floating bases. BACKGROUND ONLY perfectly flat saturated MAGENTA #FF00FF, also inside negative spaces between beams and rails. This is a technical cutout background. No white background, pink light or reflections, cast shadows, gradient, floor plane or colored glow. All object surfaces remain opaque, particularly the light ivory office walls and paper plans. Orthographic isometric camera at 35 degrees, upper-left light, premium matte painted miniature game art, warm pale timber, mint teal metal and floats, coral roof tiles and pulley, restrained brass details, clean bevels, fine hand-painted material texture, subtle ambient occlusion INSIDE objects. No damage, missing masonry or fragmented edges. TOP LEFT: complete manual timber salvage hoist with upright, diagonal brace, winch, coral pulley, connected dark suspension rope and complete brass hook, on full square mint floating dock. TOP MIDDLE: complete manual workbench, intact tabletop, all four mint legs, small vice and tools, one gear and FULL opaque folded ivory plans, mounted on square floating dock. TOP RIGHT: complete charming harbor office with SOLID ivory front and side walls all the way to the base, continuous coral pitched roof, complete chimney, intact teal door and two windows, brass bell and coral pennant on continuous pole. The entire right facade MUST be solid and unbroken; no torn-out white wall sections, cutaways or transparent holes. BOTTOM LEFT: complete narrow floating connecting jetty with full wooden deck, mint float tanks, two brass rope posts and clean continuous ends, no missing planks. BOTTOM MIDDLE: three complete mint-and-timber crates, one open with three brass gears, clear solid edges and bases. BOTTOM RIGHT: complete coral pennant with no letters or symbols, continuous brass pole, small intact mint floating foundation. Preserve the original visual identities and scale relationships, crisp readable shapes at small game size. No text, numerals, UI, borders, visible gridlines, water, people, animals or watermark. Exactly six independently cuttable COMPLETE objects with generous safe padding on FLAT MAGENTA.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "4K",
+        "aspectRatio": "3:2",
+        "images": [
+          {
+            "type": "library",
+            "assetId": "1dd14d6f-be9f-4717-89d3-45ed990ee6a5"
+          },
+          {
+            "type": "node",
+            "nodeId": "tidal-buildings"
+          }
+        ],
+        "assetId": "bcab6643-5277-450c-96f1-4dbb24703ac2"
+      },
+      "title": "09 · Starter Facilities and Nautical Props / Game Source Sheet",
+      "description": "Starter redraws generated and integrated using native alpha. The office's right ivory wall, roof, ropes, and foundation are complete. Cropped along actual gutters and inspected in the game."
     },
     {
-      "id": "runtime-lighthouse",
-      "type": "asset",
-      "title": "Lighthouse",
+      "id": "tidal-hud-skin",
+      "type": "image",
       "data": {
-        "assetId": "tidal-workshop-runtime-lighthouse",
-        "mediaType": "image"
-      }
-    },
-    {
-      "id": "runtime-boat-empty",
-      "type": "asset",
-      "title": "Boat Empty",
-      "data": {
-        "assetId": "tidal-workshop-runtime-boat-empty",
-        "mediaType": "image"
-      }
-    },
-    {
-      "id": "runtime-boat-loaded",
-      "type": "asset",
-      "title": "Boat Loaded",
-      "data": {
-        "assetId": "tidal-workshop-runtime-boat-loaded",
-        "mediaType": "image"
-      }
-    },
-    {
-      "id": "runtime-icon-scrap",
-      "type": "asset",
-      "title": "Icon Scrap",
-      "data": {
-        "assetId": "tidal-workshop-runtime-icon-scrap",
-        "mediaType": "image"
-      }
-    },
-    {
-      "id": "runtime-paper-frame",
-      "type": "asset",
-      "title": "Paper Frame",
-      "data": {
-        "assetId": "tidal-workshop-runtime-paper-frame",
-        "mediaType": "image"
-      }
-    },
-    {
-      "id": "runtime-coral-button",
-      "type": "asset",
-      "title": "Coral Button",
-      "data": {
-        "assetId": "tidal-workshop-runtime-coral-button",
-        "mediaType": "image"
-      }
+        "prompt": "Create a premium GAME HUD MATERIAL ASSET SHEET for Tidal Workshop, matching the supplied miniature harbor buildings and icon material references. This request is for actual rendered UI material IMAGES with rich authentic surface quality, NOT flat vector artwork, NOT a UI screenshot. Use the same sophisticated softly lit stylized 3D game art: sun-faded mint enamel paint, slightly worn edges, tactile paper fibers, softly rounded cast metal, tiny restrained brass screws, ambient occlusion in seams and subtle surface roughness. Cohesive colors: mint #91D9BF and deep desaturated teal metal, very pale ivory paper #F5F8F3, coral enamel #EE7667, brass #E7BC5A. All surfaces viewed STRAIGHT ON, orthographic frontal view, no isometric tilt or perspective. Light comes from upper left with gentle sculpted shading. EXACTLY FOUR isolated assets in a TWO COLUMNS by TWO ROWS square sheet, clean pure white #FFFFFF background, wide white gutters and generous padding, nothing touching or overlapping. TOP LEFT: a square blank game ledger panel, softly rounded rectangular silhouette, a narrow dimensional mint painted metal rim, small tasteful brass corner fasteners, a very light tactile ivory paper center that is completely EMPTY and quiet for readable live text. Frame is elegant and thin, about 6 percent of panel width; straight sides and uniform corners specifically suitable for nine-slice scaling. TOP RIGHT: a wide horizontal blank resource-bar plate, approximately 2.8 to 1 aspect ratio, same mint rim and paper interior as top left, richer handcrafted material details at edges, completely empty center with no dividers or inset slots. BOTTOM LEFT: a circular secondary button base, blank smooth pale mint enamel inset inside a gently beveled teal and brass rim, tactile painted metal, no central symbol. BOTTOM RIGHT: a circular primary button base, blank warm coral enamel inset inside a gently beveled brass rim, softly worn paint and premium sculpted depth, no central symbol. Buttons must be perfectly round and equal diameter, fill their cells similarly, short subtle attached underside shadow only. Materials should feel like objects made by the harbor craftsmen, polished charming quality, nuanced high resolution texture, controlled detail, believable thickness. No letters, no typography, no numbers, no icons, no gear symbols, no drawn outlines or flat CSS-looking gradients, no decorative anchors, ropes, leaves, buildings or scenery, no fantasy ornament, no distressed dirty brown parchment, no checkerboard, no fake transparent background. Exactly four blank reusable game skin pieces on white. Preserve large clean centers and crisp complete silhouettes for cutout and small-size use.",
+        "model": {
+          "provider": "openai",
+          "id": "gpt-image-2.5-flare"
+        },
+        "resolution": "2K",
+        "aspectRatio": "1:1",
+        "images": [
+          {
+            "type": "node",
+            "nodeId": "tidal-buildings"
+          },
+          {
+            "type": "node",
+            "nodeId": "tidal-icons"
+          }
+        ],
+        "assetId": "d8c4770b-2726-4333-afe8-0f3b20ef76d1"
+      },
+      "title": "10 · HUD Material Images / Four-Piece Panel and Button Set",
+      "description": "Generated HUD materials cropped and integrated. Paper/metal frames and resource plates use nine-slice scaling; mint/coral buttons retain their material silhouettes. English text, numbers, progress, and interactions are rendered through the DOM."
     }
   ],
   "edges": [

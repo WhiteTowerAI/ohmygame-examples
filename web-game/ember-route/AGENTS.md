@@ -31,7 +31,7 @@ external service or asset-generation step.
 | Combat feedback and card input | `src/motion.ts`, `src/card-input.ts` |
 | Responsive styles | `src/style.css`, `src/hud.css`, `src/experience.css`, `src/english.css` |
 | Forty runtime WebP images | `public/art/` |
-| Design, implementation history and compact board | `canvas/` |
+| Original design, implementation and generation history | `canvas/` |
 | Rules, localization and legacy-save checks | `tests/` |
 
 ## Editing rules
@@ -41,11 +41,14 @@ external service or asset-generation step.
 - Preserve Heat, Vent, Overheat, target selection, enemy intents and save
   compatibility. Design mockup numbers are illustrative; use game data.
 - Keep artwork local and synchronize Canvas references when replacing files.
-  Source sheets and asset-regeneration scripts are omitted from this example.
+- Preserve every original Canvas node, type, setting, reference, generation
+  record and editor coordinate/viewport when packaging or compressing media.
+  Keep source sheets and portable generation provenance; they are authoring
+  data. Compress images in place without resizing or changing their alpha.
 - Keep covers and catalog metadata outside this folder. Do not add exports,
   duplicate cover files, dependency folders, build output or editor caches.
 - Read `canvas/AGENTS.md`, README and schemas before editing Canvas data;
-  preserve retained IDs and validate documents, assets and layouts.
+  preserve IDs and validate documents, assets and layouts.
 - Record third-party sources and licenses in `CREDITS.md`; keep the build's
   license packaging intact.
 
