@@ -18,7 +18,7 @@ type Board = {
 };
 type Layout = { nodes: Record<string, { x: number; y: number }>; viewport: { x: number; y: number; zoom: number }; view: string };
 
-test('compact Canvas keeps valid design, asset and node references with separate layouts', () => {
+test('original Canvas keeps valid design, asset and node references with separate layouts', () => {
   const index = readJSON<Index>('canvas/index.json');
   const assets = readJSON<{ assets: Record<string, Asset> }>('canvas/assets.json').assets;
   assert.equal(new Set(index.boards.map(board => board.id)).size, index.boards.length);
@@ -60,7 +60,7 @@ test('compact Canvas keeps valid design, asset and node references with separate
     assert.equal(layout.view, 'canvas');
     assert(Number.isFinite(layout.viewport.x) && Number.isFinite(layout.viewport.y) && layout.viewport.zoom > 0);
   }
-  assert.deepEqual([...referencedAssets].sort(), Object.keys(assets).sort(), 'No unused Canvas assets');
+  assert(referencedAssets.size > 0);
 });
 
 test('case Canvas is self-contained and its design illustration resolves without Library access', () => {
@@ -71,10 +71,12 @@ test('case Canvas is self-contained and its design illustration resolves without
     assert(asset.name.length > 0);
     assert(readFileSync(resolve(root, asset.path)).length > 0, id);
   }
-  assert.deepEqual(readJSON<unknown[]>('canvas/jobs.json'), [], 'Old generation runs are omitted from the compact case');
+  const jobs = readJSON<{ id: string; status: string }[]>('canvas/jobs.json');
+  assert.equal(jobs.length, 1, 'Keep the original cover-generation record');
+  assert.equal(jobs[0]!.status, 'succeeded');
   const index = readJSON<Index>('canvas/index.json');
   const document = readFileSync(resolve(root, `canvas/documents/${index.mainDocumentId}.md`), 'utf8');
-  assert(document.startsWith('# 《电路小工匠》游戏设计文档'));
+  assert(document.startsWith('# Circuit Craftsman Game Design Document'));
   assert(document.includes('../../assets/concept.webp'));
   assert(!document.includes('assets/generated/'));
   assert.equal(webpInfo(readFileSync(resolve(root, 'assets/concept.webp'))).width, 1280);

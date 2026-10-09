@@ -19,11 +19,13 @@ jobs:
         with:
           node-version: 22.19.0
       - name: Check catalog
-        run: node scripts/check-catalog.mjs
+        run: |
+          node --test scripts/*.test.mjs
+          node scripts/check-catalog.mjs
       - name: Build every example
         run: |
           for example in $(node scripts/check-catalog.mjs); do
             echo "::group::$example"
-            (cd "$example" && npm ci && npm run build)
+            (cd "$example" && npm ci && npm test --if-present && npm run build)
             echo "::endgroup::"
           done

@@ -1,21 +1,25 @@
-# Circuit Craftsman / 电路小工匠
+# Circuit Craftsman
 
-轻量、完整可玩的 agent 网页游戏案例。使用 Phaser 3、TypeScript 和 Vite，默认英文，可在设置中切换中文。
+A complete browser puzzle game built with Phaser 3, TypeScript and Vite.
+The interface defaults to English and supports Chinese in Settings.
 
-## 游戏内容
+## Game content
 
-- 40 个手工关卡、4 个区域，棋盘从 4×4 扩展至 7×7。
-- 鼠标、触控和键盘旋转；相向接口才连通，支持分支、回路和替代解。
-- 撤销、重开、后台可行解提示、三星评分、逐关解锁与灯泡外观。
-- 本地保存进度、最佳成绩、未完成局面、语言、声音和动画偏好。
-- 卡通美术、流动电流、亮灯反馈及中英文 Logo；适配桌面和移动布局。
-- 无需账号，不含广告、支付或在线排行榜。
+- Forty handcrafted levels across four regions, with boards from 4×4 to 7×7.
+- Mouse, touch and keyboard rotation; reciprocal ports, branches and loops.
+- Undo, Restart, worker-based hints, star ratings and unlockable bulb appearances.
+- Local saves for progress, best results, unfinished attempts and preferences.
+- Cartoon artwork, flowing power feedback, responsive layouts and bilingual logos.
 
-完成得 1 星，不超过 `ceil(1.5S)` 步得 2 星，不超过参考步数 `S` 得 3 星。提示只高亮，使用后本次最高 2 星；撤销不退还累计步数，重开重置本次尝试。
+Completing a level earns one star; at most `ceil(1.5S)` moves earns two, and
+at most the reference move count `S` earns three. Hints only highlight a move
+and cap the current attempt at two stars. Undo does not refund moves;
+Restart resets the attempt.
 
-## 运行与构建
+## Run and build
 
-需要 Node.js 20.19+ 或 22.12+。OhMyGame 管理编辑器预览；独立环境可用 `npm run dev`。
+Requires Node.js 20.19+ or 22.12+. OhMyGame manages the editor preview;
+independently, use `npm run dev`.
 
 ```sh
 npm ci
@@ -23,45 +27,57 @@ npm test
 npm run build
 ```
 
-构建不需要系统美术工具。装有 `ffmpeg` 时，测试会额外解码 WebP 检查灯泡结构、接口、管身、设置面板和 Logo；未安装时明确跳过像素测试，文件头、尺寸、哈希、素材完整性、游戏逻辑和 Canvas 测试仍运行。
+Builds require no system artwork tools. Tests additionally decode WebP pixels
+when `ffmpeg` is available; those pixel checks explicitly skip otherwise.
+The static build is `dist/`, with relative URLs, embedded fonts and bundled
+third-party notices. Serve it over HTTP, including from a subdirectory.
 
-发布输出为 `dist/`，使用相对资源路径，可部署到子目录。字体已嵌入 CSS，不依赖 CDN；第三方许可证随构建输出。
+## Project layout
 
-## 项目结构
-
-| 路径 | 用途 |
+| Path | Purpose |
 | --- | --- |
-| `src/game/` | 40 关数据、电路规则、提示、状态与存档 |
-| `src/board.ts` | Phaser 棋盘、输入和视觉反馈 |
-| `src/main.ts`、`src/style.css`、`src/i18n.ts` | 响应式界面、弹窗与双语文案 |
-| `src/art-files.ts` | 游戏唯一素材加载清单 |
-| `public/art/circuit-craftsman/` | 47 张实际使用的 WebP，游戏与 Canvas 共用 |
-| `assets/concept.webp` | 设计文档的压缩概念图 |
-| `canvas/` | 原设计文档、两个精简画板、素材引用与布局 |
-| `tests/` | 关卡、规则、存档、双语、美术和 Canvas 回归 |
+| `src/game/` | Levels, circuit rules, hints, state and saves |
+| `src/board.ts` | Phaser board, input and visual feedback |
+| `src/main.ts`, `src/style.css`, `src/i18n.ts` | Responsive interface and English/Chinese text |
+| `src/art-files.ts` | Runtime artwork list |
+| `public/art/circuit-craftsman/` | Forty-seven runtime WebP images shared with Canvas |
+| `assets/concept.webp`, `assets/imported/output.webp` | Original concept and historical cover |
+| `canvas/` | English design document, original boards, generation history and layout |
+| `.data/assets.json` | Portable media origins and provenance |
+| `tests/` | Rules, saves, translations, artwork and Canvas regression checks |
 
-## 案例资料
+See the [game design](canvas/documents/970b066d-a80e-49c4-910e-a6f60f7d9526.md),
+[artwork guide](public/art/circuit-craftsman/README.md),
+[agent guide](AGENTS.md), [credits](CREDITS.md),
+[artwork manifest](public/art/circuit-craftsman/manifest.json) and
+[validation record](public/art/circuit-craftsman/validation.json).
 
-- [游戏设计文档](canvas/documents/970b066d-a80e-49c4-910e-a6f60f7d9526.md)
-- [素材说明](public/art/circuit-craftsman/README.md)
-- [代理指南](AGENTS.md)与[素材和第三方代码许可](CREDITS.md)
-- [素材清单](public/art/circuit-craftsman/manifest.json) 与 [验证记录](public/art/circuit-craftsman/validation.json)
-- [概念图](assets/concept.webp)、[英文 Logo](public/art/circuit-craftsman/branding/logo-small-en.webp)、[中文 Logo](public/art/circuit-craftsman/branding/logo-small.webp)
+## Packaging and Canvas preservation
 
-## 轻量化约定
+The original two boards contain seventeen nodes and one generation record.
+Canvas text is English. Node IDs, types, model settings, media references,
+generation status, coordinates and viewport are preserved. Prompts and labels
+are translated without replacing generation nodes with static asset nodes.
 
-图片由 146 张、约 103.4 MiB，精简为 48 张、约 4.9 MiB，减少约 95%。其中 47 张为游戏成品，另一张为概念图。43 张 PNG 成品改为无损 WebP，尺寸、透明度和可见 RGB 均保持一致；四张已调色的运行背景直接保留原 WebP。加载画面与顶栏共用中英文小 Logo。
+Runtime images remain unchanged. The historical cover's original PNG bytes
+are encoded as actual lossless WebP without changing decoded pixels, dimensions
+or alpha; the already compact concept remains unchanged. The catalog cover
+stays outside the project, while its historical generation node remains
+part of the editable Canvas.
 
-Canvas 保留原设计正文与概念图，以及灯泡、管道、设置框、四区域背景和双语 Logo 等关键成品。保留节点和素材的 ID，删除历史生成节点、未使用资产和陈旧布局引用。
+Dependencies, build output, editor caches, OS files, unused processing trees
+and duplicate exports are excluded. Original Canvas sources and generation
+provenance are retained. Packaging or media compression must not delete nodes,
+reset history, rearrange the layout or discard prompt/reference relationships.
 
-本项目是**成品案例，而不是完整生成过程归档**。历史生成母版、参考副本、加工图层、预览合集、未使用图片和生成历史已移除，依赖它们的加工、字体重建和打包脚本及开发依赖也已移除。不再提供全量美术重建或原素材 ZIP。
+## Verification and scope
 
-`dist/` 可以由构建再生成，不保留在案例源码中；`node_modules/` 与编辑器缓存也不纳入案例源码。当前编辑器预览所需依赖和缓存保留在本机。
+Tests cover all forty reference solutions, hints, scoring, save recovery,
+translations, artwork hashes and dimensions, geometry and Canvas references.
+Development-only playtest hooks are excluded from production. Earlier browser
+checks and artwork review are recorded in the validation file; those records
+are not a claim of exhaustive device testing or manual completion of every
+level.
 
-## 验证边界
-
-30 项自动测试通过，覆盖 40 关可解性、参考步数、替代解与提示、评分、存档、双语完整性、WebP 文件和哈希、棋盘几何及精简 Canvas 引用。构建和 47 张发布图片逐字节比对通过。
-
-压缩后在 `1280×800`、`390×844`、`360×640`、`844×390` 四个浏览器视口实测并截图，检查四区域、设置、双语和棋盘；鼠标 5 步通关第 11 关、触控 2 步通关第 1 关，均获得三星。完整范围记录在素材验证文件中。
-
-未逐关人工通关，未进行移动真机、扬声器听音或发布托管测试。构建保留 `logic-solver` 上游 `eval` 和 Phaser 大分包提示，均不阻断构建。开发测试桥和跳关入口不会进入生产构建。
+Code is licensed under Apache License 2.0. Assets and dependencies retain
+the licenses documented in [CREDITS.md](CREDITS.md).

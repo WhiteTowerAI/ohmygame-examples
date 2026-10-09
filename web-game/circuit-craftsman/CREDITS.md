@@ -7,7 +7,8 @@ third-party code and fonts retain the licenses listed below.
 ## Artwork and audio
 
 The 47 runtime WebP images in `public/art/circuit-craftsman/` and the design
-illustration in `assets/concept.webp` were created for the original game
+illustration in `assets/concept.webp` and historical cover in
+`assets/imported/output.webp` were created for the original game
 workspace. The supplied artwork includes generated images and normalized
 circuit tiles. See the artwork manifest and README for file details.
 The catalog cover in `../../covers/circuit-craftsman.webp` is the promotional

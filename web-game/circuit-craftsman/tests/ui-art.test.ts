@@ -18,7 +18,7 @@ test('settings frame preserves transparent exterior, opaque ice-blue face and na
   assert(main.includes('--settings-image'));
 });
 
-test('graded backgrounds and settings share runtime WebP files with the compact Canvas', () => {
+test('graded backgrounds and settings share runtime WebP files with the original Canvas', () => {
   const canvas = JSON.parse(read('canvas/assets.json')).assets;
   const manifest = JSON.parse(read('public/art/circuit-craftsman/manifest.json'));
   assert.equal(canvas['ui-v3-final-settings-panel'].path, `public/art/circuit-craftsman/${ART_FILES['settings-panel']}`);

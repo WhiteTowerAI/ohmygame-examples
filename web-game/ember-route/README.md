@@ -39,8 +39,9 @@ reduced motion. Progress saves automatically in browser local storage.
 | `src/main.ts` | DOM menus, HUD, services, audio and interactions |
 | `src/world.ts`, `src/motion.ts`, `src/card-input.ts` | Phaser, feedback and input |
 | `public/art/` | Forty runtime WebPs |
-| `assets/concept.webp` | Compressed desktop combat concept |
-| `canvas/` | Design, implementation history and compact local asset board |
+| `assets/imported/`, `assets/marketing/` | Original source images and historical cover, compressed in place |
+| `canvas/` | Original design, implementation history, generation nodes and layout |
+| `.data/assets.json` | Portable media origins and generation provenance |
 | `tests/` | Rules, English text and legacy-save regression checks |
 
 See the [game design](canvas/documents/f4076920-11c4-4376-a7e5-f1caefc1d532.md),
@@ -49,15 +50,22 @@ See the [game design](canvas/documents/f4076920-11c4-4376-a7e5-f1caefc1d532.md),
 
 ## Example cleanup
 
-Runtime artwork is copied unchanged. One original combat concept is resized
-and compressed; its card/enemy numbers illustrate layout, while source code
-defines the rules. Historical generation sheets and jobs, duplicate marketing
-covers, cover PNG, source ZIP, duplicate implementation log, asset/cover
-preparation scripts and their Sharp dependency are omitted. The catalog cover
-is kept outside this example folder.
+The original Canvas contains eighteen nodes and fourteen generation records.
+Node IDs, types, prompts, models, reference relationships, generation status,
+coordinates and viewport are preserved. Source sheets and document previews
+remain local at their original paths. Mockup numbers illustrate layout; source
+code defines the game rules.
 
-Dependencies, build output, editor caches and OS files are excluded from the
-source. The original OhMyGame workspace retains the full historical material.
+Source media uses high-quality WebP with unchanged dimensions and a lossless
+alpha channel. Encoding is selected only when visible-pixel RGB RMSE is at
+most 3 on the 0–255 scale; already smaller WebPs remain unchanged.
+Runtime images are copied unchanged. Portable `.data/assets.json` metadata
+preserves generated-media origins and prompts.
+
+Dependencies, build output, editor caches, OS files, duplicate concept and
+marketing copies, ZIP exports and duplicate implementation logs are excluded.
+The catalog cover stays outside the project; historical cover-generation
+nodes and source media remain part of the editable Canvas.
 
 ## Verification and scope
 

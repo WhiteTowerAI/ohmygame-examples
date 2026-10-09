@@ -2,7 +2,8 @@ node_modules/
 dist/
 build/
 out/
-.data/
+.data/*
+!.data/assets.json
 .DS_Store
 *.tsbuildinfo
 npm-debug.log*

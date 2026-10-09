@@ -12,7 +12,7 @@
         "assetId": "circuit-v2-final-tile-straight",
         "mediaType": "image"
       },
-      "title": "直线导线方块"
+      "title": "Straight Wire Tile"
     },
     {
       "id": "circuit-v2-final-tile-elbow",
@@ -21,7 +21,7 @@
         "assetId": "circuit-v2-final-tile-elbow",
         "mediaType": "image"
       },
-      "title": "转角导线方块"
+      "title": "Elbow Wire Tile"
     },
     {
       "id": "circuit-v2-final-tile-tee",
@@ -30,7 +30,7 @@
         "assetId": "circuit-v2-final-tile-tee",
         "mediaType": "image"
       },
-      "title": "三通导线方块"
+      "title": "T-Junction Wire Tile"
     },
     {
       "id": "circuit-v2-final-tile-cross",
@@ -39,7 +39,7 @@
         "assetId": "circuit-v2-final-tile-cross",
         "mediaType": "image"
       },
-      "title": "十字导线方块"
+      "title": "Cross Wire Tile"
     },
     {
       "id": "circuit-v2-final-tile-bulb-off",
@@ -48,7 +48,7 @@
         "assetId": "circuit-v2-final-tile-bulb-off",
         "mediaType": "image"
       },
-      "title": "灯泡方块·未通电"
+      "title": "Bulb Tile (Unpowered)"
     },
     {
       "id": "circuit-v2-final-tile-bulb-on",
@@ -57,7 +57,7 @@
         "assetId": "circuit-v2-final-tile-bulb-on",
         "mediaType": "image"
       },
-      "title": "灯泡方块·已通电"
+      "title": "Bulb Tile (Powered)"
     },
     {
       "id": "circuit-v2-final-tile-power",
@@ -66,7 +66,7 @@
         "assetId": "circuit-v2-final-tile-power",
         "mediaType": "image"
       },
-      "title": "电源方块"
+      "title": "Power Source Tile"
     },
     {
       "id": "ui-v3-final-settings-panel",
@@ -75,7 +75,7 @@
         "assetId": "ui-v3-final-settings-panel",
         "mediaType": "image"
       },
-      "title": "设置面板成品"
+      "title": "Finished Settings Panel"
     },
     {
       "id": "ui-v3-final-background-street",
@@ -84,7 +84,7 @@
         "assetId": "ui-v3-final-background-street",
         "mediaType": "image"
       },
-      "title": "街角背景调色成品"
+      "title": "Color-Graded Street Background"
     },
     {
       "id": "ui-v3-final-background-campus",
@@ -93,7 +93,7 @@
         "assetId": "ui-v3-final-background-campus",
         "mediaType": "image"
       },
-      "title": "校园背景调色成品"
+      "title": "Color-Graded Campus Background"
     },
     {
       "id": "ui-v3-final-background-station",
@@ -102,7 +102,7 @@
         "assetId": "ui-v3-final-background-station",
         "mediaType": "image"
       },
-      "title": "车站背景调色成品"
+      "title": "Color-Graded Station Background"
     },
     {
       "id": "ui-v3-final-background-square",
@@ -111,7 +111,7 @@
         "assetId": "ui-v3-final-background-square",
         "mediaType": "image"
       },
-      "title": "广场背景调色成品"
+      "title": "Color-Graded Square Background"
     },
     {
       "id": "localization-v4-logo-reference",
@@ -120,7 +120,7 @@
         "assetId": "localization-v4-logo-reference",
         "mediaType": "image"
       },
-      "title": "中文 Logo"
+      "title": "Chinese Logo"
     },
     {
       "id": "localization-v4-final-logo-en",
@@ -129,7 +129,7 @@
         "assetId": "localization-v4-final-logo-en",
         "mediaType": "image"
       },
-      "title": "英文 Logo"
+      "title": "English Logo"
     }
   ],
   "edges": [],

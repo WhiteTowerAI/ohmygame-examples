@@ -7,14 +7,14 @@ included in `LICENSE`. Third-party packages retain their upstream licenses.
 ## Artwork and audio
 
 The 29 harbor images in `public/art/`, five HUD images in `src/assets/ui/` and
-design illustration in `assets/concept.webp` were created for the original
+source sheets and design previews in `assets/` were created for the original
 workspace. They include generated original artwork and extracted sprites;
 no external artwork packs are included. Runtime images are copied unchanged.
-The concept is a 1280-pixel-wide compressed copy of the original landscape
-mockup; its baked lettering predates the current English interface.
+Source images are compressed in place without changing dimensions or alpha.
+Their generation nodes, prompts and history remain in `canvas/`.
 
 `assets/manifests/` retains dimensions, anchors and historical crop provenance.
-Original source sheets are not bundled. The catalog cover is the promotional
+Original source sheets are bundled. The catalog cover is the promotional
 illustration supplied by the project owner as `output.webp`, resized to
 1280×720 and compressed as WebP. It is stored outside this example in
 `covers/tidal-workshop.webp`.
