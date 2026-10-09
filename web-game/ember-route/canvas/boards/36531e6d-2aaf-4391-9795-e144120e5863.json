@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "gdd-ember-route",
+      "type": "document",
+      "data": {
+        "documentId": "f4076920-11c4-4376-a7e5-f1caefc1d532"
+      },
+      "title": "00 · Ember Route | Game Design Document",
+      "description": "Main design: theme, Heat and Vent, 24 cards, map, enemies, relics, UI specifications, and first-release acceptance. Design preceded artwork generation on this canvas."
+    },
+    {
+      "id": "art-direction",
+      "type": "text",
+      "data": {
+        "text": "Original industrial fairytale art direction: ink teal, aged copper, mint fire and etched silhouettes. The lantern blacksmith faces right; enemies face left. Runtime images are already cropped and integrated. Dynamic card text and HUD numbers are rendered by the DOM. This example retains one combat concept and representative runtime artwork; source sheets and generation history remain in the original workspace.",
+        "instruction": ""
+      },
+      "title": "Shared Art Direction and Asset Guidelines",
+      "description": "Common visual direction for all artwork and constraints for subsequent asset production."
+    },
+    {
+      "id": "implementation-ember-route",
+      "type": "document",
+      "data": {
+        "documentId": "2d2aa858-5691-48d0-aa29-223c7880b935"
+      },
+      "title": "15 · Chapter I Implementation and Verification | Playable Version",
+      "description": "Chapter I implementation, English UI, legacy-save compatibility and verification history. The README describes the compact standalone example."
+    },
+    {
+      "id": "hero-concept",
+      "type": "asset",
+      "title": "Runtime Lantern Blacksmith",
+      "description": "Retained local artwork for this standalone example.",
+      "data": {
+        "assetId": "69c5c29f-a5d6-4c17-b1f5-69bf4e1e949f",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "bridge-background",
+      "type": "asset",
+      "title": "Runtime Foundry Bridge",
+      "description": "Retained local artwork for this standalone example.",
+      "data": {
+        "assetId": "c3884680-8765-4898-8047-9bc1213442ab",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "combat-prototype",
+      "type": "asset",
+      "title": "Combat Design Concept",
+      "description": "Retained local artwork for this standalone example.",
+      "data": {
+        "assetId": "99da187e-7599-4d21-a741-dfe93fc121f3",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-sentinel",
+      "type": "asset",
+      "title": "Sentinel",
+      "data": {
+        "assetId": "ember-route-runtime-sentinel",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-whelp",
+      "type": "asset",
+      "title": "Whelp",
+      "data": {
+        "assetId": "ember-route-runtime-whelp",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-lantern",
+      "type": "asset",
+      "title": "Lantern",
+      "data": {
+        "assetId": "ember-route-runtime-lantern",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-boss",
+      "type": "asset",
+      "title": "Boss",
+      "data": {
+        "assetId": "ember-route-runtime-boss",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-card-0",
+      "type": "asset",
+      "title": "Card 0",
+      "data": {
+        "assetId": "ember-route-runtime-card-0",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-card-1",
+      "type": "asset",
+      "title": "Card 1",
+      "data": {
+        "assetId": "ember-route-runtime-card-1",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-relic-0",
+      "type": "asset",
+      "title": "Relic 0",
+      "data": {
+        "assetId": "ember-route-runtime-relic-0",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-ui-card-frame",
+      "type": "asset",
+      "title": "Ui Card Frame",
+      "data": {
+        "assetId": "ember-route-runtime-ui-card-frame",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-ui-heart",
+      "type": "asset",
+      "title": "Ui Heart",
+      "data": {
+        "assetId": "ember-route-runtime-ui-heart",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "runtime-ui-button-mint",
+      "type": "asset",
+      "title": "Ui Button Mint",
+      "data": {
+        "assetId": "ember-route-runtime-ui-button-mint",
+        "mediaType": "image"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "design-art-direction",
+      "source": "gdd-ember-route",
+      "target": "art-direction"
+    },
+    {
+      "id": "design-hero",
+      "source": "art-direction",
+      "target": "hero-concept"
+    },
+    {
+      "id": "design-background",
+      "source": "art-direction",
+      "target": "bridge-background"
+    }
+  ],
+  "id": "36531e6d-2aaf-4391-9795-e144120e5863"
+}
