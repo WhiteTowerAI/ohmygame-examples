@@ -1,0 +1,13 @@
+@import "../../shared/style/components.css";
+
+/* The answer bar sits horizontally centred, low on the picture. */
+.swipe-call {
+  place-content: end center;
+  padding-bottom: 22cqh;
+}
+
+/* The answer knob's offset, moved in the editor preview. It uses `translate`,
+   so the swipe's own `transform` keeps animating it from this position. */
+.swipe-knob {
+  translate: 2.24cqw 0.44cqh;
+}

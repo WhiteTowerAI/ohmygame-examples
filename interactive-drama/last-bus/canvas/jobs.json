@@ -1,0 +1,2480 @@
+[
+  {
+    "recoveryId": "83c3e444-5df2-4a55-8379-6b70c2192b14",
+    "id": "ac949ff3-5227-4b1d-8806-b333cb648b32",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T13:04:05.274Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，雨夜，正常营业的7-Eleven便利店。引用已确认的女生与便利店内景参考，保持人物外貌、服装和道具一致。室内明亮，稳定的中性白色照明，货架和冷柜整齐但有真实使用痕迹。\n\n镜头一：店内朝向入口的固定中景。\n玻璃门打开，女生走进便利店。左肩背着黑色工作包，左手拿着收好的折伞，手机已经收进口袋。\n\n她进入明亮的灯光中，脚步逐渐放慢，轻轻呼出一口气，紧绷的肩膀稍稍放松。玻璃门在身后合上，",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "ad7fa498-aaf8-4a97-af35-629dc3e47e08"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "cef381d8-17ac-4788-b997-c000de66a1e5",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T13:04:47.064Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "35dd8679-2e8c-4b8c-8197-08b59d251443"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8ae5c6c2-57b0-4cfb-82e0-7cf57fed01e3",
+    "id": "9cb924bf-fd93-4904-8d0a-1eb0b90cc687",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:54:19.891Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，雨夜公交站。延续参考画面，保持女生外貌、服装、工作包、雨伞及公交车结构一致。女生始终站在车外的人行道上。\n\n镜头一：女生右侧中景。\n女生面对敞开的公交前门，犹豫片刻，向后退一步，退向候车亭方向，与车门拉开距离。动作克制，没有转身逃跑。\n\n在女生开口之前，直接切镜。\n\n镜头二：女生正面中近景。\n从车门方向朝站台拍摄，背景为候车亭。女生看着镜头旁的驾驶位，轻轻摇头，礼貌但已经作出决定",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "a7d55ab1-ad86-456b-97f5-dcbac6ac268d"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "83619dd6-fa8f-4757-8cba-0b09770347c3",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T12:54:55.639Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "b26337cc-c09a-4c33-b56c-836c2338da02"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "19545baf-1a7c-4f7c-a343-ce06cba30d65",
+    "id": "67e64631-77cf-4117-9970-2593a6d6b485",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:46:24.333Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，雨夜公交站。延续参考画面，保持女生外貌、服装、工作包、雨伞及公交车结构一致。女生始终站在车外的人行道上。\n\n镜头一：女生右侧中景。\n女生面对敞开的公交前门，犹豫片刻，向后退一步，退向候车亭方向，与车门拉开距离。动作克制，没有转身逃跑。\n\n在女生开口之前，直接切镜。\n\n镜头二：女生正面中近景。\n从车门方向朝站台拍摄，背景为候车亭。女生看着镜头旁的驾驶位，轻轻摇头，礼貌但已经作出决定",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "a7d55ab1-ad86-456b-97f5-dcbac6ac268d"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "fed7e45f-06b9-4d14-a549-516911e7ba94",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T12:47:01.763Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "0b9b1ece-0cca-4428-84fb-62c91bcb8e25"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "a6c0a5a9-4c6f-4129-a8da-0fb352af8b55",
+    "id": "9445fd73-e5d9-4a7e-ba3f-95b82b147aa2",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:25:37.636Z",
+    "status": "succeeded",
+    "title": "写实都市恐怖电影高潮，延续女生站在公交过道、车辆已经失控的状态。严格保持女主面容、服装和车厢结构一致。前门始终关闭。\n\n镜头一：车厢前方向后拍摄。\n\n相机位于车厢前部过道，朝后排拍摄，位置固定，随车身产生短促而猛烈的震动。女生从过道中部向镜头方向冲来。\n\n她惊恐地看着车头，急促地大喊：\n“停车！师傅！停车！”\n\n声音逐渐失控，带着喘息，最后一个“停车”几乎喊破音。司机没有回答。\n\n公交继续加速，车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3ba7ba89-c4ff-448b-b1f8-c396edb35a32"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "4f059637-f78c-4578-9e0c-001f759fc5fa",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T12:26:17.007Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "85b78910-d3ec-48b9-a4c4-5692febc679a"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "e021a535-4e69-4666-8c85-e59f039419ba",
+    "id": "9983161a-dc6c-49e6-9463-2a68f8df2f68",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:24:30.805Z",
+    "status": "succeeded",
+    "title": "写实都市恐怖电影高潮，延续女生站在公交过道、车辆已经失控的状态。严格保持女主面容、服装和车厢结构一致。前门始终关闭。\n\n镜头一：车厢前方向后拍摄。\n\n相机位于车厢前部过道，朝后排拍摄，位置固定，随车身产生短促而猛烈的震动。女生从过道中部向镜头方向冲来。\n\n她惊恐地看着车头，急促地大喊：\n“停车！师傅！停车！”\n\n声音逐渐失控，带着喘息，最后一个“停车”几乎喊破音。司机没有回答。\n\n公交继续加速，车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3ba7ba89-c4ff-448b-b1f8-c396edb35a32"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "990c70d8-57e5-4eed-9ce0-a52dfc92e823",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T12:25:00.480Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "b1f21682-f57f-4693-9c4a-3090bc71fcc8"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "918795de-ef23-4489-8fbb-125bd3067181",
+    "id": "0cf7a497-19ba-4134-a5ec-b76954985890",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:13:32.737Z",
+    "status": "succeeded",
+    "title": "写实都市恐怖电影高潮，延续女生站在公交过道、车辆已经失控的状态。严格保持女主面容、服装和车厢结构一致。前门始终关闭。\n\n镜头一：车厢前方向后拍摄。\n\n相机位于车厢前部过道，朝后排拍摄，位置固定，随车身产生短促而猛烈的震动。女生从过道中部向镜头方向冲来。\n\n她惊恐地看着车头，急促地大喊：\n“停车！师傅！停车！”\n\n声音逐渐失控，带着喘息，最后一个“停车”几乎喊破音。司机没有回答。\n\n公交继续加速，车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3ba7ba89-c4ff-448b-b1f8-c396edb35a32"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "c84a0028-9375-49ba-8aaa-cef8fe101125",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T12:14:05.731Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "d49bdaf4-dde4-431f-9c26-728176f9a982"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "c2e2004d-3a34-4781-b338-f40cf3e9ee30",
+    "id": "b3fa6839-3cae-4987-a283-ebb2ee8f7b50",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:08:25.436Z",
+    "status": "failed",
+    "title": "写实都市恐怖电影高潮，延续女生站在公交过道、车辆已经失控的状态。严格保持女主面容、服装和车厢结构一致。前门始终关闭。\n\n镜头一：车厢前方向后拍摄。\n\n相机位于车厢前部过道，朝后排拍摄，位置固定，随车身产生短促而猛烈的震动。女生从过道中部向镜头方向冲来。\n\n她惊恐地看着车头，急促地大喊：\n“停车！师傅！停车！”\n\n声音逐渐失控，带着喘息，最后一个“停车”几乎喊破音。司机没有回答。\n\n公交继续加速，车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3ba7ba89-c4ff-448b-b1f8-c396edb35a32"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "error": "fetch failed"
+  },
+  {
+    "recoveryId": "c7a4d2aa-b019-486f-896d-9187b219164e",
+    "id": "6a84291d-4a52-4f89-8a6a-e4fa15ed74e7",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T12:07:15.410Z",
+    "status": "failed",
+    "title": "写实都市恐怖电影高潮，延续女生站在公交过道、车辆已经失控的状态。严格保持女主面容、服装和车厢结构一致。前门始终关闭。\n\n镜头一：车厢前方向后拍摄。\n\n相机位于车厢前部过道，朝后排拍摄，位置固定，随车身产生短促而猛烈的震动。女生从过道中部向镜头方向冲来。\n\n她惊恐地看着车头，急促地大喊：\n“停车！师傅！停车！”\n\n声音逐渐失控，带着喘息，最后一个“停车”几乎喊破音。司机没有回答。\n\n公交继续加速，车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3ba7ba89-c4ff-448b-b1f8-c396edb35a32"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "error": "Could not reach MiniMax Global"
+  },
+  {
+    "recoveryId": "3d0cf8c2-5e38-4afc-8c71-db65545b00f9",
+    "id": "1fec3ad9-cf65-4129-97e9-7cf3f99e83e8",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:55:27.718Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，延续女生站在公交过道、左手按停车铃的状态。人物、服装、红色按钮和扶杆位置与上一镜一致。\n\n开场停车铃已经响起一声：\n“叮——” 尖锐急促，机械音，女生不要发出声音\n\n女生发现车辆没有减速，仍然急切地连续按铃。左手手指快速抬起、再次按下，两三次清楚的按压，按钮正常回弹，每次对应一声短促铃响。\n\n她身体随车厢颠簸，呼吸急促，眉心紧锁，目光焦急地看向车头。右手仍攥着手机，没有松开或换手",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "57fa3fef-aa16-429f-be18-c5b3c2f366fd"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "3d532f7f-14c3-4ba9-943d-e095c471904b",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:55:51.103Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "41e1de55-4116-4581-a012-59d3d9cc33ff"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "66f11a74-e528-42c4-89b5-39e09fbf6572",
+    "id": "2839efe5-d83d-45b6-af7e-b438f1e89f27",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:54:03.646Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，延续女生站在公交过道、左手按停车铃的状态。人物、服装、红色按钮和扶杆位置与上一镜一致。\n\n开场停车铃已经响起一声：\n“叮——” 尖锐急促，机械音，不是女生自己喊的声音\n\n女生发现车辆没有减速，仍然急切地连续按铃。左手手指快速抬起、再次按下，两三次清楚的按压，按钮正常回弹，每次对应一声短促铃响。\n\n她身体随车厢颠簸，呼吸急促，眉心紧锁，目光焦急地看向车头。右手仍攥着手机，没有松开或",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "57fa3fef-aa16-429f-be18-c5b3c2f366fd"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "e3a1d8fc-33d4-4fbf-b45e-399d19893977",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:54:26.597Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "f3a13d68-1fc1-4990-8d9b-d003f2d79f14"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "ed842249-572c-4288-b629-228083464ba8",
+    "id": "29fdd4e8-93e0-48d1-9acb-2b9466f157ab",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:51:28.493Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，延续女生站在公交过道、左手按停车铃的状态。人物、服装、红色按钮和扶杆位置与上一镜一致。\n\n开场停车铃已经响起一声：\n“叮——” 尖锐急促\n\n女生发现车辆没有减速，仍然急切地连续按铃。左手手指快速抬起、再次按下，两三次清楚的按压，按钮正常回弹，每次对应一声短促铃响。\n\n她身体随车厢颠簸，呼吸急促，眉心紧锁，目光焦急地看向车头。右手仍攥着手机，没有松开或换手。\n\n固定侧面中近景，能看",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "57fa3fef-aa16-429f-be18-c5b3c2f366fd"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "5942a952-95e2-4f6a-babf-31a12e6f6a7c",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:51:46.029Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "bd8e16ac-1150-40fc-ac95-670125dc71ce"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "e6292921-268a-4dd5-9b2c-8c23731dd3d3",
+    "id": "d1537b3b-8459-48f8-b261-84638525d2dc",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:50:51.386Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，延续女生站在公交过道、左手伸向停车铃的状态。人物、服装、按钮和扶杆位置与上一镜一致。\n\n车厢突然猛烈颠簸一下。女生没能继续按稳，左手偏离红色按钮，身体失去平衡，急忙抓住旁边的扶杆稳住自己。\n\n她没有摔倒，右手仍紧攥手机。站稳后，她惊恐地看向车头，呼吸急促，又试图将左手移向按钮，但动作因颠簸而迟疑。\n\n固定侧面中近景，清楚呈现手偏离按钮、抓住扶杆的动作。镜头随车短促震动，不切镜。\n",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "ec669525-6866-4418-a439-812a1b501517"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "86c44a8b-0ee5-42ea-9afb-6f22bb66edc8",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:51:14.556Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "f05a2c9c-afed-4283-822e-7ed81d71dc36"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "65d0cf82-cd48-4ac5-abf0-8e4e057213d4",
+    "id": "dc47dbc8-1879-429f-b8e4-c868f7b2a504",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:33:41.859Z",
+    "status": "succeeded",
+    "title": "女生@image3 坐在车辆右侧靠窗位置，旁边过道座空着。右手仍握着手机，脸上惊恐。\n\n她刚将视线从身后的男人移回前方，车厢突然猛烈颠簸两下。她身体随惯性晃动，肩膀骤然绷紧，本能地扶住前排座椅靠背，努力稳住自己。\n\n车依旧在运行，她右手攥着手机放低，左手扶住靠背，急忙站起。不跨过座面，不穿过座椅。\n\n面部特写，她呼吸急促，眼神快速寻找可以求停的位置，随后锁定自己所在排过道边扶杆上的红色停车铃按钮@",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "442b6f0c-086b-4430-8289-e5c7531bfbc8"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "2b79d334-510a-4169-af97-d8b9e7f60aa0",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:34:07.685Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "fb0877a3-8bfe-4518-a767-28a3b4b07140"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "e652f427-6076-4b11-b50c-14469290ba85",
+    "id": "2f415c30-b1d8-4b33-97d2-7a465cdf8342",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:30:25.665Z",
+    "status": "succeeded",
+    "title": "女生@image3 坐在车辆右侧靠窗位置，旁边过道座空着。右手仍握着手机，脸上惊恐。\n\n她刚将视线从身后的男人移回前方，车厢突然猛烈颠簸两下。她身体随惯性晃动，肩膀骤然绷紧，本能地扶住前排座椅靠背，努力稳住自己。\n\n她右手攥着手机放低，左手扶住靠背，急忙站起。随后侧身通过空着的过道座前方空间，迈入中央过道，不跨过座面，不穿过座椅。\n\n她呼吸急促，眼神快速寻找可以求停的位置，随后锁定自己所在排过道边",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "442b6f0c-086b-4430-8289-e5c7531bfbc8"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "6e80e2d2-b955-4a2c-b3ff-8751e6bbf44e",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:30:52.180Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "5ce7ad77-d28a-4ffe-9f83-9111e9ec4d8c"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8ece93c0-1e2e-414a-af6c-a8be107ea124",
+    "id": "4c91256d-9075-4d5b-9a94-7144de0d2ce2",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:21:21.923Z",
+    "status": "succeeded",
+    "title": "引用确认的年轻男人定妆。他坐在车辆右侧靠窗位置，面容、眼镜、湿发和湿透服装保持参考一致。右手拿黑色手机贴在耳边。\n\n他的发丝贴着额头，衣料吸水后沉重，袖口有水珠，一滴水落下。神情疲惫、担忧，没有恶意，不笑。\n\n他轻声说了一句：\n“现在下不去了。” 对话是中文。整个过程没有女生，没有其他人。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "eb7ebfc2-dd4d-4e5d-881b-b17dc1ec3582"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "db490c55-b6f6-407e-ad43-707e1bec7ce0",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:21:39.776Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "504e1b30-5cdf-4384-87d9-4f1b3f0dd9e9"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b4d81ecb-7798-4643-a748-4960a1938bcc",
+    "id": "5aba9d23-3c2b-4ef2-93b9-b4234e5d5130",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:19:57.199Z",
+    "status": "succeeded",
+    "title": "引用确认的年轻男人定妆。他坐在女生后一排、车辆右侧靠窗位置，面容、眼镜、湿发和湿透服装保持参考一致。右手拿黑色手机贴在耳边。\n\n他的发丝贴着额头，衣料吸水后沉重，袖口有水珠，一滴水落下。神情疲惫、担忧，没有恶意，不笑，不突然靠近女生。\n\n他看着前方回头的女生，轻声说了一句：\n“现在下不去了。” 对话是中文",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "eb7ebfc2-dd4d-4e5d-881b-b17dc1ec3582"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "ffe7b856-753a-4582-b6b4-360a24ff321f",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:20:14.846Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "5954b0e2-2e55-4754-a753-d9848d5b13b3"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1c6aa472-5738-444d-a59e-6a586a885c5a",
+    "id": "a84149ea-9546-45c7-90f9-61843c057a01",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:14:58.932Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，同一辆公交内部，引用确认的女主@image1、阿姨@image3与车厢参考。\n阿姨已经坐在座位上了，留给观众背影。\n女生走过阿姨那排，继续往观众方向走，找了个空位子落座。后方男人暂时被座椅靠背遮挡，不出现在画面中。\n\n镜头反打，面向女生，女生选中靠窗座位，自然坐下，旁边过道座留空。她将工作包放在腿上，收好的雨伞靠在自己腿边，不挡住过道。\n\n她刚坐稳，手机突然震动。她低头查看，从外",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "81ba404d-e667-4a5d-866e-b5df2cc186a9"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "e790236e-3798-4d84-958c-8d6bd9241ac3",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:15:34.286Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "ed5ea3e1-f20a-4532-ba0e-532a1d01195a"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "de79e7c9-b1c7-417e-b1fb-ca6937c92519",
+    "id": "e1b019be-94ee-47e4-8022-367e7269d50e",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:10:46.381Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，同一辆公交内部，引用确认的女主、阿姨与车厢参考。\n\n女生来到指定座位：车辆右侧、中门后连续三排双人座的第二排靠窗位置。阿姨坐在她前一排靠窗，后方男人暂时被座椅靠背遮挡，不出现在画面中。\n\n固定斜侧面中景。女生挪进靠窗座位，自然坐下，旁边过道座留空。她将工作包放在腿上，收好的雨伞靠在自己腿边，不挡住过道。\n\n她刚坐稳，手机突然震动。她低头查看，从外套口袋取出手机，看到还是那个陌生号",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "81ba404d-e667-4a5d-866e-b5df2cc186a9"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "deb06a8b-5c10-4d1d-9ffc-95560ee2a702",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:11:15.884Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "a204316d-2bfb-485e-97b3-cd6f1bd5a864"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b9c3c8b1-5cdb-421a-858e-4362a846d4e2",
+    "id": "56a3e24e-d4ff-4ee4-b0b1-039ddccf6477",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:06:07.492Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交站。引用确认的女主@image2与公交参考，保持人物面容、服装、道具和车门结构一致。\n\nImage 1 作为首帧，女生已经决定上车。相机位于站台上、女生右后方，固定中景，清楚拍到她与打开的前门。\n\n短暂停顿后，她迈步跨过门槛，进入车厢，动作自然，不回头。\n\n她将手机靠近前门旁司机旁的扫码终端，响起一声正常的支付提示音：\n“滴。”\n\n随后收回手机，往车厢内部（Imag",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3923d841-7033-455b-8b34-ceca7652f7b5"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "51811e0b-3f52-43ac-b353-afd39d7f5d70",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:06:34.905Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "acbc0aed-00ea-43bb-89d5-75cf8792bfda"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "9a3c188e-3163-4a86-8e15-bdeedbcdb292",
+    "id": "afd9c299-db9c-4c9c-9a7c-f4c51392801e",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T11:01:59.898Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交站。引用确认的女主与公交参考，保持人物面容、服装、道具和车门结构一致。\n\n女生已经决定上车。相机位于站台上、女生右后方，固定中景，清楚拍到她与打开的前门。\n\n她左肩背黑色工作包，左手拿收拢的雨伞，右手拿手机。短暂停顿后，她迈步跨过门槛，进入车厢，动作自然，不回头。\n\n她将手机靠近前门旁的扫码终端，响起一声正常的支付提示音：\n“滴。”\n\n随后收回手机，往车厢内部走。\n",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "3923d841-7033-455b-8b34-ceca7652f7b5"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "eaa8243d-cc4e-432c-a957-a9f62d09c184",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T11:02:29.907Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "9ad83b70-ab65-481c-8b6e-98b07886403e"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1b73e707-70c7-4102-b5b5-453aa7ce754e",
+    "id": "95712180-931e-4f55-a798-8ae76bbdc5d9",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T10:59:25.925Z",
+    "status": "succeeded",
+    "title": "从车厢内侧拍摄前门局部，固定镜头。首帧前门完全打开，门外可见站台路缘和湿润人行道。\n\n车门按照正常机械结构缓缓合拢，入口逐渐收窄，最终橡胶密封条贴合，车门完全关闭。配合短促的气动声与轻微门体闭合声。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "d0f76ad6-253a-441e-a9fe-95d9c42b5c7d"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "c8808497-a06d-4a86-84e4-6971d3ec7d3f",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T10:59:42.971Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "f2082cb7-cf93-4f72-9b11-a557c1cb10fd"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "fdf26787-4408-4098-979f-c4d51dd8a53f",
+    "id": "ca7bcb70-da70-4939-bf25-ad6c5a05a1b0",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T10:10:11.272Z",
+    "status": "succeeded",
+    "title": "阿姨已经上车了，相机沿同侧人行道，缓慢向车身后方平移，跟随阿姨经过车窗的身影。移动平稳、速度克制，不环绕、不穿过车门或玻璃。阿姨经过窗框时允许短暂被遮挡，保持正常空间关系，不让身体穿透车身。\n\n透过右侧车窗，看见阿姨走到中门后第一排双人座，在靠窗位置自然坐下，旁边过道座空着。她将布袋放在膝上，布袋可以被窗沿自然遮挡，不要求从车外看清膝部。\n\n相机在这扇车窗外停住，形成阿姨隔窗的中近景。玻璃有少量雨",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "9f558aa2-1450-437a-8163-9589feb9997e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "ff26a4b4-5779-4a4f-a356-9a84e0c4cacb",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T10:10:34.605Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "329163cf-8e4e-41f9-b7ac-e0069670f82e"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "30cf9f2a-9afa-4107-a5fd-f95fc1e9b216",
+    "id": "1095554c-6e17-4860-9897-f62bc7332201",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T10:04:37.600Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交站。引用确认的女主与公交参考，保持人物面容、服装、车辆结构及道具位置一致。\n\n公交停稳，前门敞开，车内亮着正常的暖色灯光。女生站在人行道上、车门外，尚未上车。她面朝车门，身体正面与公交侧面大致平行，门就在她面前。\n\n开始时，相机位于女生自身的右后方，拍到她的侧背、部分脸部轮廓，以及前方敞开的车门。\n\n镜头以人眼高度，缓慢、小幅地沿弧线移向女生正右侧，同时轻轻调整朝向",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "51810ac8-c2f0-4f85-94f5-6968490cdb34"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "3ca3af53-818f-402a-bece-4b8710fd24e1",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T10:05:03.670Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "fe59ddff-d745-4256-9847-d2fd14865185"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "fa75ec16-7d30-44a3-904e-8ad93b07a6ba",
+    "id": "9d2976a1-1033-43a8-93b1-dec84f4dda19",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T10:02:59.732Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交站。引用确认的女主与公交参考，保持人物面容、服装、车辆结构及道具位置一致。\n\n公交停稳，前门敞开，车内亮着正常的暖色灯光。女生站在人行道上、车门外，尚未上车。她面朝车门，身体正面与公交侧面大致平行，门就在她面前。\n\n开始时，相机位于女生自身的右后方，拍到她的侧背、部分脸部轮廓，以及前方敞开的车门。\n\n镜头以人眼高度，缓慢、小幅地沿弧线移向女生正右侧，同时轻轻调整朝向",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "51810ac8-c2f0-4f85-94f5-6968490cdb34"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "06c95686-e863-4f0c-ab18-a959e4dc2a29",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T10:03:23.358Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "a84c3033-ef79-4812-b9d1-3a91095359c3"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8c049de6-5bef-4819-8984-e64648a84bfe",
+    "id": "216b6e31-bb81-4864-b386-be389d8a5197",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T09:50:35.155Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交站。引用确认的女主@image1、阿姨@image2、站台@image5、现代公交外观及内景@image4参考，保持人物、车辆和空间一致。\n\n女生穿芥末黄色外套，深栗棕短发；阿姨穿雾蓝色外套，头发挽成低发髻。公交为确认后的米白色车身、灰蓝色带的现代单层城市公交，左舵，车辆自身右侧为前门和中门。\n\n本段使用三个固定机位，通过直接剪切连接。每个镜头内部保持稳定，不连续跟",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "d550ab6d-2631-452e-b56b-ed748b30cfa4"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "0fcacb68-254a-4d1b-9a01-a8cf1cb92118",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T09:51:17.614Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "99e531cb-895f-40bc-a4e8-a773e2efaddb"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "a2d3996a-ada6-44a0-bce8-3222cfe660fa",
+    "id": "c88bc928-6f43-4012-babd-598599bb3aee",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T09:07:24.312Z",
+    "status": "succeeded",
+    "title": "深夜两人在站台等车，自然对话：女生：\n“阿姨，您经常坐这班啊？”\n阿姨：\n“嗯，下夜班就坐这趟，司机都认得我了。”\n女生：\n“这么晚，车上还有人吗？”\n阿姨：\n“没几个。有个小伙子倒是常碰见，每回都比我早上车，老坐后头。” 对话是中文。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "c4a682d8-a264-473a-a25c-ac04409f4526"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "7d89d76e-4b55-4c9b-9935-180ae91e639d",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T09:07:51.140Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "c85042d0-c922-46f7-a6b0-72f78e739381"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "141305a2-77d8-4a61-a5f5-b24a5eed60be",
+    "id": "a6858b29-7e6e-4567-b48f-131e89da2e74",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T09:03:00.670Z",
+    "status": "failed",
+    "title": "深夜两人在站台等车，自然对话：女生：\n“阿姨，您经常坐这班啊？”\n阿姨：\n“嗯，下夜班就坐这趟，司机都认得我了。”\n女生：\n“这么晚，车上还有人吗？”\n阿姨：\n“没几个。有个小伙子倒是常碰见，每回都比我早上车，老坐后头。” 对话是中文。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "c4a682d8-a264-473a-a25c-ac04409f4526"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "error": "MiniMax Global: insufficient balance (1008)"
+  },
+  {
+    "recoveryId": "b525283e-f582-464b-8845-e2bf73582afb",
+    "id": "fac2da6f-d100-426c-ae50-2f738142ee66",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:53:13.070Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的双人母镜头及人物参考，保持人物面容、发型、服装、座位与道具一致。\n\n女生坐在画面左侧，穿芥末黄色外套；阿姨坐在右侧，穿雾蓝色外套，头发挽成低发髻。站牌位于画外左侧。固定双人中景，全程不移动镜头、不切换角度。\n\n女生刚看过站牌上的停运通知。她从画外站牌方向收回目光，转向阿姨，带着一点疑问说：\n“阿姨，这上面写着夜里停运了。”\n\n阿姨先看向女生，略微意",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "12140e05-6ea9-4fc4-9493-88e2d64b8a1d"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "cf4c8169-6d14-456b-b0dd-50b8ab704def",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T08:53:50.457Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "1786d776-0d6f-4517-970f-9df9849c0247"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "3900533c-9a99-4f86-9cdc-a7bc0c4795e4",
+    "id": "7b273d44-29d6-4bca-a328-7c369f291c22",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:51:23.336Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的双人母镜头及人物参考，保持人物面容、发型、服装、座位与道具一致。\n\n女生坐在画面左侧，穿芥末黄色外套；阿姨坐在右侧，穿雾蓝色外套，头发挽成低发髻。站牌位于画外左侧。固定双人中景，全程不移动镜头、不切换角度。\n\n女生刚看过站牌上的停运通知。她从画外站牌方向收回目光，转向阿姨，带着一点疑问说：\n“阿姨，这上面写着夜里停运了。”\n\n阿姨先看向女生，略微意",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "12140e05-6ea9-4fc4-9493-88e2d64b8a1d"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "d854ed10-2cc6-46e9-b389-1f12242439ab",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T08:51:59.772Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "cbbac52a-be3d-4cbf-90c8-30151502f5d6"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b2c5b021-d827-48a3-840c-1568b43627e5",
+    "id": "5f65c953-e468-46d6-b732-51efe3a30c0c",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-16T08:32:27.273Z",
+    "status": "succeeded",
+    "title": "提升画质",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "df1715b9-4309-4169-92d6-0a786ff1ab50"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-260128"
+    },
+    "run": {
+      "id": "23870381-43b1-49ed-9015-3c5524355d2e",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-260128"
+      },
+      "createdAt": "2026-10-16T08:33:01.730Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "8f321b02-c10d-4942-99aa-71d42e7f7821"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "9abbebe4-6253-4bf8-b51f-b8f70d0f9aa6",
+    "id": "0fbb45d2-d6b5-4558-ae97-fa47e2d96537",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-16T08:32:12.290Z",
+    "status": "failed",
+    "title": "提升画质",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "df1715b9-4309-4169-92d6-0a786ff1ab50"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-flash-260915"
+    },
+    "error": "Your account 2103724821 has not activated the model doubao-seedream-5-0-flash-260915. Please activate the model service in the Ark Console. Request id: 0217921395373828df8e1a1401bb5aa62b5b494646ada58a6063d"
+  },
+  {
+    "recoveryId": "04d37253-de68-4c37-b536-75bc84b5e3c5",
+    "id": "dc5b9184-7798-4fea-b65e-58d0339fd95d",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:15:44.188Z",
+    "status": "succeeded",
+    "title": "保持同一张脸、发型、雾蓝色外套、光线和视线方向。开始时，她坐在原来的右侧座位，年轻女生位于画面外。\n\n听到女生说“南桥”，阿姨自然接话：\n“那就一站路，过了桥就到了，快到了提前按铃。”\n\n她语气熟悉、随和，像在提醒一个不常坐车的年轻人。说到按铃时，手在画面下缘做一个很小的示意动作，不夸张比画，镜头不追着手移动。\n\n她稍作停顿，嘴角浮现一点回忆时的笑意，继续说：\n“我姑娘头一回坐，坐过站，一路坐到终",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "a4e7e6ee-b0b1-4f82-97c1-baf6c495e666"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "c8a30ec9-ce52-4829-99aa-2dd2ede5da47",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T08:16:21.223Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "b0ea5830-9f1b-40d3-a0e1-be73bbf6c8c1"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "ebd7ce60-bca6-4f6f-a9e5-183a1e032c48",
+    "id": "1ff43985-7fca-474d-af61-446dc4f765ce",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:12:02.549Z",
+    "status": "succeeded",
+    "title": "女生露出一个短暂、礼貌的微笑。阿姨随后将视线移回公交驶来的方向。对白用中文。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "a4e7e6ee-b0b1-4f82-97c1-baf6c495e666"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "816018cb-a456-4150-852d-421feaca2c1b",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T08:12:38.511Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "eb3a8306-c28f-4cde-8ff3-85301af95330"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "9b119cbe-40da-4e5d-abc5-d585a9927345",
+    "id": "8ac6592b-cdec-4969-aa01-8a00af6a0635",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:11:51.774Z",
+    "status": "cancelled",
+    "title": "女生露出一个短暂、礼貌的微笑。阿姨随后将视线移回公交驶来的方向",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "a4e7e6ee-b0b1-4f82-97c1-baf6c495e666"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "error": "This operation was aborted"
+  },
+  {
+    "recoveryId": "331a7133-961b-41aa-a264-ebd87e2afc75",
+    "id": "8c93ddf6-3091-4f84-97a9-d8c80cc68a45",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T08:03:34.594Z",
+    "status": "succeeded",
+    "title": "写实都市电影，深夜雨中的公交候车亭。，严格保持人物面容、服装、座位、工作包及雨伞位置。\n\n女生坐在画面左侧，阿姨坐在右侧。两人都是普通下班乘客，语气自然，不带恐怖暗示。\n\n开始为双人中景。阿姨从路口收回目光，转向女生，轻轻整理一下外套袖口，说：\n“一下夜班就下雨，紧赶慢赶的。”\n\n女生看向阿姨，自然接话：\n“是啊，打车也打不到。”\n\n女生疲惫、略有无奈。她说话时，阿姨安静听着，轻轻点头。镜头在这段",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "6601c8cf-1e4e-4fc5-bada-821ebdfd9ab3"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "83b5f98f-f505-44c1-b013-bb0a4ca4b31b",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T08:03:57.670Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "bf331d19-831d-4bd9-bc1e-210128040cef"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "bbbbfe84-df2b-4c1c-95cd-768a8ab5ecfe",
+    "id": "fb8608f9-80d2-4ae7-9b72-7a616ad1ced4",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:55:12.965Z",
+    "status": "succeeded",
+    "title": "严格保持人物、场景、机位和已有道具位置。\n\n女生坐在长椅偏左的位置，阿姨站在画面左侧。长椅右侧留有空位。全程固定镜头，不切镜、不移动。\n\n听到女生说完时间，阿姨神情放松，轻轻说：\n“还好还好，来得及。”\n\n女生注意到阿姨准备坐下，将身旁的黑色工作包自然收拢到自己腿上，让出画面右侧的座位。女生不站起来，不改变原来的座位。\n\n阿姨沿长椅前方的通道，经过女生面前，走到画面右侧空位。她避开脚边的雨伞，不跨",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "27d89ee8-b7d6-4476-a771-61bc2b8d1eba"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "a7572791-866e-4432-b1b3-8127d3419d91",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:55:30.086Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "570acb50-a774-49d1-8b65-604b0cc53512"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "18f79c01-1501-4386-9c80-828b8b0d4ac6",
+    "id": "3b5eb125-23bd-4d5f-9faa-cf8ed1c9554b",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:54:35.499Z",
+    "status": "succeeded",
+    "title": "严格保持人物、场景、机位和已有道具位置。\n\n女生坐在长椅偏左的位置，阿姨站在画面左侧。长椅右侧留有空位。全程固定镜头，不切镜、不移动。\n\n听到女生说完时间，阿姨神情放松，轻轻说：\n“还好还好，来得及。”\n\n女生注意到阿姨准备坐下，将身旁的黑色工作包自然收拢到自己腿上，让出画面右侧的座位。女生不站起来，不改变原来的座位。\n\n阿姨沿长椅前方的通道，经过女生面前，走到画面右侧空位。她避开脚边的雨伞，不跨",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "27d89ee8-b7d6-4476-a771-61bc2b8d1eba"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "d23da2b2-d666-442a-b559-adbdb2de7d7c",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:54:54.654Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "231530f9-167e-4a63-8109-05c3e70b0643"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "6ef8c590-18ee-43d5-a5be-ccf415d7f7a7",
+    "id": "434eef3e-6b62-4552-a4b7-21f3797d89c4",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:47:44.990Z",
+    "status": "succeeded",
+    "title": "写实都市电影，深夜雨中的公交候车亭。引用确认的女主、阿姨和站台参考，严格保持人物面容、发型、服装与场景一致。\n\n固定双人中景，阿姨位于画面左侧，女生坐在长椅右端。构图同时容纳阿姨站立和坐下的位置，保留座面及膝部，不移动镜头、不自动切镜。\n\n女生是芥末黄色外套、深栗棕短发；阿姨是雾蓝色外套、低发髻。两人说话声音有明确年龄区别：女生年轻、疲倦；阿姨温和、随和，略带下夜班后的疲态。\n\n每次只有正在说话的",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "ee172cc0-aaa7-4039-bb13-025be1b3cbdb"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "148898cf-9be4-4f8e-b0c2-bd33d01d4fe4",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:48:05.531Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "55348d66-620c-404e-a228-d600a18c500e"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "fdc03fa0-2564-4953-ac2d-cc581a5da9b8",
+    "id": "06ae6312-4102-4e3f-b7c8-c3e03b7bbbf8",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:37:44.857Z",
+    "status": "succeeded",
+    "title": "写实都市电影，深夜雨中的公交候车亭。引用确认的女主、阿姨定妆及站台参考，保持人物面容、发型、服装和场景结构一致。\n\n固定中景偏宽。女生坐在长椅右端，穿芥末黄色外套，黑色工作包放在身旁，收好的雨伞靠在座位外侧。她右手在胸口下方拿着手机，刚结束查看。画面左侧保留人物进入候车亭的空间。\n\n女生用右手拇指按灭手机屏幕，将手机自然放回外套右侧口袋。收好后，右手放回腿上，肩膀略微放松，目光暂时垂下。\n\n安静停",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "9289b876-13eb-45ca-ac2d-10aba18a33bc"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "3a5bb6e7-c4c2-4ca3-8c6a-027b7990eb14",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:38:12.709Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "ecdafa3c-94ce-4a34-9889-de72617a62c5"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "0d3b6306-9564-4bde-bfa2-d9a793f5f884",
+    "id": "f82a0bde-1528-40b8-b4bc-1164de85f7fa",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:31:28.578Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的女主和场景参考，保持人物面容、发型、服装及道具一致。\n\n女生坐在长椅一端，右手拿着手机，刚点击回拨。她将手机从胸前举到右耳，左手自然放在腿上。\n\n相机位于女生右前方，固定半身近景，全程不切镜、不移动。\n\n电话接通，听筒里有很轻的车辆低频震动声。\n\n女生先试探着说：\n“你好？”\n\n她闭上嘴，等待对方回应。\n\n短暂停顿后，听筒里传来一个模糊的机械女声公",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "2a7287b8-acb2-481d-80d0-a5d230e1d4ab"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "a8ed7a1d-145d-4e82-86ea-62411eba9937",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:31:52.324Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "7935e57a-bd9d-40f0-9bf5-1c6245f8d6c6"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "65f65db4-38f6-458e-8ac0-2b7bf85ba7a3",
+    "id": "1303b4ec-c4cc-4088-a746-afafd3d9a162",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T07:25:05.019Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的女主与场景参考，严格保持人物面容、发型、发夹、芥末黄色外套和道具一致。\n\n女生坐在长椅一端，右手在胸口下方握着手机，刚刚点击回拨。她自然抬起右手，将手机贴到右耳，左手放在腿上。\n\n相机位于女生右前方，半身近景，能看清眼睛、眉毛和嘴部。全程固定机位，不切镜、不推拉。\n\n电话接通。\n\n听筒里先传来模糊、低沉的车厢震动声，像车辆正在行驶，带轻微电话压缩音",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "2a7287b8-acb2-481d-80d0-a5d230e1d4ab"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "e33f1ab2-7ee7-4114-869b-d40ba24a6b18",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T07:25:34.862Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "82eb7514-2a88-466e-bf35-d3114cdf1609"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "573f4072-4c77-46df-912b-5e27716c1fb5",
+    "id": "5353c06b-1af9-46fc-87ec-44be4af731b8",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T06:46:40.247Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的女主定妆与场景参考，保持同一张脸、发型、发夹、芥末黄色外套和道具。\n\n女生坐在长椅一端，右手在胸口下方拿着手机，刚刚完成滑动接听。右手拇指离开屏幕，她自然弯曲手臂，将手机举起，贴到右耳。左手放在腿上，身体保持坐姿。\n\n相机位于女生右前方，半身近景，能看清她的眼睛、眉毛和嘴部。全程固定机位，不切镜、不推拉。\n\n手机贴到耳边后，她安静听着。先传来一小段",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "87a855db-2139-4bb2-af5e-78db1eda860e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "fcc835ca-01de-43b0-9cbd-c03409d39ada",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T06:47:14.581Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "8cfee775-1f20-4bed-a666-ccbd70ed86ed"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "809803a6-cca0-417f-bbcc-2eddd9b8ba09",
+    "id": "49512001-5e72-4f35-90d7-d0119d112063",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T06:44:29.018Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的女主定妆与场景参考，保持同一张脸、发型、发夹、芥末黄色外套和道具。\n\n女生坐在长椅一端，右手在胸口下方拿着手机，刚刚完成滑动接听。右手拇指离开屏幕，她自然弯曲手臂，将手机举起，贴到右耳。左手放在腿上，身体保持坐姿。\n\n相机位于女生右前方，半身近景，能看清她的眼睛、眉毛和嘴部。全程固定机位，不切镜、不推拉。\n\n手机贴到耳边后，她安静听着。先传来一小段",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "87a855db-2139-4bb2-af5e-78db1eda860e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "0e0911bf-0bc7-4356-bd94-8912e98a15ff",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T06:44:59.551Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "05bff267-cea7-42c5-b38d-9825db2ac33f"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "3a303f24-f102-438a-b4fd-10416f3b315f",
+    "id": "598b1424-d859-4b61-b4db-df62ec6fefc8",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T06:38:11.351Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影，深夜雨中的公交候车亭。引用确认的女主定妆与场景参考，保持同一张脸、发型、发夹、芥末黄色外套和道具。\n\n女生坐在长椅一端，右手在胸口下方拿着手机，刚刚完成滑动接听。右手拇指离开屏幕，她自然弯曲手臂，将手机举起，贴到右耳。左手放在腿上，身体保持坐姿。\n\n相机位于女生右前方，半身近景，能看清她的眼睛、眉毛和嘴部。全程固定机位，不切镜、不推拉。\n\n手机贴到耳边后，她安静听着。先传来一小段",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "87a855db-2139-4bb2-af5e-78db1eda860e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "e78ee8c8-6b2e-4857-a16e-60bd05d9ccad",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T06:38:40.251Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "61c104a2-aefd-47fe-bd65-35448190f326"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "ac8dcfec-f495-4294-8f45-5e6be75c2b3c",
+    "id": "54b66c03-f30e-4e28-a5e5-79dc18ce0e11",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T06:13:05.681Z",
+    "status": "succeeded",
+    "title": "写实都市电影，深夜雨中的公交候车亭。引用确认的女主定妆和站台参考，保持人物面容、短发、发夹、芥末黄色外套及场景结构一致。\n\n女生独自坐在长椅右端，黑色工作包放在身旁，收好的雨伞靠在座位外侧。站牌位于候车亭旁，亭外道路空荡，没有公交车或其他人物。\n\n相机位于候车亭前方，略偏女生侧面，固定中景，能看清她的上半身、双手和身旁物品，不移动镜头。\n\n开始时，她安静坐着，肩膀略微放松，神情疲惫，目光落在亭外道",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "7ea9b5f6-fdb4-4e0c-98cc-b7964ecbb949"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "83b728e0-f263-451d-a02a-7e67dcb8bd34",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T06:13:32.058Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "ce4352d5-e4ad-4076-a307-9646902c6f81"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "e04da00d-aa7e-4775-b5b1-16b69de57d60",
+    "id": "b311782b-c5c1-462f-957a-ae37e3f1b1ba",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:47:17.502Z",
+    "status": "cancelled",
+    "title": "固定中景，女生站在站牌旁，左肩背工作包，右手握着已经收好的雨伞，伞尖朝下。\n\n她刚看完站牌，视线从牌面缓缓放低，轻轻呼出一口气，像是在估算回家的路线。神情疲惫，但比刚才稍微安心。\n\n她用很轻的声音自言自语：\n“应该还来得及……过了桥再走几百米，也还行。”\n\n语速自然，“应该还来得及”之后短暂停顿。像说给自己听，不面对镜头讲话，不夸张表演。说完后向长椅方向看一眼，\n她从站牌旁走到长椅右端，也就是靠近",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "07de16af-a3bc-4a1e-ac7d-de962d9b02d7"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "error": "This operation was aborted"
+  },
+  {
+    "recoveryId": "10f8e99e-39b6-43c9-afa6-4a4ccae4f1ff",
+    "id": "4f7b46e7-819c-4c3b-afe8-1de4f8cdbff3",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:44:12.655Z",
+    "status": "succeeded",
+    "title": "固定中景，女生站在站牌旁，左肩背工作包，右手握着已经收好的雨伞，伞尖朝下。\n\n她刚看完站牌，视线从牌面缓缓放低，轻轻呼出一口气，像是在估算回家的路线。神情疲惫，但比刚才稍微安心。\n\n她用很轻的声音自言自语：\n“应该还来得及……过了桥再走几百米，也还行。”\n\n语速自然，“应该还来得及”之后短暂停顿。像说给自己听，不面对镜头讲话，不夸张表演。说完后向长椅方向看一眼，\n她从站牌旁走到长椅右端，也就是靠近",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "07de16af-a3bc-4a1e-ac7d-de962d9b02d7"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "ef305e4a-8912-4a5b-aaf9-80bd142e9692",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:44:36.123Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "a30e31b7-d73e-4b20-b950-ead4c22b59b6"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "f50c610a-bc8e-4d3a-952a-3536f1ebe2c2",
+    "id": "c5de6984-4102-4352-b523-8ec6e45236ee",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:37:15.422Z",
+    "status": "succeeded",
+    "title": "保持女生细节不变，固定中景，镜头不要移动，女生也不要移动，女生看了看大雨，随后往她的右侧微微转身，看到了站牌，微微倾身。女生不要走路，不要移动，只是转头看到了站牌，然后仔细看",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "7f558966-3fce-4912-afe9-8506993282b5"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "599bf215-ed0e-4574-b9b3-f4e618bad0ae",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:37:33.091Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "8fb5512b-e300-4ba6-afce-5699e7da2bc2"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "7669efa2-f559-48bd-a2fc-0a812daa3363",
+    "id": "793320fa-e7a7-4a65-b336-5a7c26312865",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:27:17.495Z",
+    "status": "succeeded",
+    "title": "保持女生细节不变，固定中景，镜头不要移动，女生也不要移动，女生正在收伞，随后往她的右侧微微转身，看到了站牌，微微倾身。女生不要走路，不要移动，只是转头看到了站牌，然后仔细看",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "e4c0244d-2917-46bf-8d96-94001331c11e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "f30cbf82-dfc4-4340-a05b-e2dd4f3bb39a",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:27:34.621Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "625af27d-db9f-4877-823c-d9ed14035e31"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b86aeab7-717c-4010-bb51-89a53e506d8e",
+    "id": "5b5aaa1d-768f-4854-a327-caf8629136bd",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:25:42.277Z",
+    "status": "succeeded",
+    "title": "保持女生细节不变，固定中景，女生正在收伞，随后往画面左侧，她的右侧看，看到了站牌，微微倾身",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "e4c0244d-2917-46bf-8d96-94001331c11e"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "ac5eeeb5-c0e5-46dd-a270-c00f3974b3f3",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:25:59.838Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "2dfccffc-c1a3-4ba5-8797-46af2166846e"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "6b2302c3-5479-47ec-a5f3-234d68aa9337",
+    "id": "6ee65c6c-ee20-4140-bcce-79c3d24d66be",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:21:35.387Z",
+    "status": "succeeded",
+    "title": "为站牌参考。\n\n固定近景，正对站牌的线路信息区域。雨夜灯光下，站牌表面带少量细小水珠，版式、材质和周围环境保持不变。\n\n画面重点是17路线路标识和末班发车时间。镜头0-1.5s从下往上扫，1.5s后保持静止，保留足够阅读时间，无人物、无手部入画，不出现停运通知特写，不改变站牌结构。\n2.5s 出现一个女生画外音：“应该还来得及……过了桥再走几百米，也还行”\n真实摄影，曝光清楚，无推拉、无摇镜、无转",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "f234ec9c-e591-4baa-ab3d-37bbc0958adb"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "df20ee2b-4ac8-413f-95b1-78b83d17258f",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:21:58.059Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "9667cfa1-a848-45fc-a0cb-b52bdd6c4a64"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "ec885d25-b4f6-4417-b11e-b534147c6f00",
+    "id": "2b502503-0ddd-46db-93b8-bcef37eb77f4",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T05:17:24.317Z",
+    "status": "succeeded",
+    "title": "Image 1  为场景参考，Image 2  为人物参考，保持女生面容、发型、服装和工作包一致。\n\n固定机位，保持参考图的站台构图，不移动镜头。\n\n雨夜，女生左肩背黑色工作包，右手撑伞，从画面右后方便利店门口的位置走向候车亭。她步速正常，略显疲惫，沿同侧人行道行走，不穿过车道。\n\n她走到候车亭屋檐下、靠近站牌的一端，停下脚步，仍保持撑伞。雨水从伞边自然落下。随后切固定中景，固定中景，女生已经站在",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "13f32ae4-08d7-41b0-a758-867c6897872b"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3-Max"
+    },
+    "run": {
+      "id": "c26d19b1-6934-4be2-9b30-83b9769409e8",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3-Max"
+      },
+      "createdAt": "2026-10-16T05:17:47.994Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "1051f810-3e1d-4817-8cb1-022a00f27468"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "a6e7cf61-0c23-4365-97c1-4fd92830ac0b",
+    "id": "920fa615-c991-49aa-9799-2ece83fdbcfb",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T04:49:02.758Z",
+    "status": "succeeded",
+    "title": "写实都市电影开场，深夜写字楼门口，大雨。引用确认的女主和场景参考，保持人物面容、发型、芥末黄色外套及黑色工作包一致。\n\n女生独自站在入口屋檐下，左肩背工作包，右手拿手机，看着门口的雨，正在等待网约车接单。相机位于她侧后方，能看见部分侧脸。中景、固定机位，画面保留屋檐外的道路，以及街对面亮着灯的便利店和公交站。\n\n0—3秒：\n女生没有带伞，外面是大雨，她看了眼雨，然后低头看手机，叫车已经等待了一会儿",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "ec1f46b5-1ce7-4cb9-98a8-76ea45c16c44"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3"
+    },
+    "run": {
+      "id": "030953cc-3795-43b9-aee4-0b9b434fa61a",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3"
+      },
+      "createdAt": "2026-10-16T04:53:02.438Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "e13caa2a-31b3-4987-b097-8e8ff6878a2c"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b3d71bd4-d713-48f8-b12d-96169092756e",
+    "id": "356c4b80-9ff0-4cfd-8ef9-e138c68ca986",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-16T04:43:54.026Z",
+    "status": "succeeded",
+    "title": "环境改成大雨，保持其他细节不变",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "66bef86b-a704-4dcf-b37d-e2dd226ffe58"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "8245ceff-0d7d-4713-957e-23cb3bb844e5",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-16T04:45:23.626Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "6244ff16-f790-4cc1-bf76-36f643b4bd26"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8711d593-ee4e-43d6-a1f7-dc8d9f098bf9",
+    "id": "140c783e-cfaa-419d-99d0-2f5d8f867d20",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-16T04:43:32.090Z",
+    "status": "failed",
+    "title": "环境改成大雨，保持其他细节不变",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "66bef86b-a704-4dcf-b37d-e2dd226ffe58"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "error": "Could not reach Volcengine Ark image generation"
+  },
+  {
+    "recoveryId": "1fb4c872-a165-460f-92e2-0db997eded81",
+    "id": "0ff32aa7-1e7a-4771-b4ab-1798809c0bed",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-16T04:39:38.245Z",
+    "status": "succeeded",
+    "title": "环境改成大雨，保持女生人物和细节不变",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "5348c77b-b7bb-4d8b-a078-070ee1d8511c"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "8124899a-0644-432c-ab85-6e96f860c148",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-16T04:40:57.600Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "5b6462d0-c3bc-4499-b150-0f900b1d3aed"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "0f994782-9ed6-4987-931c-4884be5e9066",
+    "id": "0adfd02c-db1f-40f4-a9a6-3c869a3e11d8",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-16T04:05:49.026Z",
+    "status": "succeeded",
+    "title": "写实都市电影开场，深夜写字楼门口，小雨。引用确认的女主和场景参考，保持人物面容、发型、芥末黄色外套及黑色工作包一致。\n\n女生独自站在入口屋檐下，左肩背工作包，右手拿手机，正在等待网约车接单。相机位于她侧后方，能看见部分侧脸。中景、固定机位，画面保留屋檐外的道路，以及街对面亮着灯的便利店和公交站。\n\n0—3秒：\n女生低头看手机，叫车已经等待了一会儿，仍在寻找司机。她站姿略显疲惫，肩膀放松，安静地等着",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-02"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3"
+    },
+    "run": {
+      "id": "6d7850cc-9353-4fb7-a249-3239cc278b61",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "minimax-video-global",
+        "id": "MiniMax-H3"
+      },
+      "createdAt": "2026-10-16T04:09:54.494Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "c83f8494-9e62-4874-bd3b-eb8b9a6ba5a9"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "0d2b04fa-2b63-4adc-956b-01f16948f04b",
+    "id": "f147376c-d808-4bd5-9e6c-183f0d1f03b0",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T14:13:06.045Z",
+    "status": "succeeded",
+    "title": "女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息，展示电脑界面；她轻轻长出一口气，伸了个懒腰，大声说了句“下班！” 合上笔记本，起身把黑色工作包提在肩上。转身离开办公室，关了灯，办公区陷入黑暗。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身份（同一张脸型、深栗棕短发、人物自",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedance-2-0-260128"
+    },
+    "run": {
+      "id": "43dd66dc-401a-42d8-8f70-54f5a738b9d8",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedance-2-0-260128"
+      },
+      "createdAt": "2026-10-15T14:17:37.793Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "4b7f435e-9387-4600-90b5-445f15a1e8a4"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "7303ef07-51d1-4846-adbf-b6f087d9f2e7",
+    "id": "4e7dbd4c-4358-4e4e-9c14-a5f86755f0d4",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T14:11:43.951Z",
+    "status": "failed",
+    "title": "以参考首帧为起点。女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息（界面仅模糊版式，无可读文字）；她轻轻长出一口气，伸了个懒腰，大声说了句“下班！” 合上笔记本，起身把黑色工作包提在肩上。转身离开办公室，关了灯，办公区陷入黑暗。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedance-2-0-260128"
+    },
+    "error": "Volcengine Ark: The request failed because the input image 'content[1]' may contain real person. Request id: 0217920735043248f4f8ecdaf0d8a16803f1d267b7ea40dc672ea"
+  },
+  {
+    "recoveryId": "56ffdd78-f396-4c07-ab9e-b5cbc04e6b36",
+    "id": "a17eed17-ffbf-421a-9aa1-7111b51eef24",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T14:05:36.964Z",
+    "status": "failed",
+    "title": "以参考首帧为起点。女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息（界面仅模糊版式，无可读文字）；她轻轻长出一口气，肩背放松，双手离开键盘，合上笔记本，起身把黑色工作包提在肩上。转身离开办公室，关了灯，办公区陷入黑暗。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身份（同一张",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedance-2-0-260128"
+    },
+    "error": "Volcengine Ark: The request failed because the input image 'content[1]' may contain real person. Request id: 0217920731373086216202cdc086c00ba26009437f217e9955e31"
+  },
+  {
+    "recoveryId": "93539b5e-7d9c-4579-b12d-09724ecac300",
+    "id": "c29d65e6-7868-42a5-a59c-96c1f4761f6d",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T13:57:17.215Z",
+    "status": "succeeded",
+    "title": "同一女生收着伞从街对面沿人行道走进雨夜公交候车亭，在深灰长椅靠右一端坐下，把收拢的深色折伞靠在脚边，黑色托特包放在身侧；她抬头看一眼独立竖式站牌，再低头看手机确认时间。亭顶柔光与湿路反光与站台参考保持同一结构。背景无人无车。摄影机固定于人眼高度中景，轻微跟随她入座。保持参考首帧的人物身份（同一张脸型、深栗棕短发、人物自身左侧琥珀发夹、芥末黄工装外套、米白内搭、炭灰长裤）、场景结构与光线不变，不改变",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-03"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedance-2-0-260128"
+    },
+    "run": {
+      "id": "219bc0b6-dbe3-49f0-a8e8-1c11d9a6befb",
+      "toolId": "generate-video",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedance-2-0-260128"
+      },
+      "createdAt": "2026-10-15T14:01:33.506Z",
+      "files": [
+        {
+          "name": "output.mp4",
+          "mediaType": "video/mp4",
+          "assetId": "36e4d6ac-d91a-4ffb-b756-04245ad5ec73"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "0e71f24e-c740-472d-91db-b720348147a2",
+    "id": "4bc72516-0d7f-49b3-828f-342649da89f3",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T13:54:08.703Z",
+    "status": "failed",
+    "title": "以参考首帧为起点。女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息（界面仅模糊版式，无可读文字）；她轻轻长出一口气，肩背放松，双手离开键盘，合上笔记本，起身把黑色工作包提在肩上。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身份（同一张脸型、深栗棕短发、人物自身左侧琥珀发夹、",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "minimax-video-global",
+      "id": "MiniMax-H3"
+    },
+    "error": "Could not reach MiniMax Global"
+  },
+  {
+    "recoveryId": "c8165a67-cd30-4b3b-b9c4-112ac1ec8f17",
+    "id": "cbc934ac-5811-474b-a0cd-86d14635cdbd",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T13:53:21.880Z",
+    "status": "failed",
+    "title": "以参考首帧为起点。女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息（界面仅模糊版式，无可读文字）；她轻轻长出一口气，肩背放松，双手离开键盘，合上笔记本，起身把黑色工作包提在肩上。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身份（同一张脸型、深栗棕短发、人物自身左侧琥珀发夹、",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "minimax-video-cn",
+      "id": "MiniMax-H3"
+    },
+    "error": "MiniMax China credentials were rejected"
+  },
+  {
+    "recoveryId": "a20ade14-c642-41f0-a131-8079a073b554",
+    "id": "7a02f9f4-a0ae-43de-a315-fc81713bdcbc",
+    "toolId": "generate-video",
+    "createdAt": "2026-10-15T13:41:35.956Z",
+    "status": "failed",
+    "title": "以参考首帧为起点。女生独坐在深夜办公室工位，先安静敲击笔记本键盘数秒，屏幕上文件发送完成、随后弹出工作群消息（界面仅模糊版式，无可读文字）；她轻轻长出一口气，肩背放松，双手离开键盘，合上笔记本，起身把黑色工作包提在肩上。摄影机极缓慢向前推近，不作横移。办公室只有她工位上方的顶灯亮着，其余区域保持昏暗并有细节，同事显示器保持关闭。保持参考首帧的人物身份（同一张脸型、深栗棕短发、人物自身左侧琥珀发夹、",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-vid-a-01"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedance-2-0-260128"
+    },
+    "error": "Volcengine Ark: The request failed because the input image 'content[1]' may contain real person. Request id: 0217920716963007424dba2bd6e77b99d402060a9cf8c0ffc9f6e"
+  },
+  {
+    "recoveryId": "27cdb0e3-3280-42a0-b203-169000fb9570",
+    "id": "fe4da895-dce9-45ee-bdaa-b00127f70951",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T12:55:31.104Z",
+    "status": "succeeded",
+    "title": "修改一下，阿姨坐在靠窗的位置，没有反向的椅子，一排只有两个椅子",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "fd7413ca-06bd-47f7-a0ef-536891068ac7"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "571a7d14-ac10-475b-bfbc-2d3ba5c93182",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T12:56:48.191Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "a1d105c2-c841-4795-9c71-c0ab2573b1a5"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1433bd47-9a8f-47cc-be54-2f8c44eeeaa3",
+    "id": "dc8fb592-22ce-4f8b-9d88-d1dad7a46506",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T12:54:29.017Z",
+    "status": "succeeded",
+    "title": "写实都市电影的公交前门局部镜头，从车厢内部朝打开的前门拍摄。引用已确认的公交参考，严格保持同一门型、门框、门轴、玻璃分格与地板材质。\n\n此时女生已经上车并走入车厢，人物不入画。公交仍停在站台，前门完全打开，尚未开始关闭。门扇停留在参考车辆正常的全开位置，入口通道清楚、无遮挡。\n\n相机位于前门内侧稍偏过道的位置，斜向拍摄，以门框、打开的入口和下方门槛为主体。构图保留门扇从全开到完全闭合所需的画面空间",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "1e23cfb9-79c2-443f-963a-c2c2aba92c5b"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "3fc0781d-a76a-4981-a84a-cd8f7915275e",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T12:55:10.372Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "04987d00-2d91-41ee-819e-f36f518ceb20"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "619aacc6-aae2-46f3-95e8-d59bc3423478",
+    "id": "a3c19938-664a-417e-a0f8-5b44be224c67",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T12:50:52.565Z",
+    "status": "succeeded",
+    "title": "写实都市微恐互动电影的车内人物关键帧，引用提供的阿姨定妆照和现代公交内景参考，严格保持同一人物、同一服装、同一辆公交。\n\n一位约52岁的中国女性，圆中带方的脸型，真实中年肤质、细纹与轻微眼袋，神态温和，略有下夜班后的疲倦。黑发夹少量灰发，偏分露额，在后脑靠近颈部的位置挽成低发髻，鬓角有少量自然碎发。\n\n她穿雾蓝色中长款连帽防雨外套，帽子放下，拉链拉至胸口，内搭浅灰色圆领针织衫，下穿深褐色直筒长裤。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "67aea7af-193c-4316-b6a8-914c317f41f2"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "c808b100-2276-403f-98ad-7629a16ae600",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T12:52:21.181Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "b9dea4ad-50b2-42bb-90c0-d95f129d79c9"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1c40cb27-31ed-4ad1-8f46-ca6fbaacd173",
+    "id": "080e5e8d-84f9-4360-99c5-4a27bf27d7ed",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T12:47:24.852Z",
+    "status": "succeeded",
+    "title": "引用已确认的女主定妆照，生成写实都市电影的雨夜关键帧。同一位27岁中国年轻女性，严格保持脸型、五官、深栗棕短发、眉上碎刘海、人物自身左侧琥珀色发夹，以及芥末黄色工装外套、米白内搭、炭灰长裤和黑色帆布托特包。\n\n深夜零点之后，中国普通城市写字楼门口。女生站在入口屋檐下避雨，身后是普通玻璃门、灰色石材门框和亮着基础照明的办公楼大厅。建筑实用、正常使用，没有豪华酒店式装饰。\n\n她左肩背着黑色帆布工作包，",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "18b884c4-1a64-4143-b714-d80d2fcce50b"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "1bc9cf8c-168f-4ed9-8428-b1a35d23a9e0",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T12:49:12.089Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "c0a00332-d2d2-42ec-a9c5-e043223538c8"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "9ae625bf-147d-4a2f-a630-702a5b32b579",
+    "id": "e96157e0-7958-456e-a3f4-96b8cf5bad06",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:50:06.468Z",
+    "status": "succeeded",
+    "title": "参考图片为同一间深夜办公室的环境与道具基准，生成其中女主工位的一台深灰笔记本电脑屏幕特写。保持浅灰共享长桌、马克杯、资料文件与昏暗办公室冷中性顶光，背景同事工位显示器关闭、黑色网椅自然虚化。只拍一台打开的笔记本，屏幕占画面约80%，下缘保留少量真实键盘与桌面，近正面稍俯视，透视轻微，屏幕文字必须清晰易读，不是纯软件截图，也不是远景。写实电影道具摄影，16:9横幅。\n屏幕是可信的电脑端工作即时通讯软",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-office-chat-detail"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "6152e32b-f5ce-433b-a380-164a14be2526",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:51:45.298Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "8a4bac81-36cc-48b1-8f52-071d65b74c0a"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "abd8dc5a-c756-45dc-87af-e624ccc5a085",
+    "id": "69749cef-bbd9-4cdf-a9e8-0db594182c8b",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:46:33.242Z",
+    "status": "succeeded",
+    "title": "写实电影道具摄影，16:9横幅。参考图片的夜间公交候车亭、灰色长椅、雨滴玻璃和芥末黄色棉质衣袖。近距离俯拍一只自然的右手握着深灰色手机，竖屏完整，占画面高度80%，屏幕朝向相机，背景夜雨车站和便利店灯光自然虚化。手机为现代窄黑边圆角屏，玻璃反光轻微，真实材质，自然亮度。屏幕展示简洁可信的系统来电界面，深蓝灰模糊渐变背景。屏幕上半部清楚显示白色中文“陌生来电”，下方小字“手机”。屏幕底部一条半透明圆",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-phone-incoming-detail"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "85d7d5f2-f91c-4bc6-aef6-73f64dd70136",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:48:04.020Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "3a6a553f-a414-405d-a763-e9a5f61ff7ef"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1315744b-561a-4375-a06d-244903f90f46",
+    "id": "83c44673-62c2-47c5-a5aa-10692bc465c1",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:46:14.902Z",
+    "status": "failed",
+    "title": "参考图为同一女生、衣袖、手机和雨夜公交候车亭环境。制作来电接听前的手机道具特写，16:9横幅写实电影摄影，不是接通后贴耳镜头。女生刚到站台坐下，手机震动，她把手机拿在身前低头查看。相机从女生眼睛附近向下俯拍，手机屏幕朝向镜头，轻微自然透视，不拍女生面孔。她右手自然托握一部普通现代6.1英寸智能手机，哑光深灰手机壳、窄黑边框、圆角玻璃、顶部细小听筒或简洁前摄开孔。芥末黄棉质外套袖口与参考一致，手指结",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-phone-incoming-detail"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "error": "The request failed because the input text may contain sensitive information. Request id: 021792064775291770d3492782dd10cc0a489fec0a72ead33bc46"
+  },
+  {
+    "recoveryId": "4e6f3011-6808-4ec8-901c-6532ecbdd6cd",
+    "id": "59385588-bc5e-44d2-95aa-4944752f93a6",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:17:53.268Z",
+    "status": "succeeded",
+    "title": "生成写实电影中的公交站牌信息特写，16:9单张完整横幅。参考图只用于同一独立竖式公交站牌的灰色金属边框、雨水、深夜候车亭照明。镜头向上取站牌上半部线路信息区，不拍下半部停运通知。近正面、轻微自然侧角，整块信息面板清楚占画面大部分，边框完整，背景虚化夜雨候车亭与路灯，无人无车。面板为普通中国城市公交信息设计，浅灰白底、深蓝印刷字和简洁线路图，真实使用痕迹、小雨珠不遮挡重要信息，曝光足够读字。必须准确",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-sign-route-detail"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "bd7a4a3d-ab8e-4f05-8dca-9b5582c7d699",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:19:21.753Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "86f70f0a-d7ba-4f4f-b9ee-fae80ec1b42b"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "6bf86722-0bfd-440a-ad12-d5d6a5454217",
+    "id": "a1ae2feb-c154-4b87-87e7-a9e63fb7fb5d",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:11:45.612Z",
+    "status": "succeeded",
+    "title": "以参考图1双人画面为构图基础修正车内空间，不改成单人近景。女生仍在画面右侧近前景，芥末黄外套、短发，身体坐在前一排，头肩回转望向身后男子，手机贴耳；男子仍在中央偏左后一排，脸朝前一排女生，细灰框眼镜、湿发、湿灰卫衣、右手黑手机贴右耳、嘴闭着。保留两人的脸、大小、前后距离、视线关系和回头姿态，不换前景左右，不改成并排或面对面座椅。参考2即K08只用于公交材质和排位连续性，参考3即K09用于男人紧邻车",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-reveal-right-window-v3"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "59c75bb5-2ad6-4970-b921-a02bbb70cedc",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:13:27.693Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "fed0c807-57b0-4063-8f88-8f63be9920b8"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "ba2c7d59-9330-4494-a04a-6fc5f759d6bb",
+    "id": "e372b173-33ef-421e-a9e5-216180e2be30",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:02:03.480Z",
+    "status": "succeeded",
+    "title": "参考图只取女主身份服装与车内灯光，不沿用持机手和机位。重新拍同一女生坐公交的胸部以上正面三分之二近景。相机在她前方稍偏人物自身右侧，看她右脸及右手。女生自己的右手举深灰手机贴自己的右耳，因此正面画面手机在观者左侧。左手放下不持手机。深栗短发，琥珀发夹仍在自身左侧即观者右边，可部分遮住，芥末黄外套米白内搭。背景只见虚化灰蓝座椅正面软垫和车窗局部，不出现其他人、车头或远端座椅。迟疑紧张，嘴闭着，暖中性",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-call-v2"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "cfb48787-b337-41bc-89fc-c37a75f7b44d",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:02:49.331Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "881f03f1-2813-4d68-97c5-9fa5e6e2d0fe"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "f588b7e6-91a1-47b4-a5b6-b2f910404580",
+    "id": "8ee15bb5-ed8a-4260-bd2d-6b2879198ecb",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:02:03.301Z",
+    "status": "succeeded",
+    "title": "修正参考图同一构图，保留公交17、女生、包、雨夜与路缘。彻底移除前门里坐着的阿姨及其身体和布袋，前门入口空着可以上车。阿姨在画外后排坐好，由画外对白招呼，不要为了展示她移动座位。驾驶位保留一位正常司机面向前方的暗部头肩轮廓。其他不变。写实电影单帧，无文字UI。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-door-v2"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "04845a3f-c98e-4e0d-8383-a77bc19f84db",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:03:38.786Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "83e08789-229e-4920-bc9f-f9dcb8aa741b"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "36096a2b-d4f1-4e47-8ebc-9f3c9ad96cfa",
+    "id": "01c0303b-4b5b-45e5-8569-682d2f061046",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T11:02:03.125Z",
+    "status": "succeeded",
+    "title": "对参考图做局部修改，保留金属站牌、皱纸、广告、夜景和构图。删除通知纸面上所有字母、乱码、细字和日期，变成完全无印字的浅色皱纸，保留纸纹与折痕阴影，不要文字、线条、标记。底部旧广告向上延伸，遮住通知右下角落款区。站牌上方线路区裁出画面，只拍纸与边框。不另加纸，不贴到候车亭柱子，不加人物。专供后期排中文正文。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-notice-v2"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "ed4b6061-874e-4af9-8191-bf2759dffb7f",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:03:18.293Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "acbbfce7-370f-492c-be96-c951e2459bd5"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "38a0cb94-f018-45be-b33f-668467d0d72d",
+    "id": "8413a765-ae1e-4cf1-83ad-2d9019e4eba1",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T10:59:39.065Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影静帧，16:9单张完整画面，不是拼贴或设定图。保持参考人物身份与服装、正常人体结构和接触，克制自然曝光，无字幕、水印、计时环、交互UI。参考图仅取同一雨夜站台材质与光线，修正纸张位置。拍独立竖式金属公交站牌的下半部，不是候车亭侧柱。近正面特写，站牌面板边框清楚，贴一张被雨泡皱的浅色A4通知，通知底部被一张褪色旧广告的翘角遮住，遮住日期但不遮正文区域。通知顶部标题区、下方三行正文区保",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-notice"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "53779cdb-1f0e-4ec3-989a-a7bc9f3049b5",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:01:06.348Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "5a6a66d3-90c3-4823-8001-4dbd0e2be713"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "666ab6ef-85d5-4dcb-bfdf-9aea68093024",
+    "id": "578ec4d4-bea6-447e-998a-9b51a15f1efc",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T10:59:38.628Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影静帧，16:9单张完整画面，不是拼贴或设定图。保持参考人物身份与服装、正常人体结构和接触，克制自然曝光，无字幕、水印、计时环、交互UI。参考1固定车铃造型，参考2只取女生袖色。公交晃动后的极近景，红圆按钮位于中央黄色竖立柱上且未被触碰，女生右手已经错过按钮，在画面右下方握住近处灰蓝座椅顶部横向把手支撑身体。芥末黄袖口，手抓握结构真实，按钮与手之间留明确间距。只拍局部手、立柱、按钮和",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-bell-miss"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "6242a29c-086b-4839-8b5e-f2f970fe1f8d",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:01:07.148Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "c601a82a-a622-40d4-aff9-44c134ea96b0"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "dae35c08-eef1-421e-b79f-c6593ff68a47",
+    "id": "f1e57c07-a7e5-4602-8a58-e57b080c3c67",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T10:59:38.273Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影静帧，16:9单张完整画面，不是拼贴或设定图。保持参考人物身份与服装、正常人体结构和接触，克制自然曝光，无字幕、水印、计时环、交互UI。参考图是便利店临窗浅木桌、白纸杯、女主芥末黄外套环境。斜俯视桌上摊开的普通中文报纸近景，纸张自然折痕，不做泛黄古董。报纸头版上半部留一块宽大整齐的空白标题区域，供后期放两行事故新闻标题；下半部正常细密新闻栏目版式，以不可读灰色排版线表现，不生成乱码",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-paper"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "ebd20e62-3c55-4b4f-bf84-cd787d784d8c",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:01:20.355Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "cff6d3df-b4ad-42c4-ad23-4994164a5ba1"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "6b9db5a3-4e5d-4ca4-9e48-13b9f8caef07",
+    "id": "6bf889a7-d197-499b-9f81-7dc7f9504f7e",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T10:59:37.952Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影静帧，16:9单张完整画面，不是拼贴或设定图。保持参考人物身份与服装、正常人体结构和接触，克制自然曝光，无字幕、水印、计时环、交互UI。参考1固定车铃和黄色竖立柱，不改安装外壳；参考2只取女生芥末黄外套袖子和肤色。极近景，一只女生右手从画面右下方伸向红圆按钮，食指距离按钮约三厘米尚未接触，其他手指自然弯曲，五指结构正确，袖口芥末黄色棉质。女生已走到R2过道立柱旁，手不是隔座椅远伸。",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-bell-ready"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "56a8bc8f-955b-4deb-b21b-bcd8790d1414",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:01:02.956Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "227af475-8280-451a-8b9b-d21271a2ffc2"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "c9f10ee3-63f1-489f-87dc-c900d13a80a8",
+    "id": "e30986e0-0207-4196-8d93-2b0c66d09294",
+    "toolId": "generate-image",
+    "createdAt": "2026-10-15T10:59:37.713Z",
+    "status": "succeeded",
+    "title": "写实都市微恐电影静帧，16:9单张完整画面，不是拼贴或设定图。保持参考人物身份与服装、正常人体结构和接触，克制自然曝光，无字幕、水印、计时环、交互UI。参考1固定车铃造型和同样构图，参考2只取女生袖色。极近景，一只女生右手从右下伸来，食指指腹准确按在红圆按钮中心，按钮轻微压下，其他手指自然弯曲不抓按钮，无多指，芥末黄棉质袖口。只见手、红色圆按钮、浅灰安装壳和黄色竖立柱，背景虚化灰蓝座椅背壳，暖中性",
+    "context": {
+      "projectId": "d8cfe2be-42b3-434d-986a-9e5ce01bc08d",
+      "boardId": "7541f109-9262-4b64-b796-3678d8f00336",
+      "nodeId": "lastbus-batch1-bell-hit"
+    },
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "254e9297-fe1c-4d93-8d96-716d167a6976",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-10-15T11:01:08.704Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "b3b74397-db28-4274-a711-d8ea56f268bf"
+        }
+      ]
+    }
+  }
+]

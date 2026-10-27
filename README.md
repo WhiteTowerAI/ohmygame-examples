@@ -11,6 +11,7 @@ to build on it.
 | [Tidal Workshop](web-game/tidal-workshop) | Web Game | Incremental harbor economy, cargo shipping, automation, island expeditions and permanent voyage rewards |
 | [Ember Route](web-game/ember-route) | Web Game | Roguelike deckbuilding, Heat and Vent combat, a branching twelve-floor route and seeded saves |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
+| [Last Bus](interactive-drama/last-bus) | Interactive Story | A 39-Scene interactive film in Chinese with a story map and an in-game menu, plus the design canvas, storyboard and generation history behind it |
 
 ## How OhMyGame uses this repository
 
