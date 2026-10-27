@@ -1,0 +1,66 @@
+@import "../../shared/style/components.css";
+
+/* The backdrop image's offset, moved in the editor preview. */
+.backdrop > img {
+  translate: 0.62cqw 0.51cqh;
+}
+
+/* A high-frequency red pulse around the picture. */
+.pulse-edge {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 7cqw 1.6cqw rgb(224 46 34 / 0.55);
+  animation: edge-pulse 0.36s ease-in-out infinite alternate;
+}
+
+@keyframes edge-pulse {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* The ring and the tap target share one centre, on the red bell in the
+   picture; the prompt sits right below the ring, the count below that. */
+.qte-panel {
+  inset: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+}
+
+.qte-panel .qte {
+  position: absolute;
+  left: calc(45% + 2.56cqw);
+  top: calc(59% + 1.63cqh);
+  transform: translate(-50%, -50%);
+}
+
+.qte-panel .qte-prompt {
+  position: absolute;
+  left: calc(45% + 2.56cqw);
+  top: calc(59% + 1.63cqh);
+  margin-top: 8.6cqw;
+  transform: translate(-50%, 0);
+}
+
+.qte-panel .qte-progress {
+  position: absolute;
+  left: calc(45% + 2.56cqw);
+  top: calc(59% + 1.63cqh);
+  margin-top: 12.8cqw;
+  transform: translate(-50%, 0);
+}
+
+/* A quiet hit area over the bell, so the button itself stays visible. */
+.qte .key {
+  width: 7cqw;
+  height: 7cqw;
+  min-width: 7cqw;
+  min-height: 7cqw;
+  border-color: rgb(255 255 255 / 0.75);
+  background: rgb(255 255 255 / 0.14);
+  font-size: 0;
+}

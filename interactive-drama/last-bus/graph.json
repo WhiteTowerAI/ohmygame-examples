@@ -1,0 +1,1560 @@
+{
+  "version": 1,
+  "title": "末班",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "entryNodeId": "main-menu",
+  "initialState": {
+    "calledBack": false,
+    "heardNotice": false,
+    "investigated": [],
+    "askedAunt": false
+  },
+  "variables": {
+    "calledBack": "是否回拨过那个陌生号码，影响车内来电的报站声和后面的分支",
+    "heardNotice": "是否看过站牌上的停运通知，影响拒绝登车的台词和后面的分支",
+    "investigated": "本轮已经在站台和车门前看过的线索",
+    "askedAunt": "是否问过阿姨关于停运通知的事，影响后面的分支"
+  },
+  "assets": {
+    "1": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/1.mov"
+      }
+    },
+    "2": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/2.mp4"
+      }
+    },
+    "1_01": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/1_01.jpg"
+      }
+    },
+    "output": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output.webp"
+      }
+    },
+    "3-03a": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/3-03a.mp4"
+      }
+    },
+    "office": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-19.webp"
+      }
+    },
+    "phone": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-47.webp"
+      }
+    },
+    "station": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-22.webp"
+      }
+    },
+    "notice": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-43.webp"
+      }
+    },
+    "bus": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-9.webp"
+      }
+    },
+    "door": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-44.webp"
+      }
+    },
+    "cabin": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-24.webp"
+      }
+    },
+    "carphone": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-42.webp"
+      }
+    },
+    "windowman": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-32.webp"
+      }
+    },
+    "man": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-30.webp"
+      }
+    },
+    "store": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-21.webp"
+      }
+    },
+    "guardrail": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-37.webp"
+      }
+    },
+    "bell-hit": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-40.webp"
+      }
+    },
+    "bell-miss": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-39.webp"
+      }
+    },
+    "newspaper": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/imported/output-41.webp"
+      }
+    },
+    "output-2": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-2.webp"
+      }
+    },
+    "output-3": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-3.webp"
+      }
+    },
+    "output-4": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-4.webp"
+      }
+    },
+    "output-5": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-5.mp4"
+      }
+    },
+    "output-6": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-6.mp4"
+      }
+    },
+    "asset": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset.mp4"
+      }
+    },
+    "asset-2": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-2.mp4"
+      }
+    },
+    "output-7": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-7.mp4"
+      }
+    },
+    "10-16-1": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/10-16-1.webp"
+      }
+    },
+    "output-8": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-8.mp4"
+      }
+    },
+    "output-9": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-9.mp4"
+      }
+    },
+    "image-1-output-1---2026-10-15t193638.590": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/image-1-output-1---2026-10-15t193638.590.jpg"
+      }
+    },
+    "output-10": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-10.webp"
+      }
+    },
+    "asset-3": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-3.mp4"
+      }
+    },
+    "asset-4": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-4.mp4"
+      }
+    },
+    "10-16": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/10-16.webp"
+      }
+    },
+    "image-1-output-1---2026-10-16t152230.158": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/image-1-output-1---2026-10-16t152230.158.jpg"
+      }
+    },
+    "asset-5": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-5.mp4"
+      }
+    },
+    "asset-6": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-6.mp4"
+      }
+    },
+    "asset-7": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-7.mp4"
+      }
+    },
+    "asset-8": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-8.webp"
+      }
+    },
+    "image-1-output-1---2026-10-15t192509.239": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/image-1-output-1---2026-10-15t192509.239.jpg"
+      }
+    },
+    "asset-9": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-9.mp4"
+      }
+    },
+    "asset-10": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-10.mp4"
+      }
+    },
+    "asset-11": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-11.mp4"
+      }
+    },
+    "asset-12": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-12.mp4"
+      }
+    },
+    "asset-13": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-13.mov"
+      }
+    },
+    "asset-14": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-14.mov"
+      }
+    },
+    "asset-15": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-15.webp"
+      }
+    },
+    "output-11": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-11.webp"
+      }
+    },
+    "asset-16": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-16.webp"
+      }
+    },
+    "image-1-output-1---2026-10-15t192509.239-2": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/image-1-output-1---2026-10-15t192509.239-2.jpg"
+      }
+    },
+    "asset-17": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-17.webp"
+      }
+    },
+    "asset-18": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-18.webp"
+      }
+    },
+    "output-12": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-12.webp"
+      }
+    },
+    "image-1-output-1---2026-10-15t193109.238": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/image-1-output-1---2026-10-15t193109.238.jpg"
+      }
+    },
+    "asset-19": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-19.mov"
+      }
+    },
+    "asset-20": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-20.mov"
+      }
+    },
+    "asset-21": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-21.webp"
+      }
+    },
+    "asset-22": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-22.mov"
+      }
+    },
+    "asset-23": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-23.mov"
+      }
+    },
+    "output-13": {
+      "type": "image",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-13.webp"
+      }
+    },
+    "asset-24": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/asset-24.mov"
+      }
+    },
+    "output-14": {
+      "type": "video",
+      "source": {
+        "kind": "workspace",
+        "path": "assets/library/output-14.mp4"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "main-menu",
+      "title": "主菜单",
+      "source": {
+        "html": "nodes/main-menu/index.html",
+        "css": "nodes/main-menu/style.css",
+        "javascript": "nodes/main-menu/node.js"
+      },
+      "assets": [
+        "output-2",
+        "output-3",
+        "output-4",
+        "output-5",
+        "output-6",
+        "1_01"
+      ],
+      "signals": [
+        {
+          "id": "start",
+          "label": "开始游戏",
+          "when": "玩家开始新游戏"
+        },
+        {
+          "id": "story-map",
+          "label": "故事线",
+          "role": "navigation"
+        }
+      ]
+    },
+    {
+      "id": "blank-2",
+      "title": "加班夜归",
+      "source": {
+        "html": "nodes/blank-2/index.html",
+        "css": "nodes/blank-2/style.css",
+        "javascript": "nodes/blank-2/node.js"
+      },
+      "assets": [
+        "asset",
+        "output-8"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-2-2",
+      "title": "候车亭等车",
+      "source": {
+        "html": "nodes/blank-2-2/index.html",
+        "css": "nodes/blank-2-2/style.css",
+        "javascript": "nodes/blank-2-2/node.js"
+      },
+      "assets": [
+        "asset",
+        "asset-2"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "hotspot",
+      "title": "找车",
+      "source": {
+        "html": "nodes/hotspot/index.html",
+        "css": "nodes/hotspot/style.css",
+        "javascript": "nodes/hotspot/node.js"
+      },
+      "assets": [
+        "output-7",
+        "10-16-1"
+      ],
+      "signals": [
+        {
+          "id": "door",
+          "label": "还有末班车吗？"
+        },
+        {
+          "id": "wait",
+          "label": "先坐下等车"
+        }
+      ]
+    },
+    {
+      "id": "blank-3",
+      "title": "查看站牌",
+      "source": {
+        "html": "nodes/blank-3/index.html",
+        "css": "nodes/blank-3/style.css",
+        "javascript": "nodes/blank-3/node.js"
+      },
+      "assets": [
+        "output-9",
+        "image-1-output-1---2026-10-15t193638.590",
+        "image-1-output-1---2026-10-16t152230.158"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "qte",
+      "title": "接听电话",
+      "source": {
+        "html": "nodes/qte/index.html",
+        "css": "nodes/qte/style.css",
+        "javascript": "nodes/qte/node.js"
+      },
+      "assets": [
+        "output-10"
+      ],
+      "signals": [
+        {
+          "id": "answer",
+          "label": "接听"
+        }
+      ]
+    },
+    {
+      "id": "blank-4",
+      "title": "陌生来电",
+      "source": {
+        "html": "nodes/blank-4/index.html",
+        "css": "nodes/blank-4/style.css",
+        "javascript": "nodes/blank-4/node.js"
+      },
+      "assets": [
+        "asset-3",
+        "2"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-5",
+      "title": "别上车",
+      "source": {
+        "html": "nodes/blank-5/index.html",
+        "css": "nodes/blank-5/style.css",
+        "javascript": "nodes/blank-5/node.js"
+      },
+      "assets": [
+        "asset-4"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "title": "要不要回拨",
+      "source": {
+        "html": "nodes/choice/index.html",
+        "css": "nodes/choice/style.css",
+        "javascript": "nodes/choice/node.js"
+      },
+      "assets": [
+        "10-16"
+      ],
+      "signals": [
+        {
+          "id": "option-a",
+          "label": "回拨"
+        },
+        {
+          "id": "option-b",
+          "label": "收起手机"
+        }
+      ]
+    },
+    {
+      "id": "blank-6",
+      "title": "回拨",
+      "source": {
+        "html": "nodes/blank-6/index.html",
+        "css": "nodes/blank-6/style.css",
+        "javascript": "nodes/blank-6/node.js"
+      },
+      "assets": [
+        "asset-5"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-7",
+      "title": "阿姨来了",
+      "source": {
+        "html": "nodes/blank-7/index.html",
+        "css": "nodes/blank-7/style.css",
+        "javascript": "nodes/blank-7/node.js"
+      },
+      "assets": [
+        "asset-6"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-8",
+      "title": "和阿姨聊天",
+      "source": {
+        "html": "nodes/blank-8/index.html",
+        "css": "nodes/blank-8/style.css",
+        "javascript": "nodes/blank-8/node.js"
+      },
+      "assets": [
+        "asset-7"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "hotspot-2",
+      "title": "站台观察",
+      "source": {
+        "html": "nodes/hotspot-2/index.html",
+        "css": "nodes/hotspot-2/style.css",
+        "javascript": "nodes/hotspot-2/node.js"
+      },
+      "assets": [
+        "asset-7",
+        "asset-8"
+      ],
+      "signals": [
+        {
+          "id": "door",
+          "label": "余光瞄到站牌通知"
+        },
+        {
+          "id": "window",
+          "label": "看起来阿姨很熟悉这趟车"
+        },
+        {
+          "id": "done",
+          "label": "继续"
+        }
+      ]
+    },
+    {
+      "id": "choice-2",
+      "title": "停运通知",
+      "source": {
+        "html": "nodes/choice-2/index.html",
+        "css": "nodes/choice-2/style.css",
+        "javascript": "nodes/choice-2/node.js"
+      },
+      "assets": [
+        "image-1-output-1---2026-10-15t192509.239"
+      ],
+      "signals": [
+        {
+          "id": "option-a",
+          "label": "问问阿姨"
+        }
+      ]
+    },
+    {
+      "id": "blank-9",
+      "title": "阿姨熟悉这趟车",
+      "source": {
+        "html": "nodes/blank-9/index.html",
+        "css": "nodes/blank-9/style.css",
+        "javascript": "nodes/blank-9/node.js"
+      },
+      "assets": [
+        "asset-10",
+        "asset-11"
+      ],
+      "signals": []
+    },
+    {
+      "id": "blank-10",
+      "title": "阿姨：是旧通知吧",
+      "source": {
+        "html": "nodes/blank-10/index.html",
+        "css": "nodes/blank-10/style.css",
+        "javascript": "nodes/blank-10/node.js"
+      },
+      "assets": [
+        "asset-9"
+      ],
+      "signals": []
+    },
+    {
+      "id": "blank-11",
+      "title": "车来了",
+      "source": {
+        "html": "nodes/blank-11/index.html",
+        "css": "nodes/blank-11/style.css",
+        "javascript": "nodes/blank-11/node.js"
+      },
+      "assets": [
+        "asset-13"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "hotspot-3",
+      "title": "车门前",
+      "source": {
+        "html": "nodes/hotspot-3/index.html",
+        "css": "nodes/hotspot-3/style.css",
+        "javascript": "nodes/hotspot-3/node.js"
+      },
+      "assets": [
+        "output-3"
+      ],
+      "signals": [
+        {
+          "id": "door",
+          "label": "手机"
+        },
+        {
+          "id": "window",
+          "label": "车头"
+        },
+        {
+          "id": "spot-3",
+          "label": "车厢"
+        },
+        {
+          "id": "done",
+          "label": "继续"
+        }
+      ]
+    },
+    {
+      "id": "choice-3",
+      "title": "上车还是留下",
+      "source": {
+        "html": "nodes/choice-3/index.html",
+        "css": "nodes/choice-3/style.css",
+        "javascript": "nodes/choice-3/node.js"
+      },
+      "assets": [
+        "output-3",
+        "asset-15"
+      ],
+      "signals": [
+        {
+          "id": "option-a",
+          "label": "上车"
+        },
+        {
+          "id": "option-b",
+          "label": "不上车"
+        }
+      ]
+    },
+    {
+      "id": "blank-12",
+      "title": "查看手机",
+      "source": {
+        "html": "nodes/blank-12/index.html",
+        "css": "nodes/blank-12/style.css",
+        "javascript": "nodes/blank-12/node.js"
+      },
+      "assets": [
+        "output-11"
+      ],
+      "signals": [
+        {
+          "id": "called",
+          "label": "回拨过",
+          "when": "如果玩家之前回拨过那个号码"
+        }
+      ]
+    },
+    {
+      "id": "blank-13",
+      "title": "登上末班车",
+      "source": {
+        "html": "nodes/blank-13/index.html",
+        "css": "nodes/blank-13/style.css",
+        "javascript": "nodes/blank-13/node.js"
+      },
+      "assets": [
+        "asset-19",
+        "asset-20"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "qte-2",
+      "title": "连按停车铃",
+      "source": {
+        "html": "nodes/qte-2/index.html",
+        "css": "nodes/qte-2/style.css",
+        "javascript": "nodes/qte-2/node.js"
+      },
+      "assets": [
+        "asset-21"
+      ],
+      "signals": [
+        {
+          "id": "success",
+          "label": "Made it"
+        },
+        {
+          "id": "fail",
+          "label": "Missed"
+        }
+      ]
+    },
+    {
+      "id": "blank-14",
+      "title": "按响车铃",
+      "source": {
+        "html": "nodes/blank-14/index.html",
+        "css": "nodes/blank-14/style.css",
+        "javascript": "nodes/blank-14/node.js"
+      },
+      "assets": [
+        "asset-22"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "title": "末班乘客",
+      "source": {
+        "html": "nodes/ending/index.html",
+        "css": "nodes/ending/style.css",
+        "javascript": "nodes/ending/node.js"
+      },
+      "assets": [],
+      "signals": []
+    },
+    {
+      "id": "blank-15",
+      "title": "留在站台",
+      "source": {
+        "html": "nodes/blank-15/index.html",
+        "css": "nodes/blank-15/style.css",
+        "javascript": "nodes/blank-15/node.js"
+      },
+      "assets": [
+        "asset-24"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-16",
+      "title": "后窗的男人",
+      "source": {
+        "html": "nodes/blank-16/index.html",
+        "css": "nodes/blank-16/style.css",
+        "javascript": "nodes/blank-16/node.js"
+      },
+      "assets": [
+        "output-14"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "hotspot-4",
+      "title": "便利店",
+      "source": {
+        "html": "nodes/hotspot-4/index.html",
+        "css": "nodes/hotspot-4/style.css",
+        "javascript": "nodes/hotspot-4/node.js"
+      },
+      "assets": [
+        "output-12"
+      ],
+      "signals": [
+        {
+          "id": "door",
+          "label": "报纸"
+        }
+      ]
+    },
+    {
+      "id": "blank-17",
+      "title": "查看车头",
+      "source": {
+        "html": "nodes/blank-17/index.html",
+        "css": "nodes/blank-17/style.css",
+        "javascript": "nodes/blank-17/node.js"
+      },
+      "assets": [
+        "asset-16"
+      ],
+      "signals": [
+        {
+          "id": "notice",
+          "label": "看过通知",
+          "when": "如果玩家看过停运通知"
+        }
+      ]
+    },
+    {
+      "id": "blank-18",
+      "title": "查看车厢",
+      "source": {
+        "html": "nodes/blank-18/index.html",
+        "css": "nodes/blank-18/style.css",
+        "javascript": "nodes/blank-18/node.js"
+      },
+      "assets": [
+        "asset-14"
+      ],
+      "signals": []
+    },
+    {
+      "id": "blank-19",
+      "title": "走不走？",
+      "source": {
+        "html": "nodes/blank-19/index.html",
+        "css": "nodes/blank-19/style.css",
+        "javascript": "nodes/blank-19/node.js"
+      },
+      "assets": [
+        "asset-12"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-20",
+      "title": "想起停运通知",
+      "source": {
+        "html": "nodes/blank-20/index.html",
+        "css": "nodes/blank-20/style.css",
+        "javascript": "nodes/blank-20/node.js"
+      },
+      "assets": [
+        "image-1-output-1---2026-10-15t192509.239-2"
+      ],
+      "signals": [
+        {
+          "id": "asked",
+          "label": "问过阿姨",
+          "when": "如果玩家问过阿姨"
+        }
+      ]
+    },
+    {
+      "id": "blank-21",
+      "title": "回想报站声",
+      "source": {
+        "html": "nodes/blank-21/index.html",
+        "css": "nodes/blank-21/style.css",
+        "javascript": "nodes/blank-21/node.js"
+      },
+      "assets": [
+        "asset-17"
+      ],
+      "signals": []
+    },
+    {
+      "id": "blank-22",
+      "title": "阿姨昨天还坐过",
+      "source": {
+        "html": "nodes/blank-22/index.html",
+        "css": "nodes/blank-22/style.css",
+        "javascript": "nodes/blank-22/node.js"
+      },
+      "assets": [
+        "asset-18"
+      ],
+      "signals": []
+    },
+    {
+      "id": "blank-23",
+      "title": "报纸上的新闻",
+      "source": {
+        "html": "nodes/blank-23/index.html",
+        "css": "nodes/blank-23/style.css",
+        "javascript": "nodes/blank-23/node.js"
+      },
+      "assets": [
+        "image-1-output-1---2026-10-15t193109.238"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-24",
+      "title": "没能按响",
+      "source": {
+        "html": "nodes/blank-24/index.html",
+        "css": "nodes/blank-24/style.css",
+        "javascript": "nodes/blank-24/node.js"
+      },
+      "assets": [
+        "asset-23"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "blank-25",
+      "title": "坠河",
+      "source": {
+        "html": "nodes/blank-25/index.html",
+        "css": "nodes/blank-25/style.css",
+        "javascript": "nodes/blank-25/node.js"
+      },
+      "assets": [
+        "1"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "ending-3",
+      "title": "留在灯下",
+      "source": {
+        "html": "nodes/ending-3/index.html",
+        "css": "nodes/ending-3/style.css",
+        "javascript": "nodes/ending-3/node.js"
+      },
+      "assets": [],
+      "signals": []
+    },
+    {
+      "id": "blank-23-2",
+      "title": "那是什么车",
+      "source": {
+        "html": "nodes/blank-23-2/index.html",
+        "css": "nodes/blank-23-2/style.css",
+        "javascript": "nodes/blank-23-2/node.js"
+      },
+      "assets": [
+        "image-1-output-1---2026-10-15t193109.238"
+      ],
+      "signals": [
+        {
+          "id": "next",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "id": "story-map",
+      "title": "故事线",
+      "source": {
+        "html": "nodes/story-map/index.html",
+        "css": "nodes/story-map/style.css",
+        "javascript": "nodes/story-map/node.js"
+      },
+      "assets": [],
+      "signals": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "main-menu-start",
+      "source": {
+        "nodeId": "main-menu",
+        "signal": "start"
+      },
+      "targetNodeId": "blank-2",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-2-next",
+      "source": {
+        "nodeId": "blank-2",
+        "signal": "next"
+      },
+      "targetNodeId": "hotspot",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-door",
+      "source": {
+        "nodeId": "hotspot",
+        "signal": "door"
+      },
+      "targetNodeId": "blank-3",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-3-next",
+      "source": {
+        "nodeId": "blank-3",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-2-2",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-wait",
+      "source": {
+        "nodeId": "hotspot",
+        "signal": "wait"
+      },
+      "targetNodeId": "blank-2-2",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-2-2-next",
+      "source": {
+        "nodeId": "blank-2-2",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-4",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-4-next",
+      "source": {
+        "nodeId": "blank-4",
+        "signal": "next"
+      },
+      "targetNodeId": "qte",
+      "mode": "replace"
+    },
+    {
+      "id": "qte-answer",
+      "source": {
+        "nodeId": "qte",
+        "signal": "answer"
+      },
+      "targetNodeId": "blank-5",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-5-next",
+      "source": {
+        "nodeId": "blank-5",
+        "signal": "next"
+      },
+      "targetNodeId": "choice",
+      "mode": "replace"
+    },
+    {
+      "id": "choice-option-a",
+      "source": {
+        "nodeId": "choice",
+        "signal": "option-a"
+      },
+      "targetNodeId": "blank-6",
+      "mode": "replace"
+    },
+    {
+      "id": "choice-option-b",
+      "source": {
+        "nodeId": "choice",
+        "signal": "option-b"
+      },
+      "targetNodeId": "blank-7",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-6-next",
+      "source": {
+        "nodeId": "blank-6",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-7",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-7-next",
+      "source": {
+        "nodeId": "blank-7",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-8",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-8-next",
+      "source": {
+        "nodeId": "blank-8",
+        "signal": "next"
+      },
+      "targetNodeId": "hotspot-2",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-2-door",
+      "source": {
+        "nodeId": "hotspot-2",
+        "signal": "door"
+      },
+      "targetNodeId": "choice-2",
+      "mode": "push"
+    },
+    {
+      "id": "hotspot-2-window",
+      "source": {
+        "nodeId": "hotspot-2",
+        "signal": "window"
+      },
+      "targetNodeId": "blank-9",
+      "mode": "push"
+    },
+    {
+      "id": "choice-2-option-a",
+      "source": {
+        "nodeId": "choice-2",
+        "signal": "option-a"
+      },
+      "targetNodeId": "blank-10",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-3-door",
+      "source": {
+        "nodeId": "hotspot-3",
+        "signal": "door"
+      },
+      "targetNodeId": "blank-12",
+      "mode": "push"
+    },
+    {
+      "id": "hotspot-3-window",
+      "source": {
+        "nodeId": "hotspot-3",
+        "signal": "window"
+      },
+      "targetNodeId": "blank-17",
+      "mode": "push"
+    },
+    {
+      "id": "hotspot-3-spot-3",
+      "source": {
+        "nodeId": "hotspot-3",
+        "signal": "spot-3"
+      },
+      "targetNodeId": "blank-18",
+      "mode": "push"
+    },
+    {
+      "id": "blank-19-next",
+      "source": {
+        "nodeId": "blank-19",
+        "signal": "next"
+      },
+      "targetNodeId": "choice-3",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-11-next",
+      "source": {
+        "nodeId": "blank-11",
+        "signal": "next"
+      },
+      "targetNodeId": "hotspot-3",
+      "mode": "replace"
+    },
+    {
+      "id": "choice-3-option-a",
+      "source": {
+        "nodeId": "choice-3",
+        "signal": "option-a"
+      },
+      "targetNodeId": "blank-13",
+      "mode": "replace"
+    },
+    {
+      "id": "choice-3-option-b",
+      "source": {
+        "nodeId": "choice-3",
+        "signal": "option-b"
+      },
+      "targetNodeId": "blank-15",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-17-next",
+      "source": {
+        "nodeId": "blank-17",
+        "signal": "notice"
+      },
+      "targetNodeId": "blank-20",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-12-called",
+      "source": {
+        "nodeId": "blank-12",
+        "signal": "called"
+      },
+      "targetNodeId": "blank-21",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-20-asked",
+      "source": {
+        "nodeId": "blank-20",
+        "signal": "asked"
+      },
+      "targetNodeId": "blank-22",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-15-next",
+      "source": {
+        "nodeId": "blank-15",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-16",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-16-next",
+      "source": {
+        "nodeId": "blank-16",
+        "signal": "next"
+      },
+      "targetNodeId": "hotspot-4",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-4-door",
+      "source": {
+        "nodeId": "hotspot-4",
+        "signal": "door"
+      },
+      "targetNodeId": "blank-23",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-13-next",
+      "source": {
+        "nodeId": "blank-13",
+        "signal": "next"
+      },
+      "targetNodeId": "qte-2",
+      "mode": "replace"
+    },
+    {
+      "id": "qte-2-success",
+      "source": {
+        "nodeId": "qte-2",
+        "signal": "success"
+      },
+      "targetNodeId": "blank-14",
+      "mode": "replace"
+    },
+    {
+      "id": "qte-2-fail",
+      "source": {
+        "nodeId": "qte-2",
+        "signal": "fail"
+      },
+      "targetNodeId": "blank-24",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-14-next",
+      "source": {
+        "nodeId": "blank-14",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-25",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-24-next",
+      "source": {
+        "nodeId": "blank-24",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-25",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-25-next",
+      "source": {
+        "nodeId": "blank-25",
+        "signal": "next"
+      },
+      "targetNodeId": "ending",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-23-next",
+      "source": {
+        "nodeId": "blank-23",
+        "signal": "next"
+      },
+      "targetNodeId": "blank-23-2",
+      "mode": "replace"
+    },
+    {
+      "id": "blank-23-2-next",
+      "source": {
+        "nodeId": "blank-23-2",
+        "signal": "next"
+      },
+      "targetNodeId": "ending-3",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-3-done",
+      "source": {
+        "nodeId": "hotspot-3",
+        "signal": "done"
+      },
+      "targetNodeId": "blank-19",
+      "mode": "replace"
+    },
+    {
+      "id": "hotspot-2-done",
+      "source": {
+        "nodeId": "hotspot-2",
+        "signal": "done"
+      },
+      "targetNodeId": "blank-11",
+      "mode": "replace"
+    },
+    {
+      "id": "main-menu-story-map",
+      "source": {
+        "nodeId": "main-menu",
+        "signal": "story-map"
+      },
+      "targetNodeId": "story-map",
+      "mode": "push"
+    }
+  ]
+}

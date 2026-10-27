@@ -1,0 +1,999 @@
+{
+  "version": 1,
+  "id": "lastbus-storyboard",
+  "title": "末班｜节点对应分镜清单",
+  "columns": [
+    {
+      "id": "shot",
+      "title": "分镜号",
+      "type": "text",
+      "width": 140
+    },
+    {
+      "id": "node",
+      "title": "对应节点",
+      "type": "text",
+      "width": 270
+    },
+    {
+      "id": "node_id",
+      "title": "画布节点ID",
+      "type": "text",
+      "width": 270
+    },
+    {
+      "id": "type",
+      "title": "类型／条件",
+      "type": "text",
+      "width": 170
+    },
+    {
+      "id": "location",
+      "title": "场景",
+      "type": "text",
+      "width": 160
+    },
+    {
+      "id": "camera",
+      "title": "景别／机位",
+      "type": "text",
+      "width": 230
+    },
+    {
+      "id": "visual",
+      "title": "画面与动作",
+      "type": "text",
+      "width": 480
+    },
+    {
+      "id": "audio",
+      "title": "对白／声音",
+      "type": "text",
+      "width": 460
+    },
+    {
+      "id": "duration",
+      "title": "建议时长",
+      "type": "text",
+      "width": 220
+    },
+    {
+      "id": "interaction",
+      "title": "交互／判定",
+      "type": "text",
+      "width": 500
+    },
+    {
+      "id": "next",
+      "title": "接续／去向",
+      "type": "text",
+      "width": 220
+    },
+    {
+      "id": "notes",
+      "title": "制作备注／待确认",
+      "type": "text",
+      "width": 460
+    }
+  ],
+  "rows": [
+    {
+      "id": "shot-01-01",
+      "cells": {
+        "shot": "01-01",
+        "node": "01【演出】加班结束 → 前往站台",
+        "node_id": "lastbus-flow-01",
+        "type": "演出",
+        "location": "办公室／深夜",
+        "camera": "固定全景→屏幕特写",
+        "visual": "女生独坐；发送完成；00:08，工作群弹出明早9点会议消息。",
+        "audio": "键盘、消息提示；办公室底噪",
+        "duration": "6–8秒",
+        "interaction": "无",
+        "next": "01-02",
+        "notes": "屏幕文字独立合成，保证可读"
+      }
+    },
+    {
+      "id": "shot-01-02",
+      "cells": {
+        "shot": "01-02",
+        "node": "01【演出】加班结束 → 前往站台",
+        "node_id": "lastbus-flow-01",
+        "type": "演出",
+        "location": "办公室→写字楼门口",
+        "camera": "中景，动作衔接",
+        "visual": "长出一口气，关电脑，提工作包；切屋檐下夜雨。",
+        "audio": "合盖、脚步、雨滴",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "01-03",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-01-03",
+      "cells": {
+        "shot": "01-03",
+        "node": "01【演出】加班结束 → 前往站台",
+        "node_id": "lastbus-flow-01",
+        "type": "演出",
+        "location": "写字楼门口",
+        "camera": "手机特写→中景",
+        "visual": "寻找司机，提示暂未找到车辆；抬头看街对面便利店与车站。",
+        "audio": "雨声、手机提示",
+        "duration": "6–8秒",
+        "interaction": "人物自动操作",
+        "next": "01-04",
+        "notes": "便利店与站台位置须和安全结局一致"
+      }
+    },
+    {
+      "id": "shot-01-04",
+      "cells": {
+        "shot": "01-04",
+        "node": "01【演出】加班结束 → 前往站台",
+        "node_id": "lastbus-flow-01",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "站牌特写→固定中景",
+        "visual": "17路末班始发00:00，过桥至南桥；坐下收伞，手机00:14。",
+        "audio": "“应该还来得及……过了桥再走几百米，也还行。”",
+        "duration": "7–10秒",
+        "interaction": "无",
+        "next": "02",
+        "notes": "线路图文字独立制作"
+      }
+    },
+    {
+      "id": "shot-02-01",
+      "cells": {
+        "shot": "02-01",
+        "node": "02【操作】滑动接听｜必需／不限时",
+        "node_id": "lastbus-flow-02",
+        "type": "必需操作",
+        "location": "公交站／手机界面",
+        "camera": "中景→独立手机UI",
+        "visual": "陌生号码来电，显示滑动接听。",
+        "audio": "雨敲顶棚；有限铃声，等待后降低",
+        "duration": "等待不限时",
+        "interaction": "滑动接听；未完成暂停剧情，无失败",
+        "next": "02-02",
+        "notes": "非QTE；不要无限高强度震动"
+      }
+    },
+    {
+      "id": "shot-02-02",
+      "cells": {
+        "shot": "02-02",
+        "node": "02【操作】滑动接听｜必需／不限时",
+        "node_id": "lastbus-flow-02",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "女生中近景",
+        "visual": "接通、皱眉；挂断后盯着手机。",
+        "audio": "行车声；“下一辆车，别上车。”“什么？”；“恶作剧吧……”",
+        "duration": "8–11秒",
+        "interaction": "无",
+        "next": "03",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-03-01",
+      "cells": {
+        "shot": "03-01",
+        "node": "03【选择】是否回拨｜可选",
+        "node_id": "lastbus-flow-03",
+        "type": "选择",
+        "location": "手机界面",
+        "camera": "通话记录UI",
+        "visual": "显示陌生号码通话记录；允许回拨或直接继续。",
+        "audio": "站台雨声持续",
+        "duration": "等待不限时",
+        "interaction": "回拨→03A；不回拨→03B",
+        "next": "03A／03B",
+        "notes": "无倒计时，选项不自动触发"
+      }
+    },
+    {
+      "id": "shot-03a-01",
+      "cells": {
+        "shot": "03A-01",
+        "node": "03A【Hotspot】回拨陌生号码",
+        "node_id": "lastbus-flow-03a",
+        "type": "可选Hotspot",
+        "location": "手机／站台",
+        "camera": "手机特写→女生近景",
+        "visual": "回拨接通，无人回应；女生把手机拿远。",
+        "audio": "低频震动；“下一站，南桥。”“喂？你好？”断线",
+        "duration": "7–10秒",
+        "interaction": "回拨一次，R=是",
+        "next": "04",
+        "notes": "保存同一报站音源供11A复用"
+      }
+    },
+    {
+      "id": "shot-03b-01",
+      "cells": {
+        "shot": "03B-01",
+        "node": "03B【路径】不回拨",
+        "node_id": "lastbus-flow-03b",
+        "type": "路径衔接",
+        "location": "公交站",
+        "camera": "复用女生中景",
+        "visual": "不回拨，收起通话记录；不增加新剧情镜头。",
+        "audio": "雨声连续",
+        "duration": "0–1秒",
+        "interaction": "R保持否",
+        "next": "04",
+        "notes": "可直接切04，不必制作独立素材"
+      }
+    },
+    {
+      "id": "shot-04-01",
+      "cells": {
+        "shot": "04-01",
+        "node": "04【演出】阿姨到场",
+        "node_id": "lastbus-flow-04",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "固定双人中景",
+        "visual": "阿姨伞进入，收伞放袋，询问十七路；女生看时间00:17。",
+        "audio": "脚步、收伞；双方时间问答",
+        "duration": "7–10秒",
+        "interaction": "无",
+        "next": "04-02",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-04-02",
+      "cells": {
+        "shot": "04-02",
+        "node": "04【演出】阿姨到场",
+        "node_id": "lastbus-flow-04",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "双人中景为主",
+        "visual": "阿姨松口气坐下，解释约二十到站；女生说叫不到车。",
+        "audio": "零点始发到站说明、叫车对话，按剧本完整录制",
+        "duration": "12–16秒",
+        "interaction": "无",
+        "next": "04-03",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-04-03",
+      "cells": {
+        "shot": "04-03",
+        "node": "04【演出】阿姨到场",
+        "node_id": "lastbus-flow-04",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "双人中景／必要反应近景",
+        "visual": "谈南桥、一站过桥、提前按铃及女儿坐过站；女生道谢，阿姨笑。",
+        "audio": "按剧本完整对白，末句“客气啥，这趟我熟。”",
+        "duration": "17–23秒",
+        "interaction": "无",
+        "next": "05",
+        "notes": "自然亲切；勿用阴笑或恐怖音效暗示身份"
+      }
+    },
+    {
+      "id": "shot-05-01",
+      "cells": {
+        "shot": "05-01",
+        "node": "05【Hotspot中心】自由观察站台",
+        "node_id": "lastbus-flow-05",
+        "type": "Hotspot中心",
+        "location": "公交站",
+        "camera": "双人与站牌固定构图",
+        "visual": "站牌、阿姨可调查；继续等车入口。",
+        "audio": "雨声低强度循环",
+        "duration": "等待不限时",
+        "interaction": "A→05A；B→05B；继续→06，顺序不限，可全跳过",
+        "next": "05A／05B／06",
+        "notes": "复用04机位；返回中心不重播到场对白"
+      }
+    },
+    {
+      "id": "shot-05a-01",
+      "cells": {
+        "shot": "05A-01",
+        "node": "05A【Hotspot】站牌／停运通知",
+        "node_id": "lastbus-flow-05a",
+        "type": "可选Hotspot",
+        "location": "站牌",
+        "camera": "纸张特写",
+        "visual": "雨泡皱通知：因车辆事故夜间停运，日间正常，日期被旧广告遮住。",
+        "audio": "雨声",
+        "duration": "建议阅读4–6秒，可停留",
+        "interaction": "点击站牌进入；N=是",
+        "next": "05A-02",
+        "notes": "清晰文字层；遮挡范围固定"
+      }
+    },
+    {
+      "id": "shot-05a-02",
+      "cells": {
+        "shot": "05A-02",
+        "node": "05A【Hotspot】站牌／停运通知",
+        "node_id": "lastbus-flow-05a",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "双人中景／阿姨近景",
+        "visual": "女生询问；阿姨看通知后平常解释，继续看路口。",
+        "audio": "按剧本：昨晚还坐、旧通知、司机会提醒等完整对白",
+        "duration": "15–20秒",
+        "interaction": "完成后回调查中心",
+        "next": "05",
+        "notes": "无异常表情；不因调查锁定上车选择"
+      }
+    },
+    {
+      "id": "shot-05b-01",
+      "cells": {
+        "shot": "05B-01",
+        "node": "05B【Hotspot】与阿姨交谈",
+        "node_id": "lastbus-flow-05b",
+        "type": "可选Hotspot",
+        "location": "公交站",
+        "camera": "双人中景",
+        "visual": "询问哪站下；阿姨收布袋。",
+        "audio": "“您在哪儿下？”“终点下……你到家早。”",
+        "duration": "5–7秒",
+        "interaction": "点击阿姨触发；完成返回",
+        "next": "05",
+        "notes": "布袋不是可打开的线索容器"
+      }
+    },
+    {
+      "id": "shot-06-01",
+      "cells": {
+        "shot": "06-01",
+        "node": "06【操作】继续等车｜推进",
+        "node_id": "lastbus-flow-06",
+        "type": "操作＋演出",
+        "location": "公交站",
+        "camera": "道路方向中远景→阿姨中景",
+        "visual": "点击继续等车后，车灯出现，阿姨提袋站起。",
+        "audio": "远处发动机；“来了来了。”",
+        "duration": "3–5秒＋操作等待",
+        "interaction": "点击继续；亦为重试汇入点",
+        "next": "07",
+        "notes": "坏结局重试不重播前面的电话与调查"
+      }
+    },
+    {
+      "id": "shot-07-01",
+      "cells": {
+        "shot": "07-01",
+        "node": "07【演出】公交进站／阿姨上车",
+        "node_id": "lastbus-flow-07",
+        "type": "演出",
+        "location": "公交站／车外",
+        "camera": "固定侧前方中远景",
+        "visual": "17路停靠，暖光；后半车厢被靠背遮挡。",
+        "audio": "正常刹车、排气、发动机",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "07-02",
+        "notes": "不提前露出男人；车辆朝向统一"
+      }
+    },
+    {
+      "id": "shot-07-02",
+      "cells": {
+        "shot": "07-02",
+        "node": "07【演出】公交进站／阿姨上车",
+        "node_id": "lastbus-flow-07",
+        "type": "演出",
+        "location": "车门前",
+        "camera": "女生背侧中景",
+        "visual": "车门打开，司机在阴影中，阿姨先上车投币。",
+        "audio": "“今天最后一趟车了啊。”投币声",
+        "duration": "5–7秒",
+        "interaction": "无",
+        "next": "07-03",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-07-03",
+      "cells": {
+        "shot": "07-03",
+        "node": "07【演出】公交进站／阿姨上车",
+        "node_id": "lastbus-flow-07",
+        "type": "演出",
+        "location": "车门前／车内",
+        "camera": "从车外透过门或窗拍中景",
+        "visual": "阿姨后排靠窗坐好，袋在膝上，招呼女生。",
+        "audio": "“小姑娘，快上车呀。”",
+        "duration": "3–5秒",
+        "interaction": "无",
+        "next": "08",
+        "notes": "锁定座位表：女生稍后坐阿姨后排，男人在女生身后"
+      }
+    },
+    {
+      "id": "shot-08-01",
+      "cells": {
+        "shot": "08-01",
+        "node": "08【Hotspot中心】车门前最后观察",
+        "node_id": "lastbus-flow-08",
+        "type": "Hotspot中心",
+        "location": "车门前",
+        "camera": "复用女生背侧主镜头",
+        "visual": "可观察车头、车厢、手机；结束观察后进入催问。",
+        "audio": "发动机低强度循环",
+        "duration": "等待不限时",
+        "interaction": "每项一次，可跳过；完成各项返回中心",
+        "next": "08A／08B／08C／09",
+        "notes": "不要求查全，不自动判安全"
+      }
+    },
+    {
+      "id": "shot-08a-01",
+      "cells": {
+        "shot": "08A-01",
+        "node": "08A【Hotspot】车头线路牌",
+        "node_id": "lastbus-flow-08a",
+        "type": "可选Hotspot",
+        "location": "车头",
+        "camera": "线路牌特写",
+        "visual": "确认17路。",
+        "audio": "发动机持续",
+        "duration": "2–3秒",
+        "interaction": "一次短特写后返回",
+        "next": "08",
+        "notes": "只证明线路一致"
+      }
+    },
+    {
+      "id": "shot-08b-01",
+      "cells": {
+        "shot": "08B-01",
+        "node": "08B【Hotspot】车厢",
+        "node_id": "lastbus-flow-08b",
+        "type": "可选Hotspot",
+        "location": "车厢",
+        "camera": "门外视角中景",
+        "visual": "普通座椅暖光，阿姨坐好。",
+        "audio": "正常车内底噪",
+        "duration": "3–4秒",
+        "interaction": "一次短特写后返回",
+        "next": "08",
+        "notes": "遮挡保持，不提前露男人"
+      }
+    },
+    {
+      "id": "shot-08c-01",
+      "cells": {
+        "shot": "08C-01",
+        "node": "08C【Hotspot】手机",
+        "node_id": "lastbus-flow-08c",
+        "type": "可选Hotspot",
+        "location": "手机",
+        "camera": "独立手机UI特写",
+        "visual": "寻找司机；陌生号码在通话记录中。",
+        "audio": "环境声保持",
+        "duration": "建议阅读3–5秒",
+        "interaction": "仅查看，不追加回拨",
+        "next": "08",
+        "notes": "与开场手机UI一致"
+      }
+    },
+    {
+      "id": "shot-09-01",
+      "cells": {
+        "shot": "09-01",
+        "node": "09【选择】上车／留在站台",
+        "node_id": "lastbus-flow-09",
+        "type": "选择",
+        "location": "车门前",
+        "camera": "司机手部短特写→女生背侧主镜头",
+        "visual": "轻敲方向盘；上车／留在站台两个选项。",
+        "audio": "“走不走？”发动机持续",
+        "duration": "2秒演出＋不限时等待",
+        "interaction": "上车→10A；留下→10B，无默认选择",
+        "next": "10A／10B",
+        "notes": "R/N不禁用选项；不循环重复催问"
+      }
+    },
+    {
+      "id": "shot-10a-01",
+      "cells": {
+        "shot": "10A-01",
+        "node": "10A【演出】上车／关门后被困",
+        "node_id": "lastbus-flow-10a",
+        "type": "演出",
+        "location": "车内",
+        "camera": "支付特写→过道中景",
+        "visual": "女生刷手机支付，向后走，坐阿姨后面一排。",
+        "audio": "支付滴声、脚步、车内底噪",
+        "duration": "5–7秒",
+        "interaction": "人物自动操作",
+        "next": "10A-02",
+        "notes": "维持阿姨／女生／男人前后关系"
+      }
+    },
+    {
+      "id": "shot-10a-02",
+      "cells": {
+        "shot": "10A-02",
+        "node": "10A【演出】上车／关门后被困",
+        "node_id": "lastbus-flow-10a",
+        "type": "演出",
+        "location": "车内",
+        "camera": "车门特写→女生近景",
+        "visual": "车门合拢，车驶离，窗外光掠过女生面部。",
+        "audio": "雨声变闷，只剩车内低频震动",
+        "duration": "3–5秒",
+        "interaction": "关门后不可逆",
+        "next": "10A-03",
+        "notes": "无需机械锁扣特写"
+      }
+    },
+    {
+      "id": "shot-10a-03",
+      "cells": {
+        "shot": "10A-03",
+        "node": "10A【演出】上车／关门后被困",
+        "node_id": "lastbus-flow-10a",
+        "type": "演出",
+        "location": "车内",
+        "camera": "手机特写→女生近景",
+        "visual": "陌生号码再次来电，女生自动接听。",
+        "audio": "震动；女生“喂？”",
+        "duration": "3–4秒",
+        "interaction": "无玩家接听操作",
+        "next": "11A",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-11a-01",
+      "cells": {
+        "shot": "11A-01",
+        "node": "11A【条件】车内来电／读取R",
+        "node_id": "lastbus-flow-11a",
+        "type": "条件演出 R=是",
+        "location": "车内",
+        "camera": "女生近景／握手机手部",
+        "visual": "辨认报站声，握紧手机。",
+        "audio": "与03A完全相同提示音及“下一站，南桥。”",
+        "duration": "3–4秒",
+        "interaction": "自动读取R=是",
+        "next": "12A",
+        "notes": "与11A-02互斥，不连续播放"
+      }
+    },
+    {
+      "id": "shot-11a-02",
+      "cells": {
+        "shot": "11A-02",
+        "node": "11A【条件】车内来电／读取R",
+        "node_id": "lastbus-flow-11a",
+        "type": "条件衔接 R=否",
+        "location": "车内",
+        "camera": "承接10A近景",
+        "visual": "不插入报站，直接进入男人对白。",
+        "audio": "维持车内低频底噪",
+        "duration": "0秒，直接衔接",
+        "interaction": "自动读取R=否",
+        "next": "12A",
+        "notes": "复用镜头，无新增独立视频"
+      }
+    },
+    {
+      "id": "shot-12a-01",
+      "cells": {
+        "shot": "12A-01",
+        "node": "12A【演出】声源错位／男人现身",
+        "node_id": "lastbus-flow-12a",
+        "type": "演出",
+        "location": "车内",
+        "camera": "女生近景",
+        "visual": "女生听见身后同声，表情停住，慢慢回头。",
+        "audio": "“我不是……让你别上来吗？”听筒与身后座位附近同时响起",
+        "duration": "5–7秒",
+        "interaction": "无",
+        "next": "12A-02",
+        "notes": "两声严格同步；身后声不是手机外放"
+      }
+    },
+    {
+      "id": "shot-12a-02",
+      "cells": {
+        "shot": "12A-02",
+        "node": "12A【演出】声源错位／男人现身",
+        "node_id": "lastbus-flow-12a",
+        "type": "演出",
+        "location": "车厢后排",
+        "camera": "反打男人中景→袖口滴水特写",
+        "visual": "湿透的男人举手机，嘴唇不动；水滴落地板。",
+        "audio": "“现在下不去了。”两处同声；滴水",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "13A",
+        "notes": "手机持握、湿衣、水滴连续；不用血腥"
+      }
+    },
+    {
+      "id": "shot-13a-01",
+      "cells": {
+        "shot": "13A-01",
+        "node": "13A【连打QTE】3秒快速点击5次",
+        "node_id": "lastbus-flow-13a",
+        "type": "演出／QTE前置",
+        "location": "车内／挡风玻璃",
+        "camera": "女生起身中景→玻璃局部",
+        "visual": "车灯照出逼近护栏；女生从靠窗位起身，经同排空过道位靠近黄色竖立柱上的停车铃。所有乘客座椅朝车头。",
+        "audio": "发动机持续，不减速",
+        "duration": "约3–5秒，含起身靠近动作，待声音分镜验证",
+        "interaction": "无",
+        "next": "13A-02",
+        "notes": "按钮在女生排过道边竖立柱，非窗柱或椅背；移动不计3秒QTE，先到柱旁再出操作提示。"
+      }
+    },
+    {
+      "id": "shot-13a-02",
+      "cells": {
+        "shot": "13A-02",
+        "node": "13A【连打QTE】3秒快速点击5次",
+        "node_id": "lastbus-flow-13a",
+        "type": "连打QTE",
+        "location": "车内／停车铃",
+        "camera": "手与按钮近景＋交互叠层",
+        "visual": "“3秒内快速点击5次”＋收缩计时环＋进度0/5，按钮清晰可操作；有效点击更新进度。",
+        "audio": "发动机与车身震动",
+        "duration": "最多3秒，成功即结束",
+        "interaction": "提示出现即计时，3秒内快速点击／触摸铃按钮5次，第5次在窗口结束前完成即成功；超时不足5次失败。长按不累计，不使用空格替代。错点不计数、不清零。",
+        "next": "成功→13A-S；超时→13A-F",
+        "notes": "规则已统一；达标前不播放完整铃声，成功后才响铃。两路均不能逃生；不显示积分或成败结算。"
+      }
+    },
+    {
+      "id": "shot-13a-success-01",
+      "cells": {
+        "shot": "13A-SUCCESS-01",
+        "node": "13A-S【QTE成功】按响车铃",
+        "node_id": "lastbus-flow-13a-success",
+        "type": "QTE成功反馈",
+        "location": "车内",
+        "camera": "按钮手部特写→女生中近景",
+        "visual": "有效输入达标，按响停车铃，喊停车，司机不回应。",
+        "audio": "叮——；“师傅，停车！”",
+        "duration": "2–3秒",
+        "interaction": "3秒窗口结束前完成5次有效点击／触摸，第5次即成功，提前结束计时并隐藏UI",
+        "next": "13A-M",
+        "notes": "与主节点及剧本一致：连打型QTE，3秒内快速点击5次；完整铃声只播放一次"
+      }
+    },
+    {
+      "id": "shot-13a-fail-01",
+      "cells": {
+        "shot": "13A-FAIL-01",
+        "node": "13A-F【QTE超时】错过按钮",
+        "node_id": "lastbus-flow-13a-fail",
+        "type": "QTE超时反馈",
+        "location": "车内",
+        "camera": "相同角度手部特写→女生中近景",
+        "visual": "车身晃动，手错过按钮，扶住椅背，喊停车。",
+        "audio": "没有铃声；“师傅，停车！”",
+        "duration": "2–3秒",
+        "interaction": "3秒结束时不足5次有效点击／触摸；隐藏UI，不重试",
+        "next": "13A-M",
+        "notes": "不弹失败结算；与成功支路互斥"
+      }
+    },
+    {
+      "id": "shot-13a-merge-01",
+      "cells": {
+        "shot": "13A-MERGE-01",
+        "node": "13A-M【演出／汇合】无法停车／坠河",
+        "node_id": "lastbus-flow-13a-merge",
+        "type": "汇合演出",
+        "location": "车内",
+        "camera": "阿姨中景→女生反应近景",
+        "visual": "阿姨抱袋安慰；女生意识到她不知危险，惊恐停留一拍。",
+        "audio": "“放心，我天天坐。”",
+        "duration": "4–5秒",
+        "interaction": "无",
+        "next": "13A-M-02",
+        "notes": "两种QTE结果在此合流，阿姨仍是善意"
+      }
+    },
+    {
+      "id": "shot-13a-merge-02",
+      "cells": {
+        "shot": "13A-MERGE-02",
+        "node": "13A-M【演出／汇合】无法停车／坠河",
+        "node_id": "lastbus-flow-13a-merge",
+        "type": "演出",
+        "location": "车内→黑屏",
+        "camera": "画面倾斜立即黑屏",
+        "visual": "撞击瞬间黑屏，不展示坠河全景与血腥。",
+        "audio": "撞击、玻璃破裂、水声，随后安静2秒，再一声投币",
+        "duration": "5–7秒",
+        "interaction": "无",
+        "next": "14A",
+        "notes": "音效承担事故；投币声与07建立呼应"
+      }
+    },
+    {
+      "id": "shot-14a-01",
+      "cells": {
+        "shot": "14A-01",
+        "node": "14A【结局】末班乘客",
+        "node_id": "lastbus-flow-14a",
+        "type": "结局",
+        "location": "黑底结局页",
+        "camera": "静态排版",
+        "visual": "末班乘客／今晚，车上多了一个人。显示回到车来之前按钮。",
+        "audio": "投币尾音后安静",
+        "duration": "等待不限时",
+        "interaction": "等待点击重试",
+        "next": "15A",
+        "notes": "与13A-M末尾声音衔接"
+      }
+    },
+    {
+      "id": "shot-15a-01",
+      "cells": {
+        "shot": "15A-01",
+        "node": "15A【导航】回到车来之前",
+        "node_id": "lastbus-flow-15a",
+        "type": "导航／非新增镜头",
+        "location": "结局页→站台",
+        "camera": "复用结局页和06",
+        "visual": "点击后回到公交进站前。",
+        "audio": "进入06的环境声",
+        "duration": "0秒转场＋操作等待",
+        "interaction": "保留R/N，重置本次QTE，不保留角色跨轮记忆",
+        "next": "06",
+        "notes": "不重复制作视频；不重放电话与站台调查"
+      }
+    },
+    {
+      "id": "shot-10b-01",
+      "cells": {
+        "shot": "10B-01",
+        "node": "10B【条件】拒绝登车的台词",
+        "node_id": "lastbus-flow-10b",
+        "type": "条件演出 N=是",
+        "location": "车门前",
+        "camera": "女生中景",
+        "visual": "抱工作包，后退一步。",
+        "audio": "“停运通知还在，我还是打车吧。”",
+        "duration": "3–4秒",
+        "interaction": "读取N=是",
+        "next": "11B",
+        "notes": "与10B-02互斥；共用机位"
+      }
+    },
+    {
+      "id": "shot-10b-02",
+      "cells": {
+        "shot": "10B-02",
+        "node": "10B【条件】拒绝登车的台词",
+        "node_id": "lastbus-flow-10b",
+        "type": "条件演出 N=否",
+        "location": "车门前",
+        "camera": "同机位女生中景",
+        "visual": "抱工作包，后退一步。",
+        "audio": "“算了，我还是打车吧。”",
+        "duration": "2–3秒",
+        "interaction": "读取N=否",
+        "next": "11B",
+        "notes": "不新增玩家选项"
+      }
+    },
+    {
+      "id": "shot-11b-01",
+      "cells": {
+        "shot": "11B-01",
+        "node": "11B【演出】阿姨道别／车窗点头",
+        "node_id": "lastbus-flow-11b",
+        "type": "演出",
+        "location": "车窗外",
+        "camera": "阿姨隔窗中景",
+        "visual": "阿姨点头道别，车门关闭。",
+        "audio": "“小姑娘，那你注意安全哦，早点回家。”关门声",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "11B-02",
+        "notes": "自然关切，不变脸；袋在膝上"
+      }
+    },
+    {
+      "id": "shot-11b-02",
+      "cells": {
+        "shot": "11B-02",
+        "node": "11B【演出】阿姨道别／车窗点头",
+        "node_id": "lastbus-flow-11b",
+        "type": "演出",
+        "location": "站台／驶过车窗",
+        "camera": "手机特写→女生视线→车窗中景",
+        "visual": "陌生号码来电，女生抬头，湿透男人举手机点头。",
+        "audio": "震动；女生不接，来电停止",
+        "duration": "4–6秒",
+        "interaction": "人物自动不接；不提供接听交互",
+        "next": "11B-03",
+        "notes": "男人服装与12A一致；玻璃反射不遮挡关键动作"
+      }
+    },
+    {
+      "id": "shot-11b-03",
+      "cells": {
+        "shot": "11B-03",
+        "node": "11B【演出】阿姨道别／车窗点头",
+        "node_id": "lastbus-flow-11b",
+        "type": "演出",
+        "location": "公交站",
+        "camera": "道路固定空镜→女生中景",
+        "visual": "车辆消失，女生站片刻，拿伞走向便利店。",
+        "audio": "发动机骤停，雨声重新突出",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "12B",
+        "notes": ""
+      }
+    },
+    {
+      "id": "shot-12b-01",
+      "cells": {
+        "shot": "12B-01",
+        "node": "12B【演出】离开站台／进入便利店",
+        "node_id": "lastbus-flow-12b",
+        "type": "演出",
+        "location": "便利店",
+        "camera": "临窗固定主镜头",
+        "visual": "女生进店走到桌边；手机点击继续等待，显示寻找司机。",
+        "audio": "门铃、冷柜、店内广播、货架声",
+        "duration": "4–6秒",
+        "interaction": "手机为人物自动操作",
+        "next": "12B-02",
+        "notes": "主镜头交代站台窗外位置"
+      }
+    },
+    {
+      "id": "shot-12b-02",
+      "cells": {
+        "shot": "12B-02",
+        "node": "12B【演出】离开站台／进入便利店",
+        "node_id": "lastbus-flow-12b",
+        "type": "演出",
+        "location": "便利店",
+        "camera": "临窗主镜头；店员可在画面边缘",
+        "visual": "店员招呼接热水，女生缓口气道谢。",
+        "audio": "“外面挺冷的吧？热水在那边，可以接。”“谢谢。”",
+        "duration": "5–7秒",
+        "interaction": "无",
+        "next": "12B-03",
+        "notes": "不额外扩展店员专属机位"
+      }
+    },
+    {
+      "id": "shot-12b-03",
+      "cells": {
+        "shot": "12B-03",
+        "node": "12B【演出】离开站台／进入便利店",
+        "node_id": "lastbus-flow-12b",
+        "type": "演出",
+        "location": "便利店",
+        "camera": "热水局部→临窗中景",
+        "visual": "接水坐下，放包，发现桌上报纸中的17路字样。",
+        "audio": "倒水、放包、店内日常底噪",
+        "duration": "4–6秒",
+        "interaction": "无",
+        "next": "13B",
+        "notes": "不碰巧撞开报纸；不提前完整展示标题"
+      }
+    },
+    {
+      "id": "shot-13b-01",
+      "cells": {
+        "shot": "13B-01",
+        "node": "13B【操作／Hotspot】点击报纸｜必需",
+        "node_id": "lastbus-flow-13b",
+        "type": "必需Hotspot",
+        "location": "便利店",
+        "camera": "报纸所在桌面近景＋热点",
+        "visual": "报纸可点击，女生目光停住。",
+        "audio": "店内底噪低强度循环",
+        "duration": "等待不限时",
+        "interaction": "点击报纸推进，无超时失败",
+        "next": "13B-02",
+        "notes": "纸面标题使用独立可读文字层"
+      }
+    },
+    {
+      "id": "shot-13b-02",
+      "cells": {
+        "shot": "13B-02",
+        "node": "13B【操作／Hotspot】点击报纸｜必需",
+        "node_id": "lastbus-flow-13b",
+        "type": "揭示演出",
+        "location": "便利店",
+        "camera": "报纸特写→女生近景→窗外空站台",
+        "visual": "标题：17路公交坠河事故追踪／三名失联人员已确认遇难。女生慢慢望向空站台。",
+        "audio": "店内声音保持，不加解释性旁白",
+        "duration": "建议阅读5–7秒＋反应2–3秒",
+        "interaction": "无新增身份调查",
+        "next": "14B",
+        "notes": "不出现死者照片；只确认事故和遇难，保留联想"
+      }
+    },
+    {
+      "id": "shot-14b-01",
+      "cells": {
+        "shot": "14B-01",
+        "node": "14B【结局】留在灯下",
+        "node_id": "lastbus-flow-14b",
+        "type": "结局",
+        "location": "便利店淡出／结局页",
+        "camera": "静态排版",
+        "visual": "留在灯下／今晚，你没有坐上那辆车。显示重新体验。",
+        "audio": "日常环境声淡出",
+        "duration": "等待不限时",
+        "interaction": "等待重新体验",
+        "next": "15B",
+        "notes": "与坏结局统一结局页样式"
+      }
+    },
+    {
+      "id": "shot-15b-01",
+      "cells": {
+        "shot": "15B-01",
+        "node": "15B【导航】重新体验",
+        "node_id": "lastbus-flow-15b",
+        "type": "导航／非新增镜头",
+        "location": "结局页→办公室",
+        "camera": "复用结局页和01",
+        "visual": "重新体验从加班开始。",
+        "audio": "切回办公室环境声",
+        "duration": "0秒转场＋操作等待",
+        "interaction": "重置R/N、本轮热点及QTE记录",
+        "next": "01",
+        "notes": "不添加跨轮记忆"
+      }
+    },
+    {
+      "id": "shot-legend-00",
+      "cells": {
+        "shot": "LEGEND-00",
+        "node": "图例｜文字剧情树",
+        "node_id": "lastbus-flow-legend",
+        "type": "说明／不制作镜头",
+        "location": "编辑画布",
+        "camera": "不适用",
+        "visual": "从上向下阅读；左右支路表示可选调查或条件差异。\n【演出】自动播放，无玩家判定\n【操作】必须完成，但不限时、无失败惩罚\n【Hotspot】可选观察／交谈，完成后返回调查中心\n【选择】玩家主动决定路径\n【条件】读取已发现线索，只改变演出\n【结局／导航】结束、重试或重新体验\n【QTE】限时动作，成功／超时产生不同反馈\nQTE：13A停车铃共1个；滑动接听仍不是限时QTE。",
+        "audio": "不适用",
+        "duration": "不计时",
+        "interaction": "设计参考，不进入玩家流程",
+        "next": "不适用",
+        "notes": "非故事节点，纳入覆盖核对；无需拍摄或生成媒体"
+      }
+    },
+    {
+      "id": "shot-state-00",
+      "cells": {
+        "shot": "STATE-00",
+        "node": "线索与回溯规则",
+        "node_id": "lastbus-flow-state",
+        "type": "说明／不制作镜头",
+        "location": "编辑画布",
+        "camera": "不适用",
+        "visual": "文字设计记录（不是新增运行时变量）：\nR＝是否回拨，初始否；回拨后为是。\nN＝是否查看停运通知，初始否；查看后为是。\nR 影响车内来电；N 影响拒绝台词。两者都不锁定最终选项。\n坏结局重试：回到公交进站前，保留 R/N。\n重新体验：从加班开始，重置本轮记录。\n安全结局重新体验按“新一轮”表达，不添加角色跨轮记忆。",
+        "audio": "不适用",
+        "duration": "不计时",
+        "interaction": "设计参考，不进入玩家流程",
+        "next": "不适用",
+        "notes": "非故事节点，纳入覆盖核对；无需拍摄或生成媒体"
+      }
+    }
+  ]
+}

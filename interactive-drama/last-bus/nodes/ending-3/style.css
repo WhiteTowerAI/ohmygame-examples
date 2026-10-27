@@ -1,0 +1,6 @@
+@import "../../shared/style/components.css";
+
+/* The ending plays on a plain black screen. */
+.backdrop {
+  background: #000;
+}

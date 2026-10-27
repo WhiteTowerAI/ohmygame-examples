@@ -32,6 +32,14 @@
       "description": "Photograph birds in a procedurally generated wetland to fill your field journal. Three.js, Vite and TypeScript.",
       "path": "web-game/wetland-birdwatching",
       "cover": "covers/wetland-birdwatching.webp"
+    },
+    {
+      "id": "last-bus",
+      "type": "interactive-drama",
+      "name": "Last Bus",
+      "description": "A rainy-night interactive film in Chinese: wait for the last bus, choose who to trust, and find its endings. Comes with the design canvas, storyboard and generation history it was made from.",
+      "path": "interactive-drama/last-bus",
+      "cover": "covers/last-bus.webp"
     }
   ]
 }

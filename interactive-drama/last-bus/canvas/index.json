@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "boards": [
+    {
+      "id": "7541f109-9262-4b64-b796-3678d8f00336",
+      "name": "Untitled"
+    }
+  ],
+  "documents": [
+    {
+      "id": "1867e605-6e42-4a17-a97b-7c20b3c629f9",
+      "title": "末班剧本设定"
+    },
+    {
+      "id": "lastbus-asset-review",
+      "title": "末班｜素材检查与首批关键帧"
+    },
+    {
+      "id": "lastbus-final-frame-audit",
+      "title": "末班｜终版关键帧检查与排布"
+    }
+  ],
+  "mainDocumentId": "1867e605-6e42-4a17-a97b-7c20b3c629f9",
+  "tables": [
+    {
+      "id": "lastbus-storyboard",
+      "title": "末班｜节点对应分镜清单"
+    },
+    {
+      "id": "ec78103a-6807-4426-8f93-bdb400c2c2f0",
+      "title": "末班｜场景资产清单"
+    }
+  ]
+}
