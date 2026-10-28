@@ -146,9 +146,6 @@ function install({ host, graph }) {
 
   // Back to the main menu: keep the game where it is and start the page again.
   const toTitle = async () => {
-    try {
-      sessionStorage.setItem("moban:skip-cover", "1");
-    } catch {}
     await current?.context.session.save().catch(() => {});
     const url = new URL(location.href);
     for (const key of ["scene", "ohmygame-new-game", "ohmygame-forget-seen"]) url.searchParams.delete(key);

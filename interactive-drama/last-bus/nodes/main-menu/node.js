@@ -7,8 +7,6 @@ export function mount(context) {
   const backdrop = showBackdrop(context);
   const entries = [...context.root.querySelectorAll(".choices [data-signal]")];
   const resume = context.root.querySelector("[data-continue]");
-  const cover = context.root.querySelector("[data-cover]");
-  const enter = context.root.querySelector("[data-enter]");
 
   const open = async (event) => {
     const { signal, newGame } = event.currentTarget.dataset;
@@ -38,26 +36,11 @@ export function mount(context) {
   settings.hidden = !window.__mobanGameMenu;
   settings.addEventListener("click", openSettings);
 
-  // The cover opens the game once per visit; coming back from the in-game menu skips it.
-  const leave = () => {
-    window.__mobanCoverDone = true;
-    cover.classList.add("is-leaving");
-    setTimeout(() => { cover.hidden = true; }, 600);
-  };
-  if (!window.__mobanCoverDone && !takeSkipCover()) {
-    cover.querySelector("[data-cover-image]").src = context.assets.url("1_01");
-    cover.hidden = false;
-    enter.addEventListener("click", leave);
-  } else {
-    window.__mobanCoverDone = true;
-  }
-
   return () => {
     backdrop.cleanup();
     for (const entry of entries) entry.removeEventListener("click", open);
     resume.removeEventListener("click", keepGoing);
     settings.removeEventListener("click", openSettings);
-    enter.removeEventListener("click", leave);
   };
 }
 
@@ -72,16 +55,5 @@ function savedSceneId() {
     return JSON.parse(localStorage.getItem(key) ?? "null")?.currentNodeId;
   } catch {
     return undefined;
-  }
-}
-
-/** Whether the in-game menu's 回到主菜单 asked to skip the cover, once. */
-function takeSkipCover() {
-  try {
-    const skip = sessionStorage.getItem("moban:skip-cover") === "1";
-    sessionStorage.removeItem("moban:skip-cover");
-    return skip;
-  } catch {
-    return false;
   }
 }
