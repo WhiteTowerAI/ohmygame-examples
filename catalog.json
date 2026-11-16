@@ -34,6 +34,14 @@
       "cover": "covers/wetland-birdwatching.webp"
     },
     {
+      "id": "social-arena",
+      "type": "web-game",
+      "name": "Social Arena",
+      "description": "A shared realtime pulse duel that demonstrates OhMyGame sign-in, cloud saves, leaderboards, invite rooms and synchronized multiplayer state.",
+      "path": "web-game/social-arena",
+      "cover": "covers/social-arena.webp"
+    },
+    {
       "id": "last-bus",
       "type": "interactive-drama",
       "name": "Last Bus",
