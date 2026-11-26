@@ -35,10 +35,10 @@
     },
     {
       "id": "last-bus",
-      "type": "interactive-drama",
+      "type": "web-game",
       "name": "Last Bus",
       "description": "A rainy-night interactive film in Chinese: wait for the last bus, choose who to trust, and find its endings. Comes with the design canvas, storyboard and generation history it was made from.",
-      "path": "interactive-drama/last-bus",
+      "path": "web-game/last-bus",
       "cover": "covers/last-bus.webp"
     }
   ]
