@@ -11,7 +11,7 @@ to build on it.
 | [Tidal Workshop](web-game/tidal-workshop) | Web Game | Incremental harbor economy, cargo shipping, automation, island expeditions and permanent voyage rewards |
 | [Ember Route](web-game/ember-route) | Web Game | Roguelike deckbuilding, Heat and Vent combat, a branching twelve-floor route and seeded saves |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
-| [Last Bus](interactive-drama/last-bus) | Interactive Story | A 39-Scene interactive film in Chinese with a story map and an in-game menu, plus the design canvas, storyboard and generation history behind it |
+| [Last Bus](web-game/last-bus) | Web Game | A 39-Scene interactive film in Chinese with a story map and an in-game menu, plus the design canvas, storyboard and generation history behind it |
 
 ## How OhMyGame uses this repository
 
@@ -25,7 +25,7 @@ after OhMyGame updates the pinned commit.
 | Field | Meaning |
 | --- | --- |
 | `id` | Stable kebab-case id, used by OhMyGame to refer to the example |
-| `type` | OhMyGame project type: `web-game` or `interactive-drama` |
+| `type` | OhMyGame project type: `web-game` |
 | `name`, `description` | Shown when choosing an example |
 | `path` | Folder copied into the new project's workspace |
 | `cover` | Project cover, a WebP image kept outside `path` so it is not copied |
@@ -36,10 +36,10 @@ after OhMyGame updates the pinned commit.
    folder.
    - A web game needs a `package.json` with `dev` and `build` scripts, and
      `build` must write a static site to `dist/`.
-   - An interactive drama is a Playable Nodes workspace: `graph.json`,
-     `editor/layout.json`, `nodes/` and `shared/`. Leave out `AGENTS.md`,
-     `README.md` and `schemas/`; OhMyGame writes the versions that match the
-     app. Media must live in the folder (`source.kind: "workspace"`), not in a
+   - A web game played as it is, such as Last Bus, needs an `index.html` and
+     no `package.json`. A story like it keeps its runtime in `story/` and its
+     flow in `graph.json`;
+     media must live in the folder (`source.kind: "workspace"`), not in a
      user's Library.
 2. Add an `AGENTS.md` that maps the code for an agent, and record every
    third-party asset or code port with its license (see
