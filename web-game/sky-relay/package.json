@@ -1,0 +1,8 @@
+{
+  "name": "sky-relay",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"dev": "vite", "build": "vite build"},
+  "devDependencies": {"@vitejs/plugin-legacy": "latest", "vite": "latest"}
+}

@@ -1,0 +1,587 @@
+[
+  {
+    "recoveryId": "b20dce6c-0388-42ee-95dc-bde80be4ce56",
+    "inputRevision": "13a0d0fd564e5208e2f45b5feb3fdb3212af7726e1c28d4a802c859422d78f88",
+    "id": "d6397379-2e50-4bf1-9a2e-713a36c2dfbc",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:22:13.197Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game UI icon sheet. Primary request: four separate small circular player markers in teal, coral-red, golden-yellow, and violet, each with the same dark navy pix",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-player-markers"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "ca1cf093-c1e0-4b2e-a0bc-2415ed754330",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:54.986Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "a36e13c8-82aa-4d5b-868f-4a405747dede"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "be60cac4-3eb5-4a0e-babd-24cb030de896",
+    "inputRevision": "5dace6e9f082abd3b8187ecfb7681818c8d32bf9232eef0a17302a79e660b104",
+    "id": "bdae7930-3b63-47c3-b402-13d0a9a4e302",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:22:13.195Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small white cloud badge with blue-gray shadow and navy pixel outline, compact arcade emblem. Style/medium: classic 16-bit flat pi",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-cloud-badge"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "e280bbf6-cdc3-4a87-9306-2d294bfb0cc3",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:55.027Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "81eabe21-310d-4368-ac37-e311fc8f2c17"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "44ef8a4d-17fb-49b6-a1cc-1a844f538353",
+    "inputRevision": "5dace6e9f082abd3b8187ecfb7681818c8d32bf9232eef0a17302a79e660b104",
+    "id": "fade4c79-bb41-4087-98dc-08ed3f744947",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.663Z",
+    "status": "failed",
+    "title": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small white cloud badge with blue-gray shadow and navy pixel outline, compact arcade emblem. Style/medium: classic 16-bit flat pi",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-cloud-badge"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "input": {
+      "prompt": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small white cloud badge with blue-gray shadow and navy pixel outline, compact arcade emblem. Style/medium: classic 16-bit flat pixel art. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+      "resolution": "1K",
+      "aspectRatio": "1:1",
+      "imageModel": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "images": []
+    },
+    "error": "Could not reach Volcengine Ark image generation"
+  },
+  {
+    "recoveryId": "077135fe-e4ec-47f8-92c0-1edaf18d59ac",
+    "inputRevision": "9d0be64334c28231fa3fbd5f3b90fd28a43f4db518889f07c27c039b5e4502ba",
+    "id": "2ee90370-789d-4453-b262-f95f0aaf781d",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.662Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small round compass with four cardinal needle points, navy outline, teal and gold accents, crisp 16-bit pixel art. Style/medium: ",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-compass"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "d9e98129-3174-40d8-a7bb-2c2b6889e7f4",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:01.818Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "9fb5e8fe-22d0-4588-b716-231c4de8d523"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "60faa744-96af-4f41-8b06-add97f8496c2",
+    "inputRevision": "2d77ca25fc3dce29aff2b318ae54b97f11fdb35674ae7197a68db24b201682a0",
+    "id": "831ab017-61b6-4f11-bf2c-9aaec848cb0d",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.660Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small black-and-white checkered finish flag on a short pole, crisp 16-bit pixel outline, front-facing. Style/medium: classic flat",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-flag"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "ceb452f9-9936-48d3-86eb-1caf1553a402",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:03.115Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "f597f638-8a27-4c20-916d-ec96569165fd"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "fae8e06c-2879-4ed5-9140-0c2657bd71cd",
+    "inputRevision": "4c43908b8c283771cd19f4a68297a0a88436b104d3be7f6322867bce8919f240",
+    "id": "d3d7b332-1ce2-433a-87ed-688bde80646b",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.658Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small golden pixel trophy with crisp navy outline, front-facing, compact arcade icon. Style/medium: classic 16-bit flat pixel art",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "ui-trophy"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "a4f3777e-b447-4e00-969d-7dfea28f20dc",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:01.333Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "a9cfe796-3eaf-44c4-b770-1e7372e3e53c"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "fa50cfe7-df57-4499-8cb0-228428b2f9f5",
+    "inputRevision": "903f1b655b058c9e8a9a9dcf50db10d61ae30fc4ac41776308b8af6ba8e89f6f",
+    "id": "2d406239-bc94-4eba-93ab-56ef85ef66a6",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.657Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one large layered white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art,",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "cloud-large"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "3e632d1f-f683-4828-ba40-158429cf8d9c",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:04.385Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "f68c75b1-0e64-4c7f-9f44-55d8c68a07ed"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "11a2adee-1bb4-414f-9cc3-0d7599683ed1",
+    "inputRevision": "c5f076d1cb8d2e92d587d46a576f8b10da76b00984b6d328ce058502c06a6804",
+    "id": "d3869d3e-4242-40bd-87e1-693db01f209c",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.655Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one medium fluffy white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art,",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "cloud-medium"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "eabccade-50af-4ba6-9502-1dadb266c41c",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:04.179Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "378e89af-2084-44a9-901c-a66eae598cd8"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "2a3a27d7-8f34-4756-a221-714ad9d57a60",
+    "inputRevision": "e532e2a5ae0865d1e1aa20a4b5f7404cbd4f5d8fb47cd8dfefbfa413703c2780",
+    "id": "3b4810ca-1d8d-46fe-890d-43ea3d101795",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.654Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one small fluffy white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art, ",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "cloud-small"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "92c5237c-5193-430a-b568-7caa376b74a1",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:04.542Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "783dcf4a-3484-4154-8463-d3517e927ae5"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8b2fe72e-9657-4987-af47-90966a4275a1",
+    "inputRevision": "f6a205bca7853c9b18a4ca74d0a4769bf102f01979dd489567763302915a7c4a",
+    "id": "a73aa2a1-70fb-4b93-a386-4febe4dbeb42",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:21:20.652Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game prop sprite. Primary request: one circular golden aerial checkpoint ring, readable from front and top-down, small blocky pixel sparkles around the outer ri",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "checkpoint-ring"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "e864b978-838b-4c41-bf1c-af255dc867bf",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:22:07.026Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "681ab1d4-0698-4a7a-bfc5-43740878d3c8"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "b08641b3-cc31-411a-ac63-1ca601859302",
+    "inputRevision": "a8ce70e88058eaff8dde28d91be41c728bbad35d8cfd05c4c303db4c1c4cec66",
+    "id": "3966e063-ddcd-4cbd-b807-b59e95f3f5c5",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:20:25.851Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: top-down blue-sky race arena with soft white cloud banks framing the edges, a few simple pale-blue airflow lines, un",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "race-background"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "3cf4f6be-a477-4886-932d-805bd4b4d145",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:21:11.028Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "d3af8c26-13f7-42da-8d68-0dbd2e7b10d7"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "f7bc7d21-df77-4f10-aa0b-99264bf58523",
+    "inputRevision": "a8ce70e88058eaff8dde28d91be41c728bbad35d8cfd05c4c303db4c1c4cec66",
+    "id": "21941116-4c02-4bb9-be72-7cdf5c40c593",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:19:33.454Z",
+    "status": "failed",
+    "title": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: top-down blue-sky race arena with soft white cloud banks framing the edges, a few simple pale-blue airflow lines, un",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "race-background"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "input": {
+      "prompt": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: top-down blue-sky race arena with soft white cloud banks framing the edges, a few simple pale-blue airflow lines, uncluttered clear center reserved for a golden checkpoint ring and airplanes. Style/medium: flat classic 16-bit pixel art, crisp uniform pixel blocks, limited palette, no gradients. Composition/framing: wide gameplay background with safe HUD margins. Constraints: no text, no UI, no logo, no watermark, no aircraft, no 3D, no realism.",
+      "resolution": "1K",
+      "aspectRatio": "1:1",
+      "imageModel": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "images": []
+    },
+    "error": "Could not reach Volcengine Ark image generation"
+  },
+  {
+    "recoveryId": "0e82485a-92af-47d6-b872-6ce8442ed4dc",
+    "inputRevision": "8b9e05ec1751f7e7ed08ec09a6fb7db7e7aa442cfe0ee92cbab467f9656bf7ca",
+    "id": "ab17eca5-eb21-4a9f-86ce-aa95204b556c",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:19:33.452Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: bright blue 16-bit sky with distant layered white cloud banks and a few tiny floating islands near the horizon, clea",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "sky-background"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "200ab1f1-27b7-4d56-9547-1e9bfd638203",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:20:19.571Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "64102dc9-94aa-4b9b-a6f3-899008af8637"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "32797506-058e-4bd4-9d47-b9357b6a7b2d",
+    "inputRevision": "b054aeaaf9fbd7161b54fa05920e3a929045e2c12b5e65371b741405c6033adf",
+    "id": "a073d7f7-5e33-4b1c-a4f3-ad2ec4b6ac09",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:15:39.520Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small violet-purple propeller airplane named Cloudwing, clear dark navy pixel outline, top-down orthographic view, visible pro",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "plane-cloudwing"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "15107a04-ce9e-46cd-9022-738fdd742d2e",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:16:30.475Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "2a67183e-0409-41f8-8fa5-2a6159dab9ab"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "7da288c5-eac3-4bb5-a217-b6b580923c4e",
+    "inputRevision": "4ba5b06169a2ec8056e4bd9f585e03ab4906d27023ca6fa237198ae04ccac108",
+    "id": "1b4694d0-4410-40b7-a014-534646ed2bcc",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:15:39.517Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small golden-yellow propeller airplane named Sunbird, clear dark navy pixel outline, top-down orthographic view, visible prope",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "plane-sunbird"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "d476710f-1db5-47fc-9e1a-54e84f0165c9",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:16:31.136Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "3ee5ff52-626f-4943-b1d7-bccb75f3a3c7"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "1b6958fe-e8c1-4ac2-ae8b-fd685e7925ce",
+    "inputRevision": "d7f98dfd1dabe8b456d6b98a0e30c0e85a00b8b612197ed0100068779bf8bc03",
+    "id": "41ed5cca-c7b6-4910-a5f0-1e97687f91a0",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:15:39.515Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small coral-red propeller airplane named Comet, clear dark navy pixel outline, top-down orthographic view, visible propeller, ",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "plane-comet"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "6bd06cac-7d90-4faa-aabe-d342bae7f918",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:16:25.095Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "9767a3bf-4a30-4f8a-a660-641a3bba6b09"
+        }
+      ]
+    }
+  },
+  {
+    "recoveryId": "8afebc22-9555-4923-af70-4a5e937ad374",
+    "inputRevision": "4b6a48ad8db7130f3d73f292c06e6d013cd1ffa7e15e3ac08bdd9731825a9b0f",
+    "id": "2137805b-d559-49e5-9a2a-ce54946f270d",
+    "toolId": "generate-image",
+    "createdAt": "2026-11-17T05:15:39.508Z",
+    "status": "succeeded",
+    "title": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small teal propeller airplane named Nova, clear dark navy pixel outline, top-down orthographic view, visible propeller, wings,",
+    "context": {
+      "projectId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+      "boardId": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "nodeId": "plane-nova"
+    },
+    "upstream": {},
+    "model": {
+      "provider": "volcengine-ark",
+      "id": "doubao-seedream-5-0-pro-260628"
+    },
+    "run": {
+      "id": "d7b2e032-8e33-4810-bd91-945f034d3bcd",
+      "toolId": "generate-image",
+      "model": {
+        "provider": "volcengine-ark",
+        "id": "doubao-seedream-5-0-pro-260628"
+      },
+      "createdAt": "2026-11-17T05:16:27.991Z",
+      "files": [
+        {
+          "name": "output.png",
+          "mediaType": "image/png",
+          "assetId": "a7389386-0bb5-4ddd-8571-fbc5b3a3b33e"
+        }
+      ]
+    }
+  }
+]

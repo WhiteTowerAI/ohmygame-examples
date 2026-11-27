@@ -1,0 +1,70 @@
+/**
+ * Cloud saves and leaderboards: what a game's page and the game service agree on.
+ * docs/cloud-saves.md describes the routes; free of dependencies so the service can
+ * import it.
+ */
+/** Where a game keeps cloud saves and leaderboards: manifest.json's "cloud". */
+export interface CloudConfig {
+    /** The game service's HTTPS base URL. */
+    serverUrl: string;
+    /** The game's ID on that service; for a game published to OhMyGame, its OhMyGame game ID. */
+    gameId: string;
+}
+/** A save key or leaderboard name: letters, digits, dot, dash and underscore. */
+export declare const CLOUD_NAME_PATTERN: RegExp;
+/** The most save keys one player may keep in one game. */
+export declare const SAVE_MAX_KEYS = 32;
+/** The largest save, in bytes of its JSON. */
+export declare const SAVE_MAX_BYTES: number;
+/** Scores one player may submit to one game in a minute. */
+export declare const SCORE_SUBMITS_PER_MINUTE = 10;
+/** The most leaderboard entries one request returns. */
+export declare const LEADERBOARD_PAGE_MAX = 100;
+/**
+ * Leaderboards the game service writes itself from match results, such as match.wins for
+ * built-in rules. Players can read them but not submit to them.
+ */
+export declare const MATCH_BOARD_PREFIX = "match.";
+/** "desc": a higher score ranks first, as in points. "asc": lower ranks first, as in a time. */
+export type LeaderboardOrder = "desc" | "asc";
+export interface SaveRecord {
+    key: string;
+    value: unknown;
+    /** Increases with every write; send it back as ifVersion to refuse a write over a newer one. */
+    version: number;
+    /** Milliseconds since the epoch, by the service's clock. */
+    updatedAt: number;
+}
+/** A save without its value, as the key list returns it. */
+export type SaveSummary = Omit<SaveRecord, "value"> & {
+    bytes: number;
+};
+export interface LeaderboardEntry {
+    rank: number;
+    /** The player's OhMyGame account ID. Only signed-in players appear on a public board. */
+    playerId: string;
+    name: string;
+    score: number;
+    /** When the player set this score, in milliseconds since the epoch. */
+    at: number;
+}
+/**
+ * The player's own best on a board. A guest's score is kept for them only: public is
+ * false and rank is where the score would place among signed-in players.
+ */
+export interface PlayerScore {
+    score: number;
+    at: number;
+    rank: number;
+    public: boolean;
+}
+/** The answer to a submitted score. */
+export interface ScoreResult extends PlayerScore {
+    /** Whether this score replaced the player's previous best. */
+    improved: boolean;
+}
+/** Codes the service sends with an error, beside its message. */
+export type CloudErrorCode = "quota_exceeded" | "rate_limited" | "conflict" | "not_found" | "invalid_request" | "not_authorized";
+export declare function isCloudConfig(value: unknown, options?: {
+    allowLocalhost?: boolean;
+}): value is CloudConfig;

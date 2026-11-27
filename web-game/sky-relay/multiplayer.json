@@ -1,0 +1,15 @@
+{
+  "multiplayer": {
+    "enabled": true,
+    "mode": "realtime",
+    "gameId": "47850b8c-5402-4cff-8e5c-efc62a55e03f",
+    "deploymentId": "local-host-realtime-4p-v1",
+    "protocolVersion": 1,
+    "serverUrl": "http://127.0.0.1:43139",
+    "authPolicy": "anonymous",
+    "roomPolicy": "invite-or-public",
+    "maxClients": 4,
+    "reconnectSeconds": 120,
+    "adapterId": "host"
+  }
+}

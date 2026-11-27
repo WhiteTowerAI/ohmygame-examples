@@ -1,0 +1,924 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "sky-relay-design-node",
+      "type": "document",
+      "data": {
+        "documentId": "sky-relay-design"
+      },
+      "title": "Sky Relay · 可玩性与视觉设计",
+      "description": "主设计文档：首个可玩流程、视觉方向与后续多人接入边界。"
+    },
+    {
+      "id": "plane-nova",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small teal propeller airplane named Nova, clear dark navy pixel outline, top-down orthographic view, visible propeller, wings, short segmented white-blue contrail. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: single centered aircraft with generous transparent padding. Constraints: transparent background, isolated sprite, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "a7389386-0bb5-4ddd-8571-fbc5b3a3b33e"
+      },
+      "title": "飞机 · Nova 青绿色",
+      "description": "透明 PNG：Nova 玩家飞机，俯视正上方，用于玩家与 HUD 标记。"
+    },
+    {
+      "id": "plane-comet",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small coral-red propeller airplane named Comet, clear dark navy pixel outline, top-down orthographic view, visible propeller, wings, short segmented pale contrail. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: single centered aircraft with transparent padding. Constraints: transparent background, isolated sprite, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "9767a3bf-4a30-4f8a-a660-641a3bba6b09"
+      },
+      "title": "飞机 · Comet 珊瑚红",
+      "description": "透明 PNG：Comet 玩家飞机。"
+    },
+    {
+      "id": "plane-sunbird",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small golden-yellow propeller airplane named Sunbird, clear dark navy pixel outline, top-down orthographic view, visible propeller, wings, short segmented warm-white contrail. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: single centered aircraft with transparent padding. Constraints: transparent background, isolated sprite, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "3ee5ff52-626f-4943-b1d7-bccb75f3a3c7"
+      },
+      "title": "飞机 · Sunbird 金黄色",
+      "description": "透明 PNG：Sunbird 玩家飞机。"
+    },
+    {
+      "id": "plane-cloudwing",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game sprite. Primary request: one small violet-purple propeller airplane named Cloudwing, clear dark navy pixel outline, top-down orthographic view, visible propeller, wings, short segmented lavender contrail. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: single centered aircraft with transparent padding. Constraints: transparent background, isolated sprite, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "2a67183e-0409-41f8-8fa5-2a6159dab9ab"
+      },
+      "title": "飞机 · Cloudwing 紫色",
+      "description": "透明 PNG：Cloudwing 玩家飞机。"
+    },
+    {
+      "id": "sky-background",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: bright blue 16-bit sky with distant layered white cloud banks and a few tiny floating islands near the horizon, clean open center and upper area for gameplay UI. Style/medium: flat classic pixel art, crisp uniform pixel blocks, limited palette, no gradients. Composition/framing: wide horizontal scene, spacious center. Constraints: no text, no UI, no logo, no watermark, no aircraft, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "64102dc9-94aa-4b9b-a6f3-899008af8637"
+      },
+      "title": "背景 · 蓝天云海",
+      "description": "1920x1080 横版天空背景，中央和上方留白给大厅与 HUD。"
+    },
+    {
+      "id": "race-background",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: 1920x1080 game background. Primary request: top-down blue-sky race arena with soft white cloud banks framing the edges, a few simple pale-blue airflow lines, uncluttered clear center reserved for a golden checkpoint ring and airplanes. Style/medium: flat classic 16-bit pixel art, crisp uniform pixel blocks, limited palette, no gradients. Composition/framing: wide gameplay background with safe HUD margins. Constraints: no text, no UI, no logo, no watermark, no aircraft, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "d3af8c26-13f7-42da-8d68-0dbd2e7b10d7"
+      },
+      "title": "背景 · 俯视空中赛场",
+      "description": "俯视角天空赛场，中央留空放置金色检查环。"
+    },
+    {
+      "id": "checkpoint-ring",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game prop sprite. Primary request: one circular golden aerial checkpoint ring, readable from front and top-down, small blocky pixel sparkles around the outer rim. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, gold and pale-yellow limited palette with dark outline. Composition/framing: centered isolated ring. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "681ab1d4-0698-4a7a-bfc5-43740878d3c8"
+      },
+      "title": "道具 · 金色检查环",
+      "description": "透明 PNG：中央金色检查环，正面与俯视都清晰。"
+    },
+    {
+      "id": "cloud-small",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one small fluffy white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: isolated centered cloud. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "783dcf4a-3484-4154-8463-d3517e927ae5"
+      },
+      "title": "云朵 · 小型",
+      "description": "透明 PNG：小型白色像素云。"
+    },
+    {
+      "id": "cloud-medium",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one medium fluffy white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: isolated centered cloud. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "378e89af-2084-44a9-901c-a66eae598cd8"
+      },
+      "title": "云朵 · 中型",
+      "description": "透明 PNG：中型白色像素云。"
+    },
+    {
+      "id": "cloud-large",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game environment sprite. Primary request: one large layered white pixel cloud with soft blue-gray underside shadow. Style/medium: classic 16-bit flat pixel art, crisp uniform pixel blocks, limited palette. Composition/framing: isolated centered cloud. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "f68c75b1-0e64-4c7f-9f44-55d8c68a07ed"
+      },
+      "title": "云朵 · 大型",
+      "description": "透明 PNG：大型白色像素云。"
+    },
+    {
+      "id": "ui-trophy",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small golden pixel trophy with crisp navy outline, front-facing, compact arcade icon. Style/medium: classic 16-bit flat pixel art, limited gold palette. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "a9cfe796-3eaf-44c4-b770-1e7372e3e53c"
+      },
+      "title": "UI · 金色奖杯",
+      "description": "透明 PNG：像素风金色奖杯。"
+    },
+    {
+      "id": "ui-flag",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small black-and-white checkered finish flag on a short pole, crisp 16-bit pixel outline, front-facing. Style/medium: classic flat pixel art, limited palette. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "f597f638-8a27-4c20-916d-ec96569165fd"
+      },
+      "title": "UI · 终点旗帜",
+      "description": "透明 PNG：像素风终点旗帜。"
+    },
+    {
+      "id": "ui-compass",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small round compass with four cardinal needle points, navy outline, teal and gold accents, crisp 16-bit pixel art. Style/medium: flat limited palette. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "9fb5e8fe-22d0-4588-b716-231c4de8d523"
+      },
+      "title": "UI · 小型罗盘",
+      "description": "透明 PNG：像素风小型罗盘。"
+    },
+    {
+      "id": "ui-cloud-badge",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game UI icon. Primary request: small white cloud badge with blue-gray shadow and navy pixel outline, compact arcade emblem. Style/medium: classic 16-bit flat pixel art. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "81eabe21-310d-4368-ac37-e311fc8f2c17"
+      },
+      "title": "UI · 云朵徽章",
+      "description": "透明 PNG：像素风云朵徽章。"
+    },
+    {
+      "id": "ui-player-markers",
+      "type": "image",
+      "data": {
+        "prompt": "Use case: stylized-concept. Asset type: game UI icon sheet. Primary request: four separate small circular player markers in teal, coral-red, golden-yellow, and violet, each with the same dark navy pixel outline and a tiny propeller-plane glyph. Style/medium: classic 16-bit flat pixel art, aligned evenly in one row. Constraints: transparent background, no text, no logo, no watermark, no gradient, no 3D, no realism.",
+        "pixelStyle": "classic",
+        "materialStyle": "pixel",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": [],
+        "assetId": "a36e13c8-82aa-4d5b-868f-4a405747dede"
+      },
+      "title": "UI · 四色玩家标记",
+      "description": "透明 PNG：青碧、珊瑚红、金黄、紫色四种统一尺寸玩家标记。"
+    },
+    {
+      "id": "transparent-planes-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported",
+        "directory": true
+      },
+      "title": "透明飞机素材 · 修正版",
+      "description": "修正后的四架透明 PNG 飞机，运行时使用。"
+    },
+    {
+      "id": "transparent-ring-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/checkpoint-ring-transparent.png"
+      },
+      "title": "透明检查环 · 修正版",
+      "description": "修正后的透明 PNG 金色检查环。"
+    },
+    {
+      "id": "transparent-ui-files",
+      "type": "file",
+      "data": {
+        "path": "assets/imported",
+        "directory": true
+      },
+      "title": "透明 UI 素材 · 修正版",
+      "description": "奖杯、终点旗、三种云朵与罗盘的透明 PNG 修正版。"
+    },
+    {
+      "id": "3ad5c3be-dd50-4dec-b333-bf2f9b36841b",
+      "type": "image",
+      "data": {
+        "prompt": "",
+        "model": {
+          "provider": "volcengine-ark",
+          "id": "doubao-seedream-5-0-pro-260628"
+        },
+        "resolution": "1K",
+        "aspectRatio": "1:1",
+        "images": []
+      }
+    },
+    {
+      "id": "storm-convoy-enemy-aircraft-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/storm-convoy-enemy-aircraft-sheet.png"
+      },
+      "title": "敌机素材 · 侦察/轰炸/雷暴/精英",
+      "description": "透明像素敌机图集：侦察机、轰炸机、雷暴无人机和精英拦截机。"
+    },
+    {
+      "id": "storm-convoy-ordnance-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/storm-convoy-ordnance-sheet.png"
+      },
+      "title": "敌方弹药素材 · 炸弹/子弹",
+      "description": "透明像素弹药图集：普通炸弹、重型炸弹、延迟炸弹和敌方子弹。"
+    },
+    {
+      "id": "sky-relay-cat-pilots-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-cat-pilots-sheet.png"
+      },
+      "title": "猫猫飞行员 · 小鱼干号",
+      "description": "透明像素猫猫飞行员图集，用于大厅主题与玩家身份标识。"
+    },
+    {
+      "id": "sky-relay-dried-fish-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-dried-fish-sheet.png"
+      },
+      "title": "小鱼干补给素材",
+      "description": "透明像素小鱼干拾取物与维修代币图集。"
+    },
+    {
+      "id": "sky-relay-sky-pirate-skull-aircraft-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-sky-pirate-skull-aircraft-sheet.png"
+      },
+      "title": "敌机 · 骷髅头空中海盗",
+      "description": "透明像素敌机图集：骷髅侦察机、海盗轰炸机、雷暴海盗无人机和精英拦截机。"
+    },
+    {
+      "id": "sky-relay-home-rainbow-background-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/home-rainbow-background.png"
+      },
+      "title": "主页背景 · 彩虹天空",
+      "description": "用户提供的彩虹、云朵参考图；主页实际使用可伸缩天空底色与独立彩虹图层。"
+    },
+    {
+      "id": "sky-relay-rainbow-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-rainbow-transparent.png"
+      },
+      "title": "主页装饰 · 独立彩虹弧",
+      "description": "透明宽幅彩虹弧形素材，作为主页独立响应式装饰图层。"
+    },
+    {
+      "id": "sky-relay-rainbow-clouds-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-rainbow-clouds.png"
+      },
+      "title": "主页贴图 · 彩虹与云朵合并",
+      "description": "彩虹和遮住两侧落脚的云朵合并成单一透明贴图，按容器整体缩放。"
+    },
+    {
+      "id": "sky-relay-cloud-shapes-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/cloud-shapes-sheet.png"
+      },
+      "title": "主页云朵形态图集",
+      "description": "透明云朵图集：普通云、猫猫形云、鱼形云和星星云，主页随机摆放。"
+    },
+    {
+      "id": "sky-relay-cloud-fluffy-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/cloud-fluffy.png"
+      },
+      "title": "独立云朵 · 普通",
+      "description": "拆分后的普通云朵透明贴图。"
+    },
+    {
+      "id": "sky-relay-cloud-cat-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/cloud-cat.png"
+      },
+      "title": "独立云朵 · 猫猫",
+      "description": "拆分后的猫猫形云朵透明贴图。"
+    },
+    {
+      "id": "sky-relay-cloud-fish-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/cloud-fish.png"
+      },
+      "title": "独立云朵 · 鱼形",
+      "description": "拆分后的鱼形云朵透明贴图。"
+    },
+    {
+      "id": "sky-relay-cloud-star-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/cloud-star.png"
+      },
+      "title": "独立云朵 · 星星",
+      "description": "拆分后的星星形云朵透明贴图。"
+    },
+    {
+      "id": "sky-relay-create-room-fish-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-create-room-fish.png"
+      },
+      "title": "创建房间按钮 · 黄色小鱼干",
+      "description": "透明黄色小鱼干按钮底图，文字由界面叠加。"
+    },
+    {
+      "id": "sky-relay-fish-snack-convoy-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-fish-snack-convoy.png"
+      },
+      "title": "主舰艇 · 小鱼干号",
+      "description": "透明像素主舰艇：猫猫飞行员护送的小鱼干号运输飞艇。"
+    },
+    {
+      "id": "sky-relay-skill-coral-cat-fish-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-skill-coral-cat-fish.png"
+      },
+      "title": "技能图标 · 猫猫小鱼干",
+      "description": "珊瑚红技能键专用图标：猫猫抱着金色小鱼干。"
+    },
+    {
+      "id": "sky-relay-explosion-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-explosion.gif"
+      },
+      "title": "透明爆炸动画",
+      "description": "炸弹命中我方飞机或小鱼干号时播放的透明像素爆炸 GIF。"
+    },
+    {
+      "id": "sky-relay-headquarters-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-headquarters.png"
+      },
+      "title": "终点总部 · 云端停泊塔",
+      "description": "透明像素总部，供小鱼干号在最后阶段驶入停泊。"
+    },
+    {
+      "id": "sky-relay-sky-pirate-scout-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-sky-pirate-scout.png"
+      },
+      "title": "敌机 · 骷髅侦察机",
+      "description": "从原始海盗图集中裁出的透明侦察机，战斗场景直接使用。"
+    },
+    {
+      "id": "sky-relay-sky-pirate-bomber-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-sky-pirate-bomber.png"
+      },
+      "title": "敌机 · 骷髅轰炸机",
+      "description": "从原始海盗图集中裁出的透明轰炸机，投放范围伤害炸弹。"
+    },
+    {
+      "id": "sky-relay-skill-vfx-sheet-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-skill-vfx-sheet.png"
+      },
+      "title": "技能特效素材表",
+      "description": "透明 4x2 像素特效表：攻击强化、治疗、护盾、加速、小鱼干投弹、爆炸、维修光束与冻结领域。"
+    },
+    {
+      "id": "sky-relay-green-heal-vfx-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/green-heal-vfx.gif"
+      },
+      "title": "绿色十字疗愈 GIF",
+      "description": "四帧透明 GIF 疗愈特效，技能触发时置于猫猫飞机与主舰艇之上。"
+    },
+    {
+      "id": "sky-relay-battle-hud-atlas-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/imported/ui/sky-relay-battle-hud-atlas.png"
+      },
+      "title": "局内战斗 HUD 素材图集",
+      "description": "透明像素 HUD 图集：飞艇四阶段血条、四种飞机血条、四组 E/Q 技能图标、冷却遮罩、危险提示与护送成功徽章，供局内 HUD 接入。"
+    },
+    {
+      "id": "sky-relay-vfx-coral-small-attack-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-coral-small-attack.png"
+      },
+      "title": "珊瑚红 E · 强攻特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-coral-ultimate-fish-bomb-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-coral-ultimate-fish-bomb.png"
+      },
+      "title": "珊瑚红 Q · 小鱼干炸弹特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-coral-ultimate-cannon-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-coral-ultimate-cannon.png"
+      },
+      "title": "珊瑚红 Q · 重炮爆发特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-teal-small-heal-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-teal-small-heal.png"
+      },
+      "title": "青碧 E · 十字疗愈特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-teal-ultimate-repair-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-teal-ultimate-repair.png"
+      },
+      "title": "青碧 Q · 应急抢修特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-violet-small-shield-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-violet-small-shield.png"
+      },
+      "title": "紫罗兰 E · 护盾特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-violet-ultimate-shield-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-violet-ultimate-shield.png"
+      },
+      "title": "紫罗兰 Q · 全域坚盾特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-sun-small-speed-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-sun-small-speed.png"
+      },
+      "title": "向阳黄 E · 加速特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-vfx-sun-ultimate-freeze-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/sky-relay-vfx-sun-ultimate-freeze.png"
+      },
+      "title": "向阳黄 Q · 凝霜空域特效",
+      "description": "独立透明像素技能特效。"
+    },
+    {
+      "id": "sky-relay-results-screen-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-results-screen-mockup.png"
+      },
+      "title": "结算界面视觉提案",
+      "description": "16-bit 像素风结算页参考稿：成功横幅、猫猫飞行员、S 评级、四项得分、四阶段飞艇耐久与行动按钮。供后续实现确认。"
+    },
+    {
+      "id": "sky-relay-home-screen-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-home-screen-mockup.png"
+      },
+      "title": "主界面视觉提案",
+      "description": "结算页同风格的主界面参考稿。"
+    },
+    {
+      "id": "sky-relay-leaderboard-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-leaderboard-mockup.png"
+      },
+      "title": "排行榜视觉提案",
+      "description": "结算页同风格的排行榜参考稿，含金银铜前三奖牌。"
+    },
+    {
+      "id": "sky-relay-in-game-hud-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-in-game-hud-mockup.png"
+      },
+      "title": "局内 HUD 视觉提案",
+      "description": "结算页同风格的局内 HUD 参考稿。"
+    },
+    {
+      "id": "sky-relay-home-wireframe-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-home-wireframe.png"
+      },
+      "title": "主界面线稿布局稿",
+      "description": "黑白像素线稿主界面布局参考。"
+    },
+    {
+      "id": "sky-relay-character-aircraft-select-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-character-aircraft-select-mockup.png"
+      },
+      "title": "猫猫角色与飞机选择界面稿",
+      "description": "四只猫猫、四种飞机涂装和 E/Q 技能说明的选择界面参考。"
+    },
+    {
+      "id": "sky-relay-in-game-layout-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-in-game-layout-mockup.png"
+      },
+      "title": "局内逻辑位置布局稿",
+      "description": "主舰艇正中偏下、玩家飞机上方活动的局内布局参考。"
+    },
+    {
+      "id": "sky-relay-character-loadout-paired-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-character-loadout-paired-mockup.png"
+      },
+      "title": "猫猫飞行员套装选择界面稿",
+      "description": "修正版选择界面：猫猫与飞机固定成四种套装，不再分开选择。"
+    },
+    {
+      "id": "sky-relay-loadout-detail-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-loadout-detail-mockup.png"
+      },
+      "title": "猫猫飞行员套装详情页稿",
+      "description": "大厅进入的套装详情页：展示绑定猫猫、飞机、E/Q 技能，并用四张联动卡切换套装。"
+    },
+    {
+      "id": "sky-relay-in-game-layout-revised-mockup-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-in-game-layout-revised-mockup.png"
+      },
+      "title": "局内 HUD 修正版视觉稿",
+      "description": "当前猫猫专属技能、缩窄的小鱼干号血条、左右加油猫猫背景和新版敌机。"
+    },
+    {
+      "id": "sky-relay-cheering-cat-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-cheering-cat-transparent.png"
+      },
+      "title": "加油猫猫透明素材",
+      "description": "可左右翻转复用的局内背景加油猫猫透明 PNG。"
+    },
+    {
+      "id": "sky-relay-enemy-fighter-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-enemy-fighter-transparent.png"
+      },
+      "title": "灰红敌机透明素材",
+      "description": "局内敌机使用的灰红骷髅徽记透明 PNG。"
+    },
+    {
+      "id": "sky-relay-cheering-cat-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-cheering-cat-extracted.png"
+      },
+      "title": "原稿抠图·加油猫猫",
+      "description": "从局内 HUD 原稿直接抠出的透明底加油猫猫与观景台。"
+    },
+    {
+      "id": "sky-relay-enemy-fighter-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-enemy-fighter-extracted.png"
+      },
+      "title": "原稿抠图·灰红敌机",
+      "description": "从局内 HUD 原稿直接抠出的透明底灰红敌机。"
+    },
+    {
+      "id": "sky-relay-home-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-home-cat-plane-extracted.png"
+      },
+      "title": "主界面抠图·猫猫飞机",
+      "description": "主界面设计图中的猫猫与飞机组合透明素材。"
+    },
+    {
+      "id": "sky-relay-fish-create-button-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-fish-create-button-extracted.png"
+      },
+      "title": "主界面抠图·鱼形创建按钮",
+      "description": "主界面设计图中的鱼形创建按钮外壳，文字由代码叠加。"
+    },
+    {
+      "id": "sky-relay-leaderboard-medals-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-leaderboard-medals-extracted.png"
+      },
+      "title": "排行榜抠图·前三奖牌",
+      "description": "排行榜设计图中的金银铜前三奖牌透明素材。"
+    },
+    {
+      "id": "sky-relay-results-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-results-cat-plane-extracted.png"
+      },
+      "title": "结算页抠图·猫猫飞机",
+      "description": "结算设计图中的猫猫与飞机组合透明素材。"
+    },
+    {
+      "id": "sky-relay-home-title-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-home-title-extracted.png"
+      },
+      "title": "主界面抠图·Sky Relay 标题",
+      "description": "主界面设计图中的 Sky Relay 标题和副标题透明素材。"
+    },
+    {
+      "id": "sky-relay-home-paint-buttons-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-home-paint-buttons-extracted.png"
+      },
+      "title": "主界面抠图·四个飞机涂装按钮",
+      "description": "主界面设计图中的四个飞机涂装按钮透明素材。"
+    },
+    {
+      "id": "sky-relay-convoy-no-hp-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-convoy-no-hp-transparent.png"
+      },
+      "title": "小鱼干号主舰艇·无血条透明素材",
+      "description": "完整主舰艇透明素材；血条和四阶段状态由 HUD 逻辑绘制。"
+    },
+    {
+      "id": "sky-relay-in-game-left-background-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-in-game-left-background-transparent.png"
+      },
+      "title": "局内左侧观景台透明背景",
+      "description": "左侧浮岛和望远镜猫猫背景装饰。"
+    },
+    {
+      "id": "sky-relay-in-game-right-background-transparent-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-in-game-right-background-transparent.png"
+      },
+      "title": "局内右侧观景台透明背景",
+      "description": "右侧浮岛和挥旗猫猫背景装饰。"
+    },
+    {
+      "id": "sky-relay-player-coral-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-player-coral-cat-plane-extracted.png"
+      },
+      "title": "玩家机·珊瑚红猫猫飞机透明素材",
+      "description": "从套装选择图抠出的珊瑚红猫猫飞机组合。"
+    },
+    {
+      "id": "sky-relay-player-mint-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-player-mint-cat-plane-extracted.png"
+      },
+      "title": "玩家机·薄荷绿猫猫飞机透明素材",
+      "description": "薄荷船医与青碧飞机组合。"
+    },
+    {
+      "id": "sky-relay-player-violet-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-player-violet-cat-plane-extracted.png"
+      },
+      "title": "玩家机·紫罗兰猫猫飞机透明素材",
+      "description": "紫薯护卫与紫罗兰飞机组合。"
+    },
+    {
+      "id": "sky-relay-player-sun-cat-plane-extracted-file",
+      "type": "file",
+      "data": {
+        "path": "assets/imported/ui/sky-relay-player-sun-cat-plane-extracted.png"
+      },
+      "title": "玩家机·向日黄猫猫飞机透明素材",
+      "description": "奶油领航员与向日黄飞机组合。"
+    },
+    {
+      "id": "sky-relay-loadout-detail-coral-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/sky-relay-loadout-detail-coral.png"
+      },
+      "title": "珊瑚红套装详情备用变体",
+      "description": "备用生成变体；运行时珊瑚红页面使用用户指定的原始套装选择稿。"
+    },
+    {
+      "id": "sky-relay-convoy-health-full-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/convoy-states/fish-snack-full.png"
+      },
+      "title": "小鱼干号·满血形态",
+      "description": "透明主舰艇状态素材，耐久 76%–100%。"
+    },
+    {
+      "id": "sky-relay-convoy-health-light-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/convoy-states/fish-snack-light-damage.png"
+      },
+      "title": "小鱼干号·轻度受损形态",
+      "description": "透明主舰艇状态素材，耐久 51%–75%。"
+    },
+    {
+      "id": "sky-relay-convoy-health-heavy-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/convoy-states/fish-snack-heavy-damage.png"
+      },
+      "title": "小鱼干号·重度受损形态",
+      "description": "透明主舰艇状态素材，耐久 26%–50%。"
+    },
+    {
+      "id": "sky-relay-convoy-health-critical-file",
+      "type": "file",
+      "data": {
+        "path": "public/assets/convoy-states/fish-snack-critical.png"
+      },
+      "title": "小鱼干号·濒临损坏形态",
+      "description": "透明主舰艇状态素材，耐久 0%–25%。"
+    }
+  ],
+  "edges": [],
+  "id": "22478114-97ea-445f-bcb1-b1f0d6c6c762"
+}

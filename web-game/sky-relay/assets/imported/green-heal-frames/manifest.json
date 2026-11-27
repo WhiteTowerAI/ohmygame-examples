@@ -1,0 +1,22 @@
+{
+  "columns": 4,
+  "rows": 1,
+  "cellWidth": 543,
+  "cellHeight": 724,
+  "columnWidths": [
+    543,
+    543,
+    543,
+    543
+  ],
+  "rowHeights": [
+    724
+  ],
+  "frames": 4,
+  "selectedFrames": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

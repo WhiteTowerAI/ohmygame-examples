@@ -1,0 +1,347 @@
+{
+  "version": 1,
+  "nodes": {
+    "sky-relay-design-node": {
+      "x": 96,
+      "y": 96
+    },
+    "plane-nova": {
+      "x": 656,
+      "y": 96
+    },
+    "plane-comet": {
+      "x": 656,
+      "y": 576
+    },
+    "plane-sunbird": {
+      "x": 656,
+      "y": 1056
+    },
+    "plane-cloudwing": {
+      "x": 1216,
+      "y": 96
+    },
+    "sky-background": {
+      "x": 1216,
+      "y": 576
+    },
+    "race-background": {
+      "x": 1216,
+      "y": 1056
+    },
+    "checkpoint-ring": {
+      "x": 1776,
+      "y": 96
+    },
+    "cloud-small": {
+      "x": 1776,
+      "y": 576
+    },
+    "cloud-medium": {
+      "x": 1776,
+      "y": 1056
+    },
+    "cloud-large": {
+      "x": 2336,
+      "y": 96
+    },
+    "ui-trophy": {
+      "x": 2336,
+      "y": 576
+    },
+    "ui-flag": {
+      "x": 2336,
+      "y": 1056
+    },
+    "ui-compass": {
+      "x": 2896,
+      "y": 96
+    },
+    "ui-cloud-badge": {
+      "x": 2896,
+      "y": 576
+    },
+    "ui-player-markers": {
+      "x": 2896,
+      "y": 1056
+    },
+    "transparent-planes-file": {
+      "x": 3456,
+      "y": 96
+    },
+    "transparent-ring-file": {
+      "x": 3456,
+      "y": 576
+    },
+    "transparent-ui-files": {
+      "x": 3456,
+      "y": 1056
+    },
+    "3ad5c3be-dd50-4dec-b333-bf2f9b36841b": {
+      "x": 1150,
+      "y": 1830
+    },
+    "storm-convoy-enemy-aircraft-file": {
+      "x": 4016,
+      "y": 96
+    },
+    "storm-convoy-ordnance-file": {
+      "x": 4016,
+      "y": 576
+    },
+    "sky-relay-cat-pilots-file": {
+      "x": 4016,
+      "y": 1056
+    },
+    "sky-relay-dried-fish-file": {
+      "x": 4576,
+      "y": 96
+    },
+    "sky-relay-sky-pirate-skull-aircraft-file": {
+      "x": 4576,
+      "y": 576
+    },
+    "sky-relay-home-rainbow-background-file": {
+      "x": 4576,
+      "y": 1056
+    },
+    "sky-relay-rainbow-transparent-file": {
+      "x": 5136,
+      "y": 96
+    },
+    "sky-relay-rainbow-clouds-file": {
+      "x": 5136,
+      "y": 576
+    },
+    "sky-relay-cloud-shapes-file": {
+      "x": 5136,
+      "y": 1056
+    },
+    "sky-relay-cloud-fluffy-file": {
+      "x": 5696,
+      "y": 96
+    },
+    "sky-relay-cloud-cat-file": {
+      "x": 5696,
+      "y": 576
+    },
+    "sky-relay-cloud-fish-file": {
+      "x": 5696,
+      "y": 1056
+    },
+    "sky-relay-cloud-star-file": {
+      "x": 6256,
+      "y": 96
+    },
+    "sky-relay-create-room-fish-file": {
+      "x": 6256,
+      "y": 576
+    },
+    "sky-relay-fish-snack-convoy-file": {
+      "x": 6256,
+      "y": 1056
+    },
+    "sky-relay-skill-coral-cat-fish-file": {
+      "x": 6816,
+      "y": 96
+    },
+    "sky-relay-explosion-file": {
+      "x": 6816,
+      "y": 576
+    },
+    "sky-relay-headquarters-file": {
+      "x": 6816,
+      "y": 1056
+    },
+    "sky-relay-sky-pirate-scout-file": {
+      "x": 7376,
+      "y": 96
+    },
+    "sky-relay-sky-pirate-bomber-file": {
+      "x": 7376,
+      "y": 576
+    },
+    "sky-relay-skill-vfx-sheet-file": {
+      "x": 7936,
+      "y": 96
+    },
+    "sky-relay-green-heal-vfx-file": {
+      "x": 8496,
+      "y": 96
+    },
+    "sky-relay-battle-hud-atlas-file": {
+      "x": 8496,
+      "y": 576
+    },
+    "sky-relay-vfx-coral-small-attack-file": {
+      "x": 8496,
+      "y": 1056
+    },
+    "sky-relay-vfx-coral-ultimate-fish-bomb-file": {
+      "x": 9056,
+      "y": 96
+    },
+    "sky-relay-vfx-coral-ultimate-cannon-file": {
+      "x": 9056,
+      "y": 576
+    },
+    "sky-relay-vfx-teal-small-heal-file": {
+      "x": 9056,
+      "y": 1056
+    },
+    "sky-relay-vfx-teal-ultimate-repair-file": {
+      "x": 9616,
+      "y": 96
+    },
+    "sky-relay-vfx-violet-small-shield-file": {
+      "x": 9616,
+      "y": 576
+    },
+    "sky-relay-vfx-violet-ultimate-shield-file": {
+      "x": 9616,
+      "y": 1056
+    },
+    "sky-relay-vfx-sun-small-speed-file": {
+      "x": 10176,
+      "y": 96
+    },
+    "sky-relay-vfx-sun-ultimate-freeze-file": {
+      "x": 10176,
+      "y": 576
+    },
+    "sky-relay-results-screen-mockup-file": {
+      "x": 10176,
+      "y": 1056
+    },
+    "sky-relay-home-screen-mockup-file": {
+      "x": 10736,
+      "y": 96
+    },
+    "sky-relay-leaderboard-mockup-file": {
+      "x": 10736,
+      "y": 576
+    },
+    "sky-relay-in-game-hud-mockup-file": {
+      "x": 10736,
+      "y": 1056
+    },
+    "sky-relay-home-wireframe-file": {
+      "x": 11296,
+      "y": 96
+    },
+    "sky-relay-character-aircraft-select-mockup-file": {
+      "x": 11296,
+      "y": 576
+    },
+    "sky-relay-in-game-layout-mockup-file": {
+      "x": 11296,
+      "y": 1056
+    },
+    "sky-relay-character-loadout-paired-mockup-file": {
+      "x": 11856,
+      "y": 96
+    },
+    "sky-relay-loadout-detail-mockup-file": {
+      "x": 11856,
+      "y": 576
+    },
+    "sky-relay-in-game-layout-revised-mockup-file": {
+      "x": 11856,
+      "y": 1056
+    },
+    "sky-relay-cheering-cat-transparent-file": {
+      "x": 12416,
+      "y": 96
+    },
+    "sky-relay-enemy-fighter-transparent-file": {
+      "x": 12416,
+      "y": 576
+    },
+    "sky-relay-cheering-cat-extracted-file": {
+      "x": 12416,
+      "y": 1056
+    },
+    "sky-relay-enemy-fighter-extracted-file": {
+      "x": 12976,
+      "y": 96
+    },
+    "sky-relay-home-cat-plane-extracted-file": {
+      "x": 12976,
+      "y": 576
+    },
+    "sky-relay-fish-create-button-extracted-file": {
+      "x": 12976,
+      "y": 1056
+    },
+    "sky-relay-leaderboard-medals-extracted-file": {
+      "x": 13536,
+      "y": 96
+    },
+    "sky-relay-results-cat-plane-extracted-file": {
+      "x": 13536,
+      "y": 576
+    },
+    "sky-relay-home-title-extracted-file": {
+      "x": 13536,
+      "y": 1056
+    },
+    "sky-relay-home-paint-buttons-extracted-file": {
+      "x": 14096,
+      "y": 96
+    },
+    "sky-relay-convoy-no-hp-transparent-file": {
+      "x": 14096,
+      "y": 576
+    },
+    "sky-relay-in-game-left-background-transparent-file": {
+      "x": 14096,
+      "y": 1056
+    },
+    "sky-relay-in-game-right-background-transparent-file": {
+      "x": 14656,
+      "y": 96
+    },
+    "sky-relay-player-coral-cat-plane-extracted-file": {
+      "x": 14656,
+      "y": 576
+    },
+    "sky-relay-player-mint-cat-plane-extracted-file": {
+      "x": 14656,
+      "y": 1056
+    },
+    "sky-relay-player-violet-cat-plane-extracted-file": {
+      "x": 15216,
+      "y": 96
+    },
+    "sky-relay-player-sun-cat-plane-extracted-file": {
+      "x": 15216,
+      "y": 576
+    },
+    "sky-relay-loadout-detail-coral-file": {
+      "x": 15776,
+      "y": 96
+    },
+    "sky-relay-convoy-health-full-file": {
+      "x": 15776,
+      "y": 576
+    },
+    "sky-relay-convoy-health-light-file": {
+      "x": 15776,
+      "y": 1056
+    },
+    "sky-relay-convoy-health-heavy-file": {
+      "x": 16336,
+      "y": 96
+    },
+    "sky-relay-convoy-health-critical-file": {
+      "x": 16336,
+      "y": 576
+    }
+  },
+  "viewport": {
+    "x": -2351.4459427011393,
+    "y": 330.0318701378271,
+    "zoom": 0.3626736360926662
+  },
+  "view": "canvas"
+}

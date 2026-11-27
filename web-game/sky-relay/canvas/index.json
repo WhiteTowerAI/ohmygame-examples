@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "boards": [
+    {
+      "id": "22478114-97ea-445f-bcb1-b1f0d6c6c762",
+      "name": "Untitled"
+    }
+  ],
+  "documents": [{"id":"sky-relay-design","title":"Sky Relay · 可玩性与视觉设计"}],
+  "mainDocumentId":"sky-relay-design"
+}
