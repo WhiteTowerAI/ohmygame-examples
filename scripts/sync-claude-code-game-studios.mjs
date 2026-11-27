@@ -81,8 +81,8 @@ by Donchitos, release ${tag} (commit \`${sha}\`), under the MIT license in its
 \`LICENSE\`. It is copied as released, except that what is about developing the
 template is left out: ${LEFT_OUT.map((item) => `\`${item}\``).join(', ')}.
 
-\`icons/claude-code-game-studios.svg\` was drawn for OhMyGame: a film
-clapperboard with a game controller's D-pad and buttons. It is not a mark of
+\`covers/claude-code-game-studios.webp\` was made for OhMyGame: a film
+clapperboard with a game controller's D-pad and buttons, beside the name. It is not a mark of
 Claude Code Game Studios or of Anthropic, and is under this repository's
 license.
 

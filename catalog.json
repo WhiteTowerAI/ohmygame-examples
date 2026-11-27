@@ -43,12 +43,11 @@
     },
     {
       "id": "claude-code-game-studios",
-      "kind": "starter",
       "type": "general",
       "name": "Claude Code Game Studios",
       "description": "A game studio for Claude Code: 49 agents, 78 skills, hooks and design docs by Donchitos (MIT). Run /start in Claude Code; other agents can read its docs but not use its agents or hooks.",
       "path": "general/claude-code-game-studios",
-      "icon": "icons/claude-code-game-studios.svg"
+      "cover": "covers/claude-code-game-studios.webp"
     }
   ]
 }
