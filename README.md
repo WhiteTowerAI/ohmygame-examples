@@ -13,6 +13,13 @@ to build on it.
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
 | [Last Bus](web-game/last-bus) | Web Game | A 39-Scene interactive film in Chinese with a story map and an in-game menu, plus the design canvas, storyboard and generation history behind it |
 
+Starters are files a new project starts from, with nothing to play. OhMyGame
+offers them as templates in its new project dialog, not on Explore.
+
+| Starter | Type | What it gives |
+| --- | --- | --- |
+| [Claude Code Game Studios](general/claude-code-game-studios) | General | [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) by Donchitos (MIT), as released: 49 agents, 78 skills, hooks and design docs for Claude Code. See [its credits](credits/claude-code-game-studios.md) |
+
 ## How OhMyGame uses this repository
 
 OhMyGame pins a commit of this repository in its own `config/` folder. Its build
@@ -25,10 +32,12 @@ after OhMyGame updates the pinned commit.
 | Field | Meaning |
 | --- | --- |
 | `id` | Stable kebab-case id, used by OhMyGame to refer to the example |
-| `type` | OhMyGame project type: `web-game` |
+| `kind` | `game` (the default) or `starter` |
+| `type` | OhMyGame project type: `web-game`, or for a starter `general` or `web-game` |
 | `name`, `description` | Shown when choosing an example |
 | `path` | Folder copied into the new project's workspace |
-| `cover` | Project cover, a WebP image kept outside `path` so it is not copied |
+| `cover` | Project cover, a WebP image kept outside `path` so it is not copied. Every game has one; a starter may |
+| `icon` | Optional small picture for lists, an SVG, PNG or WebP image kept outside `path` |
 
 ## Adding an example
 
@@ -47,6 +56,17 @@ after OhMyGame updates the pinned commit.
 3. Add a WebP cover to `covers/` and an entry to `catalog.json`.
 4. Run `node scripts/check-catalog.mjs`, then `npm ci && npm run build` in the
    example folder. CI runs the same checks.
+
+## Adding a starter
+
+Put the files in `<type>/<id>/`, copied as they are into new projects: no
+`AGENTS.md`, build or cover is needed. Record where they come from and their
+license in `credits/<id>.md`, add an optional icon to `icons/`, and add an
+entry with `"kind": "starter"` to `catalog.json`. A starter taken from another
+repository is updated with a script, such as
+`node scripts/sync-claude-code-game-studios.mjs vX.Y.Z`; read the diff before
+opening a PR, hooks and scripts included, since agents run them in projects
+started from it.
 
 ## License
 
