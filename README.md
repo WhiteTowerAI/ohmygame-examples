@@ -12,6 +12,7 @@ to build on it.
 | [Ember Route](web-game/ember-route) | Web Game | Roguelike deckbuilding, Heat and Vent combat, a branching twelve-floor route and seeded saves |
 | [Wetland Birdwatching](web-game/wetland-birdwatching) | Web Game | Procedural Three.js wetland, bird AI that reacts to the player, a photo journal with guided onboarding |
 | [Last Bus](web-game/last-bus) | Web Game | A 39-Scene interactive film in Chinese with a story map and an in-game menu, plus the design canvas, storyboard and generation history behind it |
+| [Claude Code Game Studios](general/claude-code-game-studios) | General | [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) by Donchitos (MIT), as released: 49 agents, 78 skills, hooks and design docs for Claude Code. Nothing to play; remix it and run `/start` in Claude Code. See [its credits](credits/claude-code-game-studios.md) |
 
 ## How OhMyGame uses this repository
 
@@ -25,7 +26,7 @@ after OhMyGame updates the pinned commit.
 | Field | Meaning |
 | --- | --- |
 | `id` | Stable kebab-case id, used by OhMyGame to refer to the example |
-| `type` | OhMyGame project type: `web-game` |
+| `type` | OhMyGame project type: `web-game`, or `general` for an example with nothing to play |
 | `name`, `description` | Shown when choosing an example |
 | `path` | Folder copied into the new project's workspace |
 | `cover` | Project cover, a WebP image kept outside `path` so it is not copied |
@@ -47,6 +48,14 @@ after OhMyGame updates the pinned commit.
 3. Add a WebP cover to `covers/` and an entry to `catalog.json`.
 4. Run `node scripts/check-catalog.mjs`, then `npm ci && npm run build` in the
    example folder. CI runs the same checks.
+
+A general example, such as an agent's setup, has nothing to play: OhMyGame
+shows its cover and description and offers only Remix. Its folder is copied as
+it is, so it needs no `AGENTS.md` or build. Record where it comes from and its
+license in `credits/<id>.md`. One taken from another repository is updated with
+a script, such as `node scripts/sync-claude-code-game-studios.mjs vX.Y.Z`; read
+the diff before opening a PR, hooks and scripts included, since agents run them
+in projects made from it.
 
 ## License
 

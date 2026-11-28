@@ -5,7 +5,9 @@ app. See README.md for the layout and `catalog.json` format.
 
 - Each example lives in `<type>/<id>/`, must build and run with nothing outside
   its own folder, and has its own `AGENTS.md`. Read that file before changing
-  an example.
+  an example. A general example taken from another repository, such as
+  `general/claude-code-game-studios`, is copied as released instead; change it
+  only through its sync script.
 - Keep covers and catalog metadata outside the example folder; the folder is
   copied verbatim into users' workspaces.
 - Record every third-party asset or code port in the example's credits file.
